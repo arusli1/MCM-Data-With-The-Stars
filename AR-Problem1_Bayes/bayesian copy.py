@@ -1,37 +1,3 @@
-"""
-AR-Problem1_Bayes/bayesian.py
------------------------------
-This script infers *latent* fan-vote shares for Dancing With The Stars using only:
-- weekly judges' scores, and
-- the observed elimination week (from the `results` field).
-
-It does *not* fit a fully Bayesian probabilistic model with an explicit likelihood in a
-probabilistic programming language (PyMC/Stan). Instead, it uses:
-
-1) A differentiable objective ("loss") that combines:
-   - soft elimination likelihood (via a softmax over a risk score),
-   - temporal smoothness / dynamics between weeks (optional),
-   - L2 regularization on latent logits (prevents extreme values),
-   - entropy regularization on inferred shares (prevents degenerate shares),
-   - optional finals placement constraint (very approximate).
-
-2) MAP-style optimization (Adam) to find one best-fit set of latent vote-share logits `p`.
-
-3) Optional SGLD (stochastic gradient Langevin dynamics) to obtain a crude uncertainty
-   estimate over shares by sampling around the MAP solution.
-
-Outputs
--------
-- inferred_shares_bayes.csv: MAP fan share per (season, week, celebrity)
-- inferred_shares_bayes_unc.csv: uncertainty summary (mean/std/quantiles) if SGLD enabled
-- elimination_match_bayes.csv: per-season elimination \"match rate\" diagnostic
-
-Important modeling assumption
------------------------------
-Active contestants in week w are inferred as those with judges' total score > 0 in that week.
-This matches how the provided CSV uses zeros after elimination.
-"""
-
 import re
 from typing import Dict, List, Optional, Tuple
 
@@ -50,44 +16,33 @@ UNC_PATH = "AR-Problem1_Bayes/inferred_shares_bayes_unc.csv"
 MATCH_PATH = "AR-Problem1_Bayes/elimination_match_bayes.csv"
 
 EPS = 1e-8
-TEMP = 0.7  # temperature for elimination softmax; smaller -> sharper (more deterministic)
-TEMP_PLACEMENT = 0.6  # temperature for finals placement likelihood (if enabled)
+TEMP = 0.7
+TEMP_PLACEMENT = 0.6
 LAM_DYN = 0.5
-LAM_P = 0.1  # L2 penalty on latent logits (prevents extreme shares)
-LAM_HARD = 150.0  # hard-constraint margin penalty for eliminated vs non-eliminated risk
-LAM_FINAL = 10.0  # weight for finals placement constraint (0 disables)
-LAM_ENT = 0.05  # entropy regularization on shares (keeps shares from collapsing)
+LAM_P = 0.1
+LAM_HARD = 150.0
+LAM_FINAL = 10.0
+LAM_ENT = 0.05
 
-LR = 0.05  # Adam learning rate
-N_STEPS = 250  # Adam optimization steps per season
+LR = 0.05
+N_STEPS = 250
 
 RUN_SGLD = True
-SGLD_STEPS = 80     # total SGLD iterations
-SGLD_BURNIN = 20    # discard early SGLD samples
-SGLD_INTERVAL = 5   # keep every k-th SGLD sample after burn-in
+SGLD_STEPS = 80
+SGLD_BURNIN = 20
+SGLD_INTERVAL = 5
 
 
 def parse_week_cols(df: pd.DataFrame) -> List[str]:
-    """Return all `week{w}_judge{j}_score` columns present in the wide CSV."""
     return [c for c in df.columns if re.match(r"week\d+_judge\d+_score", c)]
 
 
 def week_score(df: pd.DataFrame, week: int, cols: List[str]) -> pd.Series:
-    """
-    Compute judges' *total points* for each contestant in a given week by summing
-    that week's judge score columns.
-    """
     wcols = [c for c in cols if c.startswith(f"week{week}_")]
     return df[wcols].sum(axis=1, skipna=True)
 
 
 def regime_for_season(season: int) -> str:
-    """
-    Determine scoring regime by season index (per problem statement assumptions).
-    - seasons 1–2: rank-based era (treated as \"rank\")
-    - seasons 3–27: percent-combination era (treated as \"percent\")
-    - seasons 28+: bottom-two/judges-save era (treated as \"bottom\")
-    """
     if season <= 2:
         return "rank"
     if season <= 27:
@@ -96,15 +51,6 @@ def regime_for_season(season: int) -> str:
 
 
 def build_season_struct(df_season: pd.DataFrame, week_cols: List[str]) -> Dict:
-    """
-    Convert one season's wide rows into a dense season structure.
-
-    Returns dict containing:
-    - names: contestant names in season order
-    - J: (W x N) matrix of weekly judges totals (zeros after elimination)
-    - elim_week: list of elimination week numbers (1-indexed) per contestant
-    - max_week: last week with any nonzero total across contestants
-    """
     max_week = max(int(re.search(r"week(\d+)_", c).group(1)) for c in week_cols)
     names = df_season["celebrity_name"].tolist()
     n = len(names)
@@ -117,8 +63,6 @@ def build_season_struct(df_season: pd.DataFrame, week_cols: List[str]) -> Dict:
     last_active = (np.where(J > 0, week_idx, 0)).max(axis=0)
     elim_week = []
     for i, row in df_season.iterrows():
-        # Parse elimination week from free-text `results`.
-        # Withdrew is treated as eliminated in the last active week for this implementation.
         if isinstance(row["results"], str) and "Eliminated Week" in row["results"]:
             elim_week.append(int(row["results"].split("Eliminated Week ")[1]))
         elif isinstance(row["results"], str) and "Withdrew" in row["results"]:
@@ -126,7 +70,6 @@ def build_season_struct(df_season: pd.DataFrame, week_cols: List[str]) -> Dict:
         else:
             elim_week.append(None)
 
-    # Determine the number of active weeks in this season based on any positive total score.
     max_week_active = int(np.where(J.sum(axis=1) > 0)[0].max() + 1)
     return {
         "names": names,
@@ -137,10 +80,6 @@ def build_season_struct(df_season: pd.DataFrame, week_cols: List[str]) -> Dict:
 
 
 def compute_jz(J: np.ndarray) -> np.ndarray:
-    """
-    Compute a per-week z-score normalization of judges totals among active contestants.
-    This is used in the temporal dynamics term so weeks are on comparable scales.
-    """
     W, N = J.shape
     Jz = np.zeros_like(J)
     for w in range(W):
@@ -154,17 +93,6 @@ def compute_jz(J: np.ndarray) -> np.ndarray:
 
 
 def elimination_match_rate(shares, struct, regime):
-    """
-    Diagnostic: how often does the inferred share matrix predict the observed elimination?
-
-    For each week:
-    - Determine active contestants (J>0).
-    - Identify the true eliminated contestant(s) for that week.
-    - Predict \"at-risk\" contestants according to the regime:
-        * percent: lowest combined (judges percent + inferred fan share)
-        * rank/bottom: use rank aggregation approximations
-    Returns (hits, total_weeks_evaluated).
-    """
     J = struct["J"]
     elim_week = struct["elim_week"]
     W, N = J.shape
@@ -209,16 +137,11 @@ def elimination_match_rate(shares, struct, regime):
 
 
 def build_mask(J: np.ndarray) -> np.ndarray:
-    """Binary mask (W x N): 1 if contestant is active in week (judge total > 0), else 0."""
     mask = (J > 0).astype(float)
     return mask
 
 
 def softmax_masked(p: torch.Tensor, mask: torch.Tensor) -> torch.Tensor:
-    """
-    Softmax over contestants *within a week*, ignoring inactive contestants by assigning
-    them a very negative logit (-1e9).
-    """
     neg_inf = torch.full_like(p, -1e9)
     masked = torch.where(mask > 0, p, neg_inf)
     return torch.softmax(masked, dim=1)
@@ -238,23 +161,6 @@ def loss_for_season(
     beta_final_raw: torch.Tensor,
     regime: str,
 ) -> torch.Tensor:
-    """
-    Core training objective for one season.
-
-    Parameters (high-level):
-    - p: (W x N) unconstrained logits whose masked softmax gives weekly fan shares
-    - J: (W x N) weekly judges totals (zeros after elimination)
-    - elim_week: elimination week per contestant (1-indexed), inferred from `results`
-    - active_mask: (W x N) 1 for active contestants
-    - Jz: (W x N) z-scored judges totals within each week for dynamics regularization
-    - regime: determines whether \"percent\" or \"rank\" or \"bottom\" rules apply
-
-    The loss includes:
-    - dynamics regularization (encourages p[w] to be predictable from p[w-1] + judges signal)
-    - L2 regularization on p (prevents extreme logits)
-    - per-week elimination likelihood + hard constraints
-    - optional finals placement constraint
-    """
     W, N = J.shape
     s = softmax_masked(p, active_mask)
     loss = torch.tensor(0.0, device=p.device)
@@ -266,13 +172,10 @@ def loss_for_season(
             pred = p[w - 1] + gamma * Jz[w]
             loss = loss + LAM_DYN * torch.mean((p[w, shared] - pred[shared]) ** 2)
 
-    # L2 prior on latent logits to prevent extreme vote-share distributions.
+    # L2 prior on latent states to prevent extreme logits
     loss = loss + LAM_P * torch.mean((p * active_mask) ** 2)
 
-    # Likelihood (soft elimination) + hard-constraint penalties:
-    # - compute a per-week \"risk\" score that should be high for eliminated contestants.
-    # - add log-softmax loss so eliminated are likely under risk.
-    # - add large hinge penalties so eliminated risk > non-eliminated risk (hard ordering).
+    # Likelihood (soft elimination) + hard-constraint penalties
     for w in range(W):
         idx = torch.where(active_mask[w] > 0)[0]
         if idx.numel() < 2:
@@ -281,10 +184,8 @@ def loss_for_season(
         if not elim:
             continue
         if regime == "percent":
-            # Percent regime uses judges percent in that week.
             q = J[w, idx] / (J[w, idx].sum() + EPS)
         else:
-            # Rank-like regimes approximate judges rank and normalize it to [0,1].
             rJ = torch.from_numpy(
                 pd.Series(J[w, idx].cpu().numpy())
                 .rank(ascending=False, method="first")
@@ -292,7 +193,7 @@ def loss_for_season(
             ).to(p.device)
             q = (rJ - 1) / (rJ.numel() - 1 + EPS)
 
-        # Normalize scales within week so neither term dominates due to scale.
+        # Normalize scales within week to reduce dominance by one term.
         q_z = (q - q.mean()) / (q.std() + EPS)
         log_s = torch.log(s[w, idx] + EPS)
         log_s_z = (log_s - log_s.mean()) / (log_s.std() + EPS)
@@ -308,16 +209,14 @@ def loss_for_season(
         # Entropy regularization (keeps shares plausible, not extreme)
         loss = loss - LAM_ENT * torch.sum(s[w, idx] * torch.log(s[w, idx] + EPS))
 
-        # Hard-constraint penalty: each eliminated contestant should have higher risk
-        # than each non-eliminated contestant (pairwise hinge losses).
+        # Hard-constraint penalty: eliminated should be among worst risk.
         elim_pos = [idx.tolist().index(e) for e in elim]
         non_elim_pos = [i for i in range(idx.numel()) if i not in elim_pos]
         for e_pos in elim_pos:
             for j_pos in non_elim_pos:
                 loss = loss + LAM_HARD * torch.relu(risk[j_pos] - risk[e_pos])
 
-        # Finals placement likelihood (very approximate):
-        # tries to match overall placement ordering using a sequential choice model.
+        # Finals placement likelihood (only on last active week)
     if LAM_FINAL > 0 and placement_rank.numel() == J.shape[1]:
         pr = placement_rank
         valid = torch.where(torch.isfinite(pr))[0]
@@ -359,12 +258,6 @@ def loss_for_season(
 
 
 def fit_season(df_season, week_cols, regime, device):
-    """
-    Fit one season:
-    - build season structure (J, elim_week)
-    - optimize p (weekly logits) and a few global parameters using Adam
-    - optionally run SGLD to sample around the MAP logits for uncertainty bands
-    """
     struct = build_season_struct(df_season, week_cols)
     J = torch.tensor(struct["J"], dtype=torch.float32, device=device)
     active_mask = torch.tensor(build_mask(struct["J"]), dtype=torch.float32, device=device)
@@ -378,7 +271,6 @@ def fit_season(df_season, week_cols, regime, device):
     )
     placement_rank = torch.tensor(placement_rank, dtype=torch.float32, device=device)
 
-    # p[w,i] are unconstrained logits; shares are softmax_masked(p[w], active_mask[w]).
     p = torch.zeros((W, N), dtype=torch.float32, requires_grad=True, device=device)
     a_raw = torch.tensor(0.0, dtype=torch.float32, requires_grad=True, device=device)
     b_raw = torch.tensor(0.0, dtype=torch.float32, requires_grad=True, device=device)
@@ -388,7 +280,6 @@ def fit_season(df_season, week_cols, regime, device):
 
     opt = torch.optim.Adam([p, a_raw, b_raw, gamma_raw, alpha_final_raw, beta_final_raw], lr=LR)
 
-    # MAP-like optimization (gradient descent on the differentiable loss).
     for _ in range(N_STEPS):
         opt.zero_grad()
         loss = loss_for_season(
@@ -411,8 +302,7 @@ def fit_season(df_season, week_cols, regime, device):
     with torch.no_grad():
         s_map = softmax_masked(p, active_mask).cpu().numpy()
 
-    # SGLD samples for uncertainty: inject Gaussian noise into gradient steps
-    # so we sample around a local mode (very approximate posterior).
+    # SGLD samples for uncertainty
     samples = []
     if RUN_SGLD:
         p_sgld = p.detach().clone().requires_grad_(True)
@@ -444,7 +334,6 @@ def fit_season(df_season, week_cols, regime, device):
 
 
 def main() -> None:
-    """Run the full pipeline across seasons and write CSV outputs."""
     df = pd.read_csv(DATA_PATH, na_values=["N/A"])
     week_cols = parse_week_cols(df)
     device = torch.device("cpu")
@@ -468,7 +357,6 @@ def main() -> None:
             }
         )
 
-        # Convert SGLD samples into uncertainty summaries.
         if samples:
             arr = np.stack(samples, axis=0)
             mean = arr.mean(axis=0)
@@ -483,7 +371,6 @@ def main() -> None:
             p10 = shares.copy()
             p90 = shares.copy()
 
-        # Emit one row per (season, week, contestant) for active contestants.
         for w in range(struct["max_week"]):
             for i, name in enumerate(struct["names"]):
                 if shares[w, i] > 0:
