@@ -1,17 +1,18 @@
 import os
 import re
 
-os.environ.setdefault("MPLCONFIGDIR", "0_data_exploration/.mplconfig")
+os.environ.setdefault("MPLCONFIGDIR", "AR-EDA/.mplconfig")
 
 import matplotlib
+import numpy as np
 import pandas as pd
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 
-DATA_PATH = "data.csv"
-FIG_PATH = "0_data_exploration/eda_summary.png"
+DATA_PATH = "Data/2026_MCM_Problem_C_Data.csv"
+FIG_PATH = "AR-EDA/eda_summary.png"
 
 
 def load_data(path: str) -> pd.DataFrame:
@@ -138,7 +139,7 @@ def make_plots(df: pd.DataFrame, long_df: pd.DataFrame) -> None:
     )
     age_place["placement"] = pd.to_numeric(age_place["placement"], errors="coerce")
 
-    fig, axes = plt.subplots(2, 2, figsize=(12, 9))
+    fig, axes = plt.subplots(2, 3, figsize=(15, 9))
     ax = axes[0, 0]
     ax.bar(season_counts.index, season_counts.values, color="#4C72B0")
     ax.set_title("Contestants per Season")
@@ -163,17 +164,126 @@ def make_plots(df: pd.DataFrame, long_df: pd.DataFrame) -> None:
     ax.set_ylabel("Count")
 
     ax = axes[1, 1]
+    contestant_avg = (
+        long_df.groupby(["season", "celebrity_name"])["score_active"]
+        .mean()
+        .reset_index()
+    )
+    contestant_avg = contestant_avg.merge(
+        df[["season", "celebrity_name", "placement"]], on=["season", "celebrity_name"]
+    )
+    contestant_avg["placement"] = pd.to_numeric(
+        contestant_avg["placement"], errors="coerce"
+    )
     ax.scatter(
-        age_place["celebrity_age_during_season"],
-        age_place["placement"],
+        contestant_avg["score_active"],
+        contestant_avg["placement"],
         s=18,
         alpha=0.5,
         color="#8172B3",
     )
     ax.invert_yaxis()
-    ax.set_title("Age vs Final Placement (lower is better)")
-    ax.set_xlabel("Age")
+    ax.set_title("Avg Judge Score vs Final Placement")
+    ax.set_xlabel("Avg Judge Score (active weeks)")
     ax.set_ylabel("Placement")
+
+    ax = axes[0, 2]
+    elim_week = parse_elimination_week(df["results"])
+    elim_map = (
+        df.assign(elim_week=elim_week)
+        .dropna(subset=["elim_week"])
+        .set_index(["season", "celebrity_name"])["elim_week"]
+    )
+    weekly_scores = (
+        long_df[long_df["score_active"].notna()]
+        .groupby(["season", "week", "celebrity_name"])["score_active"]
+        .mean()
+        .reset_index()
+    )
+    weekly_min = (
+        weekly_scores.groupby(["season", "week"])["score_active"]
+        .min()
+        .reset_index()
+        .rename(columns={"score_active": "week_min"})
+    )
+    elim_scores = weekly_scores.merge(
+        elim_map.rename("elim_week").reset_index(),
+        on=["season", "celebrity_name"],
+        how="inner",
+    )
+    elim_scores = elim_scores[elim_scores["week"] == elim_scores["elim_week"]]
+    elim_scores = elim_scores.merge(weekly_min, on=["season", "week"], how="left")
+    elim_scores["risk_gap"] = elim_scores["score_active"] - elim_scores["week_min"]
+    risk_gap = (
+        elim_scores.groupby(["season", "celebrity_name"])["risk_gap"]
+        .mean()
+        .reset_index()
+    )
+    risk_gap = risk_gap.merge(
+        df[["season", "celebrity_name", "placement"]], on=["season", "celebrity_name"]
+    )
+    risk_gap["placement"] = pd.to_numeric(risk_gap["placement"], errors="coerce")
+    risk_gap["placement_rank"] = (
+        risk_gap.groupby("season")["placement"]
+        .rank(ascending=True, method="average")
+    )
+    ax.scatter(
+        risk_gap["risk_gap"],
+        risk_gap["placement_rank"],
+        s=18,
+        alpha=0.5,
+        color="#4C72B0",
+    )
+    ax.invert_yaxis()
+    ax.axvline(0, color="#999999", linewidth=1, linestyle="--")
+    ax.set_title("Elimination Risk Gap vs Final Placement")
+    ax.set_xlabel("Eliminated Score − Week Min (avg)")
+    ax.set_ylabel("Final Placement Rank")
+
+    ax = axes[1, 2]
+    weekly_means = (
+        long_df.groupby(["season", "week", "celebrity_name"])["score_active"]
+        .mean()
+        .reset_index()
+        .dropna(subset=["score_active"])
+    )
+    avg_judge = (
+        weekly_means.groupby(["season", "celebrity_name"])["score_active"]
+        .mean()
+        .reset_index()
+    )
+    avg_judge["judge_rank"] = (
+        avg_judge.groupby("season")["score_active"]
+        .rank(ascending=False, method="average")
+    )
+    placement_rank = (
+        df[["season", "celebrity_name", "placement"]]
+        .assign(placement=lambda d: pd.to_numeric(d["placement"], errors="coerce"))
+        .dropna(subset=["placement"])
+        .assign(
+            placement_rank=lambda d: d.groupby("season")["placement"]
+            .rank(ascending=True, method="average")
+        )
+    )
+    fan_gap = avg_judge.merge(
+        placement_rank, on=["season", "celebrity_name"], how="inner"
+    )
+    fan_gap["fan_boost"] = fan_gap["judge_rank"] - fan_gap["placement_rank"]
+    sc = ax.scatter(
+        fan_gap["judge_rank"],
+        fan_gap["placement_rank"],
+        c=fan_gap["fan_boost"],
+        cmap="coolwarm",
+        s=18,
+        alpha=0.6,
+    )
+    max_rank = max(fan_gap["judge_rank"].max(), fan_gap["placement_rank"].max())
+    ax.plot([1, max_rank], [1, max_rank], color="#999999", linestyle="--")
+    ax.invert_yaxis()
+    ax.set_title("Placement vs Judge Rank (Fan Boost Colored)")
+    ax.set_xlabel("Avg Judge Rank (lower = better judges)")
+    ax.set_ylabel("Final Placement Rank (lower = better)")
+    fig.colorbar(sc, ax=ax, label="Judge Rank − Placement Rank")
 
     fig.suptitle("DWTS Data – Initial EDA", fontsize=14)
     fig.tight_layout()
