@@ -11,18 +11,18 @@ except ImportError as exc:
 
 
 DATA_PATH = "Data/2026_MCM_Problem_C_Data.csv"
-OUT_PATH = "AR-Problem1_Bayes/inferred_shares_bayes.csv"
-UNC_PATH = "AR-Problem1_Bayes/inferred_shares_bayes_unc.csv"
-MATCH_PATH = "AR-Problem1_Bayes/elimination_match_bayes.csv"
+OUT_PATH = "AR-Problem1_Bayes/results/bayesian/inferred_shares_bayes.csv"
+UNC_PATH = "AR-Problem1_Bayes/results/bayesian/inferred_shares_bayes_unc.csv"
+MATCH_PATH = "AR-Problem1_Bayes/results/bayesian/elimination_match_bayes.csv"
 
 EPS = 1e-8
 TEMP = 0.7
-TEMP_PLACEMENT = 0.6
+RANK_TAU = 10.0
 LAM_DYN = 0.5
-LAM_P = 0.1
+LAM_ETA = 1.0
 LAM_HARD = 150.0
 LAM_FINAL = 10.0
-LAM_ENT = 0.05
+LAM_COEF = 0.1
 
 LR = 0.05
 N_STEPS = 250
@@ -92,6 +92,25 @@ def compute_jz(J: np.ndarray) -> np.ndarray:
     return Jz
 
 
+def build_feature_indices(df_season: pd.DataFrame) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
+    age = pd.to_numeric(
+        df_season["celebrity_age_during_season"], errors="coerce"
+    ).to_numpy()
+    age_mean = np.nanmean(age)
+    age_std = np.nanstd(age)
+    age_z = (age - age_mean) / (age_std + EPS)
+
+    industry = df_season["celebrity_industry"].fillna("Unknown").tolist()
+    industry_ids = {v: i for i, v in enumerate(sorted(set(industry)))}
+    industry_idx = np.array([industry_ids[v] for v in industry], dtype=int)
+
+    partners = df_season["ballroom_partner"].fillna("Unknown").tolist()
+    partner_ids = {v: i for i, v in enumerate(sorted(set(partners)))}
+    partner_idx = np.array([partner_ids[v] for v in partners], dtype=int)
+
+    return age_z, industry_idx, partner_idx
+
+
 def elimination_match_rate(shares, struct, regime):
     J = struct["J"]
     elim_week = struct["elim_week"]
@@ -154,16 +173,35 @@ def loss_for_season(
     active_mask: torch.Tensor,
     Jz: torch.Tensor,
     placement_rank: torch.Tensor,
-    a_raw: torch.Tensor,
-    b_raw: torch.Tensor,
+    age_z: torch.Tensor,
+    industry_idx: torch.Tensor,
+    partner_idx: torch.Tensor,
+    beta0: torch.Tensor,
+    beta_age: torch.Tensor,
+    beta_judge: torch.Tensor,
+    beta_industry: torch.Tensor,
+    beta_partner: torch.Tensor,
+    b_contestant: torch.Tensor,
     gamma_raw: torch.Tensor,
-    alpha_final_raw: torch.Tensor,
-    beta_final_raw: torch.Tensor,
     regime: str,
 ) -> torch.Tensor:
     W, N = J.shape
     s = softmax_masked(p, active_mask)
     loss = torch.tensor(0.0, device=p.device)
+
+    for w in range(W):
+        shared = active_mask[w] > 0
+        if not shared.any():
+            continue
+        eta = (
+            beta0
+            + beta_age * age_z
+            + beta_judge * Jz[w]
+            + beta_industry[industry_idx]
+            + beta_partner[partner_idx]
+            + b_contestant
+        )
+        loss = loss + LAM_ETA * torch.mean((p[w, shared] - eta[shared]) ** 2)
 
     gamma = torch.tanh(gamma_raw)
     for w in range(1, W):
@@ -172,8 +210,14 @@ def loss_for_season(
             pred = p[w - 1] + gamma * Jz[w]
             loss = loss + LAM_DYN * torch.mean((p[w, shared] - pred[shared]) ** 2)
 
-    # L2 prior on latent states to prevent extreme logits
-    loss = loss + LAM_P * torch.mean((p * active_mask) ** 2)
+    # L2 prior on coefficients to prevent drift
+    loss = loss + LAM_COEF * (
+        torch.mean(beta_age**2)
+        + torch.mean(beta_judge**2)
+        + torch.mean(beta_industry**2)
+        + torch.mean(beta_partner**2)
+        + torch.mean(b_contestant**2)
+    )
 
     # Likelihood (soft elimination) + hard-constraint penalties
     for w in range(W):
@@ -185,65 +229,52 @@ def loss_for_season(
             continue
         if regime == "percent":
             q = J[w, idx] / (J[w, idx].sum() + EPS)
+            C = q + s[w, idx]
+            logits = -C / TEMP
         else:
             rJ = torch.from_numpy(
                 pd.Series(J[w, idx].cpu().numpy())
                 .rank(ascending=False, method="first")
                 .to_numpy()
             ).to(p.device)
-            q = (rJ - 1) / (rJ.numel() - 1 + EPS)
-
-        # Normalize scales within week to reduce dominance by one term.
-        q_z = (q - q.mean()) / (q.std() + EPS)
-        log_s = torch.log(s[w, idx] + EPS)
-        log_s_z = (log_s - log_s.mean()) / (log_s.std() + EPS)
-
-        a = torch.nn.functional.softplus(a_raw)
-        b = torch.nn.functional.softplus(b_raw)
-        risk = a * q_z - b * log_s_z
-
-        logits = risk / TEMP
+            rJ = (rJ - 1) / (rJ.numel() - 1 + EPS)
+            s_w = s[w, idx]
+            diff = (s_w.unsqueeze(0) - s_w.unsqueeze(1)) * RANK_TAU
+            rF = 1.0 + torch.sigmoid(diff).sum(dim=1)
+            rF = (rF - 1) / (rF.numel() - 1 + EPS)
+            R = rJ + rF
+            logits = R / TEMP
         log_probs = torch.log_softmax(logits, dim=0)
         loss = loss - torch.sum(log_probs[[idx.tolist().index(e) for e in elim]])
 
-        # Entropy regularization (keeps shares plausible, not extreme)
-        loss = loss - LAM_ENT * torch.sum(s[w, idx] * torch.log(s[w, idx] + EPS))
 
         # Hard-constraint penalty: eliminated should be among worst risk.
         elim_pos = [idx.tolist().index(e) for e in elim]
         non_elim_pos = [i for i in range(idx.numel()) if i not in elim_pos]
         for e_pos in elim_pos:
             for j_pos in non_elim_pos:
-                loss = loss + LAM_HARD * torch.relu(risk[j_pos] - risk[e_pos])
+                if regime == "percent":
+                    loss = loss + LAM_HARD * torch.relu(C[e_pos] - C[j_pos])
+                else:
+                    loss = loss + LAM_HARD * torch.relu(R[j_pos] - R[e_pos])
 
         # Finals placement likelihood (only on last active week)
     if LAM_FINAL > 0 and placement_rank.numel() == J.shape[1]:
         pr = placement_rank
         valid = torch.where(torch.isfinite(pr))[0]
         if valid.numel() >= 2:
-            alpha_final = torch.nn.functional.softplus(alpha_final_raw)
-            beta_final = torch.nn.functional.softplus(beta_final_raw)
-            S = torch.zeros_like(pr)
+            season_score = torch.zeros_like(pr)
             for w in range(W):
                 idx = torch.where(active_mask[w] > 0)[0]
                 if idx.numel() < 2:
                     continue
-                if regime == "percent":
-                    q = J[w, idx] / (J[w, idx].sum() + EPS)
-                else:
-                    rJ = torch.from_numpy(
-                        pd.Series(J[w, idx].cpu().numpy())
-                        .rank(ascending=False, method="first")
-                        .to_numpy()
-                    ).to(p.device).float()
-                    q = (rJ - 1) / (rJ.numel() - 1 + EPS)
-                S[idx] = S[idx] + alpha_final * (1 - q) + beta_final * torch.log(
-                    s[w, idx] + EPS
-                )
+                q = J[w, idx] / (J[w, idx].sum() + EPS)
+                C = q + s[w, idx]
+                season_score[idx] = season_score[idx] + C
             order = valid[torch.argsort(pr[valid], descending=False)]
             remaining = valid.clone()
             for pos in order:
-                logits = S[remaining] / TEMP_PLACEMENT
+                logits = season_score[remaining] / TEMP
                 log_probs = torch.log_softmax(logits, dim=0)
                 choose_idx = torch.where(remaining == pos)[0][0]
                 loss = loss - LAM_FINAL * log_probs[choose_idx]
@@ -254,6 +285,13 @@ def loss_for_season(
                 )
                 if remaining.numel() < 2:
                     break
+            # Hard ordering for placements (winner should have highest season_score)
+            for i in valid.tolist():
+                for j in valid.tolist():
+                    if pr[i] < pr[j]:
+                        loss = loss + LAM_FINAL * torch.relu(
+                            season_score[j] - season_score[i]
+                        )
     return loss
 
 
@@ -264,6 +302,10 @@ def fit_season(df_season, week_cols, regime, device):
     W, N = J.shape
 
     Jz = torch.tensor(compute_jz(struct["J"]), dtype=torch.float32, device=device)
+    age_z, industry_idx, partner_idx = build_feature_indices(df_season)
+    age_z = torch.tensor(age_z, dtype=torch.float32, device=device)
+    industry_idx = torch.tensor(industry_idx, dtype=torch.long, device=device)
+    partner_idx = torch.tensor(partner_idx, dtype=torch.long, device=device)
     placement_rank = (
         pd.to_numeric(df_season["placement"], errors="coerce")
         .rank(ascending=True, method="average")
@@ -272,13 +314,36 @@ def fit_season(df_season, week_cols, regime, device):
     placement_rank = torch.tensor(placement_rank, dtype=torch.float32, device=device)
 
     p = torch.zeros((W, N), dtype=torch.float32, requires_grad=True, device=device)
-    a_raw = torch.tensor(0.0, dtype=torch.float32, requires_grad=True, device=device)
-    b_raw = torch.tensor(0.0, dtype=torch.float32, requires_grad=True, device=device)
+    beta0 = torch.tensor(0.0, dtype=torch.float32, requires_grad=True, device=device)
+    beta_age = torch.tensor(0.0, dtype=torch.float32, requires_grad=True, device=device)
+    beta_judge = torch.tensor(0.0, dtype=torch.float32, requires_grad=True, device=device)
+    beta_industry = torch.zeros(
+        int(industry_idx.max().item() + 1),
+        dtype=torch.float32,
+        requires_grad=True,
+        device=device,
+    )
+    beta_partner = torch.zeros(
+        int(partner_idx.max().item() + 1),
+        dtype=torch.float32,
+        requires_grad=True,
+        device=device,
+    )
+    b_contestant = torch.zeros(N, dtype=torch.float32, requires_grad=True, device=device)
     gamma_raw = torch.tensor(0.0, dtype=torch.float32, requires_grad=True, device=device)
-    alpha_final_raw = torch.tensor(0.0, dtype=torch.float32, requires_grad=True, device=device)
-    beta_final_raw = torch.tensor(0.0, dtype=torch.float32, requires_grad=True, device=device)
-
-    opt = torch.optim.Adam([p, a_raw, b_raw, gamma_raw, alpha_final_raw, beta_final_raw], lr=LR)
+    opt = torch.optim.Adam(
+        [
+            p,
+            beta0,
+            beta_age,
+            beta_judge,
+            beta_industry,
+            beta_partner,
+            b_contestant,
+            gamma_raw,
+        ],
+        lr=LR,
+    )
 
     for _ in range(N_STEPS):
         opt.zero_grad()
@@ -289,11 +354,16 @@ def fit_season(df_season, week_cols, regime, device):
             active_mask,
             Jz,
             placement_rank,
-            a_raw,
-            b_raw,
+            age_z,
+            industry_idx,
+            partner_idx,
+            beta0,
+            beta_age,
+            beta_judge,
+            beta_industry,
+            beta_partner,
+            b_contestant,
             gamma_raw,
-            alpha_final_raw,
-            beta_final_raw,
             regime,
         )
         loss.backward()
@@ -314,11 +384,16 @@ def fit_season(df_season, week_cols, regime, device):
                 active_mask,
                 Jz,
                 placement_rank.detach(),
-                a_raw.detach(),
-                b_raw.detach(),
+                age_z.detach(),
+                industry_idx.detach(),
+                partner_idx.detach(),
+                beta0.detach(),
+                beta_age.detach(),
+                beta_judge.detach(),
+                beta_industry.detach(),
+                beta_partner.detach(),
+                b_contestant.detach(),
                 gamma_raw.detach(),
-                alpha_final_raw.detach(),
-                beta_final_raw.detach(),
                 regime,
             )
             loss.backward()
