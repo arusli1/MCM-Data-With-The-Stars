@@ -227,20 +227,47 @@ def train_and_cv(X, y, groups, tune=False):
     
     return all_metrics, final_model
 
+def format_feature_name(name):
+    # Mapping for common features
+    mapping = {
+        'celebrity_age_during_season': 'Celebrity Age During Season',
+        'judge_mean_w1_3': 'Judge Mean (Weeks 1-3)',
+        'fan_mean_w1_3': 'Fan Mean (Weeks 1-3)',
+        'judge_slope_w1_3': 'Judge Improvement (Weeks 1-3)',
+        'fan_slope_w1_3': 'Fan Improvement (Weeks 1-3)',
+        'judge_week1': 'Judge Score (Week 1)',
+        'fan_week1': 'Fan Score (Week 1)'
+    }
+    if name in mapping:
+        return mapping[name]
+    
+    # Handle categorical (one-hot encoded)
+    prefixes = ['celebrity_industry_', 'ballroom_partner_', 'celebrity_homestate_', 'celebrity_homecountry/region_']
+    for p in prefixes:
+        if name.startswith(p):
+            category = p[:-1].replace('_', ' ').title().replace('Homecountry', 'Home Country')
+            value = name[len(p):].replace('_', ' ')
+            return f"{category}: {value}"
+    
+    # Fallback
+    return name.replace('_', ' ').title()
+
 def run_shap_analysis(model, X, target_name):
     explainer = shap.TreeExplainer(model)
     shap_values = explainer.shap_values(X)
     
-    # Summary Plot
+    # Summary Plot (Uses the feature names from X, so we need to rename X columns temporarily or use the feature_names arg)
+    feature_names_clean = [format_feature_name(c) for c in X.columns]
+    
     plt.figure(figsize=(12, 8))
-    shap.summary_plot(shap_values, X, show=False)
+    shap.summary_plot(shap_values, X, feature_names=feature_names_clean, show=False)
     plt.tight_layout()
     plt.savefig(f"{OUTPUT_DIR}/shap_summary_{target_name}.png")
     plt.close()
     
     # Importance CSV
     importance = pd.DataFrame({
-        'feature': X.columns,
+        'feature': feature_names_clean,
         'mean_abs_shap': np.abs(shap_values).mean(axis=0)
     }).sort_values('mean_abs_shap', ascending=False)
     importance.to_csv(f"{OUTPUT_DIR}/shap_importance_{target_name}.csv", index=False)
@@ -253,7 +280,7 @@ def run_shap_analysis(model, X, target_name):
         if feat in X.columns:
             plt.figure(figsize=(8, 6))
             shap.dependence_plot(feat, shap_values, X, show=False)
-            plt.title(f"SHAP Dependence: {feat} ({target_name})")
+            plt.title(f"SHAP Dependence: {format_feature_name(feat)} ({target_name.title()})")
             plt.tight_layout()
             plt.savefig(f"{OUTPUT_DIR}/shap_dependence_{feat}_{target_name}.png")
             plt.close()
@@ -270,12 +297,12 @@ def run_shap_analysis(model, X, target_name):
         
         # Plot beeswarm for just these categorical features
         plt.figure(figsize=(10, 6))
-        # shap 0.4x+ uses shap_values as an Explanation object or we handle indices
-        # For simplicity, we can use a bar-like plot of distributions if beeswarm is tricky to subselect
         temp_shap = shap_values[:, col_indices]
         temp_X = X.iloc[:, col_indices]
-        shap.summary_plot(temp_shap, temp_X, plot_type="violin", show=False)
-        plt.title(f"SHAP Effects: {base_cat} ({target_name})")
+        # Format the column names for the sub-plot
+        temp_feat_names = [format_feature_name(c) for c in temp_X.columns]
+        shap.summary_plot(temp_shap, temp_X, feature_names=temp_feat_names, plot_type="violin", show=False)
+        plt.title(f"SHAP Effects: {format_feature_name(base_cat + '_')} ({target_name.title()})")
         plt.tight_layout()
         plt.savefig(f"{OUTPUT_DIR}/shap_cat_{base_cat.replace('/', '_')}_{target_name}.png")
         plt.close()
@@ -289,32 +316,52 @@ def run_shap_analysis(model, X, target_name):
         else:
             feature_directions.append(0)
     
-    importance['direction'] = feature_directions
+    # We need to map directions back to the cleaned importance names if we are using cleaned names,
+    # but 'importance' already has the clean names.
+    # Re-calculate importance to ensure we have directions matched to clean names correctly.
+    clean_importance = pd.DataFrame({
+        'feature': feature_names_clean,
+        'mean_abs_shap': np.abs(shap_values).mean(axis=0),
+        'direction': feature_directions
+    }).sort_values('mean_abs_shap', ascending=False)
     
-    top_pos = importance[importance['direction'] > 0].head(10)
-    top_neg = importance[importance['direction'] < 0].head(10)
+    top_pos = clean_importance[clean_importance['direction'] > 0].head(10)
+    top_neg = clean_importance[clean_importance['direction'] < 0].head(10)
     
     plt.figure(figsize=(10, 6))
     sns.barplot(data=top_pos, x='mean_abs_shap', y='feature', palette='Greens_r')
-    plt.title(f"Top 10 Positive Factors - {target_name}")
+    plt.title(f"Top 10 Positive Factors - {target_name.title()}")
+    plt.xlabel("Mean Absolute SHAP Value (Impact Magnitude)")
+    plt.ylabel("Factor")
     plt.savefig(f"{OUTPUT_DIR}/shap_top10_pos_{target_name}.png")
     plt.close()
     
     plt.figure(figsize=(10, 6))
     sns.barplot(data=top_neg, x='mean_abs_shap', y='feature', palette='Reds_r')
-    plt.title(f"Top 10 Negative Factors - {target_name}")
+    plt.title(f"Top 10 Negative Factors - {target_name.title()}")
+    plt.xlabel("Mean Absolute SHAP Value (Impact Magnitude)")
+    plt.ylabel("Factor")
     plt.savefig(f"{OUTPUT_DIR}/shap_top10_neg_{target_name}.png")
     plt.close()
     
     # 4. Per-characteristic graphs (focused SHAP visualization)
     chars = ['ballroom_partner', 'celebrity_industry', 'celebrity_homestate', 'celebrity_homecountry/region', 'celebrity_age_during_season']
     for char in chars:
-        related_cols = [c for c in X.columns if c.startswith(char)]
-        if not related_cols: continue
-        char_importance = importance[importance['feature'].isin(related_cols)].sort_values('mean_abs_shap', ascending=False)
+        # Use clean_importance which already has clean names
+        # But we need to filter by original prefix. Let's do it slightly differently.
+        related_indices = [i for i, c in enumerate(X.columns) if c.startswith(char)]
+        if not related_indices: continue
+        
+        char_importance = pd.DataFrame({
+            'feature': [feature_names_clean[i] for i in related_indices],
+            'mean_abs_shap': [np.abs(shap_values[:, i]).mean() for i in related_indices]
+        }).sort_values('mean_abs_shap', ascending=False)
+        
         plt.figure(figsize=(10, 6))
         sns.barplot(data=char_importance.head(10), x='mean_abs_shap', y='feature', palette='viridis')
-        plt.title(f"Impact of {char} - {target_name}")
+        plt.title(f"Impact of {format_feature_name(char + '_')} - {target_name.title()}")
+        plt.xlabel("Mean Absolute SHAP Value")
+        plt.ylabel("Category")
         plt.tight_layout()
         plt.savefig(f"{OUTPUT_DIR}/shap_feature_{char.replace('/', '_')}_{target_name}.png")
         plt.close()
@@ -380,12 +427,15 @@ def pro_boost_analysis(df, features_no_partner, target_col='success_score'):
     
     # Plot
     plt.figure(figsize=(10, 12)) # Taller for partners
-    plt.errorbar(partner_res['mean'], partner_res['ballroom_partner'], 
+    # Format partner names for y-axis
+    clean_partner_names = [p.replace('_', ' ') if p != 'Other_Partner' else 'Other Professional Partner' for p in partner_res['ballroom_partner']]
+    plt.errorbar(partner_res['mean'], clean_partner_names, 
                  xerr=[partner_res['mean'] - partner_res['ci_lower'], partner_res['ci_upper'] - partner_res['mean']],
                  fmt='o', color='royalblue', capsize=5)
     plt.axvline(0, color='red', linestyle='--')
-    plt.xlabel('Mean Outperformance (Residuals)')
-    plt.title('Professional Dancer Impact (Residualized Success)')
+    plt.xlabel('Mean Outcome Boost (Residuals)')
+    plt.ylabel('Professional Dancer')
+    plt.title('Professional Dancer Impact (Success Outperformance)')
     plt.tight_layout()
     plt.savefig(f"{OUTPUT_DIR}/pro_boost_residuals.png")
     plt.close()

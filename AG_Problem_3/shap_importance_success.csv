@@ -1,52 +1,52 @@
 feature,mean_abs_shap
-judge_mean_w1_3,0.09460051
-fan_mean_w1_3,0.05955365
-celebrity_age_during_season,0.050371636
-fan_week1,0.028859654
-fan_slope_w1_3,0.023259208
-judge_week1,0.016538056
-celebrity_industry_Model,0.0060813567
-ballroom_partner_Derek Hough,0.0051146885
-judge_slope_w1_3,0.005019056
-ballroom_partner_Other_Partner,0.0048574563
-ballroom_partner_Cheryl Burke,0.003916308
-celebrity_homestate_Pennsylvania,0.0017735921
-celebrity_industry_Singer/Rapper,0.0015141107
-celebrity_industry_Comedian,0.0013108517
-celebrity_homecountry/region_Other,0.00077131425
-celebrity_homestate_Ohio,0.00060606474
-ballroom_partner_Mark Ballas,0.0004610999
-celebrity_industry_Radio Personality,0.00039792556
-celebrity_homestate_California,0.00027198702
-celebrity_homestate_Texas,0.00025582104
-ballroom_partner_Karina Smirnoff,0.0002192765
-celebrity_homestate_Illinois,0.0001913918
-ballroom_partner_Sharna Burgess,0.00018079455
-celebrity_industry_Other,0.00017040086
-ballroom_partner_Artem Chigvintsev,9.091559e-05
-celebrity_industry_Athlete,8.554339e-05
-celebrity_homestate_Georgia,8.045866e-05
-ballroom_partner_Tony Dovolani,5.3282125e-05
-celebrity_homestate_New York,3.7435093e-05
-ballroom_partner_Maksim Chmerkoskiy,2.2951377e-05
-celebrity_homecountry/region_Italy,2.2192033e-05
-ballroom_partner_Emma Slater,1.8863242e-05
-celebrity_homestate_Unknown,4.2099146e-06
-ballroom_partner_Kym Johnson,0.0
-ballroom_partner_Peta Murgatroyd,0.0
-ballroom_partner_Sasha Farber,0.0
-ballroom_partner_Gleb Savchenko,0.0
-ballroom_partner_Valentin Chmerkovskiy,0.0
-celebrity_homestate_Other,0.0
-celebrity_homecountry/region_United States,0.0
-celebrity_homecountry/region_England,0.0
-celebrity_homecountry/region_Canada,0.0
-celebrity_homecountry/region_Australia,0.0
-celebrity_homestate_Michigan,0.0
-celebrity_homestate_Florida,0.0
-celebrity_industry_TV Personality,0.0
-celebrity_industry_Social Media Personality,0.0
-celebrity_industry_Racing Driver,0.0
-celebrity_industry_Entrepreneur,0.0
-celebrity_industry_Actor/Actress,0.0
-ballroom_partner_Witney Carson,0.0
+Judge Mean (Weeks 1-3),0.09460051
+Fan Mean (Weeks 1-3),0.05955365
+Celebrity Age During Season,0.050371636
+Fan Score (Week 1),0.028859654
+Fan Improvement (Weeks 1-3),0.023259208
+Judge Score (Week 1),0.016538056
+Celebrity Industry: Model,0.0060813567
+Ballroom Partner: Derek Hough,0.0051146885
+Judge Improvement (Weeks 1-3),0.005019056
+Ballroom Partner: Other Partner,0.0048574563
+Ballroom Partner: Cheryl Burke,0.003916308
+Celebrity Homestate: Pennsylvania,0.0017735921
+Celebrity Industry: Singer/Rapper,0.0015141107
+Celebrity Industry: Comedian,0.0013108517
+Celebrity Home Country/Region: Other,0.00077131425
+Celebrity Homestate: Ohio,0.00060606474
+Ballroom Partner: Mark Ballas,0.0004610999
+Celebrity Industry: Radio Personality,0.00039792556
+Celebrity Homestate: California,0.00027198702
+Celebrity Homestate: Texas,0.00025582104
+Ballroom Partner: Karina Smirnoff,0.0002192765
+Celebrity Homestate: Illinois,0.0001913918
+Ballroom Partner: Sharna Burgess,0.00018079455
+Celebrity Industry: Other,0.00017040086
+Ballroom Partner: Artem Chigvintsev,9.091559e-05
+Celebrity Industry: Athlete,8.554339e-05
+Celebrity Homestate: Georgia,8.045866e-05
+Ballroom Partner: Tony Dovolani,5.3282125e-05
+Celebrity Homestate: New York,3.7435093e-05
+Ballroom Partner: Maksim Chmerkoskiy,2.2951377e-05
+Celebrity Home Country/Region: Italy,2.2192033e-05
+Ballroom Partner: Emma Slater,1.8863242e-05
+Celebrity Homestate: Unknown,4.2099146e-06
+Ballroom Partner: Kym Johnson,0.0
+Ballroom Partner: Peta Murgatroyd,0.0
+Ballroom Partner: Sasha Farber,0.0
+Ballroom Partner: Gleb Savchenko,0.0
+Ballroom Partner: Valentin Chmerkovskiy,0.0
+Celebrity Homestate: Other,0.0
+Celebrity Home Country/Region: United States,0.0
+Celebrity Home Country/Region: England,0.0
+Celebrity Home Country/Region: Canada,0.0
+Celebrity Home Country/Region: Australia,0.0
+Celebrity Homestate: Michigan,0.0
+Celebrity Homestate: Florida,0.0
+Celebrity Industry: TV Personality,0.0
+Celebrity Industry: Social Media Personality,0.0
+Celebrity Industry: Racing Driver,0.0
+Celebrity Industry: Entrepreneur,0.0
+Celebrity Industry: Actor/Actress,0.0
+Ballroom Partner: Witney Carson,0.0

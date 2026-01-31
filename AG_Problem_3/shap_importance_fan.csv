@@ -1,46 +1,46 @@
 feature,mean_abs_shap
-celebrity_age_during_season,0.013992623
-ballroom_partner_Derek Hough,0.004850775
-celebrity_homestate_Other,0.0044488558
-celebrity_homestate_California,0.0024964022
-ballroom_partner_Valentin Chmerkovskiy,0.0016070991
-celebrity_industry_Actor/Actress,0.0014503823
-celebrity_homestate_Georgia,0.0014007663
-ballroom_partner_Other_Partner,0.0013307871
-celebrity_industry_TV Personality,0.0012503183
-celebrity_industry_Singer/Rapper,0.0012454861
-ballroom_partner_Mark Ballas,0.0012440843
-ballroom_partner_Maksim Chmerkoskiy,0.0011981918
-ballroom_partner_Gleb Savchenko,0.0011091569
-ballroom_partner_Emma Slater,0.001067274
-celebrity_homestate_Pennsylvania,0.0010604752
-celebrity_industry_Athlete,0.0010573865
-celebrity_homecountry/region_Canada,0.0008327962
-celebrity_industry_Model,0.0007527409
-celebrity_industry_Comedian,0.00074684806
-ballroom_partner_Peta Murgatroyd,0.0007466391
-celebrity_homestate_Texas,0.0007309065
-celebrity_homestate_New York,0.00067396404
-celebrity_industry_Racing Driver,0.00064214977
-ballroom_partner_Karina Smirnoff,0.0006392261
-celebrity_industry_Other,0.0006238994
-ballroom_partner_Kym Johnson,0.0005791856
-celebrity_homestate_Illinois,0.00048191196
-ballroom_partner_Sharna Burgess,0.00046225777
-celebrity_homecountry/region_Other,0.0004241288
-celebrity_homestate_Michigan,0.0004161487
-ballroom_partner_Tony Dovolani,0.0004063448
-ballroom_partner_Cheryl Burke,0.0003855878
-celebrity_homestate_Florida,0.0003807947
-celebrity_homestate_Unknown,0.00035629873
-ballroom_partner_Witney Carson,0.00034274833
-ballroom_partner_Artem Chigvintsev,0.0002618697
-celebrity_homecountry/region_England,0.0002567078
-celebrity_homecountry/region_Australia,0.0002106419
-celebrity_homestate_Ohio,0.0002061157
-ballroom_partner_Sasha Farber,0.00017738201
-celebrity_industry_Entrepreneur,0.00011783361
-celebrity_homecountry/region_Italy,7.1784816e-05
-celebrity_industry_Social Media Personality,5.4519067e-05
-celebrity_industry_Radio Personality,1.736934e-05
-celebrity_homecountry/region_United States,0.0
+Celebrity Age During Season,0.013992623
+Ballroom Partner: Derek Hough,0.004850775
+Celebrity Homestate: Other,0.0044488558
+Celebrity Homestate: California,0.0024964022
+Ballroom Partner: Valentin Chmerkovskiy,0.0016070991
+Celebrity Industry: Actor/Actress,0.0014503823
+Celebrity Homestate: Georgia,0.0014007663
+Ballroom Partner: Other Partner,0.0013307871
+Celebrity Industry: TV Personality,0.0012503183
+Celebrity Industry: Singer/Rapper,0.0012454861
+Ballroom Partner: Mark Ballas,0.0012440843
+Ballroom Partner: Maksim Chmerkoskiy,0.0011981918
+Ballroom Partner: Gleb Savchenko,0.0011091569
+Ballroom Partner: Emma Slater,0.001067274
+Celebrity Homestate: Pennsylvania,0.0010604752
+Celebrity Industry: Athlete,0.0010573865
+Celebrity Home Country/Region: Canada,0.0008327962
+Celebrity Industry: Model,0.0007527409
+Celebrity Industry: Comedian,0.00074684806
+Ballroom Partner: Peta Murgatroyd,0.0007466391
+Celebrity Homestate: Texas,0.0007309065
+Celebrity Homestate: New York,0.00067396404
+Celebrity Industry: Racing Driver,0.00064214977
+Ballroom Partner: Karina Smirnoff,0.0006392261
+Celebrity Industry: Other,0.0006238994
+Ballroom Partner: Kym Johnson,0.0005791856
+Celebrity Homestate: Illinois,0.00048191196
+Ballroom Partner: Sharna Burgess,0.00046225777
+Celebrity Home Country/Region: Other,0.0004241288
+Celebrity Homestate: Michigan,0.0004161487
+Ballroom Partner: Tony Dovolani,0.0004063448
+Ballroom Partner: Cheryl Burke,0.0003855878
+Celebrity Homestate: Florida,0.0003807947
+Celebrity Homestate: Unknown,0.00035629873
+Ballroom Partner: Witney Carson,0.00034274833
+Ballroom Partner: Artem Chigvintsev,0.0002618697
+Celebrity Home Country/Region: England,0.0002567078
+Celebrity Home Country/Region: Australia,0.0002106419
+Celebrity Homestate: Ohio,0.0002061157
+Ballroom Partner: Sasha Farber,0.00017738201
+Celebrity Industry: Entrepreneur,0.00011783361
+Celebrity Home Country/Region: Italy,7.1784816e-05
+Celebrity Industry: Social Media Personality,5.4519067e-05
+Celebrity Industry: Radio Personality,1.736934e-05
+Celebrity Home Country/Region: United States,0.0
