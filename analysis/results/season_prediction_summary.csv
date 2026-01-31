@@ -1,0 +1,35 @@
+season,contestants,mean_abs_error,median_abs_error,predicted_winner,actual_winner
+1,6,1.6666666666666667,1.0,Kelly Monaco,Kelly Monaco
+2,10,2.6,2.0,Stacy Keibler,Drew Lachey
+3,11,2.727272727272727,2.0,Willa Ford,Emmitt Smith
+4,11,2.5454545454545454,2.0,Apolo Anton Ohno,Apolo Anton Ohno
+5,12,4.0,4.0,Sabrina Bryan,Helio Castroneves
+6,12,2.3333333333333335,2.5,Shannon Elizabeth,Kristi Yamaguchi
+7,13,3.230769230769231,3.0,Cody Linley,Brooke Burke
+8,13,2.4615384615384617,2.0,Shawn Johnson,Shawn Johnson
+9,16,4.625,4.5,Louie Vito,Donny Osmond
+10,11,2.1818181818181817,1.0,Evan Lysacek,Nicole Scherzinger
+11,12,2.5,2.0,Kyle Massey,Jennifer Grey
+12,11,3.090909090909091,3.0,Romeo,Hines Ward
+13,12,3.5,2.5,Kristin Cavallari,J.R. Martinez
+14,12,2.8333333333333335,2.5,Roshon Fegan,Donald Driver
+15,13,3.076923076923077,3.0,Shawn Johnson,Melissa Rycroft
+16,12,1.3333333333333333,1.0,Alexandra Raisman,Kellie Pickler
+17,12,3.0,3.0,Amber Riley,Amber Riley
+18,12,2.6666666666666665,2.0,Cody Simpson,Meryl Davis
+19,13,3.230769230769231,3.0,Bethany Mota,Alfonso Ribeiro
+20,12,3.5,2.5,Willow Shields,Rumer Willis
+21,13,2.6153846153846154,2.0,Hayes Grier,Bindi Irwin
+22,12,2.8333333333333335,2.0,Paige VanZant,Nyle DiMarco
+23,13,2.923076923076923,2.0,Laurie Hernandez,Laurie Hernandez
+24,12,2.5,2.0,Normani,Rashad Jennings
+25,13,2.1538461538461537,1.0,Victoria Arlen,Jordan Fisher
+26,10,3.0,2.0,Arike Ogunbowale,Adam Rippon
+27,13,2.923076923076923,1.0,Milo Manheim,Bobby Bones
+28,12,2.1666666666666665,2.0,Hannah Brown,Hannah Brown
+29,15,3.6,3.0,Skai Jackson,Kaitlyn Bristowe
+30,15,3.3333333333333335,3.0,Suni Lee,Iman Shumpert
+31,16,2.25,1.0,Charli D'Amelio,Charli D'Amelio
+32,14,3.857142857142857,3.5,Xochitl Gomez,Xochitl Gomez
+33,13,2.1538461538461537,1.0,Jenn Tran,Joey Graziadei
+34,14,3.0714285714285716,2.0,Jordan Chiles,Robert Irwin

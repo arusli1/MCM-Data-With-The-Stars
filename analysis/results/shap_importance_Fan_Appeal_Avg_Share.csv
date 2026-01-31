@@ -1,0 +1,92 @@
+feature,mean_abs_shap,signed_shap,feature_clean
+age,0.02320353004303573,-0.02320353004303573,age
+partner_clean_Derek Hough,0.007332316759421397,0.007332316759421397,Partner: Derek Hough
+celebrity_homestate_Hawaii,0.0021251468875982888,0.0021251468875982888,celebrity_homestate_Hawaii
+celebrity_homestate_New Jersey,0.0012433350524792522,0.0012433350524792522,celebrity_homestate_New Jersey
+celebrity_homestate_Connecticut,0.0008654338096519355,0.0008654338096519355,celebrity_homestate_Connecticut
+celebrity_homestate_Georgia,0.0007874352044346818,0.0007874352044346818,celebrity_homestate_Georgia
+celebrity_homestate_Pennsylvania,0.0007727660314109315,0.0007727660314109315,celebrity_homestate_Pennsylvania
+partner_clean_Valentin Chmerkovskiy,0.0006451755617927525,0.0006451755617927525,Partner: Valentin Chmerkovskiy
+industry_clean_TV Personality,0.0005562996435429817,-0.0005562996435429817,Industry: TV Personality
+celebrity_homestate_Maine,0.0005492861418664143,0.0005492861418664143,celebrity_homestate_Maine
+partner_clean_Maksim Chmerkoskiy,0.0005039622905305723,0.0005039622905305723,Partner: Maksim Chmerkoskiy
+celebrity_homestate_Louisiana,0.0004963424367281446,0.0004963424367281446,celebrity_homestate_Louisiana
+celebrity_homecountry/region_Canada,0.00042447863615089097,0.00042447863615089097,celebrity_homecountry/region_Canada
+industry_clean_Model,0.0004074475855037475,-0.0004074475855037475,Industry: Model
+celebrity_homestate_New York,0.000406601869835469,0.000406601869835469,celebrity_homestate_New York
+celebrity_homecountry/region_Brazil,0.0003240844211936442,0.0003240844211936442,celebrity_homecountry/region_Brazil
+celebrity_homestate_California,0.00031823947400896565,0.00031823947400896565,celebrity_homestate_California
+celebrity_homestate_Virginia,0.00031702821023424783,0.00031702821023424783,celebrity_homestate_Virginia
+celebrity_homestate_Mississippi,0.0003168239474016077,0.0003168239474016077,celebrity_homestate_Mississippi
+celebrity_homestate_Florida,0.0003071971904878922,0.0003071971904878922,celebrity_homestate_Florida
+partner_clean_Sharna Burgess,0.00030087841128472397,0.00030087841128472397,Partner: Sharna Burgess
+celebrity_homestate_Massachusetts,0.000265120890204882,0.000265120890204882,celebrity_homestate_Massachusetts
+celebrity_homestate_Oregon,0.00023449566150616507,0.00023449566150616507,celebrity_homestate_Oregon
+celebrity_homestate_South Carolina,0.00022666757548455593,0.00022666757548455593,celebrity_homestate_South Carolina
+celebrity_homecountry/region_South Korea,0.00021817278162422843,0.00021817278162422843,celebrity_homecountry/region_South Korea
+industry_clean_Singer/Rapper,0.00020657203475188526,0.00020657203475188526,Industry: Singer/Rapper
+celebrity_homestate_Kentucky,0.00018189021598334407,0.00018189021598334407,celebrity_homestate_Kentucky
+industry_clean_Athlete,0.00016734320451821852,0.00016734320451821852,Industry: Athlete
+partner_clean_Other_Partner,0.00016174844636157378,-0.00016174844636157378,Partner: Other_Partner
+celebrity_homestate_Illinois,0.00012356968519183092,-0.00012356968519183092,celebrity_homestate_Illinois
+partner_clean_Witney Carson,0.00011713081294640355,0.00011713081294640355,Partner: Witney Carson
+partner_clean_Karina Smirnoff,0.00010776911320339667,0.00010776911320339667,Partner: Karina Smirnoff
+industry_clean_Other,9.7547274223766e-05,9.7547274223766e-05,Industry: Other
+partner_clean_Mark Ballas,8.847514690379998e-05,8.847514690379998e-05,Partner: Mark Ballas
+partner_clean_Kym Johnson,8.3453741082791e-05,8.3453741082791e-05,Partner: Kym Johnson
+partner_clean_Cheryl Burke,7.594738046944261e-05,7.594738046944261e-05,Partner: Cheryl Burke
+celebrity_homestate_Washington,6.369214572793589e-05,6.369214572793589e-05,celebrity_homestate_Washington
+celebrity_homestate_Utah,6.2428960489911e-05,6.2428960489911e-05,celebrity_homestate_Utah
+celebrity_homecountry/region_United States,5.773075054144204e-05,-5.773075054144204e-05,celebrity_homecountry/region_United States
+celebrity_homestate_Texas,5.57441976315928e-05,-5.57441976315928e-05,celebrity_homestate_Texas
+celebrity_homestate_Arizona,5.2123599875426814e-05,5.2123599875426814e-05,celebrity_homestate_Arizona
+celebrity_homecountry/region_England,5.20369037188474e-05,5.20369037188474e-05,celebrity_homecountry/region_England
+celebrity_homestate_Tennessee,4.6583472555017e-05,4.6583472555017e-05,celebrity_homestate_Tennessee
+celebrity_homestate_Kansas,4.277065276377809e-05,4.277065276377809e-05,celebrity_homestate_Kansas
+partner_clean_Peta Murgatroyd,3.923615102672505e-05,3.923615102672505e-05,Partner: Peta Murgatroyd
+celebrity_homestate_Arkansas,3.726746974279303e-05,3.726746974279303e-05,celebrity_homestate_Arkansas
+partner_clean_Tony Dovolani,3.6375023026909416e-05,-3.6375023026909416e-05,Partner: Tony Dovolani
+celebrity_homestate_North Carolina,3.440478210551335e-05,-3.440478210551335e-05,celebrity_homestate_North Carolina
+celebrity_homestate_Ohio,3.301585891214382e-05,-3.301585891214382e-05,celebrity_homestate_Ohio
+industry_clean_Comedian,2.355457762512787e-05,2.355457762512787e-05,Industry: Comedian
+celebrity_homestate_New Mexico,2.308567480518828e-05,-2.308567480518828e-05,celebrity_homestate_New Mexico
+partner_clean_Emma Slater,2.0390495269199926e-05,-2.0390495269199926e-05,Partner: Emma Slater
+celebrity_homecountry/region_South Africa,1.6528681478002526e-05,-1.6528681478002526e-05,celebrity_homecountry/region_South Africa
+partner_clean_Gleb Savchenko,1.3373216554558037e-05,-1.3373216554558037e-05,Partner: Gleb Savchenko
+celebrity_homestate_Alaska,1.3308624384841128e-05,-1.3308624384841128e-05,celebrity_homestate_Alaska
+celebrity_homecountry/region_France,9.195047942549667e-06,9.195047942549667e-06,celebrity_homecountry/region_France
+celebrity_homestate_Colorado,7.352484026699507e-06,-7.352484026699507e-06,celebrity_homestate_Colorado
+celebrity_homestate_Indiana,6.34198289462458e-06,-6.34198289462458e-06,celebrity_homestate_Indiana
+celebrity_homecountry/region_New Zealand,6.263376403101128e-06,6.263376403101128e-06,celebrity_homecountry/region_New Zealand
+celebrity_homestate_Minnesota,5.465136428470637e-06,5.465136428470637e-06,celebrity_homestate_Minnesota
+celebrity_homestate_Nevada,5.358311591625449e-06,5.358311591625449e-06,celebrity_homestate_Nevada
+celebrity_homecountry/region_Russia,5.018947416975114e-06,5.018947416975114e-06,celebrity_homecountry/region_Russia
+celebrity_homestate_Michigan,3.1371963333974367e-06,3.1371963333974367e-06,celebrity_homestate_Michigan
+celebrity_homecountry/region_Australia,2.0088021303382673e-06,2.0088021303382673e-06,celebrity_homecountry/region_Australia
+celebrity_homecountry/region_Poland,5.178258615773166e-07,5.178258615773166e-07,celebrity_homecountry/region_Poland
+partner_clean_Sasha Farber,4.880226273808397e-07,-4.880226273808397e-07,Partner: Sasha Farber
+celebrity_homecountry/region_Mexico,0.0,-0.0,celebrity_homecountry/region_Mexico
+celebrity_homecountry/region_Germany,0.0,-0.0,celebrity_homecountry/region_Germany
+celebrity_homecountry/region_Ireland,0.0,-0.0,celebrity_homecountry/region_Ireland
+celebrity_homecountry/region_Italy,0.0,-0.0,celebrity_homecountry/region_Italy
+celebrity_homecountry/region_Venezuela,0.0,-0.0,celebrity_homecountry/region_Venezuela
+celebrity_homecountry/region_Wales,0.0,-0.0,celebrity_homecountry/region_Wales
+celebrity_homecountry/region_Taiwan China,0.0,-0.0,celebrity_homecountry/region_Taiwan China
+celebrity_homecountry/region_Spain,0.0,-0.0,celebrity_homecountry/region_Spain
+celebrity_homecountry/region_Philippines,0.0,-0.0,celebrity_homecountry/region_Philippines
+celebrity_homestate_Nebraska,0.0,-0.0,celebrity_homestate_Nebraska
+celebrity_homecountry/region_Czechoslovakia,0.0,-0.0,celebrity_homecountry/region_Czechoslovakia
+celebrity_homecountry/region_Cuba,0.0,-0.0,celebrity_homecountry/region_Cuba
+celebrity_homecountry/region_Croatia,0.0,-0.0,celebrity_homecountry/region_Croatia
+celebrity_homecountry/region_Chile,0.0,-0.0,celebrity_homecountry/region_Chile
+celebrity_homestate_Wisconsin,0.0,-0.0,celebrity_homestate_Wisconsin
+celebrity_homestate_West Virginia,0.0,-0.0,celebrity_homestate_West Virginia
+celebrity_homestate_Washington D.C.,0.0,-0.0,celebrity_homestate_Washington D.C.
+celebrity_homestate_South Dakota,0.0,-0.0,celebrity_homestate_South Dakota
+celebrity_homestate_Rhode Island,0.0,-0.0,celebrity_homestate_Rhode Island
+celebrity_homestate_New Hamshire,0.0,-0.0,celebrity_homestate_New Hamshire
+celebrity_homestate_Missouri,0.0,-0.0,celebrity_homestate_Missouri
+celebrity_homestate_Maryland,0.0,-0.0,celebrity_homestate_Maryland
+celebrity_homestate_Iowa,0.0,-0.0,celebrity_homestate_Iowa
+celebrity_homestate_Delaware,0.0,-0.0,celebrity_homestate_Delaware
+celebrity_homecountry/region_Yugoslavia,0.0,-0.0,celebrity_homecountry/region_Yugoslavia
