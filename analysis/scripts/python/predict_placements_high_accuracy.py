@@ -15,8 +15,8 @@ from sklearn.model_selection import LeaveOneGroupOut, cross_val_predict
 from sklearn.ensemble import RandomForestRegressor
 
 # Config
-DATA_PATH = "../Data/2026_MCM_Problem_C_Data.csv"
-OUTPUT_DIR = "results"
+DATA_PATH = "../../Data/2026_MCM_Problem_C_Data.csv"
+OUTPUT_DIR = "../../results"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 def bucket_top_n(series, n, other_label):
@@ -56,7 +56,7 @@ def run_high_accuracy_predictions():
 
     # Build matrix
     X_raw = df[["age", "industry_clean", "partner_clean", "early_score"]]
-    X = pd.get_dummies(X_raw, drop_first=True)
+    X = pd.get_dummies(X_raw, drop_first=False)
     y = df["success_score"].fillna(0)
     groups = df["season"]
 

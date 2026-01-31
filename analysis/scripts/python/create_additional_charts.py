@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 
-OUTPUT_DIR = "results"
+OUTPUT_DIR = "../../results"
 
 def plot_diverging_bars(data, x_col, y_col, title, filename, xlabel="Impact"):
     """Create diverging bar chart with green (positive) and red (negative)"""
@@ -12,10 +12,15 @@ def plot_diverging_bars(data, x_col, y_col, title, filename, xlabel="Impact"):
     # Color based on sign
     colors = ['#2ca02c' if x > 0 else '#d62728' for x in data[x_col]]
     
+    # Create a boolean column for hue to ensure consistent mapping
+    data = data.copy()
+    data['is_positive'] = data[x_col] >= 0
+    
     sns.barplot(
         data=data, x=x_col, y=y_col,
-        hue=data[x_col] > 0, 
+        hue='is_positive', 
         palette={True: '#2ca02c', False: '#d62728'}, 
+        hue_order=[True, False],
         legend=False
     )
     

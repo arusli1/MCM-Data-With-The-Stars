@@ -5,9 +5,9 @@ from sklearn.ensemble import RandomForestRegressor
 import os
 
 # Paths
-DATA_PATH = "../Data/2026_MCM_Problem_C_Data.csv"
-FAN_VOTES_PATH = "../AR-Problem1-Base/final_results/base_inferred_shares.csv"
-OUTPUT_DIR = "results"
+DATA_PATH = "../../Data/2026_MCM_Problem_C_Data.csv"
+FAN_VOTES_PATH = "../../AR-Problem1-Base/final_../../results/base_inferred_shares.csv"
+OUTPUT_DIR = "../../results"
 
 def load_and_preprocess():
     print("Loading data...")

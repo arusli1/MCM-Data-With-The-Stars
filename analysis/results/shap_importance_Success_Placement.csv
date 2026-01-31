@@ -1,55 +1,59 @@
 feature,mean_abs_shap,signed_shap,feature_clean
-Early Performance (W1-2),0.15818734653141311,0.003861690070785322,Early Performance (W1-2)
-age,0.0535385746110615,-0.002025954405609746,age
-partner_clean_Other_Partner,0.0068623316108980485,1.9543880147343204e-05,Partner: Other_Partner
-homestate_clean_California,0.006810977859822566,7.196881103114987e-05,State: California
-industry_clean_Singer/Rapper,0.0068049004403904784,0.00021543032128602032,Industry: Singer/Rapper
-industry_clean_TV Personality,0.005255376022002131,-0.00041260142269012283,Industry: TV Personality
-industry_clean_Model,0.005202812395413607,0.0008166918272922507,Industry: Model
-partner_clean_Cheryl Burke,0.00465406290861644,-0.00045390651537907244,Partner: Cheryl Burke
-homestate_clean_Illinois,0.002871215376200235,-0.00017309691241967483,State: Illinois
-homestate_clean_Texas,0.00279540376955951,-0.00033171297844695146,State: Texas
-homestate_clean_Pennsylvania,0.002588996969537839,-0.0005307540304021491,State: Pennsylvania
-homestate_clean_Ohio,0.001980948970079759,0.0003176845643116562,State: Ohio
-industry_clean_Athlete,0.001722793619152749,-3.116102865676536e-05,Industry: Athlete
-homecountry_clean_United States,0.0016316586018625013,9.075902953314692e-06,Country: United States
-homestate_clean_Unknown,0.0016069185548042788,-8.450243797149487e-05,State: Unknown
-partner_clean_Karina Smirnoff,0.0015887264160205307,0.0001524827368594595,Partner: Karina Smirnoff
-homestate_clean_New York,0.0013190809731570656,0.00014898716584009199,State: New York
-industry_clean_Other,0.0013045046893166662,-0.00017714446003899752,Industry: Other
-partner_clean_Maksim Chmerkoskiy,0.0012654427171284663,0.0001437917755727773,Partner: Maksim Chmerkoskiy
-homestate_clean_Other_State,0.001149353962591924,-1.1557643794747028e-05,State: Other_State
-partner_clean_Mark Ballas,0.0011081584137514256,0.00014610558953137882,Partner: Mark Ballas
-partner_clean_Derek Hough,0.0010641394249004635,-0.00034700622963415714,Partner: Derek Hough
-homestate_clean_Georgia,0.0010305634809794878,-0.00023923470477323926,State: Georgia
-partner_clean_Witney Carson,0.0007765553394944428,-0.00011777081306888917,Partner: Witney Carson
-partner_clean_Sharna Burgess,0.000695194765457417,-0.0001571513578699439,Partner: Sharna Burgess
-homestate_clean_New Jersey,0.0005440043269286941,0.0001888084321276265,State: New Jersey
-industry_clean_Comedian,0.0005303140335697055,-0.0001715266667087817,Industry: Comedian
-partner_clean_Emma Slater,0.000527924624057439,-8.93502617892398e-05,Partner: Emma Slater
-homestate_clean_Louisiana,0.0004730769870642243,-0.00014952614200966851,State: Louisiana
-homestate_clean_Florida,0.0004606391707495369,4.403858531138591e-05,State: Florida
-partner_clean_Valentin Chmerkovskiy,0.00043476091395453826,2.8248659578153645e-05,Partner: Valentin Chmerkovskiy
-partner_clean_Tony Dovolani,0.0003832624959364833,0.00010056409507355285,Partner: Tony Dovolani
-partner_clean_Sasha Farber,0.0003400823986278427,-4.7977576418954904e-05,Partner: Sasha Farber
-homestate_clean_Kentucky,0.00030511060784100977,3.947654171851245e-05,State: Kentucky
-partner_clean_Kym Johnson,0.00024154729750941565,-8.181778527686863e-05,Partner: Kym Johnson
-partner_clean_Peta Murgatroyd,0.00020599124721088104,3.206719290916166e-05,Partner: Peta Murgatroyd
-partner_clean_Gleb Savchenko,0.0001988926955581147,4.1490315741892475e-05,Partner: Gleb Savchenko
-homecountry_clean_Other_Country,0.0001710084672536878,7.021672574557854e-05,Country: Other_Country
-homecountry_clean_Canada,0.00012408565519727636,-3.172010299348948e-05,Country: Canada
-homecountry_clean_England,0.0001087399332981691,-3.215852634095787e-05,Country: England
-homecountry_clean_Czechoslovakia,8.830688215916874e-05,4.543830005218158e-05,Country: Czechoslovakia
-homestate_clean_Michigan,6.711657933960103e-05,1.5305281027592243e-05,State: Michigan
-homestate_clean_Iowa,5.4821559118738175e-05,-2.0784754523651203e-05,State: Iowa
-homecountry_clean_Brazil,1.125287229226329e-05,4.9970360554568114e-06,Country: Brazil
-homecountry_clean_Australia,1.0765920527600034e-05,-7.782553544385658e-06,Country: Australia
-homecountry_clean_France,9.65181137757146e-06,4.220299085787845e-06,Country: France
-homecountry_clean_Italy,2.4504485246916775e-06,1.986328492750807e-06,Country: Italy
-homecountry_clean_Chile,0.0,0.0,Country: Chile
+Early Performance (W1-2),0.15824661353645308,0.003201177841155356,Early Performance (W1-2)
+age,0.05331706334570264,-0.001542088965587671,age
+partner_clean_Other_Partner,0.00692451681525566,-5.428468147028345e-06,Partner: Other_Partner
+industry_clean_Singer/Rapper,0.006450728880499326,0.00025542341284109596,Industry: Singer/Rapper
+homestate_clean_California,0.0063192372726851125,9.442924433780138e-05,State: California
+industry_clean_TV Personality,0.0053188811125180115,-0.00041204409693800827,Industry: TV Personality
+industry_clean_Model,0.005072448187160392,0.0007905615562519189,Industry: Model
+partner_clean_Cheryl Burke,0.0045690252269964,-0.00044927517848010495,Partner: Cheryl Burke
+industry_clean_Actor/Actress,0.0031751153104417258,4.8197338295109644e-05,Industry: Actor/Actress
+homestate_clean_Illinois,0.002894721775810054,-0.00017259194827372258,State: Illinois
+homestate_clean_Texas,0.002865899905918616,-0.00035260904263261357,State: Texas
+homestate_clean_Pennsylvania,0.002483720579184834,-0.0004899671650797192,State: Pennsylvania
+homecountry_clean_United States,0.0017625171683275027,-3.7435718120546165e-05,Country: United States
+homestate_clean_Ohio,0.0017611209711817935,0.00030421912139798405,State: Ohio
+partner_clean_Karina Smirnoff,0.0015408281744098563,0.0001590662347651072,Partner: Karina Smirnoff
+industry_clean_Athlete,0.0014869304140282113,-1.5084480689984695e-05,Industry: Athlete
+homestate_clean_New York,0.0013836363636283002,0.00013733858924782345,State: New York
+homestate_clean_Unknown,0.0013649535061851389,-2.9871533726486007e-05,State: Unknown
+partner_clean_Maksim Chmerkoskiy,0.0013023815744708474,0.00016172788169740155,Partner: Maksim Chmerkoskiy
+industry_clean_Other,0.0012785611566361933,-0.00020138197800252807,Industry: Other
+partner_clean_Mark Ballas,0.0011406847744458502,0.00016227851496099322,Partner: Mark Ballas
+homestate_clean_Other_State,0.0011293997523093955,3.167821223553786e-05,State: Other_State
+homestate_clean_Georgia,0.0010288804137361543,-0.0002381216381997994,State: Georgia
+partner_clean_Derek Hough,0.0010197235206409927,-0.00033868879573884273,Partner: Derek Hough
+partner_clean_Witney Carson,0.0008112481343800615,-0.00013290592463261096,Partner: Witney Carson
+partner_clean_Sharna Burgess,0.0006860057610945248,-0.00015533469477067724,Partner: Sharna Burgess
+industry_clean_Comedian,0.0005591914404522512,-0.00017619656556260973,Industry: Comedian
+homestate_clean_New Jersey,0.0005200659085918762,0.00018001829578774138,State: New Jersey
+partner_clean_Emma Slater,0.0004979390420479454,-9.198063801119915e-05,Partner: Emma Slater
+homestate_clean_Louisiana,0.0004971009098071629,-0.00015678626756825625,State: Louisiana
+homestate_clean_Florida,0.000473996484104883,6.463115041273705e-05,State: Florida
+partner_clean_Valentin Chmerkovskiy,0.0003925322179993617,-2.5081530019919112e-06,Partner: Valentin Chmerkovskiy
+partner_clean_Tony Dovolani,0.0003513204818365419,0.00010471625479508017,Partner: Tony Dovolani
+partner_clean_Sasha Farber,0.00032609378823675414,-4.572230625319254e-05,Partner: Sasha Farber
+homestate_clean_Kentucky,0.0003146774942042657,3.671893797968562e-05,State: Kentucky
+homestate_clean_Alabama,0.00022502686161912424,-9.679629315550427e-05,State: Alabama
+partner_clean_Kym Johnson,0.00022316014297375761,-7.357888357442602e-05,Partner: Kym Johnson
+partner_clean_Gleb Savchenko,0.00017731673838106282,2.937184086160261e-05,Partner: Gleb Savchenko
+partner_clean_Artem Chigvintsev,0.0001712982404116348,-1.911817207650303e-05,Partner: Artem Chigvintsev
+partner_clean_Peta Murgatroyd,0.00017078097047839005,2.846673596311011e-05,Partner: Peta Murgatroyd
+homecountry_clean_Canada,0.00016918045094979587,-5.241248853846331e-05,Country: Canada
+homecountry_clean_Other_Country,0.00015785137155718964,6.162065801441505e-05,Country: Other_Country
+homecountry_clean_England,0.00012206350463927567,-4.193056143539918e-05,Country: England
+homecountry_clean_Czechoslovakia,9.215301628800985e-05,4.803004193800972e-05,Country: Czechoslovakia
+homestate_clean_Michigan,6.691902642078098e-05,1.5319332319326127e-05,State: Michigan
+homestate_clean_Iowa,6.45145650903439e-05,-2.6990401576077974e-05,State: Iowa
+homecountry_clean_Brazil,3.066694328255804e-05,1.4297003322013333e-05,Country: Brazil
+homecountry_clean_Australia,1.0765920527600019e-05,-7.782553544385643e-06,Country: Australia
+homecountry_clean_France,4.455292630046798e-06,1.9501075902804365e-06,Country: France
 homecountry_clean_Croatia,0.0,0.0,Country: Croatia
-homecountry_clean_Ireland,0.0,0.0,Country: Ireland
-homecountry_clean_Mexico,0.0,0.0,Country: Mexico
+homecountry_clean_Chile,0.0,0.0,Country: Chile
 missing_fan_share,0.0,0.0,missing_fan_share
+homecountry_clean_Ireland,0.0,0.0,Country: Ireland
+homecountry_clean_Italy,0.0,0.0,Country: Italy
+homecountry_clean_Mexico,0.0,0.0,Country: Mexico
+homecountry_clean_Argentina,0.0,0.0,Country: Argentina
 homecountry_clean_Russia,0.0,0.0,Country: Russia
 homecountry_clean_Taiwan China,0.0,0.0,Country: Taiwan China

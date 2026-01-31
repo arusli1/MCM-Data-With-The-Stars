@@ -26,9 +26,9 @@ import shap
 # -------------------------
 # Configuration
 # -------------------------
-DATA_PATH = "../Data/2026_MCM_Problem_C_Data.csv"
-FAN_VOTES_PATH = "../AR-Problem1-Base/final_results/base_inferred_shares.csv"
-OUTPUT_DIR = "results"
+DATA_PATH = "../../Data/2026_MCM_Problem_C_Data.csv"
+FAN_VOTES_PATH = "../../AR-Problem1-Base/final_../../results/base_inferred_shares.csv"
+OUTPUT_DIR = "../../results"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Category bucketing (reduce sparse one-hot explosion)
@@ -201,7 +201,7 @@ def make_design_matrix(df, include_leaky_for_success: bool):
         X_raw["avg_judge_score"] = df["avg_judge_score"]
         X_raw["avg_fan_share"] = df["avg_fan_share"]
 
-    X = pd.get_dummies(X_raw, drop_first=True)
+    X = pd.get_dummies(X_raw, drop_first=False)
     X = X.replace([np.inf, -np.inf], np.nan).fillna(0)
     return X
 

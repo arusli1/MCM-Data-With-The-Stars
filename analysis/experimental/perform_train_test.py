@@ -16,8 +16,8 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 # Config
-DATA_PATH = "../Data/2026_MCM_Problem_C_Data.csv"
-OUTPUT_DIR = "results"
+DATA_PATH = "../../Data/2026_MCM_Problem_C_Data.csv"
+OUTPUT_DIR = "../../results"
 TEST_SEASONS = [31, 32, 33, 34]
 
 def bucket_top_n(series, n, other_label):
@@ -46,7 +46,7 @@ def perform_validation():
 
     # Build matrix
     X_raw = df[["season", "age", "industry_clean", "partner_clean", "early_score"]]
-    X = pd.get_dummies(X_raw.drop(columns=["season"]), drop_first=True)
+    X = pd.get_dummies(X_raw.drop(columns=["season"]), drop_first=False)
     y = df["success_score"].fillna(0)
     seasons = df["season"]
 

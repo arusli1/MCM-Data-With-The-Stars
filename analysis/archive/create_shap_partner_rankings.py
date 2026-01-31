@@ -19,12 +19,16 @@ plt.figure(figsize=(12, 10))
 
 colors = ['#2ca02c' if x > 0 else '#d62728' for x in partners['signed_shap']]
 
+# Create boolean column for consistent hue mapping
+partners['is_positive'] = partners['signed_shap'] >= 0
+
 sns.barplot(
     data=partners,
     x='signed_shap',
     y='partner_name',
-    hue=partners['signed_shap'] > 0,
+    hue='is_positive',
     palette={True: '#2ca02c', False: '#d62728'},
+    hue_order=[True, False],
     legend=False
 )
 

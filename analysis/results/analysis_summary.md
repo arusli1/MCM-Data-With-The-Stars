@@ -8,18 +8,18 @@
 
 Top 10 features by mean absolute SHAP:
 
-| feature_clean          |   signed_shap |   mean_abs_shap |
-|:-----------------------|--------------:|----------------:|
-| age                    |  -0.00021222  |      0.120574   |
-| Partner: Other_Partner |   0.000663551 |      0.0294569  |
-| State: California      |   0.000374355 |      0.0127189  |
-| Industry: Model        |   0.000866058 |      0.010849   |
-| Partner: Derek Hough   |  -0.000657512 |      0.0100356  |
-| State: Other_State     |  -0.00023126  |      0.0043579  |
-| Industry: Athlete      |  -0.000225611 |      0.00374108 |
-| State: Georgia         |  -0.000668953 |      0.00333945 |
-| Partner: Cheryl Burke  |  -0.000346989 |      0.00312372 |
-| State: Pennsylvania    |  -0.000604494 |      0.00295235 |
+| feature_clean            |   signed_shap |   mean_abs_shap |
+|:-------------------------|--------------:|----------------:|
+| Early Performance (W1-2) |   0.00320118  |      0.158247   |
+| age                      |  -0.00154209  |      0.0533171  |
+| Partner: Other_Partner   |  -5.42847e-06 |      0.00692452 |
+| Industry: Singer/Rapper  |   0.000255423 |      0.00645073 |
+| State: California        |   9.44292e-05 |      0.00631924 |
+| Industry: TV Personality |  -0.000412044 |      0.00531888 |
+| Industry: Model          |   0.000790562 |      0.00507245 |
+| Partner: Cheryl Burke    |  -0.000449275 |      0.00456903 |
+| Industry: Actor/Actress  |   4.81973e-05 |      0.00317512 |
+| State: Illinois          |  -0.000172592 |      0.00289472 |
 
 ## Drivers of Judge Appeal (Avg Score)
 
@@ -27,31 +27,31 @@ Top 10 features by mean absolute SHAP:
 
 | feature_clean            |   signed_shap |   mean_abs_shap |
 |:-------------------------|--------------:|----------------:|
-| age                      |  -0.000362142 |       0.56297   |
-| Partner: Other_Partner   |   0.000469814 |       0.23025   |
-| Industry: TV Personality |   0.00278098  |       0.0460741 |
-| State: California        |   0.00103321  |       0.0421917 |
-| Partner: Derek Hough     |  -0.00574689  |       0.0322417 |
-| Industry: Athlete        |   0.00175622  |       0.0269793 |
-| Industry: Model          |   0.00274956  |       0.0268211 |
-| State: New York          |   0.000730828 |       0.0247018 |
-| Partner: Peta Murgatroyd |   0.00138526  |       0.0183141 |
-| Industry: Other          |   0.00199389  |       0.0154249 |
+| Early Performance (W1-2) |   0.0125809   |      0.917975   |
+| age                      |   0.00117736  |      0.165139   |
+| Partner: Other_Partner   |  -0.00249272  |      0.0460915  |
+| Industry: Actor/Actress  |  -0.000307678 |      0.0202925  |
+| Industry: TV Personality |  -0.000320438 |      0.0147652  |
+| Industry: Singer/Rapper  |  -0.000176987 |      0.00804075 |
+| Industry: Athlete        |   0.000252761 |      0.00752901 |
+| Partner: Cheryl Burke    |  -0.0010988   |      0.0064298  |
+| Industry: Other          |  -0.000907941 |      0.00602133 |
+| State: Other_State       |   0.000874483 |      0.00533327 |
 
 ## Drivers of Fan Appeal (Avg Share)
 
 Top 10 features by mean absolute SHAP:
 
-| feature_clean                  |   signed_shap |   mean_abs_shap |
-|:-------------------------------|--------------:|----------------:|
-| age                            |   0.000390533 |     0.0228112   |
-| Partner: Derek Hough           |  -0.000363573 |     0.00943977  |
-| State: Other_State             |   5.01964e-06 |     0.00311763  |
-| State: Georgia                 |  -0.000160319 |     0.00123596  |
-| State: Pennsylvania            |  -0.000134814 |     0.00117538  |
-| Industry: Singer/Rapper        |  -0.000121025 |     0.00105338  |
-| Industry: TV Personality       |   5.21179e-05 |     0.00100659  |
-| Partner: Valentin Chmerkovskiy |  -8.28116e-05 |     0.000961047 |
-| State: California              |   1.62074e-05 |     0.000936874 |
-| Partner: Sharna Burgess        |  -5.76698e-05 |     0.000910108 |
+| feature_clean            |   signed_shap |   mean_abs_shap |
+|:-------------------------|--------------:|----------------:|
+| Early Performance (W1-2) |   0.00112215  |     0.0364891   |
+| age                      |   0.000217977 |     0.00635593  |
+| Partner: Derek Hough     |  -0.000994406 |     0.00453183  |
+| State: Alabama           |  -0.000276758 |     0.00155699  |
+| State: Other_State       |  -4.61983e-05 |     0.00125408  |
+| State: Louisiana         |  -0.000150356 |     0.000837239 |
+| State: Georgia           |  -6.94502e-05 |     0.000789382 |
+| State: Illinois          |  -5.67873e-05 |     0.000686983 |
+| State: Pennsylvania      |  -4.15103e-05 |     0.000652593 |
+| Industry: Athlete        |   4.44479e-06 |     0.000626485 |
 

@@ -5,10 +5,10 @@ season,celebrity_name,ballroom_partner,placement,predicted_placement,abs_error,e
 1,Rachel Hunter,Jonathan Roberts,4,1.0,3.0,7.333333333333333
 1,Joey McIntyre,Ashly DelGrosso,3,3.0,0.0,6.833333333333333
 1,Trista Sutter,Louis van Amstel,6,4.0,2.0,6.166666666666667
-2,Tatum O'Neal,Nick Kosovich,9,6.0,3.0,6.666666666666667
+2,Tatum O'Neal,Nick Kosovich,9,5.0,4.0,6.666666666666667
 2,Tia Carrere,Maksim Chmerkoskiy,6,4.0,2.0,7.0
 2,George Hamilton,Edyta Sliwinska,5,8.0,3.0,6.666666666666667
-2,Lisa Rinna,Louis van Amstel,4,5.0,1.0,6.5
+2,Lisa Rinna,Louis van Amstel,4,6.0,2.0,6.5
 2,Stacy Keibler,Tony Dovolani,3,2.0,1.0,8.5
 2,Jerry Rice,Anna Trebunskaya,2,7.0,5.0,7.333333333333333
 2,Giselle Fernandez,Jonathan Roberts,8,3.0,5.0,7.833333333333333
@@ -17,12 +17,12 @@ season,celebrity_name,ballroom_partner,placement,predicted_placement,abs_error,e
 2,Kenny Mayne,Andrea Hale,10,10.0,0.0,4.333333333333333
 3,Harry Hamlin,Ashly DelGrosso,9,9.0,0.0,6.333333333333333
 3,Vivica A. Fox,Nick Kosovich,8,6.0,2.0,7.666666666666667
-3,Monique Coleman,Louis van Amstel,4,4.0,0.0,7.5
-3,Joey Lawrence,Edyta Sliwinska,3,2.0,1.0,8.333333333333334
-3,Mario Lopez,Karina Smirnoff,2,1.0,1.0,7.833333333333333
-3,Emmitt Smith,Cheryl Burke,1,3.0,2.0,8.0
+3,Monique Coleman,Louis van Amstel,4,5.0,1.0,7.5
+3,Joey Lawrence,Edyta Sliwinska,3,4.0,1.0,8.333333333333334
+3,Mario Lopez,Karina Smirnoff,2,2.0,0.0,7.833333333333333
+3,Emmitt Smith,Cheryl Burke,1,1.0,0.0,8.0
 3,Shanna Moakler,Jesse DeSoto,10,7.0,3.0,6.666666666666667
-3,Willa Ford,Maksim Chmerkoskiy,7,5.0,2.0,7.5
+3,Willa Ford,Maksim Chmerkoskiy,7,3.0,4.0,7.5
 3,Sara Evans,Tony Dovolani,6,8.0,2.0,6.0
 3,Jerry Springer,Kym Johnson,5,11.0,6.0,5.833333333333333
 3,Tucker Carlson,Elena Grinenko,11,10.0,1.0,4.0
@@ -40,19 +40,19 @@ season,celebrity_name,ballroom_partner,placement,predicted_placement,abs_error,e
 5,Cameron Mathison,Edyta Sliwinska,5,7.0,2.0,7.0
 5,Jane Seymour,Tony Dovolani,6,8.0,2.0,7.5
 5,Sabrina Bryan,Mark Ballas,7,1.0,6.0,8.666666666666666
-5,Jennie Garth,Derek Hough,4,4.0,0.0,7.0
+5,Jennie Garth,Derek Hough,4,5.0,1.0,7.0
 5,Floyd Mayweather Jr. ,Karina Smirnoff,9,9.0,0.0,6.5
 5,Josie Maran,Alec Mazo,12,11.0,1.0,5.333333333333333
 5,Albert Reed,Anna Trebunskaya,11,6.0,5.0,7.0
 5,Helio Castroneves,Julianne Hough,1,2.0,1.0,8.666666666666666
 5,Mel B,Maksim Chmerkoskiy,2,3.0,1.0,7.833333333333333
 5,Wayne Newton,Cheryl Burke,10,12.0,2.0,5.666666666666667
-5,Marie Osmond,Jonathan Roberts,3,5.0,2.0,7.5
+5,Marie Osmond,Jonathan Roberts,3,4.0,1.0,7.5
 5,Mark Cuban,Kym Johnson,8,10.0,2.0,6.5
-6,Cristian de la Fuente,Cheryl Burke,3,7.0,4.0,6.833333333333333
+6,Cristian de la Fuente,Cheryl Burke,3,6.0,3.0,6.833333333333333
 6,Steve Guttenberg,Anna Trebunskaya,10,10.0,0.0,5.666666666666667
 6,Priscilla Presley,Louis van Amstel,8,5.0,3.0,7.5
-6,Marlee Matlin,Fabian Sanchez,7,6.0,1.0,7.666666666666667
+6,Marlee Matlin,Fabian Sanchez,7,7.0,0.0,7.666666666666667
 6,Shannon Elizabeth,Derek Hough,6,3.0,3.0,7.5
 6,Marissa Jaret Winokur,Tony Dovolani,4,8.0,4.0,6.5
 6,Jason Taylor,Edyta Sliwinska,2,4.0,2.0,8.166666666666666
@@ -63,18 +63,18 @@ season,celebrity_name,ballroom_partner,placement,predicted_placement,abs_error,e
 6,Mario,Karina Smirnoff,5,2.0,3.0,8.333333333333334
 7,Ted McGinley,Inna Brayer,12,11.0,1.0,6.166666666666667
 7,Cloris Leachman,Corky Ballas,7,12.0,5.0,5.166666666666667
-7,Susan Lucci,Tony Dovolani,6,8.0,2.0,6.583333333333333
-7,Cody Linley,Julianne Hough,4,4.0,0.0,6.916666666666667
-7,Misty May-Treanor,Maksim Chmerkoskiy,10,3.0,7.0,7.0
+7,Susan Lucci,Tony Dovolani,6,9.0,3.0,6.583333333333333
+7,Cody Linley,Julianne Hough,4,3.0,1.0,6.916666666666667
+7,Misty May-Treanor,Maksim Chmerkoskiy,10,4.0,6.0,7.0
 7,Maurice Greene,Cheryl Burke,5,6.0,1.0,6.416666666666667
 7,Warren Sapp,Kym Johnson,2,2.0,0.0,7.583333333333333
 7,Jeffrey Ross,Edyta Sliwinska,13,13.0,0.0,4.0
 7,Toni Braxton,Alec Mazo,8,5.0,3.0,7.583333333333333
 7,Lance Bass,Lacey Schwimmer,3,7.0,4.0,6.916666666666667
-7,Kim Kardashian,Mark Ballas,11,9.0,2.0,5.916666666666667
+7,Kim Kardashian,Mark Ballas,11,8.0,3.0,5.916666666666667
 7,Rocco DiSpirito,Karina Smirnoff,9,10.0,1.0,5.583333333333333
 7,Brooke Burke,Derek Hough,1,1.0,0.0,8.083333333333334
-8,Gilles Marini,Cheryl Burke,2,1.0,1.0,8.5
+8,Gilles Marini,Cheryl Burke,2,3.0,1.0,8.5
 8,Denise Richards,Maksim Chmerkoskiy,12,4.0,8.0,6.5
 8,David Alan Grier,Kym Johnson,9,10.0,1.0,6.0
 8,Lawrence Taylor,Edyta Sliwinska,7,12.0,5.0,6.0
@@ -86,7 +86,7 @@ season,celebrity_name,ballroom_partner,placement,predicted_placement,abs_error,e
 8,Lil' Kim,Derek Hough,5,5.0,0.0,7.333333333333333
 8,Steve-O,Lacey Schwimmer,8,8.0,0.0,5.166666666666667
 8,Holly Madison,Dmitry Chaplin,11,7.0,4.0,6.0
-8,Melissa Rycroft,Tony Dovolani,3,3.0,0.0,8.166666666666666
+8,Melissa Rycroft,Tony Dovolani,3,1.0,2.0,8.166666666666666
 9,Ashley Hamiliton,Edyta Sliwinska,16,13.0,3.0,6.3333
 9,Debi Mazar,Maksim Chmerkoskiy,12,10.0,2.0,7.166666666666667
 9,Melissa Joan Hart,Mark Ballas,9,8.0,1.0,7.166666666666667
@@ -100,9 +100,9 @@ season,celebrity_name,ballroom_partner,placement,predicted_placement,abs_error,e
 9,Tom DeLay,Cheryl Burke,13,14.0,1.0,6.333316666666666
 9,Macy Gray,Jonathan Roberts,15,15.0,0.0,6.3333
 9,Aaron Carter,Karina Smirnoff,5,6.0,1.0,9.833316666666667
-9,Mya,Dmitry Chaplin,2,4.0,2.0,9.666649999999999
+9,Mya,Dmitry Chaplin,2,5.0,3.0,9.666649999999999
 9,Donny Osmond,Kym Johnson,1,7.0,6.0,9.166649999999999
-9,Kelly Osbourne,Louis van Amstel,3,5.0,2.0,8.3333
+9,Kelly Osbourne,Louis van Amstel,3,4.0,1.0,8.3333
 10,Aiden Turner,Edyta Sliwinska,9,9.0,0.0,5.666666666666667
 10,Shannen Doherty,Mark Ballas,11,8.0,3.0,6.333333333333333
 10,Niecy Nash,Louis van Amstel,5,5.0,0.0,6.5
@@ -115,25 +115,25 @@ season,celebrity_name,ballroom_partner,placement,predicted_placement,abs_error,e
 10,Kate Gosselin,Tony Dovolani,8,10.0,2.0,5.166666666666667
 10,Jake Pavelka,Chelsie Hightower,7,4.0,3.0,6.666666666666667
 11,David Hasselhoff,Kym Johnson,12,11.0,1.0,5.0
-11,Florence Henderson,Corky Ballas,8,9.0,1.0,6.166666666666667
+11,Florence Henderson,Corky Ballas,8,10.0,2.0,6.166666666666667
 11,Kyle Massey,Lacey Schwimmer,2,1.0,1.0,7.5
 11,Jennifer Grey,Derek Hough,1,2.0,1.0,8.0
 11,Rick Fox,Cheryl Burke,6,5.0,1.0,7.166666666666667
 11,Kurt Warner,Anna Trebunskaya,5,7.0,2.0,6.666666666666667
-11,Margaret Cho,Louis van Amstel,10,10.0,0.0,5.5
+11,Margaret Cho,Louis van Amstel,10,9.0,1.0,5.5
 11,Michael Bolton,Chelsie Hightower,11,12.0,1.0,4.666666666666667
 11,Brandy,Maksim Chmerkoskiy,4,4.0,0.0,7.333333333333333
 11,The Situation,Karina Smirnoff,9,8.0,1.0,5.5
 11,Audrina Patridge,Tony Dovolani,7,3.0,4.0,7.0
 11,Bristol Palin,Mark Ballas,3,6.0,3.0,6.666666666666667
-12,Ralph Macchio,Karina Smirnoff,4,3.0,1.0,7.5
+12,Ralph Macchio,Karina Smirnoff,4,4.0,0.0,7.5
 12,Chelsea Kane,Mark Ballas,3,5.0,2.0,6.5
 12,Kirstie Alley,Maksim Chmerkoskiy,2,7.0,5.0,7.166666666666667
-12,Hines Ward,Kym Johnson,1,4.0,3.0,7.333333333333333
+12,Hines Ward,Kym Johnson,1,3.0,2.0,7.333333333333333
 12,Sugar Ray Leonard,Anna Trebunskaya,9,11.0,2.0,5.666666666666667
 12,Chris Jericho,Cheryl Burke,7,2.0,5.0,7.0
-12,Petra Nemcova,Dmitry Chaplin,8,9.0,1.0,6.0
-12,Mike Catherwood,Lacey Schwimmer,11,8.0,3.0,5.0
+12,Petra Nemcova,Dmitry Chaplin,8,8.0,0.0,6.0
+12,Mike Catherwood,Lacey Schwimmer,11,9.0,2.0,5.0
 12,Romeo,Chelsie Hightower,5,1.0,4.0,7.0
 12,Wendy Williams,Tony Dovolani,10,10.0,0.0,5.166666666666667
 12,Kendra Wilkinson,Louis van Amstel,6,6.0,0.0,6.166666666666667
@@ -141,18 +141,18 @@ season,celebrity_name,ballroom_partner,placement,predicted_placement,abs_error,e
 13,David Arquette,Kym Johnson,6,8.0,2.0,6.0
 13,Ricki Lake,Derek Hough,3,3.0,0.0,7.166666666666667
 13,J.R. Martinez,Karina Smirnoff,1,1.0,0.0,7.333333333333333
-13,Metta World Peace (Ron),Peta Murgatroyd,12,9.0,3.0,4.666666666666667
+13,Metta World Peace (Ron),Peta Murgatroyd,12,10.0,2.0,4.666666666666667
 13,Hope Solo,Maksim Chmerkoskiy,4,5.0,1.0,6.666666666666667
 13,Chynna Phillips,Tony Dovolani,9,6.0,3.0,7.166666666666667
 13,Kristin Cavallari,Mark Ballas,10,2.0,8.0,6.833333333333333
 13,Carson Kressley,Anna Trebunskaya,8,11.0,3.0,5.833333333333333
-13,Chaz Bono,Lacey Schwimmer,7,10.0,3.0,5.666666666666667
+13,Chaz Bono,Lacey Schwimmer,7,9.0,2.0,5.666666666666667
 13,Nancy Grace,Tristan MacManus,5,12.0,7.0,6.166666666666667
 13,Rob Kardashian,Cheryl Burke,2,4.0,2.0,6.166666666666667
-14,William Levy,Cheryl Burke,3,2.0,1.0,8.166666666666666
+14,William Levy,Cheryl Burke,3,1.0,2.0,8.166666666666666
 14,Jack Wagner,Anna Trebunskaya,11,8.0,3.0,7.333333333333333
 14,Sherri Sheperd,Valentin Chmerkovskiy,10,6.0,4.0,7.666666666666667
-14,Jaleel White,Kym Johnson,7,1.0,6.0,8.0
+14,Jaleel White,Kym Johnson,7,2.0,5.0,8.0
 14,Roshon Fegan,Chelsie Hightower,6,3.0,3.0,8.166666666666666
 14,Melissa Gilbert,Maksim Chmerkoskiy,5,10.0,5.0,6.666666666666667
 14,Martina Navratilova,Tony Dovolani,12,12.0,0.0,6.166666666666667
@@ -161,24 +161,24 @@ season,celebrity_name,ballroom_partner,placement,predicted_placement,abs_error,e
 14,Gladys Knight,Tristan MacManus,8,11.0,3.0,7.0
 14,Katherine Jenkins,Mark Ballas,2,5.0,3.0,8.666666666666666
 14,Maria Menounos,Derek Hough,4,4.0,0.0,7.666666666666667
-15,Gilles Marini,Peta Murgatroyd,6,1.0,5.0,8.25
-15,Sabrina Bryan,Louis van Amstel,8,3.0,5.0,8.083333333333334
+15,Gilles Marini,Peta Murgatroyd,6,2.0,4.0,8.25
+15,Sabrina Bryan,Louis van Amstel,8,4.0,4.0,8.083333333333334
 15,Kirstie Alley,Maksim Chmerkoskiy,7,11.0,4.0,6.666666666666667
-15,Kelly Monaco,Valentin Chmerkovskiy,3,7.0,4.0,7.25
-15,Apolo Anton Ohno,Karina Smirnoff,5,4.0,1.0,7.75
+15,Kelly Monaco,Valentin Chmerkovskiy,3,8.0,5.0,7.25
+15,Apolo Anton Ohno,Karina Smirnoff,5,3.0,2.0,7.75
 15,Emmitt Smith,Cheryl Burke,4,9.0,5.0,7.833333333333333
-15,Shawn Johnson,Derek Hough,2,2.0,0.0,7.833333333333333
+15,Shawn Johnson,Derek Hough,2,1.0,1.0,7.833333333333333
 15,Pamela Anderson,Tristan MacManus,13,13.0,0.0,5.666666666666667
 15,Helio Castroneves,Chelsie Hightower,10,6.0,4.0,7.416666666666667
-15,Joey Fatone,Kym Johnson,12,8.0,4.0,7.166666666666667
+15,Joey Fatone,Kym Johnson,12,7.0,5.0,7.166666666666667
 15,Drew Lachey,Anna Trebunskaya,11,10.0,1.0,7.333333333333333
 15,Bristol Palin,Mark Ballas,9,12.0,3.0,6.25
 15,Melissa Rycroft,Tony Dovolani,1,5.0,4.0,7.416666666666667
 16,Ingo Rademacher,Kym Johnson,5,7.0,2.0,6.666666666666667
-16,Zendaya,Valentin Chmerkovskiy,2,1.0,1.0,8.333333333333334
+16,Zendaya,Valentin Chmerkovskiy,2,2.0,0.0,8.333333333333334
 16,Dorothy Hamill,Tristan MacManus,12,11.0,1.0,6.0
 16,Victor Ortiz,Lindsay Arnold,8,6.0,2.0,6.0
-16,Alexandra Raisman,Mark Ballas,4,2.0,2.0,7.5
+16,Alexandra Raisman,Mark Ballas,4,1.0,3.0,7.5
 16,Jacoby Jones,Karina Smirnoff,3,4.0,1.0,7.166666666666667
 16,D. L. Hughley,Cheryl Burke,9,12.0,3.0,4.666666666666667
 16,Andy Dick,Sharna Burgess,7,9.0,2.0,6.166666666666667
@@ -186,14 +186,14 @@ season,celebrity_name,ballroom_partner,placement,predicted_placement,abs_error,e
 16,Kellie Pickler,Derek Hough,1,3.0,2.0,7.833333333333333
 16,Lisa Vanderpump,Gleb Savchenko,10,8.0,2.0,6.0
 16,Sean Lowe,Peta Murgatroyd,6,5.0,1.0,6.5
-17,Valerie Harper,Tristan MacManus,10,10.0,0.0,6.666666666666667
-17,Brant Daugherty,Peta Murgatroyd,7,4.0,3.0,7.5
+17,Valerie Harper,Tristan MacManus,10,9.0,1.0,6.666666666666667
+17,Brant Daugherty,Peta Murgatroyd,7,5.0,2.0,7.5
 17,Elizabeth Berkley Lauren,Valentin Chmerkovskiy,6,7.0,1.0,8.166666666666666
 17,Leah Remini,Tony Dovolani,5,8.0,3.0,7.5
-17,Corbin Bleu,Karina Smirnoff,2,5.0,3.0,8.333333333333334
+17,Corbin Bleu,Karina Smirnoff,2,4.0,2.0,8.333333333333334
 17,Amber Riley,Derek Hough,1,3.0,2.0,8.5
 17,Keyshawn Johnson,Sharna Burgess,12,11.0,1.0,5.833333333333333
-17,Bill Engvall,Emma Slater,4,9.0,5.0,6.5
+17,Bill Engvall,Emma Slater,4,10.0,6.0,6.5
 17,Christina Milian,Mark Ballas,9,2.0,7.0,7.833333333333333
 17,"Nicole ""Snooki"" Polizzi",Sasha Farber,8,6.0,2.0,7.166666666666667
 17,Jack Osbourne,Cheryl Burke,3,1.0,2.0,7.833333333333333
@@ -223,7 +223,7 @@ season,celebrity_name,ballroom_partner,placement,predicted_placement,abs_error,e
 19,Tavis Smiley,Sharna Burgess,12,9.0,3.0,7.125
 19,Bethany Mota,Derek Hough,4,1.0,3.0,8.125
 19,Sadie Robertson,Mark Ballas,2,2.0,0.0,8.125
-20,Suzanne Somers,Tony Dovolani,9,9.0,0.0,6.625
+20,Suzanne Somers,Tony Dovolani,9,8.0,1.0,6.625
 20,Willow Shields,Mark Ballas,7,4.0,3.0,7.125
 20,Riker Lynch,Allison Holker,2,2.0,0.0,7.875
 20,Rumer Willis,Valentin Chmerkovskiy,1,3.0,2.0,8.0
@@ -234,16 +234,16 @@ season,celebrity_name,ballroom_partner,placement,predicted_placement,abs_error,e
 20,Noah Galloway,Sharna Burgess,3,5.0,2.0,6.625
 20,Redfoo,Emma Slater,12,7.0,5.0,6.625
 20,Patti LaBelle,Artem Chigvintsev,8,10.0,2.0,6.625
-20,Chris Soules,Witney Carson,5,8.0,3.0,5.875
+20,Chris Soules,Witney Carson,5,9.0,4.0,5.875
 21,Gary Busey,Anna Trebunskaya,10,12.0,2.0,5.25
 21,Alexa PenaVega,Mark Ballas,6,4.0,2.0,7.5
 21,Carlos PenaVega,Witney Carson,4,3.0,1.0,7.583333333333333
 21,Victor Espinoza,Karina Smirnoff,12,10.0,2.0,5.583333333333333
 21,Alek Skarlatos,Lindsay Arnold,3,2.0,1.0,7.416666666666667
 21,Chaka Khan,Keo Motsepe,13,13.0,0.0,4.666666666666667
-21,Andy Grammer,Allison Holker,7,7.0,0.0,7.166666666666667
+21,Andy Grammer,Allison Holker,7,8.0,1.0,7.166666666666667
 21,Tamar Braxton,Valentin Chmerkovskiy,5,6.0,1.0,7.916666666666667
-21,Nick Carter,Sharna Burgess,2,8.0,6.0,7.75
+21,Nick Carter,Sharna Burgess,2,7.0,5.0,7.75
 21,Hayes Grier,Emma Slater,8,5.0,3.0,7.25
 21,Bindi Irwin,Derek Hough,1,1.0,0.0,8.0
 21,Kim Zolciak-Biermann,Tony Dovolani,11,9.0,2.0,5.083333333333333
@@ -252,17 +252,17 @@ season,celebrity_name,ballroom_partner,placement,predicted_placement,abs_error,e
 22,Kim Fields,Sasha Farber,8,7.0,1.0,6.5
 22,Jodie Sweetin,Keo Motsepe,6,3.0,3.0,6.833333333333333
 22,Doug Flutie,Karina Smirnoff,9,11.0,2.0,5.833333333333333
-22,Von Miller,Witney Carson,7,5.0,2.0,6.833333333333333
+22,Von Miller,Witney Carson,7,6.0,1.0,6.833333333333333
 22,Antonio Brown,Sharna Burgess,5,4.0,1.0,6.666666666666667
 22,Paige VanZant,Mark Ballas,2,1.0,1.0,7.5
 22,Geraldo Rivera,Edyta Sliwinska,12,12.0,0.0,4.333333333333333
 22,Nyle DiMarco,Peta Murgatroyd,1,10.0,9.0,7.166666666666667
 22,Ginger Zee,Valentin Chmerkovskiy,3,2.0,1.0,7.333333333333333
-22,Wanya Morris,Lindsay Arnold,4,6.0,2.0,7.833333333333333
+22,Wanya Morris,Lindsay Arnold,4,5.0,1.0,7.833333333333333
 22,Marla Maples,Tony Dovolani,10,8.0,2.0,6.833333333333333
-23,Jake T. Austin,Jenna Johnson,13,9.0,4.0,5.75
+23,Jake T. Austin,Jenna Johnson,13,7.0,6.0,5.75
 23,Maureen McCormick,Artem Chigvintsev,8,12.0,4.0,6.0
-23,Marilu Henner,Derek Hough,6,7.0,1.0,6.75
+23,Marilu Henner,Derek Hough,6,8.0,2.0,6.75
 23,Ryan Lochte,Cheryl Burke,7,4.0,3.0,6.0
 23,Calvin Johnson Jr.,Lindsay Arnold,3,6.0,3.0,6.75
 23,Laurie Hernandez,Valentin Chmerkovskiy,1,1.0,0.0,7.875
@@ -270,21 +270,21 @@ season,celebrity_name,ballroom_partner,placement,predicted_placement,abs_error,e
 23,Rick Perry,Emma Slater,12,13.0,1.0,5.25
 23,James Hinchcliffe,Sharna Burgess,2,2.0,0.0,7.5
 23,Babyface,Allison Holker,11,10.0,1.0,7.0
-23,Vanilla Ice,Witney Carson,10,8.0,2.0,6.375
+23,Vanilla Ice,Witney Carson,10,9.0,1.0,6.375
 23,Jana Kramer,Gleb Savchenko,4,5.0,1.0,7.0
 23,Terra Jole,Sasha Farber,5,3.0,2.0,7.0
 24,Charo,Keo Motsepe,11,11.0,0.0,5.75
 24,Mr. T,Kym Herjavec,10,12.0,2.0,5.25
 24,Heather Morris,Maksim Chmerkoskiy,8,3.0,5.0,7.25
 24,Nancy Kerrigan,Artem Chigvintsev,7,6.0,1.0,7.0
-24,Bonner Bolton,Sharna Burgess,5,8.0,3.0,6.25
+24,Bonner Bolton,Sharna Burgess,5,9.0,4.0,6.25
 24,Simone Biles,Sasha Farber,4,2.0,2.0,7.625
 24,David Ross,Lindsay Arnold,2,5.0,3.0,6.875
 24,Rashad Jennings,Emma Slater,1,1.0,0.0,7.875
 24,Chris Kattan,Witney Carson,12,10.0,2.0,4.875
 24,Erika Jayne,Gleb Savchenko,9,7.0,2.0,6.5
 24,Normani,Valentin Chmerkovskiy,3,4.0,1.0,7.375
-24,Nick Viall,Peta Murgatroyd,6,9.0,3.0,6.125
+24,Nick Viall,Peta Murgatroyd,6,8.0,2.0,6.125
 25,Sasha Pieterse,Gleb Savchenko,10,6.0,4.0,6.75
 25,Frankie Muniz,Witney Carson,3,4.0,1.0,7.166666666666667
 25,Jordan Fisher,Lindsay Arnold,1,1.0,0.0,7.666666666666667
@@ -304,18 +304,18 @@ season,celebrity_name,ballroom_partner,placement,predicted_placement,abs_error,e
 26,Arike Ogunbowale,Gleb Savchenko,7,1.0,6.0,7.857142857142857
 26,Jennie Finch Daigle,Keo Motsepe,6,7.0,1.0,7.5
 26,Chris Mazdzer,Witney Carson,5,3.0,2.0,7.714285714285714
-26,Mirai Nagasu,Alan Bersten,4,5.0,1.0,8.571428571428571
-26,Tonya Harding,Sasha Farber,3,6.0,3.0,8.0
+26,Mirai Nagasu,Alan Bersten,4,6.0,2.0,8.571428571428571
+26,Tonya Harding,Sasha Farber,3,5.0,2.0,8.0
 26,Josh Norman,Sharna Burgess,2,2.0,0.0,7.928571428571429
 26,Adam Rippon,Jenna Johnson,1,4.0,3.0,8.714285714285714
-27,Juan Pablo Di Pace,Cheryl Burke,5,4.0,1.0,8.0
+27,Juan Pablo Di Pace,Cheryl Burke,5,5.0,0.0,8.0
 27,Evanna Lynch,Keo Motsepe,3,6.0,3.0,7.0
 27,Nancy McKeon,Valentin Chmerkovskiy,11,10.0,1.0,6.666666666666667
-27,John Schneider,Emma Slater,8,8.0,0.0,6.583333333333333
+27,John Schneider,Emma Slater,8,7.0,1.0,6.583333333333333
 27,Milo Manheim,Witney Carson,2,3.0,1.0,7.666666666666667
 27,Danelle Umstead,Artem Chigvintsev,12,12.0,0.0,6.083333333333333
-27,Mary Lou Retton,Sasha Farber,9,7.0,2.0,7.166666666666667
-27,DeMarcus Ware,Lindsay Arnold,7,5.0,2.0,7.75
+27,Mary Lou Retton,Sasha Farber,9,8.0,1.0,7.166666666666667
+27,DeMarcus Ware,Lindsay Arnold,7,4.0,3.0,7.75
 27,Nikki Glaser,Gleb Savchenko,13,11.0,2.0,5.833333333333333
 27,Bobby Bones,Sharna Burgess,1,9.0,8.0,6.583333333333333
 27,Tinashe,Brandon Armstrong,10,2.0,8.0,8.166666666666666
@@ -324,30 +324,30 @@ season,celebrity_name,ballroom_partner,placement,predicted_placement,abs_error,e
 28,Kate Flannery,Pasha Pashkov,7,9.0,2.0,6.0
 28,James Van Der Beek,Emma Slater,5,2.0,3.0,6.833333333333333
 28,Kel Mitchell,Witney Carson,2,7.0,5.0,6.0
-28,Ray Lewis,Cheryl Burke,11,5.0,6.0,5.0
+28,Ray Lewis,Cheryl Burke,11,6.0,5.0,5.0
 28,Lamar Odom,Peta Murgatroyd,10,11.0,1.0,3.8333333333333335
 28,Sailor Brinkley-Cook,Valentin Chmerkovskiy,9,8.0,1.0,6.0
 28,Sean Spicer,Lindsay Arnold,6,12.0,6.0,4.666666666666667
 28,Mary Wilson,Brandon Armstrong,12,10.0,2.0,5.333333333333333
-28,Lauren Alaina,Gleb Savchenko,4,6.0,2.0,6.333333333333333
+28,Lauren Alaina,Gleb Savchenko,4,5.0,1.0,6.333333333333333
 28,Ally Brooke,Sasha Farber,3,3.0,0.0,6.0
 28,Karamo Brown,Jenna Johnson,8,4.0,4.0,6.0
 28,Hannah Brown,Alan Bersten,1,1.0,0.0,7.333333333333333
-29,Anne Heche,Keo Motsepe,13,11.0,2.0,6.0
+29,Anne Heche,Keo Motsepe,13,12.0,1.0,6.0
 29,Jesse Metcalfe,Sharna Burgess,12,7.0,5.0,6.333333333333333
-29,Chrishell Stause,Gleb Savchenko,8,12.0,4.0,5.166666666666667
+29,Chrishell Stause,Gleb Savchenko,8,11.0,3.0,5.166666666666667
 29,Skai Jackson,Alan Bersten,5,8.0,3.0,6.0
-29,Justina Machado,Sasha Farber,4,4.0,0.0,7.0
+29,Justina Machado,Sasha Farber,4,3.0,1.0,7.0
 29,Charles Oakley,Emma Slater,15,15.0,0.0,4.5
 29,Veron Davis,Peta Murgatroyd,11,9.0,2.0,5.833333333333333
-29,Johnny Weir,Britt Stewart,6,6.0,0.0,6.0
+29,Johnny Weir,Britt Stewart,6,5.0,1.0,6.0
 29,Nev Schulman,Jenna Johnson,2,2.0,0.0,6.833333333333333
-29,AJ McLean,Cheryl Burke,7,3.0,4.0,6.166666666666667
+29,AJ McLean,Cheryl Burke,7,4.0,3.0,6.166666666666667
 29,Nelly,Daniella Karagach,3,13.0,10.0,5.666666666666667
 29,Kaitlyn Bristowe,Artem Chigvintsev,1,1.0,0.0,7.0
 29,Carole Baskin,Pasha Pashkov,14,14.0,0.0,4.5
 29,Monica Aldama,Valentin Chmerkovskiy,10,10.0,0.0,5.833333333333333
-29,Jeannie Mai,Brandon Armstrong,9,5.0,4.0,6.0
+29,Jeannie Mai,Brandon Armstrong,9,6.0,3.0,6.0
 30,Martin Kove,Britt Stewart,15,15.0,0.0,3.5
 30,Brian Austin Green,Sharna Burgess,13,14.0,1.0,5.875
 30,Melora Hardin,Artem Chigvintsev,6,8.0,2.0,6.625
@@ -355,24 +355,24 @@ season,celebrity_name,ballroom_partner,placement,predicted_placement,abs_error,e
 30,"Mike ""The Miz"" Mizanin",Witney Carson,9,5.0,4.0,6.25
 30,Suni Lee,Sasha Farber,5,2.0,3.0,7.0
 30,Iman Shumpert,Daniella Karagach,1,13.0,12.0,5.75
-30,Cody Rigsby,Cheryl Burke,3,6.0,3.0,6.0
+30,Cody Rigsby,Cheryl Burke,3,7.0,4.0,6.0
 30,Melanie C,Gleb Savchenko,11,9.0,2.0,7.125
 30,Jimmie Allen,Emma Slater,7,10.0,3.0,6.125
-30,Olivia Jade,Valentin Chmerkovskiy,8,3.0,5.0,6.5
+30,Olivia Jade,Valentin Chmerkovskiy,8,4.0,4.0,6.5
 30,JoJo Siwa,Jenna Johnson,2,1.0,1.0,7.5
-30,Christine Chiu,Pasha Pashkov,14,7.0,7.0,6.125
+30,Christine Chiu,Pasha Pashkov,14,6.0,8.0,6.125
 30,Kenya Moore,Brandon Armstrong,10,12.0,2.0,6.25
-30,Amanda Kloots,Alan Bersten,4,4.0,0.0,7.5
+30,Amanda Kloots,Alan Bersten,4,3.0,1.0,7.5
 31,Jason Lewis,Peta Murgatroyd,16,15.0,1.0,4.5
 31,Cheryl Ladd,Louis van Amstel,14,16.0,2.0,5.25
-31,Selma Blair,Sasha Farber,12,7.0,5.0,7.0
+31,Selma Blair,Sasha Farber,12,6.0,6.0,7.0
 31,Joseph Baena,Daniella Karagach,11,9.0,2.0,5.875
 31,Trevor Donovan,Emma Slater,6,10.0,4.0,6.375
 31,Daniel Durant,Britt Stewart,5,3.0,2.0,7.0
 31,Wayne Brady,Witney Carson,3,4.0,1.0,7.625
 31,Sam Champion,Cheryl Burke,13,12.0,1.0,5.75
 31,Jessie James Decker,Alan Bersten,10,13.0,3.0,5.625
-31,Jordin Sparks,Brandon Armstrong,9,6.0,3.0,6.625
+31,Jordin Sparks,Brandon Armstrong,9,7.0,2.0,6.625
 31,Heidi D'Amelio,Artem Chigvintsev,8,8.0,0.0,6.5
 31,Charli D'Amelio,Mark Ballas,1,1.0,0.0,8.0
 31,Teresa Giudice,Pasha Pashkov,15,14.0,1.0,5.375
@@ -406,17 +406,17 @@ season,celebrity_name,ballroom_partner,placement,predicted_placement,abs_error,e
 33,Phaedra Parks,Val Chmerkovskiy,8,8.0,0.0,6.666666666666667
 33,Jenn Tran,Sasha Farber,7,7.0,0.0,6.333333333333333
 33,Joey Graziadei,Jenna Johnson,1,3.0,2.0,7.166666666666667
-34,Corey Feldman,Jenna Johnson,13,14.0,1.0,4.8
+34,Corey Feldman,Jenna Johnson,13,13.0,0.0,4.8
 34,Danielle Fishel,Pasha Pashkov,8,11.0,3.0,6.2
 34,Elaine Hendrix,Alan Bersten (Rashad Jennings week 9),5,8.0,3.0,6.6
 34,Baron Davis,Britt Stewart,13,12.0,1.0,5.6
 34,Jordan Chiles,Ezra Sosa (Apolo Anton Ohno week 9),3,7.0,4.0,6.4
-34,Andy Richter,Emma Slater/Kaitlyn Bristowe (week 9),7,13.0,6.0,5.0
-34,Robert Irwin,Witney Carson (Xoshitl Gomez week 9),1,1.0,0.0,7.4
+34,Andy Richter,Emma Slater/Kaitlyn Bristowe (week 9),7,14.0,7.0,5.0
+34,Robert Irwin,Witney Carson (Xoshitl Gomez week 9),1,2.0,1.0,7.4
 34,Hilaria Baldwin,Gleb Savchenko,11,6.0,5.0,7.0
 34,Lauren Jauregui,Brandon Armstrong,12,4.0,8.0,6.8
 34,Scott Hoying,Rylee Arnold,10,10.0,0.0,5.6
 34,Alix Earle,Val Chmerkovskiy (Joey Graziadei week 9),2,5.0,3.0,6.8
 34,Jen Affleck,Jan Ravnik,9,3.0,6.0,6.8
-34,Whitney Leavitt,Mark Ballas,6,2.0,4.0,7.4
+34,Whitney Leavitt,Mark Ballas,6,1.0,5.0,7.4
 34,Dylan Efron,Daniella Karagach (Rumer Willis week 9),4,9.0,5.0,6.0
