@@ -1,0 +1,376 @@
+season,celebrity_name,wiki_title,pop_score,pop_score_end,pop_score_start,pop_score_delta,source,window_start,window_end
+1,Evander Holyfield,Evander Holyfield,56,56,52,4,wikipedia_edits_cumulative,2005-06-01,2005-07-06
+1,Joey McIntyre,Joey McIntyre,19,19,0,19,wikipedia_edits_cumulative,2005-06-01,2005-07-06
+1,John O'Hurley,John O'Hurley,6,6,4,2,wikipedia_edits_cumulative,2005-06-01,2005-07-06
+1,Kelly Monaco,Kelly Monaco,51,51,30,21,wikipedia_edits_cumulative,2005-06-01,2005-07-06
+1,Rachel Hunter,Rachel Hunter,26,26,15,11,wikipedia_edits_cumulative,2005-06-01,2005-07-06
+1,Trista Sutter,Trista Sutter,28,28,26,2,wikipedia_edits_cumulative,2005-06-01,2005-07-06
+2,Drew Lachey,Drew Lachey,39,39,10,29,wikipedia_edits_cumulative,2006-01-01,2006-02-19
+2,George Hamilton,George Hamilton (actor),57,57,32,25,wikipedia_edits_cumulative,2006-01-01,2006-02-19
+2,Giselle Fernandez,Giselle Fernández,27,27,18,9,wikipedia_edits_cumulative,2006-01-01,2006-02-19
+2,Jerry Rice,Jerry Rice,222,222,165,57,wikipedia_edits_cumulative,2006-01-01,2006-02-19
+2,Kenny Mayne,Kenny Mayne,22,22,10,12,wikipedia_edits_cumulative,2006-01-01,2006-02-19
+2,Lisa Rinna,Lisa Rinna,70,70,40,30,wikipedia_edits_cumulative,2006-01-01,2006-02-19
+2,Master P,Master P,306,306,210,96,wikipedia_edits_cumulative,2006-01-01,2006-02-19
+2,Stacy Keibler,Stacy Keibler,773,773,606,167,wikipedia_edits_cumulative,2006-01-01,2006-02-19
+2,Tatum O'Neal,Tatum O'Neal,72,72,59,13,wikipedia_edits_cumulative,2006-01-01,2006-02-19
+2,Tia Carrere,Tia Carrere,93,93,79,14,wikipedia_edits_cumulative,2006-01-01,2006-02-19
+3,Emmitt Smith,Emmitt Smith,328,328,255,73,wikipedia_edits_cumulative,2006-09-01,2006-11-03
+3,Harry Hamlin,Harry Hamlin,81,81,58,23,wikipedia_edits_cumulative,2006-09-01,2006-11-03
+3,Jerry Springer,Jerry Springer,431,431,361,70,wikipedia_edits_cumulative,2006-09-01,2006-11-03
+3,Joey Lawrence,Joey Lawrence,126,126,91,35,wikipedia_edits_cumulative,2006-09-01,2006-11-03
+3,Mario Lopez,Mario Lopez,268,268,181,87,wikipedia_edits_cumulative,2006-09-01,2006-11-03
+3,Monique Coleman,Monique Coleman,253,253,155,98,wikipedia_edits_cumulative,2006-09-01,2006-11-03
+3,Sara Evans,Sara Evans,507,507,307,200,wikipedia_edits_cumulative,2006-09-01,2006-11-03
+3,Shanna Moakler,Shanna Moakler,167,167,126,41,wikipedia_edits_cumulative,2006-09-01,2006-11-03
+3,Tucker Carlson,Tucker Carlson,971,971,825,146,wikipedia_edits_cumulative,2006-09-01,2006-11-03
+3,Vivica A. Fox,Vivica A. Fox,151,151,127,24,wikipedia_edits_cumulative,2006-09-01,2006-11-03
+3,Willa Ford,Willa Ford,757,757,643,114,wikipedia_edits_cumulative,2006-09-01,2006-11-03
+4,Apolo Anton Ohno,Apolo Ohno,505,505,411,94,wikipedia_edits_cumulative,2007-03-01,2007-05-03
+4,Billy Ray Cyrus,Billy Ray Cyrus,569,569,444,125,wikipedia_edits_cumulative,2007-03-01,2007-05-03
+4,Clyde Drexler,Clyde Drexler,209,209,166,43,wikipedia_edits_cumulative,2007-03-01,2007-05-03
+4,Heather Mills,Heather Mills,764,764,584,180,wikipedia_edits_cumulative,2007-03-01,2007-05-03
+4,Ian Ziering,Ian Ziering,105,105,51,54,wikipedia_edits_cumulative,2007-03-01,2007-05-03
+4,Joey Fatone,Joey Fatone,216,216,145,71,wikipedia_edits_cumulative,2007-03-01,2007-05-03
+4,John Ratzenberger,John Ratzenberger,290,290,205,85,wikipedia_edits_cumulative,2007-03-01,2007-05-03
+4,Laila Ali,Laila Ali,205,205,158,47,wikipedia_edits_cumulative,2007-03-01,2007-05-03
+4,Leeza Gibbons,Leeza Gibbons,80,80,67,13,wikipedia_edits_cumulative,2007-03-01,2007-05-03
+4,Paulina Porizkova,Paulina Porizkova,278,278,220,58,wikipedia_edits_cumulative,2007-03-01,2007-05-03
+4,Shandi Finnessey,Shandi Finnessey,233,233,178,55,wikipedia_edits_cumulative,2007-03-01,2007-05-03
+5,Albert Reed,Albert Reed,0,0,0,0,wikipedia_edits_cumulative,2007-09-01,2007-11-03
+5,Cameron Mathison,Cameron Mathison,73,73,56,17,wikipedia_edits_cumulative,2007-09-01,2007-11-03
+5,Floyd Mayweather Jr. ,Floyd Mayweather Jr.,1109,1109,1009,100,wikipedia_edits_cumulative,2007-09-01,2007-11-03
+5,Helio Castroneves,Hélio Castroneves,193,193,174,19,wikipedia_edits_cumulative,2007-09-01,2007-11-03
+5,Jane Seymour,Jane Seymour,406,406,331,75,wikipedia_edits_cumulative,2007-09-01,2007-11-03
+5,Jennie Garth,Jennie Garth,238,238,208,30,wikipedia_edits_cumulative,2007-09-01,2007-11-03
+5,Josie Maran,Josie Maran,441,441,372,69,wikipedia_edits_cumulative,2007-09-01,2007-11-03
+5,Marie Osmond,Marie Osmond,451,451,280,171,wikipedia_edits_cumulative,2007-09-01,2007-11-03
+5,Mark Cuban,Mark Cuban,1371,1371,1216,155,wikipedia_edits_cumulative,2007-09-01,2007-11-03
+5,Mel B,Mel B,1003,1003,974,29,wikipedia_edits_cumulative,2007-09-01,2007-11-03
+5,Sabrina Bryan,Sabrina Bryan,717,717,595,122,wikipedia_edits_cumulative,2007-09-01,2007-11-03
+5,Wayne Newton,Wayne Newton,305,305,234,71,wikipedia_edits_cumulative,2007-09-01,2007-11-03
+6,Adam Carolla,Adam Carolla,1171,1171,1090,81,wikipedia_edits_cumulative,2008-03-01,2008-05-03
+6,Cristian de la Fuente,Cristián de la Fuente,97,97,74,23,wikipedia_edits_cumulative,2008-03-01,2008-05-03
+6,Jason Taylor,Jason Taylor (American football),472,472,348,124,wikipedia_edits_cumulative,2008-03-01,2008-05-03
+6,Kristi Yamaguchi,Kristi Yamaguchi,470,470,352,118,wikipedia_edits_cumulative,2008-03-01,2008-05-03
+6,Mario,Mario,8474,8474,8320,154,wikipedia_edits_cumulative,2008-03-01,2008-05-03
+6,Marissa Jaret Winokur,Marissa Jaret Winokur,146,146,109,37,wikipedia_edits_cumulative,2008-03-01,2008-05-03
+6,Marlee Matlin,Marlee Matlin,352,352,289,63,wikipedia_edits_cumulative,2008-03-01,2008-05-03
+6,Monica Seles,Monica Seles,923,923,872,51,wikipedia_edits_cumulative,2008-03-01,2008-05-03
+6,Penn Jillette,Penn Jillette,626,626,580,46,wikipedia_edits_cumulative,2008-03-01,2008-05-03
+6,Priscilla Presley,Priscilla Presley,543,543,411,132,wikipedia_edits_cumulative,2008-03-01,2008-05-03
+6,Shannon Elizabeth,Shannon Elizabeth,646,646,543,103,wikipedia_edits_cumulative,2008-03-01,2008-05-03
+6,Steve Guttenberg,Steve Guttenberg,539,539,516,23,wikipedia_edits_cumulative,2008-03-01,2008-05-03
+7,Brooke Burke,Brooke Burke,641,641,561,80,wikipedia_edits_cumulative,2008-09-01,2008-11-03
+7,Cloris Leachman,Cloris Leachman,540,540,447,93,wikipedia_edits_cumulative,2008-09-01,2008-11-03
+7,Cody Linley,Cody Linley,1634,1634,1439,195,wikipedia_edits_cumulative,2008-09-01,2008-11-03
+7,Jeffrey Ross,Jeff Ross,129,129,113,16,wikipedia_edits_cumulative,2008-09-01,2008-11-03
+7,Kim Kardashian,Kim Kardashian,2550,2550,2241,309,wikipedia_edits_cumulative,2008-09-01,2008-11-03
+7,Lance Bass,Lance Bass,2596,2596,2486,110,wikipedia_edits_cumulative,2008-09-01,2008-11-03
+7,Maurice Greene,Maurice Greene (fighter),0,0,0,0,wikipedia_edits_cumulative,2008-09-01,2008-11-03
+7,Misty May-Treanor,Misty May-Treanor,639,639,529,110,wikipedia_edits_cumulative,2008-09-01,2008-11-03
+7,Rocco DiSpirito,Rocco DiSpirito,132,132,111,21,wikipedia_edits_cumulative,2008-09-01,2008-11-03
+7,Susan Lucci,Susan Lucci,446,446,376,70,wikipedia_edits_cumulative,2008-09-01,2008-11-03
+7,Ted McGinley,Ted McGinley,251,251,213,38,wikipedia_edits_cumulative,2008-09-01,2008-11-03
+7,Toni Braxton,Toni Braxton,1886,1886,1798,88,wikipedia_edits_cumulative,2008-09-01,2008-11-03
+7,Warren Sapp,Warren Sapp,662,662,573,89,wikipedia_edits_cumulative,2008-09-01,2008-11-03
+8,Belinda Carlisle,Belinda Carlisle,1083,1083,981,102,wikipedia_edits_cumulative,2009-03-01,2009-05-10
+8,Chuck Wicks,Chuck Wicks,373,373,302,71,wikipedia_edits_cumulative,2009-03-01,2009-05-10
+8,David Alan Grier,David Alan Grier,336,336,316,20,wikipedia_edits_cumulative,2009-03-01,2009-05-10
+8,Denise Richards,Denise Richards,1121,1121,1049,72,wikipedia_edits_cumulative,2009-03-01,2009-05-10
+8,Gilles Marini,Gilles Marini,61,61,24,37,wikipedia_edits_cumulative,2009-03-01,2009-05-10
+8,Holly Madison,Holly Madison,1027,1027,932,95,wikipedia_edits_cumulative,2009-03-01,2009-05-10
+8,Lawrence Taylor,Lawrence Taylor,1840,1840,1806,34,wikipedia_edits_cumulative,2009-03-01,2009-05-10
+8,Lil' Kim,Lil' Kim,4113,4113,3890,223,wikipedia_edits_cumulative,2009-03-01,2009-05-10
+8,Melissa Rycroft,Melissa Rycroft,198,198,0,198,wikipedia_edits_cumulative,2009-03-01,2009-05-10
+8,Shawn Johnson,Shawn Johnson East,1200,1200,1014,186,wikipedia_edits_cumulative,2009-03-01,2009-05-10
+8,Steve Wozniak,Steve Wozniak,2346,2346,2168,178,wikipedia_edits_cumulative,2009-03-01,2009-05-10
+8,Steve-O,Steve-O,1541,1541,1516,25,wikipedia_edits_cumulative,2009-03-01,2009-05-10
+8,Ty Murray,Ty Murray,181,181,123,58,wikipedia_edits_cumulative,2009-03-01,2009-05-10
+9,Aaron Carter,Aaron Carter,2467,2467,2457,10,wikipedia_edits_cumulative,2009-09-01,2009-11-03
+9,Ashley Hamiliton,The Secret Storm,146,146,144,2,wikipedia_edits_cumulative,2009-09-01,2009-11-03
+9,Chuck Liddell,Chuck Liddell,3579,3579,3561,18,wikipedia_edits_cumulative,2009-09-01,2009-11-03
+9,Debi Mazar,Debi Mazar,258,258,228,30,wikipedia_edits_cumulative,2009-09-01,2009-11-03
+9,Donny Osmond,Donny Osmond,907,907,872,35,wikipedia_edits_cumulative,2009-09-01,2009-11-03
+9,Joanna Krupa,Joanna Krupa,508,508,421,87,wikipedia_edits_cumulative,2009-09-01,2009-11-03
+9,Kathy Ireland,Kathy Ireland,480,480,449,31,wikipedia_edits_cumulative,2009-09-01,2009-11-03
+9,Kelly Osbourne,Kelly Osbourne,1330,1330,1234,96,wikipedia_edits_cumulative,2009-09-01,2009-11-03
+9,Louie Vito,Louie Vito,136,136,56,80,wikipedia_edits_cumulative,2009-09-01,2009-11-03
+9,Macy Gray,Macy Gray,827,827,795,32,wikipedia_edits_cumulative,2009-09-01,2009-11-03
+9,Mark Dacascos,Mark Dacascos,297,297,268,29,wikipedia_edits_cumulative,2009-09-01,2009-11-03
+9,Melissa Joan Hart,Melissa Joan Hart,1231,1231,1173,58,wikipedia_edits_cumulative,2009-09-01,2009-11-03
+9,Michael Irvin,Michael Irvin,1137,1137,1120,17,wikipedia_edits_cumulative,2009-09-01,2009-11-03
+9,Mya,Mya (singer),4200,4200,4089,111,wikipedia_edits_cumulative,2009-09-01,2009-11-03
+9,Natalie Coughlin,Natalie Coughlin,533,533,512,21,wikipedia_edits_cumulative,2009-09-01,2009-11-03
+9,Tom DeLay,Tom DeLay,3324,3324,2920,404,wikipedia_edits_cumulative,2009-09-01,2009-11-03
+10,Aiden Turner,Aiden Turner,155,155,117,38,wikipedia_edits_cumulative,2010-03-01,2010-05-03
+10,Buzz Aldrin,Buzz Aldrin,1931,1931,1864,67,wikipedia_edits_cumulative,2010-03-01,2010-05-03
+10,Chad Ochocinco,Chad Johnson,3001,3001,2893,108,wikipedia_edits_cumulative,2010-03-01,2010-05-03
+10,Erin Andrews,Erin Andrews,1135,1135,1076,59,wikipedia_edits_cumulative,2010-03-01,2010-05-03
+10,Evan Lysacek,Evan Lysacek,1145,1145,1038,107,wikipedia_edits_cumulative,2010-03-01,2010-05-03
+10,Jake Pavelka,Jake Pavelka,37,37,31,6,wikipedia_edits_cumulative,2010-03-01,2010-05-03
+10,Kate Gosselin,Kate Gosselin,1188,1188,1022,166,wikipedia_edits_cumulative,2010-03-01,2010-05-03
+10,Nicole Scherzinger,Nicole Scherzinger,6455,6455,6273,182,wikipedia_edits_cumulative,2010-03-01,2010-05-03
+10,Niecy Nash,Niecy Nash,255,255,203,52,wikipedia_edits_cumulative,2010-03-01,2010-05-03
+10,Pamela Anderson,Pamela Anderson,4838,4838,4536,302,wikipedia_edits_cumulative,2010-03-01,2010-05-03
+10,Shannen Doherty,Shannen Doherty,1546,1546,1481,65,wikipedia_edits_cumulative,2010-03-01,2010-05-03
+11,Audrina Patridge,Audrina Patridge,1527,1527,1438,89,wikipedia_edits_cumulative,2010-09-01,2010-11-03
+11,Brandy,Brandy,997,997,980,17,wikipedia_edits_cumulative,2010-09-01,2010-11-03
+11,Bristol Palin,Bristol Palin,824,824,637,187,wikipedia_edits_cumulative,2010-09-01,2010-11-03
+11,David Hasselhoff,David Hasselhoff,4587,4587,4432,155,wikipedia_edits_cumulative,2010-09-01,2010-11-03
+11,Florence Henderson,Florence Henderson,443,443,398,45,wikipedia_edits_cumulative,2010-09-01,2010-11-03
+11,Jennifer Grey,Jennifer Grey,420,420,370,50,wikipedia_edits_cumulative,2010-09-01,2010-11-03
+11,Kurt Warner,Kurt Warner,2311,2311,2256,55,wikipedia_edits_cumulative,2010-09-01,2010-11-03
+11,Kyle Massey,Kyle Massey,2108,2108,2013,95,wikipedia_edits_cumulative,2010-09-01,2010-11-03
+11,Margaret Cho,Margaret Cho,1258,1258,1210,48,wikipedia_edits_cumulative,2010-09-01,2010-11-03
+11,Michael Bolton,Michael Bolton,1477,1477,1435,42,wikipedia_edits_cumulative,2010-09-01,2010-11-03
+11,Rick Fox,Rick Fox,616,616,580,36,wikipedia_edits_cumulative,2010-09-01,2010-11-03
+11,The Situation,Situation,14,14,13,1,wikipedia_edits_cumulative,2010-09-01,2010-11-03
+12,Chelsea Kane,Chelsea Kane,1620,1620,1411,209,wikipedia_edits_cumulative,2011-03-01,2011-05-03
+12,Chris Jericho,Chris Jericho,7456,7456,7364,92,wikipedia_edits_cumulative,2011-03-01,2011-05-03
+12,Hines Ward,Hines Ward,1684,1684,1621,63,wikipedia_edits_cumulative,2011-03-01,2011-05-03
+12,Kendra Wilkinson,Kendra Wilkinson,2197,2197,2189,8,wikipedia_edits_cumulative,2011-03-01,2011-05-03
+12,Kirstie Alley,Kirstie Alley,1446,1446,1370,76,wikipedia_edits_cumulative,2011-03-01,2011-05-03
+12,Mike Catherwood,Michael Catherwood,183,183,83,100,wikipedia_edits_cumulative,2011-03-01,2011-05-03
+12,Petra Nemcova,Petra Němcová,732,732,692,40,wikipedia_edits_cumulative,2011-03-01,2011-05-03
+12,Ralph Macchio,Ralph Macchio,1088,1088,984,104,wikipedia_edits_cumulative,2011-03-01,2011-05-03
+12,Romeo,Romeo,851,851,771,80,wikipedia_edits_cumulative,2011-03-01,2011-05-03
+12,Sugar Ray Leonard,Sugar Ray Leonard,1242,1242,1195,47,wikipedia_edits_cumulative,2011-03-01,2011-05-03
+12,Wendy Williams,Wendy Williams,1665,1665,1559,106,wikipedia_edits_cumulative,2011-03-01,2011-05-03
+13,Carson Kressley,Carson Kressley,463,463,451,12,wikipedia_edits_cumulative,2011-09-01,2011-11-03
+13,Chaz Bono,Chaz Bono,944,944,899,45,wikipedia_edits_cumulative,2011-09-01,2011-11-03
+13,Chynna Phillips,Chynna Phillips,259,259,226,33,wikipedia_edits_cumulative,2011-09-01,2011-11-03
+13,David Arquette,David Arquette,1220,1220,1195,25,wikipedia_edits_cumulative,2011-09-01,2011-11-03
+13,Elisabetta Canalis,Elisabetta Canalis,313,313,274,39,wikipedia_edits_cumulative,2011-09-01,2011-11-03
+13,Hope Solo,Hope Solo,650,650,544,106,wikipedia_edits_cumulative,2011-09-01,2011-11-03
+13,J.R. Martinez,J. R. Martinez,137,137,60,77,wikipedia_edits_cumulative,2011-09-01,2011-11-03
+13,Kristin Cavallari,Kristin Cavallari,2019,2019,1942,77,wikipedia_edits_cumulative,2011-09-01,2011-11-03
+13,Metta World Peace (Ron),Metta Sandiford-Artest,2597,2597,2471,126,wikipedia_edits_cumulative,2011-09-01,2011-11-03
+13,Nancy Grace,Nancy Grace,2851,2851,2833,18,wikipedia_edits_cumulative,2011-09-01,2011-11-03
+13,Ricki Lake,Ricki Lake,872,872,800,72,wikipedia_edits_cumulative,2011-09-01,2011-11-03
+13,Rob Kardashian,Rob Kardashian,1455,1455,1306,149,wikipedia_edits_cumulative,2011-09-01,2011-11-03
+14,Donald Driver,Donald Driver,663,663,640,23,wikipedia_edits_cumulative,2012-03-01,2012-05-03
+14,Gavin DeGraw,Gavin DeGraw,1279,1279,1196,83,wikipedia_edits_cumulative,2012-03-01,2012-05-03
+14,Gladys Knight,Gladys Knight,1152,1152,1125,27,wikipedia_edits_cumulative,2012-03-01,2012-05-03
+14,Jack Wagner,Jack Wagner (actor),403,403,374,29,wikipedia_edits_cumulative,2012-03-01,2012-05-03
+14,Jaleel White,Jaleel White,1750,1750,1686,64,wikipedia_edits_cumulative,2012-03-01,2012-05-03
+14,Katherine Jenkins,Katherine Jenkins,1133,1133,1098,35,wikipedia_edits_cumulative,2012-03-01,2012-05-03
+14,Maria Menounos,Maria Menounos,885,885,814,71,wikipedia_edits_cumulative,2012-03-01,2012-05-03
+14,Martina Navratilova,Martina Navratilova,1765,1765,1740,25,wikipedia_edits_cumulative,2012-03-01,2012-05-03
+14,Melissa Gilbert,Melissa Gilbert,650,650,616,34,wikipedia_edits_cumulative,2012-03-01,2012-05-03
+14,Roshon Fegan,Roshon Fegan,827,827,702,125,wikipedia_edits_cumulative,2012-03-01,2012-05-03
+14,Sherri Sheperd,Shepherd (name),109,109,108,1,wikipedia_edits_cumulative,2012-03-01,2012-05-03
+14,William Levy,William Levy (actor),1692,1692,1539,153,wikipedia_edits_cumulative,2012-03-01,2012-05-03
+15,Apolo Anton Ohno,Apolo Ohno,1830,1830,1828,2,wikipedia_edits_cumulative,2012-09-01,2012-11-03
+15,Bristol Palin,Bristol Palin,1509,1509,1486,23,wikipedia_edits_cumulative,2012-09-01,2012-11-03
+15,Drew Lachey,Drew Lachey,346,346,327,19,wikipedia_edits_cumulative,2012-09-01,2012-11-03
+15,Emmitt Smith,Emmitt Smith,2151,2151,2124,27,wikipedia_edits_cumulative,2012-09-01,2012-11-03
+15,Gilles Marini,Gilles Marini,235,235,227,8,wikipedia_edits_cumulative,2012-09-01,2012-11-03
+15,Helio Castroneves,Hélio Castroneves,814,814,808,6,wikipedia_edits_cumulative,2012-09-01,2012-11-03
+15,Joey Fatone,Joey Fatone,963,963,945,18,wikipedia_edits_cumulative,2012-09-01,2012-11-03
+15,Kelly Monaco,Kelly Monaco,914,914,888,26,wikipedia_edits_cumulative,2012-09-01,2012-11-03
+15,Kirstie Alley,Kirstie Alley,1682,1682,1655,27,wikipedia_edits_cumulative,2012-09-01,2012-11-03
+15,Melissa Rycroft,Melissa Rycroft,520,520,509,11,wikipedia_edits_cumulative,2012-09-01,2012-11-03
+15,Pamela Anderson,Pamela Anderson,5773,5773,5718,55,wikipedia_edits_cumulative,2012-09-01,2012-11-03
+15,Sabrina Bryan,Sabrina Bryan,2034,2034,1982,52,wikipedia_edits_cumulative,2012-09-01,2012-11-03
+15,Shawn Johnson,Shawn Johnson East,1894,1894,1854,40,wikipedia_edits_cumulative,2012-09-01,2012-11-03
+16,Alexandra Raisman,Aly Raisman,746,746,658,88,wikipedia_edits_cumulative,2013-03-01,2013-05-03
+16,Andy Dick,Andy Dick,2354,2354,2341,13,wikipedia_edits_cumulative,2013-03-01,2013-05-03
+16,D. L. Hughley,D. L. Hughley,558,558,546,12,wikipedia_edits_cumulative,2013-03-01,2013-05-03
+16,Dorothy Hamill,Dorothy Hamill,398,398,382,16,wikipedia_edits_cumulative,2013-03-01,2013-05-03
+16,Ingo Rademacher,Ingo Rademacher,226,226,217,9,wikipedia_edits_cumulative,2013-03-01,2013-05-03
+16,Jacoby Jones,Jacoby Jones,377,377,332,45,wikipedia_edits_cumulative,2013-03-01,2013-05-03
+16,Kellie Pickler,Kellie Pickler,3348,3348,3233,115,wikipedia_edits_cumulative,2013-03-01,2013-05-03
+16,Lisa Vanderpump,Lisa Vanderpump,53,53,0,53,wikipedia_edits_cumulative,2013-03-01,2013-05-03
+16,Sean Lowe,Sean Lowe (television personality),0,0,0,0,wikipedia_edits_cumulative,2013-03-01,2013-05-03
+16,Victor Ortiz,Victor Ortiz,927,927,882,45,wikipedia_edits_cumulative,2013-03-01,2013-05-03
+16,Wynonna Judd,Wynonna Judd,715,715,696,19,wikipedia_edits_cumulative,2013-03-01,2013-05-03
+16,Zendaya,Zendaya,1637,1637,1578,59,wikipedia_edits_cumulative,2013-03-01,2013-05-03
+17,Amber Riley,Amber Riley,696,696,634,62,wikipedia_edits_cumulative,2013-09-01,2013-11-10
+17,Bill Engvall,Bill Engvall,667,667,656,11,wikipedia_edits_cumulative,2013-09-01,2013-11-10
+17,Bill Nye,Bill Nye,3851,3851,3833,18,wikipedia_edits_cumulative,2013-09-01,2013-11-10
+17,Brant Daugherty,Brant Daugherty,201,201,174,27,wikipedia_edits_cumulative,2013-09-01,2013-11-10
+17,Christina Milian,Christina Milian,4660,4660,4594,66,wikipedia_edits_cumulative,2013-09-01,2013-11-10
+17,Corbin Bleu,Corbin Bleu,5948,5948,5926,22,wikipedia_edits_cumulative,2013-09-01,2013-11-10
+17,Elizabeth Berkley Lauren,Elizabeth Berkley,1030,1030,1016,14,wikipedia_edits_cumulative,2013-09-01,2013-11-10
+17,Jack Osbourne,Jack Osbourne,927,927,899,28,wikipedia_edits_cumulative,2013-09-01,2013-11-10
+17,Keyshawn Johnson,Keyshawn Johnson,730,730,715,15,wikipedia_edits_cumulative,2013-09-01,2013-11-10
+17,Leah Remini,Leah Remini,1441,1441,1383,58,wikipedia_edits_cumulative,2013-09-01,2013-11-10
+17,"Nicole ""Snooki"" Polizzi",Snooki,1511,1511,1458,53,wikipedia_edits_cumulative,2013-09-01,2013-11-10
+17,Valerie Harper,Valerie Harper,580,580,553,27,wikipedia_edits_cumulative,2013-09-01,2013-11-10
+18,Amy Purdy,Amy Purdy,199,199,120,79,wikipedia_edits_cumulative,2014-03-01,2014-05-03
+18,Billy Dee Williams,Billy Dee Williams,1070,1070,1047,23,wikipedia_edits_cumulative,2014-03-01,2014-05-03
+18,Candace Cameron Bure,Candace Cameron Bure,1265,1265,1237,28,wikipedia_edits_cumulative,2014-03-01,2014-05-03
+18,Charlie White,Charlie White (figure skater),829,829,798,31,wikipedia_edits_cumulative,2014-03-01,2014-05-03
+18,Cody Simpson,Cody Simpson,1558,1558,1459,99,wikipedia_edits_cumulative,2014-03-01,2014-05-03
+18,Danica McKellar,Danica McKellar,977,977,959,18,wikipedia_edits_cumulative,2014-03-01,2014-05-03
+18,Diana Nyad,Diana Nyad,617,617,587,30,wikipedia_edits_cumulative,2014-03-01,2014-05-03
+18,Drew Carey,Drew Carey,2513,2513,2487,26,wikipedia_edits_cumulative,2014-03-01,2014-05-03
+18,James Maslow,James Maslow,2150,2150,2050,100,wikipedia_edits_cumulative,2014-03-01,2014-05-03
+18,Meryl Davis,Meryl Davis,957,957,915,42,wikipedia_edits_cumulative,2014-03-01,2014-05-03
+18,NeNe Leakes,NeNe Leakes,632,632,578,54,wikipedia_edits_cumulative,2014-03-01,2014-05-03
+18,Sean Avery,Sean Avery,3056,3056,3034,22,wikipedia_edits_cumulative,2014-03-01,2014-05-03
+19,Alfonso Ribeiro,Alfonso Ribeiro,1690,1690,1623,67,wikipedia_edits_cumulative,2014-09-01,2014-11-10
+19,Antonio Sabato Jr.,Antonio Sabàto Jr.,584,584,567,17,wikipedia_edits_cumulative,2014-09-01,2014-11-10
+19,Bethany Mota,Bethany Mota,395,395,241,154,wikipedia_edits_cumulative,2014-09-01,2014-11-10
+19,Betsey Johnson,Betsey Johnson,434,434,423,11,wikipedia_edits_cumulative,2014-09-01,2014-11-10
+19,Janel Parrish,Janel Parrish,645,645,590,55,wikipedia_edits_cumulative,2014-09-01,2014-11-10
+19,Jonathan Bennett,Jonathan Bennett (actor),670,670,624,46,wikipedia_edits_cumulative,2014-09-01,2014-11-10
+19,Lea Thompson,Lea Thompson,674,674,639,35,wikipedia_edits_cumulative,2014-09-01,2014-11-10
+19,Lolo Jones,Lolo Jones,783,783,771,12,wikipedia_edits_cumulative,2014-09-01,2014-11-10
+19,Michael Waltrip,Michael Waltrip,1160,1160,1074,86,wikipedia_edits_cumulative,2014-09-01,2014-11-10
+19,Randy Couture,Randy Couture,4243,4243,4225,18,wikipedia_edits_cumulative,2014-09-01,2014-11-10
+19,Sadie Robertson,Sadie Robertson,163,163,103,60,wikipedia_edits_cumulative,2014-09-01,2014-11-10
+19,Tavis Smiley,Tavis Smiley,584,584,557,27,wikipedia_edits_cumulative,2014-09-01,2014-11-10
+19,Tommy Chong,Tommy Chong,1259,1259,1237,22,wikipedia_edits_cumulative,2014-09-01,2014-11-10
+20,Charlotte McKinney,Charlotte McKinney,126,126,1,125,wikipedia_edits_cumulative,2015-03-01,2015-05-03
+20,Chris Soules,Chris Soules,30,30,0,30,wikipedia_edits_cumulative,2015-03-01,2015-05-03
+20,Michael Sam,Michael Sam,518,518,506,12,wikipedia_edits_cumulative,2015-03-01,2015-05-03
+20,Nastia Liukin,Nastia Liukin,1797,1797,1770,27,wikipedia_edits_cumulative,2015-03-01,2015-05-03
+20,Noah Galloway,Noah Galloway,115,115,0,115,wikipedia_edits_cumulative,2015-03-01,2015-05-03
+20,Patti LaBelle,Patti LaBelle,2326,2326,2293,33,wikipedia_edits_cumulative,2015-03-01,2015-05-03
+20,Redfoo,Redfoo,868,868,784,84,wikipedia_edits_cumulative,2015-03-01,2015-05-03
+20,Riker Lynch,Riker Lynch,546,546,506,40,wikipedia_edits_cumulative,2015-03-01,2015-05-03
+20,Robert Herjavec,Robert Herjavec,398,398,372,26,wikipedia_edits_cumulative,2015-03-01,2015-05-03
+20,Rumer Willis,Rumer Willis,793,793,766,27,wikipedia_edits_cumulative,2015-03-01,2015-05-03
+20,Suzanne Somers,Suzanne Somers,864,864,853,11,wikipedia_edits_cumulative,2015-03-01,2015-05-03
+20,Willow Shields,Willow Shields,493,493,455,38,wikipedia_edits_cumulative,2015-03-01,2015-05-03
+21,Alek Skarlatos,Alek Skarlatos,135,135,0,135,wikipedia_edits_cumulative,2015-09-01,2015-11-10
+21,Alexa PenaVega,Alexa PenaVega,2124,2124,2069,55,wikipedia_edits_cumulative,2015-09-01,2015-11-10
+21,Andy Grammer,Andy Grammer,777,777,727,50,wikipedia_edits_cumulative,2015-09-01,2015-11-10
+21,Bindi Irwin,Bindi Irwin,2077,2077,1996,81,wikipedia_edits_cumulative,2015-09-01,2015-11-10
+21,Carlos PenaVega,Carlos PenaVega,1921,1921,1875,46,wikipedia_edits_cumulative,2015-09-01,2015-11-10
+21,Chaka Khan,Chaka Khan,1764,1764,1735,29,wikipedia_edits_cumulative,2015-09-01,2015-11-10
+21,Gary Busey,Gary Busey,2829,2829,2792,37,wikipedia_edits_cumulative,2015-09-01,2015-11-10
+21,Hayes Grier,Hayes Grier,70,70,0,70,wikipedia_edits_cumulative,2015-09-01,2015-11-10
+21,Kim Zolciak-Biermann,Kim Zolciak,1354,1354,1309,45,wikipedia_edits_cumulative,2015-09-01,2015-11-10
+21,Nick Carter,Nick Carter,2994,2994,2945,49,wikipedia_edits_cumulative,2015-09-01,2015-11-10
+21,Paula Deen,Paula Deen,2304,2304,2263,41,wikipedia_edits_cumulative,2015-09-01,2015-11-10
+21,Tamar Braxton,Tamar Braxton,1806,1806,1713,93,wikipedia_edits_cumulative,2015-09-01,2015-11-10
+21,Victor Espinoza,Victor Espinoza,251,251,240,11,wikipedia_edits_cumulative,2015-09-01,2015-11-10
+22,Antonio Brown,Antonio Brown,1120,1120,1021,99,wikipedia_edits_cumulative,2016-03-01,2016-05-03
+22,Doug Flutie,Doug Flutie,1572,1572,1543,29,wikipedia_edits_cumulative,2016-03-01,2016-05-03
+22,Geraldo Rivera,Geraldo Rivera,2363,2363,2339,24,wikipedia_edits_cumulative,2016-03-01,2016-05-03
+22,Ginger Zee,Ginger Zee,221,221,198,23,wikipedia_edits_cumulative,2016-03-01,2016-05-03
+22,Jodie Sweetin,Jodie Sweetin,1451,1451,1424,27,wikipedia_edits_cumulative,2016-03-01,2016-05-03
+22,Kim Fields,Kim Fields,469,469,428,41,wikipedia_edits_cumulative,2016-03-01,2016-05-03
+22,Marla Maples,Marla Maples,528,528,471,57,wikipedia_edits_cumulative,2016-03-01,2016-05-03
+22,Mischa Barton,Mischa Barton,3328,3328,3316,12,wikipedia_edits_cumulative,2016-03-01,2016-05-03
+22,Nyle DiMarco,Nyle DiMarco,300,300,202,98,wikipedia_edits_cumulative,2016-03-01,2016-05-03
+22,Paige VanZant,Paige VanZant,243,243,217,26,wikipedia_edits_cumulative,2016-03-01,2016-05-03
+22,Von Miller,Von Miller,1066,1066,913,153,wikipedia_edits_cumulative,2016-03-01,2016-05-03
+22,Wanya Morris,Wanya Morris,193,193,188,5,wikipedia_edits_cumulative,2016-03-01,2016-05-03
+23,Amber Rose,Amber Rose,2331,2331,2234,97,wikipedia_edits_cumulative,2016-09-01,2016-11-10
+23,Babyface,Babyface (musician),1243,1243,1212,31,wikipedia_edits_cumulative,2016-09-01,2016-11-10
+23,Calvin Johnson Jr.,Calvin Johnson,3256,3256,3186,70,wikipedia_edits_cumulative,2016-09-01,2016-11-10
+23,Jake T. Austin,Jake T. Austin,4158,4158,4153,5,wikipedia_edits_cumulative,2016-09-01,2016-11-10
+23,James Hinchcliffe,James Hinchcliffe,381,381,361,20,wikipedia_edits_cumulative,2016-09-01,2016-11-10
+23,Jana Kramer,Jana Kramer,939,939,888,51,wikipedia_edits_cumulative,2016-09-01,2016-11-10
+23,Laurie Hernandez,Laurie Hernandez,285,285,207,78,wikipedia_edits_cumulative,2016-09-01,2016-11-10
+23,Marilu Henner,Marilu Henner,656,656,642,14,wikipedia_edits_cumulative,2016-09-01,2016-11-10
+23,Maureen McCormick,Maureen McCormick,1134,1134,1121,13,wikipedia_edits_cumulative,2016-09-01,2016-11-10
+23,Rick Perry,Rick Perry,5301,5301,5256,45,wikipedia_edits_cumulative,2016-09-01,2016-11-10
+23,Ryan Lochte,Ryan Lochte,1946,1946,1874,72,wikipedia_edits_cumulative,2016-09-01,2016-11-10
+23,Terra Jole,Terra Jolé,18,18,0,18,wikipedia_edits_cumulative,2016-09-01,2016-11-10
+23,Vanilla Ice,Vanilla Ice,3894,3894,3865,29,wikipedia_edits_cumulative,2016-09-01,2016-11-10
+24,Bonner Bolton,Bonner Bolton,22,22,0,22,wikipedia_edits_cumulative,2017-03-01,2017-05-03
+24,Charo,Charo,1281,1281,1194,87,wikipedia_edits_cumulative,2017-03-01,2017-05-03
+24,Chris Kattan,Chris Kattan,798,798,773,25,wikipedia_edits_cumulative,2017-03-01,2017-05-03
+24,David Ross,Adin Ross,0,0,0,0,wikipedia_edits_cumulative,2017-03-01,2017-05-03
+24,Erika Jayne,Erika Jayne,498,498,461,37,wikipedia_edits_cumulative,2017-03-01,2017-05-03
+24,Heather Morris,Heather Morris,1338,1338,1298,40,wikipedia_edits_cumulative,2017-03-01,2017-05-03
+24,Mr. T,Mr. T,5534,5534,5519,15,wikipedia_edits_cumulative,2017-03-01,2017-05-03
+24,Nancy Kerrigan,Nancy Kerrigan,957,957,939,18,wikipedia_edits_cumulative,2017-03-01,2017-05-03
+24,Nick Viall,Nick Viall,56,56,0,56,wikipedia_edits_cumulative,2017-03-01,2017-05-03
+24,Normani,Normani,97,97,46,51,wikipedia_edits_cumulative,2017-03-01,2017-05-03
+24,Rashad Jennings,Rashad Jennings,264,264,237,27,wikipedia_edits_cumulative,2017-03-01,2017-05-03
+24,Simone Biles,Simone Biles,1450,1450,1375,75,wikipedia_edits_cumulative,2017-03-01,2017-05-03
+25,Barbara Corcoran,Barbara Corcoran,294,294,275,19,wikipedia_edits_cumulative,2017-09-01,2017-11-03
+25,Debbie Gibson,Debbie Gibson,2096,2096,2071,25,wikipedia_edits_cumulative,2017-09-01,2017-11-03
+25,Derek Fisher,Derek Fisher,2436,2436,2430,6,wikipedia_edits_cumulative,2017-09-01,2017-11-03
+25,Drew Scott,Drew Scott,507,507,413,94,wikipedia_edits_cumulative,2017-09-01,2017-11-03
+25,Frankie Muniz,Frankie Muniz,4086,4086,4023,63,wikipedia_edits_cumulative,2017-09-01,2017-11-03
+25,Jordan Fisher,Jordan Fisher,228,228,190,38,wikipedia_edits_cumulative,2017-09-01,2017-11-03
+25,Lindsey Stirling,Lindsey Stirling,2370,2370,2324,46,wikipedia_edits_cumulative,2017-09-01,2017-11-03
+25,Nick Lachey,Nick Lachey,2707,2707,2701,6,wikipedia_edits_cumulative,2017-09-01,2017-11-03
+25,Nikki Bella,Nikki Bella,1246,1246,1209,37,wikipedia_edits_cumulative,2017-09-01,2017-11-03
+25,Sasha Pieterse,Sasha Pieterse,1968,1968,1934,34,wikipedia_edits_cumulative,2017-09-01,2017-11-03
+25,Terrell Owens,Terrell Owens,8406,8406,8112,294,wikipedia_edits_cumulative,2017-09-01,2017-11-03
+25,Vanessa Lachey,Vanessa Lachey,1778,1778,1772,6,wikipedia_edits_cumulative,2017-09-01,2017-11-03
+25,Victoria Arlen,Victoria Arlen,81,81,69,12,wikipedia_edits_cumulative,2017-09-01,2017-11-03
+26,Adam Rippon,Adam Rippon,949,949,932,17,wikipedia_edits_cumulative,2018-04-01,2018-04-22
+26,Arike Ogunbowale,Arike Ogunbowale,25,25,0,25,wikipedia_edits_cumulative,2018-04-01,2018-04-22
+26,Chris Mazdzer,Chris Mazdzer,88,88,84,4,wikipedia_edits_cumulative,2018-04-01,2018-04-22
+26,Jamie Anderson,Jamie Anderson (snowboarder),261,261,255,6,wikipedia_edits_cumulative,2018-04-01,2018-04-22
+26,Jennie Finch Daigle,Casey Daigle,148,148,147,1,wikipedia_edits_cumulative,2018-04-01,2018-04-22
+26,Johnny Damon,Johnny Damon,3413,3413,3410,3,wikipedia_edits_cumulative,2018-04-01,2018-04-22
+26,Josh Norman,Josh Norman,904,904,896,8,wikipedia_edits_cumulative,2018-04-01,2018-04-22
+26,Kareem Abdul-Jabbar,Kareem Abdul-Jabbar,4555,4555,4550,5,wikipedia_edits_cumulative,2018-04-01,2018-04-22
+26,Mirai Nagasu,Mirai Nagasu,1618,1618,1615,3,wikipedia_edits_cumulative,2018-04-01,2018-04-22
+26,Tonya Harding,Tonya Harding,2272,2272,2238,34,wikipedia_edits_cumulative,2018-04-01,2018-04-22
+27,Alexis Ren,Alexis Ren,266,266,224,42,wikipedia_edits_cumulative,2018-09-01,2018-10-27
+27,Bobby Bones,Bobby Bones,311,311,298,13,wikipedia_edits_cumulative,2018-09-01,2018-10-27
+27,Danelle Umstead,Danelle Umstead,29,29,21,8,wikipedia_edits_cumulative,2018-09-01,2018-10-27
+27,DeMarcus Ware,DeMarcus Ware,1579,1579,1569,10,wikipedia_edits_cumulative,2018-09-01,2018-10-27
+27,Evanna Lynch,Evanna Lynch,2633,2633,2606,27,wikipedia_edits_cumulative,2018-09-01,2018-10-27
+27,Joe Amabile,Joe Amabile,4,4,0,4,wikipedia_edits_cumulative,2018-09-01,2018-10-27
+27,John Schneider,John Schneider (screen actor),1226,1226,1217,9,wikipedia_edits_cumulative,2018-09-01,2018-10-27
+27,Juan Pablo Di Pace,Juan Pablo Di Pace,277,277,254,23,wikipedia_edits_cumulative,2018-09-01,2018-10-27
+27,Mary Lou Retton,Mary Lou Retton,862,862,843,19,wikipedia_edits_cumulative,2018-09-01,2018-10-27
+27,Milo Manheim,Milo Manheim,175,175,133,42,wikipedia_edits_cumulative,2018-09-01,2018-10-27
+27,Nancy McKeon,Nancy McKeon,532,532,507,25,wikipedia_edits_cumulative,2018-09-01,2018-10-27
+27,Nikki Glaser,Nikki Glaser,350,350,325,25,wikipedia_edits_cumulative,2018-09-01,2018-10-27
+27,Tinashe,Tinashe,2576,2576,2527,49,wikipedia_edits_cumulative,2018-09-01,2018-10-27
+28,Ally Brooke,Ally Brooke,799,799,780,19,wikipedia_edits_cumulative,2019-09-01,2019-11-10
+28,Hannah Brown,Hannah Brown,113,113,95,18,wikipedia_edits_cumulative,2019-09-01,2019-11-10
+28,James Van Der Beek,James Van Der Beek,1341,1341,1315,26,wikipedia_edits_cumulative,2019-09-01,2019-11-10
+28,Karamo Brown,Karamo Brown,216,216,177,39,wikipedia_edits_cumulative,2019-09-01,2019-11-10
+28,Kate Flannery,Kate Flannery,347,347,334,13,wikipedia_edits_cumulative,2019-09-01,2019-11-10
+28,Kel Mitchell,Kel Mitchell,3344,3344,3311,33,wikipedia_edits_cumulative,2019-09-01,2019-11-10
+28,Lamar Odom,Lamar Odom,2282,2282,2241,41,wikipedia_edits_cumulative,2019-09-01,2019-11-10
+28,Lauren Alaina,Lauren Alaina,2504,2504,2464,40,wikipedia_edits_cumulative,2019-09-01,2019-11-10
+28,Mary Wilson,Mary Wilson,46,46,46,0,wikipedia_edits_cumulative,2019-09-01,2019-11-10
+28,Ray Lewis,Ray Lewis,3409,3409,3399,10,wikipedia_edits_cumulative,2019-09-01,2019-11-10
+28,Sailor Brinkley-Cook,Sailor Brinkley Cook,4,4,4,0,wikipedia_edits_cumulative,2019-09-01,2019-11-10
+28,Sean Spicer,Sean Spicer,1195,1195,1178,17,wikipedia_edits_cumulative,2019-09-01,2019-11-10
+29,AJ McLean,AJ McLean,1563,1563,1543,20,wikipedia_edits_cumulative,2020-09-01,2020-11-10
+29,Anne Heche,Anne Heche,1557,1557,1538,19,wikipedia_edits_cumulative,2020-09-01,2020-11-10
+29,Carole Baskin,Carole Baskin,352,352,285,67,wikipedia_edits_cumulative,2020-09-01,2020-11-10
+29,Charles Oakley,Charles Oakley,648,648,642,6,wikipedia_edits_cumulative,2020-09-01,2020-11-10
+29,Chrishell Stause,Chrishell Stause,390,390,351,39,wikipedia_edits_cumulative,2020-09-01,2020-11-10
+29,Jeannie Mai,Jeannie Mai,782,782,759,23,wikipedia_edits_cumulative,2020-09-01,2020-11-10
+29,Jesse Metcalfe,Jesse Metcalfe,1544,1544,1535,9,wikipedia_edits_cumulative,2020-09-01,2020-11-10
+29,Johnny Weir,Johnny Weir,2366,2366,2360,6,wikipedia_edits_cumulative,2020-09-01,2020-11-10
+29,Justina Machado,Justina Machado,468,468,460,8,wikipedia_edits_cumulative,2020-09-01,2020-11-10
+29,Kaitlyn Bristowe,Kaitlyn Bristowe,229,229,218,11,wikipedia_edits_cumulative,2020-09-01,2020-11-10
+29,Monica Aldama,Monica Aldama,56,56,33,23,wikipedia_edits_cumulative,2020-09-01,2020-11-10
+29,Nelly,Nelly,5809,5809,5800,9,wikipedia_edits_cumulative,2020-09-01,2020-11-10
+29,Nev Schulman,Nev Schulman,470,470,463,7,wikipedia_edits_cumulative,2020-09-01,2020-11-10
+29,Skai Jackson,Skai Jackson,2071,2071,2048,23,wikipedia_edits_cumulative,2020-09-01,2020-11-10
+29,Veron Davis,Juan Sebastián Verón,1403,1403,1401,2,wikipedia_edits_cumulative,2020-09-01,2020-11-10
+30,Amanda Kloots,Amanda Kloots,168,168,150,18,wikipedia_edits_cumulative,2021-09-01,2021-11-03
+30,Brian Austin Green,Brian Austin Green,2379,2379,2350,29,wikipedia_edits_cumulative,2021-09-01,2021-11-03
+30,Christine Chiu,Bling Empire,102,102,94,8,wikipedia_edits_cumulative,2021-09-01,2021-11-03
+30,Cody Rigsby,Cody Rigsby,2,2,0,2,wikipedia_edits_cumulative,2021-09-01,2021-11-03
+30,Iman Shumpert,Iman Shumpert,1553,1553,1540,13,wikipedia_edits_cumulative,2021-09-01,2021-11-03
+30,Jimmie Allen,Jimmie Allen,352,352,330,22,wikipedia_edits_cumulative,2021-09-01,2021-11-03
+30,JoJo Siwa,JoJo Siwa,1182,1182,1154,28,wikipedia_edits_cumulative,2021-09-01,2021-11-03
+30,Kenya Moore,Kenya Moore,1188,1188,1165,23,wikipedia_edits_cumulative,2021-09-01,2021-11-03
+30,Martin Kove,Martin Kove,691,691,647,44,wikipedia_edits_cumulative,2021-09-01,2021-11-03
+30,Matt James,Matt James,75,75,74,1,wikipedia_edits_cumulative,2021-09-01,2021-11-03
+30,Melanie C,Melanie C,5995,5995,5950,45,wikipedia_edits_cumulative,2021-09-01,2021-11-03
+30,Melora Hardin,Melora Hardin,720,720,704,16,wikipedia_edits_cumulative,2021-09-01,2021-11-03
+30,"Mike ""The Miz"" Mizanin",The Miz,13416,13416,13400,16,wikipedia_edits_cumulative,2021-09-01,2021-11-03
+30,Olivia Jade,Olivia Jade,586,586,566,20,wikipedia_edits_cumulative,2021-09-01,2021-11-03
+30,Suni Lee,Sunisa Lee,485,485,456,29,wikipedia_edits_cumulative,2021-09-01,2021-11-03
+31,Charli D'Amelio,Charli D'Amelio,1226,1226,1185,41,wikipedia_edits_cumulative,2022-09-01,2022-11-03
+31,Cheryl Ladd,Cheryl Ladd,802,802,796,6,wikipedia_edits_cumulative,2022-09-01,2022-11-03
+31,Daniel Durant,Daniel Durant,86,86,76,10,wikipedia_edits_cumulative,2022-09-01,2022-11-03
+31,Gabby Windey,Gabby Windey,63,63,41,22,wikipedia_edits_cumulative,2022-09-01,2022-11-03
+31,Heidi D'Amelio,Charli D'Amelio,1226,1226,1185,41,wikipedia_edits_cumulative,2022-09-01,2022-11-03
+31,Jason Lewis,Jason Lewis (actor),558,558,548,10,wikipedia_edits_cumulative,2022-09-01,2022-11-03
+31,Jessie James Decker,Jessie James Decker,1804,1804,1793,11,wikipedia_edits_cumulative,2022-09-01,2022-11-03
+31,Jordin Sparks,Jordin Sparks,7989,7989,7921,68,wikipedia_edits_cumulative,2022-09-01,2022-11-03
+31,Joseph Baena,Joseph Baena,114,114,9,105,wikipedia_edits_cumulative,2022-09-01,2022-11-03
+31,Sam Champion,Sam Champion,650,650,648,2,wikipedia_edits_cumulative,2022-09-01,2022-11-03
+31,Selma Blair,Selma Blair,1880,1880,1867,13,wikipedia_edits_cumulative,2022-09-01,2022-11-03

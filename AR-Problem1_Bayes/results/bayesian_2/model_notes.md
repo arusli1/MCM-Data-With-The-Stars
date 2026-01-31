@@ -8,10 +8,10 @@ From the provided CSV:
 - `season`, `celebrity_name`, `ballroom_partner`, `celebrity_age_during_season`,
   `celebrity_industry`, `celebrity_home*`, `placement`, `results`
 - Week-by-week judge scores: `weekX_judgeY_score`
-- Season-level popularity proxy `pop_{si}` from Google Trends:
-  a season-window time series is pulled once per season and averaged for
-  each contestant, normalized against a fixed anchor term. This is a strong
-  driver of baseline support and avoids sparse weekly zeros.
+- Season-level popularity proxy `pop_{si}` from `Data/dwts_wiki_edits_preseason.csv`:
+  edits_total_to_cutoff (cumulative revisions up to the preseason cutoff). Within
+  each season, we transform counts into shares with a softmax so `pop_{si}` sums
+  to 1 across contestants and acts as a strong baseline support signal.
 - Derived: weekly active set, eliminated set, judge percent, standardized judge z-score
 
 Optional / external (used only if you choose):
@@ -45,8 +45,8 @@ s_swi = exp(p_swi / tau) / sum_{j in A_sw} exp(p_sw,j / tau)
 Use weekly centering of p to fix gauge freedom.
 
 3) Combined risk
-- Percent seasons: R_swi = judge_pct_swi + s_swi
-- Rank seasons: R_swi = rJ_swi + rF_swi (rF from soft rank of s)
+- Percent seasons: R_swi = judge_pct_swi + s_swi (higher is better)
+- Rank seasons: R_swi = rJ_swi + rF_swi (higher is worse; rF from soft rank of s)
 - Bottom-two seasons: use rank proxy to define bottom-two, then judge-choice logit
 
 4) Likelihood

@@ -13,6 +13,9 @@ import matplotlib.pyplot as plt
 
 DATA_PATH = "Data/2026_MCM_Problem_C_Data.csv"
 FIG_PATH = "AR-EDA/eda_summary.png"
+PARTNER_PATH = "AR-EDA/partner_effect.png"
+PARTNER_TABLE = "AR-EDA/partner_effect.csv"
+PARTNER_PERMUTATIONS = 1000
 
 
 def load_data(path: str) -> pd.DataFrame:
@@ -290,6 +293,97 @@ def make_plots(df: pd.DataFrame, long_df: pd.DataFrame) -> None:
     fig.savefig(FIG_PATH, dpi=200)
 
 
+def analyze_partner_effect(df: pd.DataFrame) -> pd.DataFrame:
+    placements = df[
+        ["season", "celebrity_name", "ballroom_partner", "placement"]
+    ].copy()
+    placements["placement"] = pd.to_numeric(placements["placement"], errors="coerce")
+    placements = placements.dropna(subset=["placement"])
+    placements["placement_rank"] = placements.groupby("season")["placement"].rank(
+        ascending=True, method="average"
+    )
+    placements["rank_z"] = placements.groupby("season")["placement_rank"].transform(
+        lambda s: (s - s.mean()) / (s.std() + 1e-8)
+    )
+
+    partner_stats = (
+        placements.groupby("ballroom_partner")
+        .agg(
+            n_contestants=("celebrity_name", "count"),
+            mean_rank=("placement_rank", "mean"),
+            mean_rank_z=("rank_z", "mean"),
+            std_rank_z=("rank_z", "std"),
+        )
+        .reset_index()
+    )
+    partner_stats["se_rank_z"] = partner_stats["std_rank_z"] / np.sqrt(
+        partner_stats["n_contestants"]
+    )
+    partner_stats["t_stat"] = partner_stats["mean_rank_z"] / (
+        partner_stats["se_rank_z"] + 1e-8
+    )
+
+    min_n = 5
+    filtered = partner_stats[partner_stats["n_contestants"] >= min_n].copy()
+
+    # Permutation test: shuffle partner labels within season.
+    rng = np.random.default_rng(42)
+    partner_list = filtered["ballroom_partner"].tolist()
+    perm_counts = {p: 0 for p in partner_list}
+    if len(partner_list) > 0:
+        observed = filtered.set_index("ballroom_partner")["mean_rank_z"].to_dict()
+        for _ in range(PARTNER_PERMUTATIONS):
+            shuffled = placements.copy()
+            shuffled["ballroom_partner"] = shuffled.groupby("season")[
+                "ballroom_partner"
+            ].transform(lambda s: rng.permutation(s.values))
+            perm_means = (
+                shuffled.groupby("ballroom_partner")["rank_z"].mean().to_dict()
+            )
+            for p in partner_list:
+                if p not in perm_means:
+                    continue
+                if abs(perm_means[p]) >= abs(observed[p]):
+                    perm_counts[p] += 1
+        filtered["p_perm"] = filtered["ballroom_partner"].map(
+            lambda p: (perm_counts.get(p, 0) + 1) / (PARTNER_PERMUTATIONS + 1)
+        )
+    else:
+        filtered["p_perm"] = np.nan
+
+    filtered = filtered.sort_values("mean_rank_z")
+    fig, ax = plt.subplots(figsize=(10, 6))
+    ax.barh(
+        filtered["ballroom_partner"],
+        filtered["mean_rank_z"],
+        color="#4C78A8",
+        alpha=0.8,
+    )
+    ax.errorbar(
+        filtered["mean_rank_z"],
+        filtered["ballroom_partner"],
+        xerr=1.96 * filtered["se_rank_z"],
+        fmt="none",
+        ecolor="#444444",
+        elinewidth=1,
+        alpha=0.7,
+    )
+    ax.axvline(0, color="#999999", linestyle="--", linewidth=1)
+    ax.set_xlabel("Mean Placement Rank (z-score within season)")
+    ax.set_ylabel("Ballroom Partner (>=5 contestants)")
+    ax.set_title("Ballroom Partner Effect on Placement (season-normalized)")
+    fig.tight_layout()
+    fig.savefig(PARTNER_PATH, dpi=200)
+
+    partner_stats = partner_stats.merge(
+        filtered[["ballroom_partner", "p_perm"]],
+        on="ballroom_partner",
+        how="left",
+    ).sort_values("mean_rank_z")
+    partner_stats.to_csv(PARTNER_TABLE, index=False)
+    return partner_stats
+
+
 def main() -> None:
     df = load_data(DATA_PATH)
     week_cols = get_week_cols(df)
@@ -307,6 +401,9 @@ def main() -> None:
 
     make_plots(df, long_df)
     print(f"\nSaved visualization to {FIG_PATH}")
+    analyze_partner_effect(df)
+    print(f"Saved partner effect plot to {PARTNER_PATH}")
+    print(f"Saved partner effect table to {PARTNER_TABLE}")
 
 
 if __name__ == "__main__":

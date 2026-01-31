@@ -1,0 +1,365 @@
+season,celebrity_name,pop_score,source,anchor_term,timeframe,geo
+1,John O'Hurley,0.0001,google_trends_anchor_season,Barack Obama,2005-06-01 2005-07-12,US
+1,Kelly Monaco,22.027777777777775,google_trends_anchor_season,Barack Obama,2005-06-01 2005-07-12,US
+1,Evander Holyfield,0.49,google_trends_anchor_season,Barack Obama,2005-06-01 2005-07-12,US
+1,Rachel Hunter,2.595653031327474,google_trends_anchor_season,Barack Obama,2005-06-01 2005-07-12,US
+1,Joey McIntyre,1.158611111111111,google_trends_anchor_season,Barack Obama,2005-06-01 2005-07-12,US
+1,Trista Sutter,1.2291666666666667,google_trends_anchor_season,Barack Obama,2005-06-01 2005-07-12,US
+2,Tatum O'Neal,0.0001,google_trends_anchor_season,Barack Obama,2006-01-01 2006-02-25,US
+2,Tia Carrere,0.9896167665768392,google_trends_anchor_season,Barack Obama,2006-01-01 2006-02-25,US
+2,George Hamilton,2.4326923076923075,google_trends_anchor_season,Barack Obama,2006-01-01 2006-02-25,US
+2,Lisa Rinna,2.2959496178017496,google_trends_anchor_season,Barack Obama,2006-01-01 2006-02-25,US
+2,Stacy Keibler,6.139199447895101,google_trends_anchor_season,Barack Obama,2006-01-01 2006-02-25,US
+2,Jerry Rice,1.2223863299310511,google_trends_anchor_season,Barack Obama,2006-01-01 2006-02-25,US
+2,Giselle Fernandez,1.3388888888888888,google_trends_anchor_season,Barack Obama,2006-01-01 2006-02-25,US
+2,Master P,1.4269694723464417,google_trends_anchor_season,Barack Obama,2006-01-01 2006-02-25,US
+2,Drew Lachey,2.3890022675736966,google_trends_anchor_season,Barack Obama,2006-01-01 2006-02-25,US
+2,Kenny Mayne,1.1176470588235294,google_trends_anchor_season,Barack Obama,2006-01-01 2006-02-25,US
+3,Harry Hamlin,1.002857142857143,google_trends_anchor_season,Barack Obama,2006-09-01 2006-11-09,US
+3,Vivica A. Fox,0.7142857142857143,google_trends_anchor_season,Barack Obama,2006-09-01 2006-11-09,US
+3,Monique Coleman,0.7817370043216099,google_trends_anchor_season,Barack Obama,2006-09-01 2006-11-09,US
+3,Joey Lawrence,1.9455026005909442,google_trends_anchor_season,Barack Obama,2006-09-01 2006-11-09,US
+3,Mario Lopez,2.730644598548685,google_trends_anchor_season,Barack Obama,2006-09-01 2006-11-09,US
+3,Emmitt Smith,0.665116265271889,google_trends_anchor_season,Barack Obama,2006-09-01 2006-11-09,US
+3,Shanna Moakler,2.579000465909394,google_trends_anchor_season,Barack Obama,2006-09-01 2006-11-09,US
+3,Willa Ford,3.364272615553189,google_trends_anchor_season,Barack Obama,2006-09-01 2006-11-09,US
+3,Sara Evans,3.09890350877193,google_trends_anchor_season,Barack Obama,2006-09-01 2006-11-09,US
+3,Jerry Springer,1.1048945596648627,google_trends_anchor_season,Barack Obama,2006-09-01 2006-11-09,US
+3,Tucker Carlson,1.1719456469456468,google_trends_anchor_season,Barack Obama,2006-09-01 2006-11-09,US
+4,John Ratzenberger,0.20436097661209943,google_trends_anchor_season,Barack Obama,2007-03-01 2007-05-09,US
+4,Ian Ziering,0.23175445525085328,google_trends_anchor_season,Barack Obama,2007-03-01 2007-05-09,US
+4,Clyde Drexler,0.29534405052146295,google_trends_anchor_season,Barack Obama,2007-03-01 2007-05-09,US
+4,Laila Ali,0.3139266177128655,google_trends_anchor_season,Barack Obama,2007-03-01 2007-05-09,US
+4,Apolo Anton Ohno,0.2538744225750584,google_trends_anchor_season,Barack Obama,2007-03-01 2007-05-09,US
+4,Shandi Finnessey,0.2702392257927964,google_trends_anchor_season,Barack Obama,2007-03-01 2007-05-09,US
+4,Paulina Porizkova,0.3584753599372677,google_trends_anchor_season,Barack Obama,2007-03-01 2007-05-09,US
+4,Heather Mills,0.5504399381400917,google_trends_anchor_season,Barack Obama,2007-03-01 2007-05-09,US
+4,Billy Ray Cyrus,0.22913667447090436,google_trends_anchor_season,Barack Obama,2007-03-01 2007-05-09,US
+4,Joey Fatone,0.2588698156706469,google_trends_anchor_season,Barack Obama,2007-03-01 2007-05-09,US
+4,Leeza Gibbons,0.3224079512318837,google_trends_anchor_season,Barack Obama,2007-03-01 2007-05-09,US
+5,Cameron Mathison,0.14600686083291436,google_trends_anchor_season,Barack Obama,2007-09-01 2007-11-09,US
+5,Jane Seymour,0.3996248203980573,google_trends_anchor_season,Barack Obama,2007-09-01 2007-11-09,US
+5,Sabrina Bryan,0.4540090946345037,google_trends_anchor_season,Barack Obama,2007-09-01 2007-11-09,US
+5,Jennie Garth,0.25626530998460606,google_trends_anchor_season,Barack Obama,2007-09-01 2007-11-09,US
+5,Floyd Mayweather Jr. ,0.0001,google_trends_anchor_season,Barack Obama,2007-09-01 2007-11-09,US
+5,Josie Maran,0.28097532047060375,google_trends_anchor_season,Barack Obama,2007-09-01 2007-11-09,US
+5,Albert Reed,0.4942031083469602,google_trends_anchor_season,Barack Obama,2007-09-01 2007-11-09,US
+5,Helio Castroneves,0.20818559333584932,google_trends_anchor_season,Barack Obama,2007-09-01 2007-11-09,US
+5,Mel B,0.13546974674624426,google_trends_anchor_season,Barack Obama,2007-09-01 2007-11-09,US
+5,Wayne Newton,0.49863241242432327,google_trends_anchor_season,Barack Obama,2007-09-01 2007-11-09,US
+5,Marie Osmond,0.8063059581927505,google_trends_anchor_season,Barack Obama,2007-09-01 2007-11-09,US
+5,Mark Cuban,0.4144837370896229,google_trends_anchor_season,Barack Obama,2007-09-01 2007-11-09,US
+6,Cristian de la Fuente,0.05812287629042522,google_trends_anchor_season,Barack Obama,2008-03-01 2008-05-09,US
+6,Steve Guttenberg,0.07148741013428728,google_trends_anchor_season,Barack Obama,2008-03-01 2008-05-09,US
+6,Priscilla Presley,0.1373129592093658,google_trends_anchor_season,Barack Obama,2008-03-01 2008-05-09,US
+6,Marlee Matlin,0.059101004468199624,google_trends_anchor_season,Barack Obama,2008-03-01 2008-05-09,US
+6,Shannon Elizabeth,0.17864713849626238,google_trends_anchor_season,Barack Obama,2008-03-01 2008-05-09,US
+6,Marissa Jaret Winokur,0.04449638226173142,google_trends_anchor_season,Barack Obama,2008-03-01 2008-05-09,US
+6,Jason Taylor,0.09916456184980779,google_trends_anchor_season,Barack Obama,2008-03-01 2008-05-09,US
+6,Kristi Yamaguchi,0.059720275470046234,google_trends_anchor_season,Barack Obama,2008-03-01 2008-05-09,US
+6,Monica Seles,0.08639790621214265,google_trends_anchor_season,Barack Obama,2008-03-01 2008-05-09,US
+6,Penn Jillette,0.03653067748566425,google_trends_anchor_season,Barack Obama,2008-03-01 2008-05-09,US
+6,Adam Carolla,0.051155317476671874,google_trends_anchor_season,Barack Obama,2008-03-01 2008-05-09,US
+6,Mario,2.767837130542387,google_trends_anchor_season,Barack Obama,2008-03-01 2008-05-09,US
+7,Ted McGinley,0.125,google_trends_anchor_season,Barack Obama,2008-09-01 2008-11-09,US
+7,Cloris Leachman,0.12515550169986528,google_trends_anchor_season,Barack Obama,2008-09-01 2008-11-09,US
+7,Susan Lucci,0.12042307703097736,google_trends_anchor_season,Barack Obama,2008-09-01 2008-11-09,US
+7,Cody Linley,0.12152777777777778,google_trends_anchor_season,Barack Obama,2008-09-01 2008-11-09,US
+7,Misty May-Treanor,0.08333333333333333,google_trends_anchor_season,Barack Obama,2008-09-01 2008-11-09,US
+7,Maurice Greene,0.0001,google_trends_anchor_season,Barack Obama,2008-09-01 2008-11-09,US
+7,Warren Sapp,0.1111111111111111,google_trends_anchor_season,Barack Obama,2008-09-01 2008-11-09,US
+7,Jeffrey Ross,0.125,google_trends_anchor_season,Barack Obama,2008-09-01 2008-11-09,US
+7,Toni Braxton,0.14087301587301587,google_trends_anchor_season,Barack Obama,2008-09-01 2008-11-09,US
+7,Lance Bass,0.12037037037037036,google_trends_anchor_season,Barack Obama,2008-09-01 2008-11-09,US
+7,Kim Kardashian,0.3694063310542498,google_trends_anchor_season,Barack Obama,2008-09-01 2008-11-09,US
+7,Rocco DiSpirito,0.10096153846153846,google_trends_anchor_season,Barack Obama,2008-09-01 2008-11-09,US
+7,Brooke Burke,0.13722671638437606,google_trends_anchor_season,Barack Obama,2008-09-01 2008-11-09,US
+8,Gilles Marini,0.1475878502120694,google_trends_anchor_season,Barack Obama,2009-03-01 2009-05-16,US
+8,Denise Richards,0.19725157288630002,google_trends_anchor_season,Barack Obama,2009-03-01 2009-05-16,US
+8,David Alan Grier,0.0661677746131274,google_trends_anchor_season,Barack Obama,2009-03-01 2009-05-16,US
+8,Lawrence Taylor,0.07021135405447963,google_trends_anchor_season,Barack Obama,2009-03-01 2009-05-16,US
+8,Ty Murray,0.11828326839773477,google_trends_anchor_season,Barack Obama,2009-03-01 2009-05-16,US
+8,Shawn Johnson,0.47640817445842853,google_trends_anchor_season,Barack Obama,2009-03-01 2009-05-16,US
+8,Steve Wozniak,0.15079037945046672,google_trends_anchor_season,Barack Obama,2009-03-01 2009-05-16,US
+8,Belinda Carlisle,0.12862754066016716,google_trends_anchor_season,Barack Obama,2009-03-01 2009-05-16,US
+8,Chuck Wicks,0.12222942632333883,google_trends_anchor_season,Barack Obama,2009-03-01 2009-05-16,US
+8,Lil' Kim,0.0001,google_trends_anchor_season,Barack Obama,2009-03-01 2009-05-16,US
+8,Steve-O,0.12487812239432977,google_trends_anchor_season,Barack Obama,2009-03-01 2009-05-16,US
+8,Holly Madison,0.365145727645576,google_trends_anchor_season,Barack Obama,2009-03-01 2009-05-16,US
+8,Melissa Rycroft,0.3594488326473423,google_trends_anchor_season,Barack Obama,2009-03-01 2009-05-16,US
+9,Ashley Hamiliton,0.0001,google_trends_anchor_season,Barack Obama,2009-09-01 2009-11-09,US
+9,Debi Mazar,0.1505908148563935,google_trends_anchor_season,Barack Obama,2009-09-01 2009-11-09,US
+9,Melissa Joan Hart,0.1366288249945869,google_trends_anchor_season,Barack Obama,2009-09-01 2009-11-09,US
+9,Mark Dacascos,0.10359438265035689,google_trends_anchor_season,Barack Obama,2009-09-01 2009-11-09,US
+9,Chuck Liddell,0.13703124742038358,google_trends_anchor_season,Barack Obama,2009-09-01 2009-11-09,US
+9,Natalie Coughlin,0.15517434883322503,google_trends_anchor_season,Barack Obama,2009-09-01 2009-11-09,US
+9,Louie Vito,0.16481464026767048,google_trends_anchor_season,Barack Obama,2009-09-01 2009-11-09,US
+9,Michael Irvin,0.07645219426805873,google_trends_anchor_season,Barack Obama,2009-09-01 2009-11-09,US
+9,Joanna Krupa,0.268651438629889,google_trends_anchor_season,Barack Obama,2009-09-01 2009-11-09,US
+9,Kathy Ireland,0.14424213906068686,google_trends_anchor_season,Barack Obama,2009-09-01 2009-11-09,US
+9,Tom DeLay,0.28419294983392085,google_trends_anchor_season,Barack Obama,2009-09-01 2009-11-09,US
+9,Macy Gray,0.18906849597933312,google_trends_anchor_season,Barack Obama,2009-09-01 2009-11-09,US
+9,Aaron Carter,0.21123997276664763,google_trends_anchor_season,Barack Obama,2009-09-01 2009-11-09,US
+9,Mya,0.3729361153282263,google_trends_anchor_season,Barack Obama,2009-09-01 2009-11-09,US
+9,Donny Osmond,0.13572155079944706,google_trends_anchor_season,Barack Obama,2009-09-01 2009-11-09,US
+9,Kelly Osbourne,0.1521906065642023,google_trends_anchor_season,Barack Obama,2009-09-01 2009-11-09,US
+10,Aiden Turner,0.2813003435770466,google_trends_anchor_season,Barack Obama,2010-03-01 2010-05-09,US
+10,Shannen Doherty,0.1640382893988084,google_trends_anchor_season,Barack Obama,2010-03-01 2010-05-09,US
+10,Niecy Nash,0.15109919199445684,google_trends_anchor_season,Barack Obama,2010-03-01 2010-05-09,US
+10,Buzz Aldrin,0.23193844463853647,google_trends_anchor_season,Barack Obama,2010-03-01 2010-05-09,US
+10,Chad Ochocinco,0.29273299308898676,google_trends_anchor_season,Barack Obama,2010-03-01 2010-05-09,US
+10,Evan Lysacek,0.24073552890496813,google_trends_anchor_season,Barack Obama,2010-03-01 2010-05-09,US
+10,Pamela Anderson,0.8183781293480454,google_trends_anchor_season,Barack Obama,2010-03-01 2010-05-09,US
+10,Nicole Scherzinger,0.43657600233585997,google_trends_anchor_season,Barack Obama,2010-03-01 2010-05-09,US
+10,Erin Andrews,1.6728411667697385,google_trends_anchor_season,Barack Obama,2010-03-01 2010-05-09,US
+10,Kate Gosselin,1.5830921347832154,google_trends_anchor_season,Barack Obama,2010-03-01 2010-05-09,US
+10,Jake Pavelka,0.343958322968788,google_trends_anchor_season,Barack Obama,2010-03-01 2010-05-09,US
+11,David Hasselhoff,0.321853357910756,google_trends_anchor_season,Barack Obama,2010-09-01 2010-11-09,US
+11,Florence Henderson,0.3975033947721776,google_trends_anchor_season,Barack Obama,2010-09-01 2010-11-09,US
+11,Kyle Massey,0.2777820004327381,google_trends_anchor_season,Barack Obama,2010-09-01 2010-11-09,US
+11,Jennifer Grey,1.3574078267670704,google_trends_anchor_season,Barack Obama,2010-09-01 2010-11-09,US
+11,Rick Fox,0.6525517558126256,google_trends_anchor_season,Barack Obama,2010-09-01 2010-11-09,US
+11,Kurt Warner,0.3243728305218751,google_trends_anchor_season,Barack Obama,2010-09-01 2010-11-09,US
+11,Margaret Cho,0.2505727721023615,google_trends_anchor_season,Barack Obama,2010-09-01 2010-11-09,US
+11,Michael Bolton,0.3550948388189839,google_trends_anchor_season,Barack Obama,2010-09-01 2010-11-09,US
+11,Brandy,1.386555238472754,google_trends_anchor_season,Barack Obama,2010-09-01 2010-11-09,US
+11,The Situation,1.4226323432951697,google_trends_anchor_season,Barack Obama,2010-09-01 2010-11-09,US
+11,Audrina Patridge,0.5378110682658338,google_trends_anchor_season,Barack Obama,2010-09-01 2010-11-09,US
+11,Bristol Palin,0.7672574104393648,google_trends_anchor_season,Barack Obama,2010-09-01 2010-11-09,US
+12,Ralph Macchio,0.6582158601591376,google_trends_anchor_season,Barack Obama,2011-03-01 2011-05-09,US
+12,Chelsea Kane,0.6366537143267513,google_trends_anchor_season,Barack Obama,2011-03-01 2011-05-09,US
+12,Kirstie Alley,0.9806469359305495,google_trends_anchor_season,Barack Obama,2011-03-01 2011-05-09,US
+12,Hines Ward,0.47323817973748716,google_trends_anchor_season,Barack Obama,2011-03-01 2011-05-09,US
+12,Sugar Ray Leonard,0.3006258091525228,google_trends_anchor_season,Barack Obama,2011-03-01 2011-05-09,US
+12,Chris Jericho,0.23093680509309797,google_trends_anchor_season,Barack Obama,2011-03-01 2011-05-09,US
+12,Petra Nemcova,0.32518356501671775,google_trends_anchor_season,Barack Obama,2011-03-01 2011-05-09,US
+12,Mike Catherwood,0.2727674998674673,google_trends_anchor_season,Barack Obama,2011-03-01 2011-05-09,US
+12,Romeo,2.782138064468826,google_trends_anchor_season,Barack Obama,2011-03-01 2011-05-09,US
+12,Wendy Williams,0.8441951786817391,google_trends_anchor_season,Barack Obama,2011-03-01 2011-05-09,US
+12,Kendra Wilkinson,0.786336286933271,google_trends_anchor_season,Barack Obama,2011-03-01 2011-05-09,US
+13,Elisabetta Canalis,0.2608249384616125,google_trends_anchor_season,Barack Obama,2011-09-01 2011-11-09,US
+13,David Arquette,0.41140130728894464,google_trends_anchor_season,Barack Obama,2011-09-01 2011-11-09,US
+13,Ricki Lake,0.3280509884932977,google_trends_anchor_season,Barack Obama,2011-09-01 2011-11-09,US
+13,J.R. Martinez,0.27538745933196157,google_trends_anchor_season,Barack Obama,2011-09-01 2011-11-09,US
+13,Metta World Peace (Ron),0.11506656426011264,google_trends_anchor_season,Barack Obama,2011-09-01 2011-11-09,US
+13,Hope Solo,1.6022778330446397,google_trends_anchor_season,Barack Obama,2011-09-01 2011-11-09,US
+13,Chynna Phillips,0.4288506309097504,google_trends_anchor_season,Barack Obama,2011-09-01 2011-11-09,US
+13,Kristin Cavallari,0.6128168076210978,google_trends_anchor_season,Barack Obama,2011-09-01 2011-11-09,US
+13,Carson Kressley,0.19905723307962842,google_trends_anchor_season,Barack Obama,2011-09-01 2011-11-09,US
+13,Chaz Bono,1.6795144538001678,google_trends_anchor_season,Barack Obama,2011-09-01 2011-11-09,US
+13,Nancy Grace,2.3964285714285714,google_trends_anchor_season,Barack Obama,2011-09-01 2011-11-09,US
+13,Rob Kardashian,0.5143065110487687,google_trends_anchor_season,Barack Obama,2011-09-01 2011-11-09,US
+14,William Levy,1.2553084613798902,google_trends_anchor_season,Barack Obama,2012-03-01 2012-05-09,US
+14,Jack Wagner,0.3559912304483519,google_trends_anchor_season,Barack Obama,2012-03-01 2012-05-09,US
+14,Sherri Sheperd,0.0001,google_trends_anchor_season,Barack Obama,2012-03-01 2012-05-09,US
+14,Jaleel White,0.44238580018801094,google_trends_anchor_season,Barack Obama,2012-03-01 2012-05-09,US
+14,Roshon Fegan,0.242541464729418,google_trends_anchor_season,Barack Obama,2012-03-01 2012-05-09,US
+14,Melissa Gilbert,0.7203192161391929,google_trends_anchor_season,Barack Obama,2012-03-01 2012-05-09,US
+14,Martina Navratilova,0.3359010326572869,google_trends_anchor_season,Barack Obama,2012-03-01 2012-05-09,US
+14,Donald Driver,0.24515940764380068,google_trends_anchor_season,Barack Obama,2012-03-01 2012-05-09,US
+14,Gavin DeGraw,0.6303934176567514,google_trends_anchor_season,Barack Obama,2012-03-01 2012-05-09,US
+14,Gladys Knight,0.611033218648765,google_trends_anchor_season,Barack Obama,2012-03-01 2012-05-09,US
+14,Katherine Jenkins,0.3564872462059716,google_trends_anchor_season,Barack Obama,2012-03-01 2012-05-09,US
+14,Maria Menounos,0.658524309557726,google_trends_anchor_season,Barack Obama,2012-03-01 2012-05-09,US
+15,Gilles Marini,0.14221019128654594,google_trends_anchor_season,Barack Obama,2012-09-01 2012-11-09,US
+15,Sabrina Bryan,0.2105266955266956,google_trends_anchor_season,Barack Obama,2012-09-01 2012-11-09,US
+15,Kirstie Alley,0.17480768742432023,google_trends_anchor_season,Barack Obama,2012-09-01 2012-11-09,US
+15,Kelly Monaco,0.24072437449110878,google_trends_anchor_season,Barack Obama,2012-09-01 2012-11-09,US
+15,Apolo Anton Ohno,0.2538744225750584,google_trends_anchor_season,Barack Obama,2012-09-01 2012-11-09,US
+15,Emmitt Smith,0.15585129035940395,google_trends_anchor_season,Barack Obama,2012-09-01 2012-11-09,US
+15,Shawn Johnson,0.15002470532334872,google_trends_anchor_season,Barack Obama,2012-09-01 2012-11-09,US
+15,Pamela Anderson,0.16240727486109072,google_trends_anchor_season,Barack Obama,2012-09-01 2012-11-09,US
+15,Helio Castroneves,0.1349206349206349,google_trends_anchor_season,Barack Obama,2012-09-01 2012-11-09,US
+15,Joey Fatone,0.19285714285714284,google_trends_anchor_season,Barack Obama,2012-09-01 2012-11-09,US
+15,Drew Lachey,0.2067460317460317,google_trends_anchor_season,Barack Obama,2012-09-01 2012-11-09,US
+15,Bristol Palin,0.20006944648488767,google_trends_anchor_season,Barack Obama,2012-09-01 2012-11-09,US
+15,Melissa Rycroft,0.18334776334776334,google_trends_anchor_season,Barack Obama,2012-09-01 2012-11-09,US
+16,Ingo Rademacher,0.17555876662140302,google_trends_anchor_season,Barack Obama,2013-03-01 2013-05-09,US
+16,Zendaya,1.3618112822767845,google_trends_anchor_season,Barack Obama,2013-03-01 2013-05-09,US
+16,Dorothy Hamill,0.43804199272949274,google_trends_anchor_season,Barack Obama,2013-03-01 2013-05-09,US
+16,Victor Ortiz,0.1728233077329303,google_trends_anchor_season,Barack Obama,2013-03-01 2013-05-09,US
+16,Alexandra Raisman,0.14074186476162445,google_trends_anchor_season,Barack Obama,2013-03-01 2013-05-09,US
+16,Jacoby Jones,0.3597797522875057,google_trends_anchor_season,Barack Obama,2013-03-01 2013-05-09,US
+16,D. L. Hughley,0.03773584905660377,google_trends_anchor_season,Barack Obama,2013-03-01 2013-05-09,US
+16,Andy Dick,0.4219820707599403,google_trends_anchor_season,Barack Obama,2013-03-01 2013-05-09,US
+16,Wynonna Judd,0.19298634620012434,google_trends_anchor_season,Barack Obama,2013-03-01 2013-05-09,US
+16,Kellie Pickler,0.8141203502908431,google_trends_anchor_season,Barack Obama,2013-03-01 2013-05-09,US
+16,Lisa Vanderpump,0.640108596761939,google_trends_anchor_season,Barack Obama,2013-03-01 2013-05-09,US
+16,Sean Lowe,1.2089057767629197,google_trends_anchor_season,Barack Obama,2013-03-01 2013-05-09,US
+17,Valerie Harper,0.5140699345607022,google_trends_anchor_season,Barack Obama,2013-09-01 2013-11-16,US
+17,Brant Daugherty,0.40023723691276525,google_trends_anchor_season,Barack Obama,2013-09-01 2013-11-16,US
+17,Elizabeth Berkley Lauren,0.12104348730158059,google_trends_anchor_season,Barack Obama,2013-09-01 2013-11-16,US
+17,Leah Remini,0.5327184239987616,google_trends_anchor_season,Barack Obama,2013-09-01 2013-11-16,US
+17,Corbin Bleu,0.37751370269498064,google_trends_anchor_season,Barack Obama,2013-09-01 2013-11-16,US
+17,Amber Riley,0.2986504903801428,google_trends_anchor_season,Barack Obama,2013-09-01 2013-11-16,US
+17,Keyshawn Johnson,0.16123863032207378,google_trends_anchor_season,Barack Obama,2013-09-01 2013-11-16,US
+17,Bill Engvall,0.16977616183264976,google_trends_anchor_season,Barack Obama,2013-09-01 2013-11-16,US
+17,Christina Milian,0.5387538359272507,google_trends_anchor_season,Barack Obama,2013-09-01 2013-11-16,US
+17,"Nicole ""Snooki"" Polizzi",0.05524223810269192,google_trends_anchor_season,Barack Obama,2013-09-01 2013-11-16,US
+17,Jack Osbourne,0.2055004589090582,google_trends_anchor_season,Barack Obama,2013-09-01 2013-11-16,US
+17,Bill Nye,1.0742743007353397,google_trends_anchor_season,Barack Obama,2013-09-01 2013-11-16,US
+18,Billy Dee Williams,0.32898415339688014,google_trends_anchor_season,Barack Obama,2014-03-01 2014-05-09,US
+18,Danica McKellar,0.7299828220956263,google_trends_anchor_season,Barack Obama,2014-03-01 2014-05-09,US
+18,James Maslow,0.7056104874030484,google_trends_anchor_season,Barack Obama,2014-03-01 2014-05-09,US
+18,Candace Cameron Bure,0.1974656819079344,google_trends_anchor_season,Barack Obama,2014-03-01 2014-05-09,US
+18,Sean Avery,0.25430959257156466,google_trends_anchor_season,Barack Obama,2014-03-01 2014-05-09,US
+18,Diana Nyad,0.21610936556354296,google_trends_anchor_season,Barack Obama,2014-03-01 2014-05-09,US
+18,Charlie White,0.3134708268344926,google_trends_anchor_season,Barack Obama,2014-03-01 2014-05-09,US
+18,Amy Purdy,0.7703725893443293,google_trends_anchor_season,Barack Obama,2014-03-01 2014-05-09,US
+18,Meryl Davis,0.6433815231652809,google_trends_anchor_season,Barack Obama,2014-03-01 2014-05-09,US
+18,Drew Carey,0.5285186031755645,google_trends_anchor_season,Barack Obama,2014-03-01 2014-05-09,US
+18,Cody Simpson,0.9169039443780148,google_trends_anchor_season,Barack Obama,2014-03-01 2014-05-09,US
+18,NeNe Leakes,0.9121670416210944,google_trends_anchor_season,Barack Obama,2014-03-01 2014-05-09,US
+19,Antonio Sabato Jr.,0.07509881422924901,google_trends_anchor_season,Barack Obama,2014-09-01 2014-11-16,US
+19,Jonathan Bennett,0.3742446288120555,google_trends_anchor_season,Barack Obama,2014-09-01 2014-11-16,US
+19,Lea Thompson,0.648599975005226,google_trends_anchor_season,Barack Obama,2014-09-01 2014-11-16,US
+19,Janel Parrish,0.509493844839276,google_trends_anchor_season,Barack Obama,2014-09-01 2014-11-16,US
+19,Alfonso Ribeiro,0.579680286773227,google_trends_anchor_season,Barack Obama,2014-09-01 2014-11-16,US
+19,Lolo Jones,0.4112152362271763,google_trends_anchor_season,Barack Obama,2014-09-01 2014-11-16,US
+19,Randy Couture,0.20951404885777444,google_trends_anchor_season,Barack Obama,2014-09-01 2014-11-16,US
+19,Tommy Chong,0.5809387015993428,google_trends_anchor_season,Barack Obama,2014-09-01 2014-11-16,US
+19,Betsey Johnson,0.714003185532576,google_trends_anchor_season,Barack Obama,2014-09-01 2014-11-16,US
+19,Michael Waltrip,0.2770478375263153,google_trends_anchor_season,Barack Obama,2014-09-01 2014-11-16,US
+19,Tavis Smiley,0.2229118275378494,google_trends_anchor_season,Barack Obama,2014-09-01 2014-11-16,US
+19,Bethany Mota,1.2765532964159443,google_trends_anchor_season,Barack Obama,2014-09-01 2014-11-16,US
+19,Sadie Robertson,1.1546807761186564,google_trends_anchor_season,Barack Obama,2014-09-01 2014-11-16,US
+20,Suzanne Somers,0.531856375443981,google_trends_anchor_season,Barack Obama,2015-03-01 2015-05-09,US
+20,Willow Shields,0.4325612735197571,google_trends_anchor_season,Barack Obama,2015-03-01 2015-05-09,US
+20,Riker Lynch,0.44986627756581754,google_trends_anchor_season,Barack Obama,2015-03-01 2015-05-09,US
+20,Rumer Willis,0.844668856807844,google_trends_anchor_season,Barack Obama,2015-03-01 2015-05-09,US
+20,Nastia Liukin,0.23860458654765537,google_trends_anchor_season,Barack Obama,2015-03-01 2015-05-09,US
+20,Michael Sam,0.2563876639744599,google_trends_anchor_season,Barack Obama,2015-03-01 2015-05-09,US
+20,Robert Herjavec,0.6091602975351467,google_trends_anchor_season,Barack Obama,2015-03-01 2015-05-09,US
+20,Charlotte McKinney,1.0266561433185712,google_trends_anchor_season,Barack Obama,2015-03-01 2015-05-09,US
+20,Noah Galloway,0.3060040053212861,google_trends_anchor_season,Barack Obama,2015-03-01 2015-05-09,US
+20,Redfoo,0.20585392598499677,google_trends_anchor_season,Barack Obama,2015-03-01 2015-05-09,US
+20,Patti LaBelle,0.5741817409702197,google_trends_anchor_season,Barack Obama,2015-03-01 2015-05-09,US
+20,Chris Soules,0.9289808277623404,google_trends_anchor_season,Barack Obama,2015-03-01 2015-05-09,US
+21,Gary Busey,0.7203838369422786,google_trends_anchor_season,Barack Obama,2015-09-01 2015-11-16,US
+21,Alexa PenaVega,0.26164837757842846,google_trends_anchor_season,Barack Obama,2015-09-01 2015-11-16,US
+21,Carlos PenaVega,0.21564004653137744,google_trends_anchor_season,Barack Obama,2015-09-01 2015-11-16,US
+21,Victor Espinoza,0.17479970806577866,google_trends_anchor_season,Barack Obama,2015-09-01 2015-11-16,US
+21,Alek Skarlatos,0.21422466004525756,google_trends_anchor_season,Barack Obama,2015-09-01 2015-11-16,US
+21,Chaka Khan,0.2782772259673004,google_trends_anchor_season,Barack Obama,2015-09-01 2015-11-16,US
+21,Andy Grammer,0.5295513744958944,google_trends_anchor_season,Barack Obama,2015-09-01 2015-11-16,US
+21,Tamar Braxton,0.7881826480048305,google_trends_anchor_season,Barack Obama,2015-09-01 2015-11-16,US
+21,Nick Carter,0.48253055362699526,google_trends_anchor_season,Barack Obama,2015-09-01 2015-11-16,US
+21,Hayes Grier,0.6875682176373745,google_trends_anchor_season,Barack Obama,2015-09-01 2015-11-16,US
+21,Bindi Irwin,1.1417567675624247,google_trends_anchor_season,Barack Obama,2015-09-01 2015-11-16,US
+21,Kim Zolciak-Biermann,0.07894590231943116,google_trends_anchor_season,Barack Obama,2015-09-01 2015-11-16,US
+21,Paula Deen,1.2125320508544246,google_trends_anchor_season,Barack Obama,2015-09-01 2015-11-16,US
+22,Mischa Barton,0.3697619806900965,google_trends_anchor_season,Barack Obama,2016-03-01 2016-05-09,US
+22,Kim Fields,0.4370639107225234,google_trends_anchor_season,Barack Obama,2016-03-01 2016-05-09,US
+22,Jodie Sweetin,1.1092171740054562,google_trends_anchor_season,Barack Obama,2016-03-01 2016-05-09,US
+22,Doug Flutie,0.28088298524848543,google_trends_anchor_season,Barack Obama,2016-03-01 2016-05-09,US
+22,Von Miller,0.43568578351611303,google_trends_anchor_season,Barack Obama,2016-03-01 2016-05-09,US
+22,Antonio Brown,0.4202421398325802,google_trends_anchor_season,Barack Obama,2016-03-01 2016-05-09,US
+22,Paige VanZant,0.4281973863976803,google_trends_anchor_season,Barack Obama,2016-03-01 2016-05-09,US
+22,Geraldo Rivera,0.20457633220764543,google_trends_anchor_season,Barack Obama,2016-03-01 2016-05-09,US
+22,Nyle DiMarco,0.36249605033002263,google_trends_anchor_season,Barack Obama,2016-03-01 2016-05-09,US
+22,Ginger Zee,0.2946525553672064,google_trends_anchor_season,Barack Obama,2016-03-01 2016-05-09,US
+22,Wanya Morris,0.13025986053483748,google_trends_anchor_season,Barack Obama,2016-03-01 2016-05-09,US
+22,Marla Maples,0.581855981736757,google_trends_anchor_season,Barack Obama,2016-03-01 2016-05-09,US
+23,Jake T. Austin,0.14090909090909093,google_trends_anchor_season,Barack Obama,2016-09-01 2016-11-16,US
+23,Maureen McCormick,0.4477634140748889,google_trends_anchor_season,Barack Obama,2016-09-01 2016-11-16,US
+23,Marilu Henner,0.25967865933872875,google_trends_anchor_season,Barack Obama,2016-09-01 2016-11-16,US
+23,Ryan Lochte,1.2620512820512821,google_trends_anchor_season,Barack Obama,2016-09-01 2016-11-16,US
+23,Calvin Johnson Jr.,0.0001,google_trends_anchor_season,Barack Obama,2016-09-01 2016-11-16,US
+23,Laurie Hernandez,0.3065877355384641,google_trends_anchor_season,Barack Obama,2016-09-01 2016-11-16,US
+23,Amber Rose,1.428668139053826,google_trends_anchor_season,Barack Obama,2016-09-01 2016-11-16,US
+23,Rick Perry,0.17020662419209887,google_trends_anchor_season,Barack Obama,2016-09-01 2016-11-16,US
+23,James Hinchcliffe,0.18013601944834315,google_trends_anchor_season,Barack Obama,2016-09-01 2016-11-16,US
+23,Babyface,0.19616257611951443,google_trends_anchor_season,Barack Obama,2016-09-01 2016-11-16,US
+23,Vanilla Ice,0.5777374217909504,google_trends_anchor_season,Barack Obama,2016-09-01 2016-11-16,US
+23,Jana Kramer,0.7894225974768833,google_trends_anchor_season,Barack Obama,2016-09-01 2016-11-16,US
+23,Terra Jole,0.21358594554395807,google_trends_anchor_season,Barack Obama,2016-09-01 2016-11-16,US
+24,Charo,1.5932692307692307,google_trends_anchor_season,Barack Obama,2017-03-01 2017-05-09,US
+24,Mr. T,0.20232150896892287,google_trends_anchor_season,Barack Obama,2017-03-01 2017-05-09,US
+24,Heather Morris,0.3499695281674323,google_trends_anchor_season,Barack Obama,2017-03-01 2017-05-09,US
+24,Nancy Kerrigan,0.6561885725751938,google_trends_anchor_season,Barack Obama,2017-03-01 2017-05-09,US
+24,Bonner Bolton,0.4544629990380296,google_trends_anchor_season,Barack Obama,2017-03-01 2017-05-09,US
+24,Simone Biles,0.5284584047390899,google_trends_anchor_season,Barack Obama,2017-03-01 2017-05-09,US
+24,David Ross,0.5082717608023382,google_trends_anchor_season,Barack Obama,2017-03-01 2017-05-09,US
+24,Rashad Jennings,0.363648374540045,google_trends_anchor_season,Barack Obama,2017-03-01 2017-05-09,US
+24,Chris Kattan,0.40718001361383716,google_trends_anchor_season,Barack Obama,2017-03-01 2017-05-09,US
+24,Erika Jayne,0.6383503929554634,google_trends_anchor_season,Barack Obama,2017-03-01 2017-05-09,US
+24,Normani,0.3104919651811423,google_trends_anchor_season,Barack Obama,2017-03-01 2017-05-09,US
+24,Nick Viall,0.6860617358831644,google_trends_anchor_season,Barack Obama,2017-03-01 2017-05-09,US
+25,Sasha Pieterse,0.4402713011027064,google_trends_anchor_season,Barack Obama,2017-09-01 2017-11-09,US
+25,Frankie Muniz,0.9431261595547312,google_trends_anchor_season,Barack Obama,2017-09-01 2017-11-09,US
+25,Jordan Fisher,0.6634868200980925,google_trends_anchor_season,Barack Obama,2017-09-01 2017-11-09,US
+25,Derek Fisher,0.23179422169430683,google_trends_anchor_season,Barack Obama,2017-09-01 2017-11-09,US
+25,Nikki Bella,0.751852995514268,google_trends_anchor_season,Barack Obama,2017-09-01 2017-11-09,US
+25,Terrell Owens,0.3554512114014446,google_trends_anchor_season,Barack Obama,2017-09-01 2017-11-09,US
+25,Victoria Arlen,0.3975394587177432,google_trends_anchor_season,Barack Obama,2017-09-01 2017-11-09,US
+25,Barbara Corcoran,0.3008656939753494,google_trends_anchor_season,Barack Obama,2017-09-01 2017-11-09,US
+25,Lindsey Stirling,0.8017913395620978,google_trends_anchor_season,Barack Obama,2017-09-01 2017-11-09,US
+25,Debbie Gibson,0.5145550818781691,google_trends_anchor_season,Barack Obama,2017-09-01 2017-11-09,US
+25,Nick Lachey,0.42235267504964347,google_trends_anchor_season,Barack Obama,2017-09-01 2017-11-09,US
+25,Drew Scott,0.27763094969439067,google_trends_anchor_season,Barack Obama,2017-09-01 2017-11-09,US
+25,Vanessa Lachey,0.38955665864681616,google_trends_anchor_season,Barack Obama,2017-09-01 2017-11-09,US
+26,Jamie Anderson,0.08505743075718103,google_trends_anchor_season,Barack Obama,2018-04-01 2018-04-28,US
+26,Johnny Damon,0.11708476582510874,google_trends_anchor_season,Barack Obama,2018-04-01 2018-04-28,US
+26,Kareem Abdul-Jabbar,0.05906224333269815,google_trends_anchor_season,Barack Obama,2018-04-01 2018-04-28,US
+26,Arike Ogunbowale,0.34859871666985787,google_trends_anchor_season,Barack Obama,2018-04-01 2018-04-28,US
+26,Jennie Finch Daigle,0.07407407407407407,google_trends_anchor_season,Barack Obama,2018-04-01 2018-04-28,US
+26,Chris Mazdzer,0.09529511544342054,google_trends_anchor_season,Barack Obama,2018-04-01 2018-04-28,US
+26,Mirai Nagasu,0.0752426640808452,google_trends_anchor_season,Barack Obama,2018-04-01 2018-04-28,US
+26,Tonya Harding,1.0551033770103162,google_trends_anchor_season,Barack Obama,2018-04-01 2018-04-28,US
+26,Josh Norman,0.09390104118366872,google_trends_anchor_season,Barack Obama,2018-04-01 2018-04-28,US
+26,Adam Rippon,0.19179888616384674,google_trends_anchor_season,Barack Obama,2018-04-01 2018-04-28,US
+27,Juan Pablo Di Pace,0.17739142601305974,google_trends_anchor_season,Barack Obama,2018-09-01 2018-11-02,US
+27,Evanna Lynch,0.22886563105999827,google_trends_anchor_season,Barack Obama,2018-09-01 2018-11-02,US
+27,Nancy McKeon,0.41710727363169214,google_trends_anchor_season,Barack Obama,2018-09-01 2018-11-02,US
+27,John Schneider,0.44647172445592126,google_trends_anchor_season,Barack Obama,2018-09-01 2018-11-02,US
+27,Milo Manheim,0.42579911386926295,google_trends_anchor_season,Barack Obama,2018-09-01 2018-11-02,US
+27,Danelle Umstead,0.24328377375266497,google_trends_anchor_season,Barack Obama,2018-09-01 2018-11-02,US
+27,Mary Lou Retton,0.6802729534055294,google_trends_anchor_season,Barack Obama,2018-09-01 2018-11-02,US
+27,DeMarcus Ware,0.30403410767741257,google_trends_anchor_season,Barack Obama,2018-09-01 2018-11-02,US
+27,Nikki Glaser,0.48987484574579393,google_trends_anchor_season,Barack Obama,2018-09-01 2018-11-02,US
+27,Bobby Bones,0.863907485345323,google_trends_anchor_season,Barack Obama,2018-09-01 2018-11-02,US
+27,Tinashe,0.3628057876100704,google_trends_anchor_season,Barack Obama,2018-09-01 2018-11-02,US
+27,Alexis Ren,0.6934028804039959,google_trends_anchor_season,Barack Obama,2018-09-01 2018-11-02,US
+27,Joe Amabile,0.13663843619898386,google_trends_anchor_season,Barack Obama,2018-09-01 2018-11-02,US
+28,Kate Flannery,0.2687752714391229,google_trends_anchor_season,Barack Obama,2019-09-01 2019-11-16,US
+28,James Van Der Beek,0.42384342428458094,google_trends_anchor_season,Barack Obama,2019-09-01 2019-11-16,US
+28,Kel Mitchell,0.27494670910400165,google_trends_anchor_season,Barack Obama,2019-09-01 2019-11-16,US
+28,Ray Lewis,0.47257170098958245,google_trends_anchor_season,Barack Obama,2019-09-01 2019-11-16,US
+28,Lamar Odom,0.5809156410135462,google_trends_anchor_season,Barack Obama,2019-09-01 2019-11-16,US
+28,Sailor Brinkley-Cook,0.09364481509189705,google_trends_anchor_season,Barack Obama,2019-09-01 2019-11-16,US
+28,Sean Spicer,0.7488109634726176,google_trends_anchor_season,Barack Obama,2019-09-01 2019-11-16,US
+28,Mary Wilson,0.2078693606664615,google_trends_anchor_season,Barack Obama,2019-09-01 2019-11-16,US
+28,Lauren Alaina,0.46402911663258234,google_trends_anchor_season,Barack Obama,2019-09-01 2019-11-16,US
+28,Ally Brooke,0.32753931200407027,google_trends_anchor_season,Barack Obama,2019-09-01 2019-11-16,US
+28,Karamo Brown,0.20474801153496558,google_trends_anchor_season,Barack Obama,2019-09-01 2019-11-16,US
+28,Hannah Brown,1.0305563026653886,google_trends_anchor_season,Barack Obama,2019-09-01 2019-11-16,US
+29,Anne Heche,0.4767065305944241,google_trends_anchor_season,Barack Obama,2020-09-01 2020-11-16,US
+29,Jesse Metcalfe,0.3650323497443944,google_trends_anchor_season,Barack Obama,2020-09-01 2020-11-16,US
+29,Chrishell Stause,0.5060032881774484,google_trends_anchor_season,Barack Obama,2020-09-01 2020-11-16,US
+29,Skai Jackson,0.7859928341981812,google_trends_anchor_season,Barack Obama,2020-09-01 2020-11-16,US
+29,Justina Machado,0.19750647040989083,google_trends_anchor_season,Barack Obama,2020-09-01 2020-11-16,US
+29,Charles Oakley,0.2994871362018475,google_trends_anchor_season,Barack Obama,2020-09-01 2020-11-16,US
+29,Veron Davis,0.05065666041275797,google_trends_anchor_season,Barack Obama,2020-09-01 2020-11-16,US
+29,Johnny Weir,0.20509458988033935,google_trends_anchor_season,Barack Obama,2020-09-01 2020-11-16,US
+29,Nev Schulman,0.17119400836219567,google_trends_anchor_season,Barack Obama,2020-09-01 2020-11-16,US
+29,AJ McLean,0.13730202191439114,google_trends_anchor_season,Barack Obama,2020-09-01 2020-11-16,US
+29,Nelly,1.0139066311091662,google_trends_anchor_season,Barack Obama,2020-09-01 2020-11-16,US
+29,Kaitlyn Bristowe,0.281016550008371,google_trends_anchor_season,Barack Obama,2020-09-01 2020-11-16,US
+29,Carole Baskin,1.3943214754846558,google_trends_anchor_season,Barack Obama,2020-09-01 2020-11-16,US
+29,Monica Aldama,0.22805801066905754,google_trends_anchor_season,Barack Obama,2020-09-01 2020-11-16,US
+29,Jeannie Mai,0.38839356992973845,google_trends_anchor_season,Barack Obama,2020-09-01 2020-11-16,US
+30,Martin Kove,0.48103316245419825,google_trends_anchor_season,Barack Obama,2021-09-01 2021-11-09,US
+30,Brian Austin Green,1.0351901273329849,google_trends_anchor_season,Barack Obama,2021-09-01 2021-11-09,US
+30,Melora Hardin,0.6633265426164634,google_trends_anchor_season,Barack Obama,2021-09-01 2021-11-09,US
+30,Matt James,0.6667831989122982,google_trends_anchor_season,Barack Obama,2021-09-01 2021-11-09,US
+30,"Mike ""The Miz"" Mizanin",,google_trends_anchor_season,Barack Obama,2021-09-01 2021-11-09,US
+30,Suni Lee,0.577405373346492,google_trends_anchor_season,Barack Obama,2021-09-01 2021-11-09,US
+30,Iman Shumpert,0.7799714752243803,google_trends_anchor_season,Barack Obama,2021-09-01 2021-11-09,US
+30,Cody Rigsby,0.7883632059849099,google_trends_anchor_season,Barack Obama,2021-09-01 2021-11-09,US
+30,Melanie C,0.31345998294612987,google_trends_anchor_season,Barack Obama,2021-09-01 2021-11-09,US
+30,Jimmie Allen,0.7869979936667466,google_trends_anchor_season,Barack Obama,2021-09-01 2021-11-09,US
+30,Olivia Jade,1.2551350237064522,google_trends_anchor_season,Barack Obama,2021-09-01 2021-11-09,US
+30,JoJo Siwa,4.656363160648875,google_trends_anchor_season,Barack Obama,2021-09-01 2021-11-09,US
+30,Christine Chiu,0.40296532405423624,google_trends_anchor_season,Barack Obama,2021-09-01 2021-11-09,US
+30,Kenya Moore,0.5525493356911753,google_trends_anchor_season,Barack Obama,2021-09-01 2021-11-09,US
+30,Amanda Kloots,1.050511708425242,google_trends_anchor_season,Barack Obama,2021-09-01 2021-11-09,US

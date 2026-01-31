@@ -16,7 +16,7 @@ DATA_PATH = "Data/2026_MCM_Problem_C_Data.csv"
 OUT_SHARES = "AR-Problem1_Bayes/results/bayesian_2/inferred_shares.csv"
 OUT_UNC = "AR-Problem1_Bayes/results/bayesian_2/inferred_uncertainty.csv"
 OUT_MATCH = "AR-Problem1_Bayes/results/bayesian_2/match_rates.csv"
-POP_PATH = "AR-Problem1_Bayes/popularity_trends_season.csv"
+POP_PATH = "Data/dwts_wiki_edits_preseason.csv"
 POP_WEIGHT = 1.0
 
 EPS = 1e-8
@@ -24,6 +24,7 @@ EPS = 1e-8
 # Training
 LR = 0.03
 N_STEPS = 300
+PRINT_EVERY = 10
 
 # Likelihood temperatures
 KAPPA_INIT = 1.0
@@ -219,17 +220,31 @@ def load_popularity_scores(path: str) -> Dict[Tuple[int, str], float]:
         raise FileNotFoundError(f"Missing popularity file: {path}")
     pop_df = pd.read_csv(path)
     if (
-        "celebrity_name" not in pop_df.columns
-        or "pop_score" not in pop_df.columns
+        "celebrityname" not in pop_df.columns
+        or "edits_total_to_cutoff" not in pop_df.columns
         or "season" not in pop_df.columns
     ):
         raise ValueError("Popularity file missing required columns")
-    return dict(
-        zip(
-            zip(pop_df["season"].astype(int), pop_df["celebrity_name"]),
-            pop_df["pop_score"],
-        )
-    )
+    pop_df["celebrityname"] = pop_df["celebrityname"].astype(str).str.strip()
+    pop_df["edits_total_to_cutoff"] = pd.to_numeric(
+        pop_df["edits_total_to_cutoff"], errors="coerce"
+    ).fillna(0.0)
+
+    pop_scores: Dict[Tuple[int, str], float] = {}
+    for season, df_season in pop_df.groupby("season"):
+        edits = df_season["edits_total_to_cutoff"].to_numpy(dtype=float)
+        if edits.size == 0:
+            continue
+        edits = edits - edits.max()
+        weights = np.exp(edits)
+        denom = weights.sum()
+        if denom <= 0:
+            shares = np.full_like(weights, 1.0 / len(weights))
+        else:
+            shares = weights / denom
+        for name, share in zip(df_season["celebrityname"].tolist(), shares.tolist()):
+            pop_scores[(int(season), str(name).strip())] = float(share)
+    return pop_scores
 
 
 def build_dataset(df: pd.DataFrame) -> Tuple[List[SeasonPack], Dict]:
@@ -258,14 +273,7 @@ def build_dataset(df: pd.DataFrame) -> Tuple[List[SeasonPack], Dict]:
         pop = np.zeros((W, N), dtype=float)
         for i, name in enumerate(df_season["celebrity_name"].tolist()):
             pop[:, i] = pop_scores.get((int(season), name), 0.0)
-        pop_z = np.zeros_like(pop)
-        for w in range(W):
-            mask = active_mask[w] > 0
-            if mask.sum() < 2:
-                continue
-            mean = pop[w, mask].mean()
-            std = pop[w, mask].std()
-            pop_z[w, mask] = (pop[w, mask] - mean) / (std + EPS)
+        pop_z = pop.copy()
         industry_idx = np.array([industry_ids[v] for v in df_season["celebrity_industry"].fillna("Unknown")])
         partner_idx = np.array([partner_ids[v] for v in df_season["ballroom_partner"].fillna("Unknown")])
         packs.append(
@@ -495,7 +503,7 @@ def main():
 
     opt = torch.optim.Adam(params, lr=LR)
 
-    for _ in range(N_STEPS):
+    for step in range(N_STEPS):
         opt.zero_grad()
         rho = torch.sigmoid(rho_raw)
         tau = torch.clamp(torch.nn.functional.softplus(tau_raw), 0.7, 1.5)
@@ -530,6 +538,8 @@ def main():
         )
         loss.backward()
         opt.step()
+        if (step + 1) % PRINT_EVERY == 0 or step == 0:
+            print(f"step {step+1}/{N_STEPS} loss {loss.item():.4f}", flush=True)
 
     # Outputs
     shares_rows = []
