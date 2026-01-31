@@ -94,7 +94,7 @@ Below are **theory-motivated** rule changes that could differentiate the show an
 
 **What would strengthen 2c (optional):**
 - **Lit review:** A short paragraph citing 2–3 studies on reality-TV voting, procedural fairness, or suspense/viewership would add academic weight. We reference concepts; formal citations would deepen credibility.
-- **Data/plots:** Viewership data was fetched from Wikipedia (see `Data/dwts_viewership.csv`, `fetch_wiki_viewership.py`). **Controversy–viewership analysis done:** scatter plot and correlation (Pearson r = -0.03, Spearman ρ = -0.06; *p* > 0.7). **Finding:** No correlation between controversy count and mean viewership; controversy does not predict engagement in this data. Figures: `viewership_controversy_scatter.pdf`, `viewership_controversy_by_season.pdf` in `all-paper-info`.
+- **Data/plots:** Viewership data was fetched from Wikipedia (see `Data/dwts_viewership.csv`). **Controversy–viewership analysis done:** we use a continuous metric (mean |judge % − placement %| per contestant per season). Raw correlation with viewership is positive (r ≈ 0.33) but confounded by time. **Partial correlation (controlling season) is negative** (r ≈ −0.54, *p* ≈ 0.002): within-era, higher controversy tends to associate with *lower* viewership. **Paper figures:** `paper_viewership_controversy.pdf` (2-panel: time series + residual scatter), `paper_viewership_controversy_scatter.pdf`.
 - **Simulation of proposed rules:** We could implement "Tension Arc" or "Redemption B2" and show simulated outcomes. This would make proposals more concrete and data-driven.
 
 **Bottom line:** The current 2c is defensible without additional analysis—recommendations are grounded in our existing results and theory. Additional work would strengthen but is not strictly required.
@@ -107,7 +107,23 @@ If time permits, these would add empirical support:
 
 1. **Suspense index by season:** Correlate rank–percent displacement with a proxy for "tension" (e.g., number of contestants whose placement differs by ≥3 under the two methods). Seasons with high displacement = more potential narrative swing. Plot: "Suspense potential by season."
 2. **Controversy vs. volatility:** For controversial contestants, compute variance in placement across the 4 regimes. High volatility = more "what if" tension. Could support "controversy creates engagement" claim.
-3. **Viewership analysis (done):** Fetched Wikipedia ratings and correlated with controversy count. **Result:** No correlation (r ≈ -0.03, p > 0.7). Controversy does not predict viewership in this data.
+3. **Viewership analysis (done):** Fetched Wikipedia ratings; correlated with mean controversy (|judge % − placement %|). Raw r ≈ 0.33 (confounded by time); partial r controlling season ≈ −0.54 (*p* ≈ 0.002). See "Viewership–Controversy: Data Limitations" below.
+---
+
+## Viewership–Controversy: Data Limitations
+
+We cannot robustly test whether controversy drives engagement (e.g., viewership) with our data. Issues:
+
+| Issue | Explanation |
+|-------|-------------|
+| **Confounding** | Viewership declines sharply over time (cord-cutting). Raw correlation is confounded: early seasons had both high viewership and different controversy levels. Partial correlation (controlling season) suggests the opposite of the raw trend. |
+| **Small N** | Only 30 seasons with Wikipedia viewership; 4 missing (12, 18, 19, 31). Low power; sensitivity to outliers. |
+| **Data quality** | Wikipedia ratings tables vary by season (format, completeness). No fallback for missing seasons. Season 31 (Disney+) has no comparable Nielsen data. |
+| **Metric choice** | We use mean |judge % − placement %| per contestant. Alternative metrics (count above threshold, max in season) give different results. Max controversy shows no correlation. |
+| **Causal inference** | Even significant correlations would not imply causation. Competitors, scheduling, and external events drive viewership. |
+
+**Bottom line:** We present the viewership–controversy figures as exploratory. We do not claim controversy predicts viewership; we acknowledge the analysis is limited and emphasize theory over this empirical result for 2c recommendations.
+
 ---
 
 ## Summary Table

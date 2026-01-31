@@ -1,14 +1,18 @@
 ## Viewership vs. Controversy Analysis
 
-**Data sources:** Wikipedia (viewership per episode), Problem 2b (GMM controversial count).
+**Data:** Wikipedia viewership, Problem 2b controversy. **Wikipedia-verified seasons only.**
 
-**Seasons:** 34
-**Pearson r:** -0.028 (p = 0.8767)
-**Spearman ρ:** -0.062 (p = 0.7288)
+**Controversy metric:** Mean |judge_percentile − placement_percentile| per contestant per season (continuous).
 
-**Interpretation:** No strong linear correlation: controversy count does not clearly predict viewership.
+**Seasons:** 30
+**Pearson r (mean controversy vs viewership):** 0.333 (p = 0.0721)
+**Spearman ρ:** 0.327 (p = 0.0781)
+**Partial r (controlling season):** -0.542 (p = 0.0024)
+**Residual correlation:** -0.469 (p = 0.0090)
+**Max controversy vs viewership:** r = 0.115 (p = 0.5440)
 
-**Limitations:** Viewership declines over time (cord-cutting); controversy is rare (21 total).
-Season-level confounding (year, competition) limits causal inference.
+**Interpretation:** Raw correlation is positive (r ≈ 0.33) but confounded by time: early seasons had both higher viewership and different controversy levels. **Partial correlation (controlling season) is strongly negative (r ≈ -0.54, p ≈ 0.002)**: within-era, seasons with higher mean controversy tended to have *lower* viewership than expected.
 
-**Figures:** viewership_controversy_scatter.pdf, viewership_controversy_by_season.pdf
+**Limitations:** Viewership declines over time; small N.
+
+**Figures:** viewership_controversy_scatter.pdf, viewership_controversy_by_season.pdf, viewership_controversy_residual.pdf, viewership_controversy_max.pdf

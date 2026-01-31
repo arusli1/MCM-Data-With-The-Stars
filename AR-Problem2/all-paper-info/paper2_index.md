@@ -34,8 +34,10 @@ Outputs: `outputs/`, `figures/`, `sensitivity_analysis/outputs/`, `sensitivity_a
 | `problem2b_controversy_cdf.pdf` | CDF of controversy score; GMM cutoff |
 | `problem2b_controversy_scatter.pdf` | Judge vs placement percentile scatter |
 | `problem2b_regime_controversy_by_type.pdf` | Mean simulated controversy by regime |
-| `viewership_controversy_scatter.pdf` | Controversy count vs mean viewership (r ≈ 0) |
-| `viewership_controversy_by_season.pdf` | Viewership + controversy bars by season |
+| `viewership_controversy_scatter.pdf` | Mean controversy vs viewership scatter |
+| `viewership_controversy_by_season.pdf` | Viewership + controversy over time |
+| `paper_viewership_controversy.pdf` | **Paper-ready:** 2-panel (a) viewership+controversy over time, (b) residual scatter |
+| `paper_viewership_controversy_scatter.pdf` | **Paper-ready:** single-panel scatter with partial r |
 | `outputs/viewership_controversy_summary.md` | Correlation stats, interpretation |
 
 ## Suggested Paper Wording
