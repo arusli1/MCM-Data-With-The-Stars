@@ -1,0 +1,2 @@
+npseudo,min_partner,min_state,min_country,lambda,spearman_mean,kendall_mean,top1_mean,top3_mean,ndcg_mean
+2,1,1,3,10,0.40205738342993247,0.2906256295145184,0.14814814814814814,0.9259259259259259,0.7158042381882364

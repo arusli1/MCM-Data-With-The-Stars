@@ -1,0 +1,24 @@
+PlackettLuce            Fit a Plackett-Luce Model
+adjacency               Create an Adjacency Matrix for a set of
+                        Rankings
+aggregate               Aggregate Rankings
+beans                   Preferred Bean Varieties in Nicaragua
+choices                 Choices Object
+complete                Complete Orderings with the Missing Redundant
+                        Rank
+connectivity            Check Connectivity of Rankings
+decode                  Decode Orderings using a Key to Item Names
+fitted.PlackettLuce     Fitted Probabilities for PlackettLuce Objects
+group                   Group Rankings
+itempar.PlackettLuce    Extract Item Parameters of Plackett-Luce Models
+nascar                  Results from 2002 NASCAR Season
+pladmm                  Fit a Plackett-Luce Model with Linear Predictor
+                        for Log-worth
+pltree                  Plackett-Luce Trees
+pltree-summaries        Plackett-Luce Tree Summaries
+preflib                 Read Preflib Election Data Files
+pudding                 Paired Comparisons of Chocolate Pudding
+qvcalc.PlackettLuce     Quasi Variances for Model Coefficients
+rankings                Rankings Object
+simulate.PlackettLuce   Simulate from 'PlackettLuce' fitted objects
+summaries               Plackett-Luce Model Summaries

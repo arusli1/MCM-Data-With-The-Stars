@@ -1,0 +1,42 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+find_root <- function() {
+  cands <- c("AT_P3/PLACKET_LUCE", ".", "..", "../..", "../../AT_P3/PLACKET_LUCE")
+  for (c in cands) {
+    p <- normalizePath(c, mustWork = FALSE)
+    if (file.exists(file.path(p, "artifacts"))) return(p)
+  }
+  stop("Could not locate AT_P3/PLACKET_LUCE/artifacts.")
+}
+root <- find_root()
+art <- file.path(root, "artifacts", "ablation")
+library(readr)
+library(dplyr)
+```
+
+## Ablation: incremental factor impact (season-blocked CV)
+
+We measure the incremental impact of each factor using the **same season folds** for all models to ensure fair deltas.
+The **primary metric** is held-out **negative log-likelihood (NLL)** of the observed season ranking under the fitted model
+(lower is better). We also report rank metrics (Spearman, Kendall, Top-1, Top-3-overlap) as secondary diagnostics.
+
+### Overall fold-level metrics by model
+
+```{r}
+by_fold <- read_csv(file.path(art, "metrics_by_fold_model.csv"), show_col_types = FALSE)
+by_fold %>% arrange(model, fold)
+```
+
+### Factor impact summary
+
+```{r}
+impact <- read_csv(file.path(art, "factor_impact_summary.csv"), show_col_types = FALSE)
+impact %>% arrange(delta_nll_add)
+```
+
+Interpretation:
+- `delta_nll_add < 0` means adding the factor improves held-out likelihood.
+- `delta_nll_drop > 0` means removing the factor from the full model hurts likelihood.
+- `frac_folds_add_improves` is the stability measure: fraction of folds where `delta_nll_add < 0`.
+
+

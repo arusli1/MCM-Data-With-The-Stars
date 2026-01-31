@@ -1,0 +1,71 @@
+ConspiracistBeliefs2016
+                        Generic Conspiracist Beliefs Scale (2016 Data)
+FirstNames              Popularity of First Names
+GermanParties2009       Choice among German Political Parties
+MathExam14W             Mathematics 101 Exam Results
+MemoryDeficits          Memory Deficits in Psychiatric Patients
+PairClustering          Pair Clustering Data in Klauer (2006)
+Sim3PL                  Simulated Data for fitting a 3PL and 3PLu
+SoundQuality            Quality of Multichannel Reproduced Sound
+SourceMonitoring        Performance in a Source-Monitoring Experiment
+StereotypeThreat        Stereotype Threat in Dutch Differential
+                        Aptitude Test
+VerbalAggression        Situation-Response Questionnaire on Verbal
+                        Aggression
+YouthGratitude          Measuring Gratitude in Youth
+anchor                  Anchor Methods for the Detection of Uniform DIF
+                        the Rasch Model
+anchortest              Anchor methods for the detection of uniform DIF
+                        in the Rasch model
+as.list.itemresp        Coercing Item Response Data
+btmodel                 Bradley-Terry Model Fitting Function
+covariates              Extract/Set Covariates
+curveplot               Response Curve Plots for IRT Models
+discrpar                Extract Discrimination Parameters of Item
+                        Response Models
+elementary_symmetric_functions
+                        Calculation of the Elementary Symmetric
+                        Functions and Their Derivatives
+gpcmodel                Generalized Partial Credit Model Fitting
+                        Function
+guesspar                Extract Guessing Parameters of Item Response
+                        Models
+infoplot                Information Plots for IRT Models
+itempar                 Extract Item Parameters of Item Response Models
+itemresp                Data Structure for Item Response Data
+labels<-                Set Labels
+mptmodel                Multinomial Processing Tree (MPT) Model Fitting
+                        Function
+mscale                  Extract/Replace Measurement Scale
+nplmodel                Parametric Logistic Model (n-PL) Fitting
+                        Function
+paircomp                Data Structure for Paired Comparisons
+pcmodel                 Partial Credit Model Fitting Function
+personpar               Extract Person Parameters of Item Response
+                        Models
+piplot                  Person-Item Plots for IRT Models
+plot.btmodel            Visualizing Bradley-Terry Models
+plot.paircomp           Plotting Paired Comparison Data
+plot.raschmodel         Visualizing IRT Models
+predict.pcmodel         Predict Methods for Item Response Models
+print.itemresp          Formatting Item Response Data
+print.paircomp          Formatting Paired Comparison Data
+profileplot             Profile Plots for IRT Models
+raschmodel              Rasch Model Fitting Function
+regionplot              Region Plots for IRT Models
+rgpcm                   Simulate Data under a Generalized Partial
+                        Credit Model
+rpcm                    Simulate Data under a Partial Credit Model
+rpl                     Simulate Data under a Parametric Logistic IRT
+                        Model
+rrm                     Simulate Data under a Rasch model
+rrsm                    Simulate Data under a Rating Scale Model
+rsmodel                 Rating Scale Model Fitting Function
+subset.itemresp         Subsetting Item Response Data
+subset.paircomp         Subsetting/Reordering Paired Comparison Data
+summary.itemresp        Summarizing and Visualizing Item Response Data
+threshpar               Extract Threshold Parameters of Item Response
+                        Models
+upperpar                Extract Upper Asymptote Parameters of Item
+                        Response Models
+worth                   Extract Worth Parameters

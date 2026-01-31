@@ -1,0 +1,159 @@
+\documentclass[nojss]{jss}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{setspace}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{threeparttable}
+\usepackage{tabularx}
+\usepackage{rotating}
+
+%% need no \usepackage{Sweave}
+\SweaveOpts{engine = R, keep.source=TRUE, eps = FALSE, echo = TRUE}
+
+%\VignetteIndexEntry{Using psychotools for Evaluating the Performance of Score-Based Measurement Invariance Tests in IRT Models}
+%\VignetteKeywords{item response theory, IRT, score-based tests, measurement invariance, differential item functioning, DIF, structural change}
+%\VignettePackage{psychotools}
+
+\title{Using \pkg{psychotools} for Evaluating the Performance of Score-Based Measurement Invariance Tests in IRT Models}
+\Plaintitle{Using psychotools for Evaluating the Performance of Score-Based Measurement Invariance Tests in IRT Models}
+\Shorttitle{Evaluating the Performance of Score-Based Measurement Invariance Tests}
+\author{Lennart Schneider\\Ludwig-Maximilians-\\Universit\"at M\"unchen
+   \And Carolin Strobl\\Universit\"at Z\"urich
+   \And Achim Zeileis\\Universit\"at Innsbruck
+   \And Rudolf Debelak\\Universit\"at Z\"urich}
+\Plainauthor{Lennart Schneider, Carolin Strobl, Achim Zeileis, Rudolf Debelak}
+
+
+\Abstract{
+The detection of differential item functioning (DIF) is a central topic in psychometrics and educational measurement. In the past few years, a new family of score-based tests of measurement invariance has been proposed, which allows the detection of DIF along arbitrary person covariates in a variety of item response theory (IRT) models. \cite{schneider2020} illustrate the application of these tests within the R system for statistical computing. This vignette targets more advanced users and provides a tutorial on how to conduct simulation studies investigating the performance of score-based tests of measurement invariance.
+}
+
+\Keywords{Item response theory, IRT, score-based tests, measurement invariance, differential item functioning, DIF, structural change}
+
+\Address{
+  Lennart Schneider\\
+  Department of Statistics\\
+  Ludwig-Maximilians-Universit\"at M\"unchen\\
+  Ludwigstra{\ss}e 33\\
+  80539 M\"unchen, Germany\\
+  E-mail: \email{lennart.sch@web.de}\\
+
+  Carolin Strobl, Rudolf Debelak\\
+  Department of Psychology\\
+  Universit\"at Z\"urich\\
+  Binzm\"uhlestr.~14\\
+  8050 Z\"urich, Switzerland\\
+  E-mail: \email{Carolin.Strobl@psychologie.uzh.ch}, \email{Rudolf.Debelak@psychologie.uzh.ch}\\
+  URL: \url{http://www.psychologie.uzh.ch/fachrichtungen/methoden.html}\\
+
+  Achim Zeileis\\
+  Department of Statistics\\
+  Faculty of Economics and Statistics\\
+  Universit\"at Innsbruck\\
+  Universit\"atsstr.~15\\
+  6020 Innsbruck, Austria\\
+  E-mail: \email{Achim.Zeileis@R-project.org}\\
+  URL: \url{https://www.zeileis.org/}
+}
+
+\begin{document}
+\cite{schneider2020} describe the conceptual framework as well as the software to perform differential item functioning (DIF) investigations. This vignette aims at more advanced users and provides a tutorial on how to conduct simulation studies investigating the performance of score-based tests of measurement invariance. We recommend to have read at least the following sections of \cite{schneider2020}: ``A Conceptual and Formal Framework for Score-Based Measurement Invariance Tests'' and ``The Implementation of Score-Based Measurement Invariance Tests within R''.
+
+In this vignette, we want to carry out simulation studies that investigate how to appropriately model impact with a 2PL model in the presence of a continuous numerical covariate (Simulation 1) and what power we can expect to detect DIF in this case (Simulation 2). The motivation for the first simulation study is that modeling impact is necessary to avoid an increased Type I error rate, as was already mentioned in the main text, whereas the second simulation study aims at providing an additional investigation of the method's power. 
+
+Both of these simulations serve as illustrations. To keep our presentation concise, the design of these studies is somewhat limited. To provide a realistic setting, we again rely on the first six items of the Verbal Aggression dataset, which were already used in the ``Illustrations with Empirical Data'' section of \cite{schneider2020}. In the following, \texttt{refmodel} refers to a 2PL model fitted to the first six items of the Verbal Aggression dataset:
+
+\texttt{refmodel <- nplmodel(VerbalAggression\$resp2[, 1:6])}
+
+Instead of using the item parameters of this fitted 2PL model, we could of course also simply generate them based on specific parametric distributions, such as a standard normal distribution for the item difficulty parameters. This could be done using standard functions of R, which we do not present for brevity.
+
+In our first simulation study, we investigate the Type I error for our score-based tests when applied to a 2PL model. Here, no DIF is present, but we use various conditions that differ with regard to the presence of impact, the number of groups used to model it, and the relationship of the covariate with the person parameters. We are interested how different methods of modeling impact affect the Type I error rate depending on the relationship between the ability of respondents and the observed covariate. In summary, we want to vary the following conditions in our simulation study:
+\begin{itemize}
+	\item The presence of impact. The person parameter distribution could be either normal ($N(0,1)$) for the whole sample, or a mixed normal distribution. In the second case, there are two latent groups of respondents, whose person parameters follow a $N(-0.5, 1)$ or $N(0.5, 1)$ distribution, respectively. These two cases correspond to conditions without and with impact.
+	\item The type of relationship between the ability parameter $\theta_i$ and the observed covariate $\text{cov}_i$, considered over all respondents $i = 1, \dots, N$. In a first condition, there is no systematic relationship, and the covariate is generated independently from the ability parameter. In a second condition, there is a linear relationship. Using an error term $\varepsilon$, which follows a standard normal distribution, this is denoted by $\text{cov}_i = \theta_i + \varepsilon_i$. Finally, we consider a quadratic relationship $\text{cov}_i = \theta^2_i + \varepsilon_i$ as a third condition.
+	\item We further vary the number of groups $G$ which are used for modeling impact, using 1, 2, 5 and 25 groups. For simplicity, we assume that impact should always be modeled based on groups of about equal size that correspond to respondents whose value in the covariate come from different intervals. The boundaries of these intervals are therefore defined based on percentiles of the observed distribution of the covariates.
+\end{itemize}
+We hypothesize that an independent relationship should show no systematic effect on the Type I error rate, and that modeling a quadratic relationship should be more difficult than a linear one and thus require a larger number of groups. An heuristic argument for this expectation is that in a quadratic relationship, the change of the expected personality parameter becomes very large for a comparatively small group of respondents (namely those with a very high or very low covariate). It seems plausible that the resulting model is more difficult to estimate than a model resulting from a linear relationship.
+On the other hand, we keep the following conditions fixed:
+\begin{itemize}
+	\item The sample size \texttt{N} is 1000.
+	\item The used item parameters correspond to the item parameter estimates for the six items of the verbal aggression dataset.
+\end{itemize}
+ Our data generating process (DGP) thus consists of the following steps:
+\begin{itemize}
+\item Generating the vector of person parameters (\texttt{theta}) for \texttt{N} persons following a normal distribution (standard normal if no impact is present, \texttt{impact = FALSE}, and $N(-0.5, 1)$ or $N(0.5, 1$) for each half of the sample if impact is present, \texttt{impact = TRUE}). 
+\item Generating the vector of covariates for \texttt{N} persons, either independent, in a linear relationship or in a quadratic relationship.
+\item Determining the number of groups, \texttt{G}, for modeling impact and modeling the impact effect if the number of groups, \texttt{G}, is larger than one (i.e., categorizing the covariate based on equidistant percentiles matching the number of groups, using \texttt{cut}; see also \texttt{?cut}).
+\item Simulating data under the 2PL model using the item parameters of our already fitted model (using the \texttt{rpl} function of the {\em psychotools} package, see \texttt{?rpl} for more information).
+\end{itemize}
+Listing~\ref{lst:dgp} shows the corresponding code.
+\lstinputlisting[firstline=9, lastline=34, frame=single, basicstyle=\scriptsize\ttfamily, language=R, numbers=left, numberstyle=\tiny\color{black}, caption={The data generating process}, label={lst:dgp}]{../demo/toolbox1.R}
+To calculate $p$-values three steps are needed: Simulate data (\texttt{dgp(...)}), fit the 2PL model (\texttt{nplmodel(...)}) and calculate the score-based tests (\texttt{sctest(...)}). A possible solution is given in Listing~\ref{lst:perf} using, e.g., 1000 persons (\texttt{N = 1000}), one group (\texttt{G = 1}), simulating no impact (\texttt{impact = FALSE}) and assuming the covariate to be independent of the person parameters (\texttt{cotype = "random"}).
+\begin{lstlisting}[frame=single, basicstyle=\scriptsize\ttfamily, language=R, numbers=left, numberstyle=\tiny\color{black}, caption={Calculate $p$-values}, label={lst:perf}]
+d <- dgp(refmodel, N = 1000, G = 1, impact = FALSE, cotype = "random")
+m <- nplmodel(d$resp, impact = d$impact, vcov = FALSE)
+sctest(m, order.by = d$covariate, functional = "DM")
+\end{lstlisting}
+In our simulation, these three steps are repeated \texttt{M} times under all simulated conditions. We are interested in the hit rate under each condition, which is calculated as the proportion of significant tests given a specified significance level \texttt{alpha}. As no DIF effect was simulated, this is the Type I error. In the following code, we also allow for setting the \texttt{parm} argument that allows for only testing a specified subset of the item parameters; \texttt{parm = NULL} defaults to using all item parameters. See Listing~\ref{lst:hitrate} for the code using, e.g., \texttt{M = 1000} replications, and setting \texttt{alpha} to \texttt{0.05}.
+\lstinputlisting[firstline=36, lastline=46, frame=single, basicstyle=\scriptsize\ttfamily, language=R, numbers=left, numberstyle=\tiny\color{black}, caption={Calculate hit rate}, label={lst:hitrate}]{../demo/toolbox1.R}
+The Type I error is investigated for a varying number of groups (\texttt{G = c(1, 2, 5, 25)}) that are used to model impact (which can be present or not, \texttt{impact = c(FALSE, TRUE)}) and the different types of relationship of the covariate with the person parameters, \texttt{cotype = c("random", "linear", "quadratic")}. Listing~\ref{lst:sim} shows the final code.
+\lstinputlisting[firstline=48, lastline=58, frame=single, basicstyle=\scriptsize\ttfamily, language=R, numbers=left, numberstyle=\tiny\color{black}, caption={Simulation}, label={lst:sim}]{../demo/toolbox1.R}
+Results are given in Table~\ref{tab:sim1}. As expected, a random relationship of the covariate with the person parameters does not require impact modeling in any case, i.e., we observe Type I error rates close to $5\%$ for the single group model regardless of whether impact is present or not, and more conservative Type I error rates when using multiple groups. Looking at the linear relationship, we see that a single group model fails to yield reasonable Type I error rates, but we achieve rates around the nominal $5\%$, using five groups. Finally, the hardest case of a quadratic relationship would require more than 25 groups if impact is present to achieve a Type I error rate close to $5\%$. Nevertheless, we can observe the trend that if the number of groups grows, the Type I error rate is closer to its nominal level.
+\begin{table}
+\footnotesize
+\centering
+\begin{threeparttable}
+\caption{\label{tab:sim1} Simulation 1: Results on the Type I error in the 2PL model.}
+\begin{tabular}{l l r r r r r r r r r r r}
+\hline
+{Relationship} & {Impact} & {} & \multicolumn{5}{c}{Type I Error (\%)} \\ \cline{4-8}
+{} & {} & {} & {Single Group} & {} & \multicolumn{3}{c}{No. Groups} \\ \cline{6-8}
+{} & {} & {} & {} & {} & {2} & {5} & {25}\\
+\hline
+\multirow{2}{*}{Random}    & {No} & {} & 4.60 & {} & 1.60 & 1.40 & 1.00 \\
+                           & {Yes} & {} & 4.80 & {} & 1.70 & 2.10 & 1.30 \\
+\multirow{2}{*}{Linear}    & {No} & {} & 100.00 & {} & 96.80 & 4.00 & 1.50 \\
+                           & {Yes} & {} & 100.00 & {} & 99.00 & 5.40 & 1.40 \\
+\multirow{2}{*}{Quadratic} & {No} & {} & 100.00 & {} & 98.80 & 47.40 & 6.60 \\
+                           & {Yes} & {} & 100.00 & {} & 99.60 & 75.50 & 10.70 \\
+\hline
+\end{tabular}
+\end{threeparttable}
+\end{table}
+
+In a second simulation study, we investigate the power of a 2PL model assuming uniform DIF in the first item. We use the (somewhat arbitrary) condition that the item difficulty parameter of this item is changed by $sd$ for persons exhibiting a covariate larger than the median, making it more difficult for these respondents, but is unchanged for the remaining sample. $sd$ is simply one standard deviation of all item difficulty parameters. We can reuse almost all of the code presented above in Simulation 1. However, we do have to add DIF, i.e., the last part of our DGP now looks like the following:
+\lstinputlisting[firstnumber=17, firstline=26, lastline=45, frame=single, basicstyle=\scriptsize\ttfamily, language=R, numbers=left, numberstyle=\tiny\color{black}, caption={The data generating process when simulating DIF}, label={lst:dgp_dif}]{../demo/toolbox2.R}
+This is the only necessary change. Since we have included a model violation, our hit rate now represents the power. Results are given in Table~\ref{tab:sim2}. To evaluate our findings, we have to consider which scenarios yielded a reasonable Type I error rate close to $5\%$ in our first study. Looking at the random relationship of the covariate with the person parameters, we observe a high power in all scenarios, with impact being present resulting in a slightly lower power. Regarding the linear relationship, we observe a power of around $9\%$ to $15\%$ for the scenarios that yielded a reasonable Type I error rate beforehand. Detecting uniform DIF in the first item being one standard deviation more difficult for persons exhibiting a covariate larger than the median appears to be especially difficult if the relationship of the covariate with the person parameters is linear. A possible explanation is that, if both the impact and the DIF effect are linearly related to the person parameters, modeling the impact effect can essentially mask a part of the DIF effect. Finally, in a scenario with a quadratic relationship, the scenario of no impact being present and a multiple group model using 25 groups results in a high power of around $86\%$. If impact is present, the power is also high (at around $83\%$). However, we have to keep in mind that the Type I error rate was already at around $10\%$ in this scenario; that is, we would have observed an increased rate of significant results even if no DIF is present.
+\begin{table}
+\footnotesize
+\centering
+\begin{threeparttable}
+\caption{\label{tab:sim2} Simulation 2: Results on the power to detect DIF in the first item using the 2PL model.}
+\begin{tabular}{l l r r r r r r r r r r r}
+\hline
+{Relationship} & {Impact} & {} & \multicolumn{5}{c}{Power (\%)} \\ \cline{4-8}
+{} & {} & {} & {Single Group} & {} & \multicolumn{3}{c}{No. Groups} \\ \cline{6-8}
+{} & {} & {} & {} & {} & {2} & {5} & {25}\\
+\hline
+\multirow{2}{*}{Random}    & {No} & {} & 94.60 & {} & 90.40 & 91.40 & 89.80 \\
+                           & {Yes} & {} & 94.10 & {} & 88.20 & 89.40 & 87.40 \\
+\multirow{2}{*}{Linear}    & {No} & {} & 100.00 & {} & 98.20 & 15.20 & 12.30 \\
+                           & {Yes} & {} & 100.00 & {} & 99.80 & 11.50 & 8.80 \\
+\multirow{2}{*}{Quadratic} & {No} & {} & 100.00 & {} & 100.00 & 95.50 & 86.30 \\
+                           & {Yes} & {} & 100.00 & {} & 100.00 & 96.60 & 83.10 \\
+\hline
+\end{tabular}
+\end{threeparttable}
+\end{table}
+
+The full simulation code of both simulations can be inspected using \texttt{demo("toolbox1", package = "psychotools")} or \texttt{demo("toolbox2", package = "psychotools")}.
+
+All results were obtained using the R system for statistical computing \cite{R} version 3.5.3 employing the add-on packages {\em mirt} \cite{mirt} version 1.31, {\em psychotools} \cite{psychotools} version 0.6-0 and {\em strucchange} \cite{zeileis2002} version 1.5-2, which are freely available under the General Public License from the Comprehensive R Archive Network at \url{https://cran.r-project.org/}. Numerical values were rounded based on the IEC 60559 standard.
+
+\bibliography{psychotools}
+
+\end{document}

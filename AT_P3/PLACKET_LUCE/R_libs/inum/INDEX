@@ -1,0 +1,4 @@
+enum                    Enumeration-type Representation of Vectors
+interval                Cut Numeric Vectors into Intervals
+inum                    Coerse Variables in Data Frames to 'enum' or
+                        'interval'

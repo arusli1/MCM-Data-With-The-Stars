@@ -1,0 +1,18 @@
+bibentry(bibtype = "Article",
+  title        = "Operator Splitting for Conic Optimization via Homogeneous Self-Dual Embedding",
+  author       = c(person(given = "Brendan", family = "O'Donoghue"),
+                   person(given = "Eric", family = "Chu"),
+                   person(given = "Parikh", family = "Neal"),
+                   person(given = "Stephen", family = "Boyd")),
+  journal      = "Journal of Optimization Theory and Applications",
+  year         = "2016",
+  month        = "Jun",
+  day          = "01",
+  volume       = "169",
+  number       = "3",
+  pages        = "1042--1068",
+  doi          = "10.1007/s10957-016-0892-3",
+  url          = "https://doi.org/10.1007/s10957-016-0892-3",
+  header       = "To cite scs in publications use:"
+)
+

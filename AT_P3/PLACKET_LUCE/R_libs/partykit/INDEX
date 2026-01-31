@@ -1,0 +1,26 @@
+HuntingSpiders          Abundance of Hunting Spiders
+WeatherPlay             Weather Conditions and Playing a Game
+cforest                 Conditional Random Forests
+ctree                   Conditional Inference Trees
+ctree_control           Control for Conditional Inference Trees
+extree_data             Data Preprocessing for Extensible Trees.
+extree_fit              Fit Extensible Trees.
+glmtree                 Generalized Linear Model Trees
+lmtree                  Linear Model Trees
+mob                     Model-based Recursive Partitioning
+mob_control             Control Parameters for Model-Based Partitioning
+model_frame_rpart       Model Frame Method for rpart
+nodeapply               Apply Functions Over Nodes
+nodeids                 Extract Node Identifiers
+panelfunctions          Panel-Generators for Visualization of Party
+                        Trees
+party                   Recursive Partytioning
+party-coercion          Coercion Functions
+party-methods           Methods for Party Objects
+party-plot              Visualization of Trees
+party-predict           Tree Predictions
+partynode               Inner and Terminal Nodes
+partynode-methods       Methods for Node Objects
+partysplit              Binary and Multiway Splits
+prune.modelparty        Post-Prune 'modelparty' Objects
+varimp                  Variable Importance

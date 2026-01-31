@@ -1,0 +1,48 @@
+## R >= 2.8.0 passes package metadata to citation().
+if(!exists("meta") || is.null(meta)) meta <- packageDescription("psychotools")
+year <- sub("-.*", "", meta$Date)
+note <- sprintf("R package version %s", meta$Version)
+
+bibentry(bibtype = "Manual",
+         title   = "{psychotools}: Infrastructure for Psychometric Modeling",
+         author  = c(person(given = "Achim", family = "Zeileis"),
+                     person(given = "Carolin", family = "Strobl"),
+                     person(given = "Florian", family = "Wickelmaier"),
+                     person(given = "Basil", family = "Komboz"),
+                     person(given = "Julia", family = "Kopf"),
+                     person(given = "Lennart", family = "Schneider"),
+                     person(given = "Rudolf", family = "Debelak")),
+         year    = year,
+         note    = note,
+         url     = "https://CRAN.R-project.org/package=psychotools",
+	       header  = "To cite psychotools in publications use"
+)
+
+bibentry(bibtype = "Article",
+         title   = "An {R} Toolbox for Score-Based Measurement Invariance Tests in {IRT} Models",
+         author  = c(person(given = "Lennart", family = "Schneider"),
+                     person(given = "Carolin", family = "Strobl"),
+                     person(given = "Achim", family = "Zeileis"),
+                     person(given = "Rudolf", family = "Debelak")),
+         journal = "Behavior Research Methods",
+         year    = "2022",
+         note    = "Forthcoming",
+         doi     = "10.3758/s13428-021-01689-0",
+         header  = "If you use IRT models, please cite"
+)
+
+bibentry(bibtype = "Article",
+         title   = "Anchor Point Selection: Scale Alignment Based on an Inequality Criterion",
+         author  = c(person(given = "Carolin", family = "Strobl"),
+                     person(given = "Julia", family = "Kopf"),
+                     person(given = "Lucas", family = "Kohler"),
+                     person(given = "Timo", family = "von Oertzen"),
+                     person(given = "Achim", family = "Zeileis")),
+         journal = "Applied Psychological Measurement",
+         year    = "2021",
+         volume  = "45",
+         number  = "3",
+         pages   = "214--230",
+         doi     = "10.1177/0146621621990743",
+         header  = "If you use anchor() or anchortest(), please cite"
+)

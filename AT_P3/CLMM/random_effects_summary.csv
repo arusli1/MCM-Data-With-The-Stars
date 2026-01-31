@@ -1,0 +1,8 @@
+model,group,variance,sd
+primary_no_season,ballroom_partner,0.13908341714214142,0.37293889196776114
+primary_no_season,celebrity_homecountry_region,0,0
+primary_no_season,celebrity_homestate,0.13616655981870415,0.36900753355277743
+sensitivity_with_season,ballroom_partner,0.13908051814541728,0.37293500525616696
+sensitivity_with_season,celebrity_homecountry_region,0,0
+sensitivity_with_season,celebrity_homestate,0.13615965337682812,0.3689981753028436
+sensitivity_with_season,season,4.934676279628189e-11,7.024725104677185e-6

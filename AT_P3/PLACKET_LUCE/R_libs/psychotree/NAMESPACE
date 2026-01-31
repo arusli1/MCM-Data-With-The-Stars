@@ -1,0 +1,80 @@
+## imported packages (with generics etc.)
+import(
+  "stats",
+  "graphics",
+  "psychotools",
+  "partykit",
+  "Formula"
+)
+importFrom("grid",
+  "gpar", "grid.layout", "unit",
+  "grid.lines", "grid.points", "grid.polyline",
+  "grid.rect", "grid.text", "grid.xaxis", "grid.yaxis",
+  "popViewport", "pushViewport", "upViewport", "viewport"
+)
+importFrom("grDevices", "extendrange", "gray.colors")
+
+## exported functions
+export(
+  ## trees
+  "raschtree",
+  "rstree",
+  "pctree",
+  "bttree",
+  "mpttree",
+  "npltree",
+  "gpcmtree",
+
+  ## panel-generating visualization functions
+  "node_profileplot",
+  "node_regionplot",
+  "node_btplot",
+  "node_mptplot"
+)
+
+## methods for raschtree objects
+S3method("plot", "raschtree")
+S3method("print", "raschtree")
+S3method("predict", "raschtree")
+S3method("itempar", "raschtree")
+
+## methods for rstree objects
+S3method("plot", "rstree")
+S3method("print", "rstree")
+S3method("predict", "rstree")
+S3method("itempar", "rstree")
+S3method("threshpar", "rstree")
+
+## methods for pctree objects
+S3method("plot", "pctree")
+S3method("print", "pctree")
+S3method("predict", "pctree")
+S3method("itempar", "pctree")
+S3method("threshpar", "pctree")
+
+## methods for bttree objects
+S3method("plot", "bttree")
+S3method("predict", "bttree")
+S3method("print", "bttree")
+S3method("itempar", "bttree")
+
+## methods for mpttree objects
+S3method("coef", "mpttree")
+S3method("plot", "mpttree")
+S3method("print", "mpttree")
+
+## methods for npltree objects
+S3method("plot", "npltree")
+S3method("print", "npltree")
+S3method("itempar", "npltree")
+S3method("threshpar", "npltree")
+S3method("guesspar", "npltree")
+S3method("upperpar", "npltree")
+
+## methods for gpcmtree objects
+S3method("plot", "gpcmtree")
+S3method("print", "gpcmtree")
+S3method("itempar", "gpcmtree")
+S3method("threshpar", "gpcmtree")
+S3method("guesspar", "gpcmtree")
+S3method("upperpar", "gpcmtree")

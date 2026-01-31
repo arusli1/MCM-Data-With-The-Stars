@@ -1,0 +1,21 @@
+CEMSChoice              CEMS University Choice Data
+DIFSim                  Artificial Data with Differential Item
+                        Functioning
+EuropeanValuesStudy     European Values Study
+SPISA                   SPIEGEL Studentenpisa Data (Subsample)
+Topmodel2007            Attractiveness of Germany's Next Topmodels 2007
+bttree                  Bradley-Terry Trees
+gpcmtree                Generalized Partial Credit Model Trees
+mpttree                 MPT Trees
+node_btplot             Panel-Generating Function for Visualizing
+                        Bradley-Terry Tree Models
+node_mptplot            Panel-Generating Function for Visualizing MPT
+                        Tree Models
+node_profileplot        Panel-Generating Function for Visualizing IRT
+                        Tree Models
+node_regionplot         Panel-Generating Function for Visualizing IRT
+                        Tree Models
+npltree                 Parametric Logisitic (n-PL) IRT Model Trees
+pctree                  Partial Credit Trees
+raschtree               Rasch Trees
+rstree                  Rating Scale Trees

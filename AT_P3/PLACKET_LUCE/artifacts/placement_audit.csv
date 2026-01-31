@@ -1,0 +1,422 @@
+season,celebrity_name,results,placement,placement_final,placement_source
+1,Kelly Monaco,1st Place,1,1,placement_col
+1,John O'Hurley,2nd Place,2,2,placement_col
+1,Joey McIntyre,3rd Place,3,3,placement_col
+1,Rachel Hunter,Eliminated Week 4,4,4,placement_col
+1,Evander Holyfield,Eliminated Week 3,5,5,placement_col
+1,Trista Sutter,Eliminated Week 2,6,6,placement_col
+2,Drew Lachey,1st Place,1,1,placement_col
+2,Jerry Rice,2nd Place,2,2,placement_col
+2,Stacy Keibler,3rd Place,3,3,placement_col
+2,Lisa Rinna,Eliminated Week 7,4,4,placement_col
+2,George Hamilton,Eliminated Week 6,5,5,placement_col
+2,Tia Carrere,Eliminated Week 5,6,6,placement_col
+2,Master P,Eliminated Week 4,7,7,placement_col
+2,Giselle Fernandez,Eliminated Week 3,8,8,placement_col
+2,Tatum O'Neal,Eliminated Week 2,9,9,placement_col
+2,Kenny Mayne,Eliminated Week 1,10,10,placement_col
+3,Emmitt Smith,1st Place,1,1,placement_col
+3,Mario Lopez,2nd Place,2,2,placement_col
+3,Joey Lawrence,3rd Place,3,3,placement_col
+3,Monique Coleman,Eliminated Week 8,4,4,placement_col
+3,Jerry Springer,Eliminated Week 7,5,5,placement_col
+3,Sara Evans,Withdrew,6,6,placement_col
+3,Willa Ford,Eliminated Week 5,7,7,placement_col
+3,Vivica A. Fox,Eliminated Week 4,8,8,placement_col
+3,Harry Hamlin,Eliminated Week 3,9,9,placement_col
+3,Shanna Moakler,Eliminated Week 2,10,10,placement_col
+3,Tucker Carlson,Eliminated Week 1,11,11,placement_col
+4,Apolo Anton Ohno,1st Place,1,1,placement_col
+4,Joey Fatone,2nd Place,2,2,placement_col
+4,Laila Ali,3rd Place,3,3,placement_col
+4,Ian Ziering,Eliminated Week 9,4,4,placement_col
+4,Billy Ray Cyrus,Eliminated Week 8,5,5,placement_col
+4,John Ratzenberger,Eliminated Week 7,6,6,placement_col
+4,Heather Mills,Eliminated Week 6,7,7,placement_col
+4,Clyde Drexler,Eliminated Week 5,8,8,placement_col
+4,Leeza Gibbons,Eliminated Week 4,9,9,placement_col
+4,Shandi Finnessey,Eliminated Week 3,10,10,placement_col
+4,Paulina Porizkova,Eliminated Week 2,11,11,placement_col
+5,Helio Castroneves,1st Place,1,1,placement_col
+5,Mel B,2nd Place,2,2,placement_col
+5,Marie Osmond,3rd Place,3,3,placement_col
+5,Jennie Garth,Eliminated Week 9,4,4,placement_col
+5,Cameron Mathison,Eliminated Week 8,5,5,placement_col
+5,Jane Seymour,Eliminated Week 7,6,6,placement_col
+5,Sabrina Bryan,Eliminated Week 6,7,7,placement_col
+5,Mark Cuban,Eliminated Week 5,8,8,placement_col
+5,Floyd Mayweather Jr.,Eliminated Week 4,9,9,placement_col
+5,Wayne Newton,Eliminated Week 3,10,10,placement_col
+5,Albert Reed,Eliminated Week 2,11,11,placement_col
+5,Josie Maran,Eliminated Week 1,12,12,placement_col
+6,Kristi Yamaguchi,1st Place,1,1,placement_col
+6,Jason Taylor,2nd Place,2,2,placement_col
+6,Cristian de la Fuente,3rd Place,3,3,placement_col
+6,Marissa Jaret Winokur,Eliminated Week 9,4,4,placement_col
+6,Mario,Eliminated Week 8,5,5,placement_col
+6,Shannon Elizabeth,Eliminated Week 7,6,6,placement_col
+6,Marlee Matlin,Eliminated Week 6,7,7,placement_col
+6,Priscilla Presley,Eliminated Week 5,8,8,placement_col
+6,Adam Carolla,Eliminated Week 4,9,9,placement_col
+6,Steve Guttenberg,Eliminated Week 3,10,10,placement_col
+6,Monica Seles,Eliminated Week 2,11,11,placement_col
+6,Penn Jillette,Eliminated Week 2,12,12,placement_col
+7,Brooke Burke,1st Place,1,1,placement_col
+7,Warren Sapp,2nd Place,2,2,placement_col
+7,Lance Bass,3rd Place,3,3,placement_col
+7,Cody Linley,Eliminated Week 9,4,4,placement_col
+7,Maurice Greene,Eliminated Week 8,5,5,placement_col
+7,Susan Lucci,Eliminated Week 7,6,6,placement_col
+7,Cloris Leachman,Eliminated Week 6,7,7,placement_col
+7,Toni Braxton,Eliminated Week 5,8,8,placement_col
+7,Rocco DiSpirito,Eliminated Week 4,9,9,placement_col
+7,Misty May-Treanor,Withdrew,10,10,placement_col
+7,Kim Kardashian,Eliminated Week 2,11,11,placement_col
+7,Ted McGinley,Eliminated Week 1,12,12,placement_col
+7,Jeffrey Ross,Eliminated Week 1,13,13,placement_col
+8,Shawn Johnson,1st Place,1,1,placement_col
+8,Gilles Marini,2nd Place,2,2,placement_col
+8,Melissa Rycroft,3rd Place,3,3,placement_col
+8,Ty Murray,Eliminated Week 10,4,4,placement_col
+8,Lil' Kim,Eliminated Week 9,5,5,placement_col
+8,Chuck Wicks,Eliminated Week 8,6,6,placement_col
+8,Lawrence Taylor,Eliminated Week 7,7,7,placement_col
+8,Steve-O,Eliminated Week 6,8,8,placement_col
+8,David Alan Grier,Eliminated Week 5,9,9,placement_col
+8,Steve Wozniak,Eliminated Week 4,10,10,placement_col
+8,Holly Madison,Eliminated Week 4,11,11,placement_col
+8,Denise Richards,Eliminated Week 3,12,12,placement_col
+8,Belinda Carlisle,Eliminated Week 2,13,13,placement_col
+9,Donny Osmond,1st Place,1,1,placement_col
+9,Mya,2nd Place,2,2,placement_col
+9,Kelly Osbourne,3rd Place,3,3,placement_col
+9,Joanna Krupa,Eliminated Week 9,4,4,placement_col
+9,Aaron Carter,Eliminated Week 8,5,5,placement_col
+9,Mark Dacascos,Eliminated Week 7,6,6,placement_col
+9,Michael Irvin,Eliminated Week 7,7,7,placement_col
+9,Louie Vito,Eliminated Week 6,8,8,placement_col
+9,Melissa Joan Hart,Eliminated Week 6,9,9,placement_col
+9,Natalie Coughlin,Eliminated Week 5,10,10,placement_col
+9,Chuck Liddell,Eliminated Week 4,11,11,placement_col
+9,Debi Mazar,Eliminated Week 3,12,12,placement_col
+9,Tom DeLay,Withdrew,13,13,placement_col
+9,Kathy Ireland,Eliminated Week 2,14,14,placement_col
+9,Macy Gray,Eliminated Week 1,15,15,placement_col
+9,Ashley Hamiliton,Eliminated Week 1,16,16,placement_col
+10,Nicole Scherzinger,1st Place,1,1,placement_col
+10,Evan Lysacek,2nd Place,2,2,placement_col
+10,Erin Andrews,3rd Place,3,3,placement_col
+10,Chad Ochocinco,Eliminated Week 9,4,4,placement_col
+10,Niecy Nash,Eliminated Week 8,5,5,placement_col
+10,Pamela Anderson,Eliminated Week 7,6,6,placement_col
+10,Jake Pavelka,Eliminated Week 6,7,7,placement_col
+10,Kate Gosselin,Eliminated Week 5,8,8,placement_col
+10,Aiden Turner,Eliminated Week 4,9,9,placement_col
+10,Buzz Aldrin,Eliminated Week 3,10,10,placement_col
+10,Shannen Doherty,Eliminated Week 2,11,11,placement_col
+11,Jennifer Grey,1st Place,1,1,placement_col
+11,Kyle Massey,2nd Place,2,2,placement_col
+11,Bristol Palin,3rd Place,3,3,placement_col
+11,Brandy,Eliminated Week 9,4,4,placement_col
+11,Kurt Warner,Eliminated Week 8,5,5,placement_col
+11,Rick Fox,Eliminated Week 7,6,6,placement_col
+11,Audrina Patridge,Eliminated Week 6,7,7,placement_col
+11,Florence Henderson,Eliminated Week 5,8,8,placement_col
+11,The Situation,Eliminated Week 4,9,9,placement_col
+11,Margaret Cho,Eliminated Week 3,10,10,placement_col
+11,Michael Bolton,Eliminated Week 2,11,11,placement_col
+11,David Hasselhoff,Eliminated Week 1,12,12,placement_col
+12,Hines Ward,1st Place,1,1,placement_col
+12,Kirstie Alley,2nd Place,2,2,placement_col
+12,Chelsea Kane,3rd Place,3,3,placement_col
+12,Ralph Macchio,Eliminated Week 9,4,4,placement_col
+12,Romeo,Eliminated Week 8,5,5,placement_col
+12,Kendra Wilkinson,Eliminated Week 7,6,6,placement_col
+12,Chris Jericho,Eliminated Week 6,7,7,placement_col
+12,Petra Nemcova,Eliminated Week 5,8,8,placement_col
+12,Sugar Ray Leonard,Eliminated Week 4,9,9,placement_col
+12,Wendy Williams,Eliminated Week 3,10,10,placement_col
+12,Mike Catherwood,Eliminated Week 2,11,11,placement_col
+13,J.R. Martinez,1st Place,1,1,placement_col
+13,Rob Kardashian,2nd Place,2,2,placement_col
+13,Ricki Lake,3rd Place,3,3,placement_col
+13,Hope Solo,Eliminated Week 9,4,4,placement_col
+13,Nancy Grace,Eliminated Week 8,5,5,placement_col
+13,David Arquette,Eliminated Week 7,6,6,placement_col
+13,Chaz Bono,Eliminated Week 6,7,7,placement_col
+13,Carson Kressley,Eliminated Week 5,8,8,placement_col
+13,Chynna Phillips,Eliminated Week 4,9,9,placement_col
+13,Kristin Cavallari,Eliminated Week 3,10,10,placement_col
+13,Elisabetta Canalis,Eliminated Week 2,11,11,placement_col
+13,Metta World Peace (Ron),Eliminated Week 1,12,12,placement_col
+14,Donald Driver,1st Place,1,1,placement_col
+14,Katherine Jenkins,2nd Place,2,2,placement_col
+14,William Levy,3rd Place,3,3,placement_col
+14,Maria Menounos,Eliminated Week 9,4,4,placement_col
+14,Melissa Gilbert,Eliminated Week 8,5,5,placement_col
+14,Roshon Fegan,Eliminated Week 8,6,6,placement_col
+14,Jaleel White,Eliminated Week 7,7,7,placement_col
+14,Gladys Knight,Eliminated Week 6,8,8,placement_col
+14,Gavin DeGraw,Eliminated Week 5,9,9,placement_col
+14,Sherri Sheperd,Eliminated Week 4,10,10,placement_col
+14,Jack Wagner,Eliminated Week 3,11,11,placement_col
+14,Martina Navratilova,Eliminated Week 2,12,12,placement_col
+15,Melissa Rycroft,1st Place,1,1,placement_col
+15,Shawn Johnson,2nd Place,2,2,placement_col
+15,Kelly Monaco,3rd Place,3,3,placement_col
+15,Emmitt Smith,Eliminated Week 9,4,4,placement_col
+15,Apolo Anton Ohno,Eliminated Week 9,5,5,placement_col
+15,Gilles Marini,Eliminated Week 8,6,6,placement_col
+15,Kirstie Alley,Eliminated Week 8,7,7,placement_col
+15,Sabrina Bryan,Eliminated Week 6,8,8,placement_col
+15,Bristol Palin,Eliminated Week 4,9,9,placement_col
+15,Helio Castroneves,Eliminated Week 3,10,10,placement_col
+15,Drew Lachey,Eliminated Week 3,11,11,placement_col
+15,Joey Fatone,Eliminated Week 2,12,12,placement_col
+15,Pamela Anderson,Eliminated Week 1,13,13,placement_col
+16,Kellie Pickler,1st Place,1,1,placement_col
+16,Zendaya,2nd Place,2,2,placement_col
+16,Jacoby Jones,3rd Place,3,3,placement_col
+16,Alexandra Raisman,Eliminated Week 10,4,4,placement_col
+16,Ingo Rademacher,Eliminated Week 9,5,5,placement_col
+16,Sean Lowe,Eliminated Week 8,6,6,placement_col
+16,Andy Dick,Eliminated Week 7,7,7,placement_col
+16,Victor Ortiz,Eliminated Week 6,8,8,placement_col
+16,D. L. Hughley,Eliminated Week 5,9,9,placement_col
+16,Lisa Vanderpump,Eliminated Week 4,10,10,placement_col
+16,Wynonna Judd,Eliminated Week 3,11,11,placement_col
+16,Dorothy Hamill,Withdrew,12,12,placement_col
+17,Amber Riley,1st Place,1,1,placement_col
+17,Corbin Bleu,2nd Place,2,2,placement_col
+17,Jack Osbourne,3rd Place,3,3,placement_col
+17,Bill Engvall,Eliminated Week 11,4,4,placement_col
+17,Leah Remini,Eliminated Week 10,5,5,placement_col
+17,Elizabeth Berkley Lauren,Eliminated Week 9,6,6,placement_col
+17,Brant Daugherty,Eliminated Week 8,7,7,placement_col
+17,"Nicole ""Snooki"" Polizzi",Eliminated Week 7,8,8,placement_col
+17,Christina Milian,Eliminated Week 5,9,9,placement_col
+17,Valerie Harper,Eliminated Week 4,10,10,placement_col
+17,Bill Nye,Eliminated Week 3,11,11,placement_col
+17,Keyshawn Johnson,Eliminated Week 2,12,12,placement_col
+18,Meryl Davis,1st Place,1,1,placement_col
+18,Amy Purdy,2nd Place,2,2,placement_col
+18,Candace Cameron Bure,3rd Place,3,3,placement_col
+18,James Maslow,Eliminated Week 10,4,4,placement_col
+18,Charlie White,Eliminated Week 9,5,5,placement_col
+18,Danica McKellar,Eliminated Week 8,6,6,placement_col
+18,NeNe Leakes,Eliminated Week 7,7,7,placement_col
+18,Drew Carey,Eliminated Week 6,8,8,placement_col
+18,Cody Simpson,Eliminated Week 5,9,9,placement_col
+18,Billy Dee Williams,Withdrew,10,10,placement_col
+18,Sean Avery,Eliminated Week 2,11,11,placement_col
+18,Diana Nyad,Eliminated Week 2,12,12,placement_col
+19,Alfonso Ribeiro,1st Place,1,1,placement_col
+19,Sadie Robertson,2nd Place,2,2,placement_col
+19,Janel Parrish,3rd Place,3,3,placement_col
+19,Bethany Mota,Eliminated Week 11,4,4,placement_col
+19,Tommy Chong,Eliminated Week 10,5,5,placement_col
+19,Lea Thompson,Eliminated Week 9,6,6,placement_col
+19,Michael Waltrip,Eliminated Week 8,7,7,placement_col
+19,Antonio Sabato Jr.,Eliminated Week 7,8,8,placement_col
+19,Jonathan Bennett,Eliminated Week 6,9,9,placement_col
+19,Betsey Johnson,Eliminated Week 4,10,10,placement_col
+19,Randy Couture,Eliminated Week 3,11,11,placement_col
+19,Tavis Smiley,Eliminated Week 2,12,12,placement_col
+19,Lolo Jones,Eliminated Week 1,13,13,placement_col
+20,Rumer Willis,1st Place,1,1,placement_col
+20,Riker Lynch,2nd Place,2,2,placement_col
+20,Noah Galloway,3rd Place,3,3,placement_col
+20,Nastia Liukin,Eliminated Week 9,4,4,placement_col
+20,Chris Soules,Eliminated Week 8,5,5,placement_col
+20,Robert Herjavec,Eliminated Week 8,6,6,placement_col
+20,Willow Shields,Eliminated Week 7,7,7,placement_col
+20,Patti LaBelle,Eliminated Week 6,8,8,placement_col
+20,Suzanne Somers,Eliminated Week 5,9,9,placement_col
+20,Michael Sam,Eliminated Week 4,10,10,placement_col
+20,Charlotte McKinney,Eliminated Week 3,11,11,placement_col
+20,Redfoo,Eliminated Week 2,12,12,placement_col
+21,Bindi Irwin,1st Place,1,1,placement_col
+21,Nick Carter,2nd Place,2,2,placement_col
+21,Alek Skarlatos,3rd Place,3,3,placement_col
+21,Carlos PenaVega,Eliminated Week 11,4,4,placement_col
+21,Tamar Braxton,Withdrew,5,5,placement_col
+21,Alexa PenaVega,Eliminated Week 9,6,6,placement_col
+21,Andy Grammer,Eliminated Week 8,7,7,placement_col
+21,Hayes Grier,Eliminated Week 7,8,8,placement_col
+21,Paula Deen,Eliminated Week 6,9,9,placement_col
+21,Gary Busey,Eliminated Week 4,10,10,placement_col
+21,Kim Zolciak-Biermann,Withdrew,11,11,placement_col
+21,Victor Espinoza,Eliminated Week 2,12,12,placement_col
+21,Chaka Khan,Eliminated Week 2,13,13,placement_col
+22,Nyle DiMarco,1st Place,1,1,placement_col
+22,Paige VanZant,2nd Place,2,2,placement_col
+22,Ginger Zee,3rd Place,3,3,placement_col
+22,Wanya Morris,Eliminated Week 9,4,4,placement_col
+22,Antonio Brown,Eliminated Week 9,5,5,placement_col
+22,Jodie Sweetin,Eliminated Week 8,6,6,placement_col
+22,Von Miller,Eliminated Week 7,7,7,placement_col
+22,Kim Fields,Eliminated Week 7,8,8,placement_col
+22,Doug Flutie,Eliminated Week 6,9,9,placement_col
+22,Marla Maples,Eliminated Week 4,10,10,placement_col
+22,Mischa Barton,Eliminated Week 3,11,11,placement_col
+22,Geraldo Rivera,Eliminated Week 2,12,12,placement_col
+23,Laurie Hernandez,1st Place,1,1,placement_col
+23,James Hinchcliffe,2nd Place,2,2,placement_col
+23,Calvin Johnson Jr.,3rd Place,3,3,placement_col
+23,Jana Kramer,Eliminated Week 11,4,4,placement_col
+23,Terra Jole,Eliminated Week 10,5,5,placement_col
+23,Marilu Henner,Eliminated Week 9,6,6,placement_col
+23,Ryan Lochte,Eliminated Week 8,7,7,placement_col
+23,Maureen McCormick,Eliminated Week 7,8,8,placement_col
+23,Amber Rose,Eliminated Week 6,9,9,placement_col
+23,Vanilla Ice,Eliminated Week 4,10,10,placement_col
+23,Babyface,Eliminated Week 4,11,11,placement_col
+23,Rick Perry,Eliminated Week 3,12,12,placement_col
+23,Jake T. Austin,Eliminated Week 2,13,13,placement_col
+24,Rashad Jennings,1st Place,1,1,placement_col
+24,David Ross,2nd Place,2,2,placement_col
+24,Normani,3rd Place,3,3,placement_col
+24,Simone Biles,Eliminated Week 9,4,4,placement_col
+24,Bonner Bolton,Eliminated Week 8,5,5,placement_col
+24,Nick Viall,Eliminated Week 7,6,6,placement_col
+24,Nancy Kerrigan,Eliminated Week 7,7,7,placement_col
+24,Heather Morris,Eliminated Week 6,8,8,placement_col
+24,Erika Jayne,Eliminated Week 5,9,9,placement_col
+24,Mr. T,Eliminated Week 4,10,10,placement_col
+24,Charo,Eliminated Week 3,11,11,placement_col
+24,Chris Kattan,Eliminated Week 2,12,12,placement_col
+25,Jordan Fisher,1st Place,1,1,placement_col
+25,Lindsey Stirling,2nd Place,2,2,placement_col
+25,Frankie Muniz,3rd Place,3,3,placement_col
+25,Drew Scott,Eliminated Week 10,4,4,placement_col
+25,Victoria Arlen,Eliminated Week 9,5,5,placement_col
+25,Terrell Owens,Eliminated Week 8,6,6,placement_col
+25,Vanessa Lachey,Eliminated Week 7,7,7,placement_col
+25,Nikki Bella,Eliminated Week 7,8,8,placement_col
+25,Nick Lachey,Eliminated Week 6,9,9,placement_col
+25,Sasha Pieterse,Eliminated Week 5,10,10,placement_col
+25,Derek Fisher,Eliminated Week 4,11,11,placement_col
+25,Debbie Gibson,Eliminated Week 2,12,12,placement_col
+25,Barbara Corcoran,Eliminated Week 2,13,13,placement_col
+26,Adam Rippon,1st Place,1,1,placement_col
+26,Josh Norman,2nd Place,2,2,placement_col
+26,Tonya Harding,3rd Place,3,3,placement_col
+26,Mirai Nagasu,Eliminated Week 3,4,4,placement_col
+26,Chris Mazdzer,Eliminated Week 3,5,5,placement_col
+26,Jennie Finch Daigle,Eliminated Week 3,6,6,placement_col
+26,Arike Ogunbowale,Eliminated Week 2,7,7,placement_col
+26,Kareem Abdul-Jabbar,Eliminated Week 2,8,8,placement_col
+26,Johnny Damon,Eliminated Week 1,9,9,placement_col
+26,Jamie Anderson,Eliminated Week 1,10,10,placement_col
+27,Bobby Bones,1st Place,1,1,placement_col
+27,Milo Manheim,2nd Place,2,2,placement_col
+27,Evanna Lynch,3rd Place,3,3,placement_col
+27,Alexis Ren,4th Place,4,4,placement_col
+27,Juan Pablo Di Pace,Eliminated Week 8,5,5,placement_col
+27,Joe Amabile,Eliminated Week 8,6,6,placement_col
+27,DeMarcus Ware,Eliminated Week 7,7,7,placement_col
+27,John Schneider,Eliminated Week 7,8,8,placement_col
+27,Mary Lou Retton,Eliminated Week 6,9,9,placement_col
+27,Tinashe,Eliminated Week 4,10,10,placement_col
+27,Nancy McKeon,Eliminated Week 3,11,11,placement_col
+27,Danelle Umstead,Eliminated Week 2,12,12,placement_col
+27,Nikki Glaser,Eliminated Week 1,13,13,placement_col
+28,Hannah Brown,1st Place,1,1,placement_col
+28,Kel Mitchell,2nd Place,2,2,placement_col
+28,Ally Brooke,3rd Place,3,3,placement_col
+28,Lauren Alaina,4th Place,4,4,placement_col
+28,James Van Der Beek,Eliminated Week 10,5,5,placement_col
+28,Sean Spicer,Eliminated Week 9,6,6,placement_col
+28,Kate Flannery,Eliminated Week 8,7,7,placement_col
+28,Karamo Brown,Eliminated Week 7,8,8,placement_col
+28,Sailor Brinkley-Cook,Eliminated Week 6,9,9,placement_col
+28,Lamar Odom,Eliminated Week 4,10,10,placement_col
+28,Ray Lewis,Withdrew,11,11,placement_col
+28,Mary Wilson,Eliminated Week 2,12,12,placement_col
+29,Kaitlyn Bristowe,1st Place,1,1,placement_col
+29,Nev Schulman,2nd Place,2,2,placement_col
+29,Nelly,3rd Place,3,3,placement_col
+29,Justina Machado,4th Place,4,4,placement_col
+29,Skai Jackson,Eliminated Week 10,5,5,placement_col
+29,Johnny Weir,Eliminated Week 10,6,6,placement_col
+29,AJ McLean,Eliminated Week 9,7,7,placement_col
+29,Chrishell Stause,Eliminated Week 8,8,8,placement_col
+29,Jeannie Mai,Withdrew,9,9,placement_col
+29,Monica Aldama,Eliminated Week 7,10,10,placement_col
+29,Veron Davis,Eliminated Week 6,11,11,placement_col
+29,Jesse Metcalfe,Eliminated Week 5,12,12,placement_col
+29,Anne Heche,Eliminated Week 4,13,13,placement_col
+29,Carole Baskin,Eliminated Week 3,14,14,placement_col
+29,Charles Oakley,Eliminated Week 2,15,15,placement_col
+30,Iman Shumpert,1st Place,1,1,placement_col
+30,JoJo Siwa,2nd Place,2,2,placement_col
+30,Cody Rigsby,3rd Place,3,3,placement_col
+30,Amanda Kloots,4th Place,4,4,placement_col
+30,Suni Lee,Eliminated Week 9,5,5,placement_col
+30,Melora Hardin,Eliminated Week 9,6,6,placement_col
+30,Jimmie Allen,Eliminated Week 8,7,7,placement_col
+30,Olivia Jade,Eliminated Week 8,8,8,placement_col
+30,"Mike ""The Miz"" Mizanin",Eliminated Week 7,9,9,placement_col
+30,Kenya Moore,Eliminated Week 6,10,10,placement_col
+30,Melanie C,Eliminated Week 5,11,11,placement_col
+30,Matt James,Eliminated Week 4,12,12,placement_col
+30,Brian Austin Green,Eliminated Week 4,13,13,placement_col
+30,Christine Chiu,Eliminated Week 3,14,14,placement_col
+30,Martin Kove,Eliminated Week 2,15,15,placement_col
+31,Charli D'Amelio,1st Place,1,1,placement_col
+31,Gabby Windey,2nd Place,2,2,placement_col
+31,Wayne Brady,3rd Place,3,3,placement_col
+31,Shangela,4th Place,4,4,placement_col
+31,Daniel Durant,Eliminated Week 9,5,5,placement_col
+31,Trevor Donovan,Eliminated Week 9,6,6,placement_col
+31,Vinny Guadagnino,Eliminated Week 8,7,7,placement_col
+31,Heidi D'Amelio,Eliminated Week 8,8,8,placement_col
+31,Jordin Sparks,Eliminated Week 7,9,9,placement_col
+31,Jessie James Decker,Eliminated Week 6,10,10,placement_col
+31,Joseph Baena,Eliminated Week 5,11,11,placement_col
+31,Selma Blair,Withdrew,12,12,placement_col
+31,Sam Champion,Eliminated Week 4,13,13,placement_col
+31,Cheryl Ladd,Eliminated Week 3,14,14,placement_col
+31,Teresa Giudice,Eliminated Week 2,15,15,placement_col
+31,Jason Lewis,Eliminated Week 1,16,16,placement_col
+32,Xochitl Gomez,1st Place,1,1,placement_col
+32,Jason Mraz,2nd Place,2,2,placement_col
+32,Ariana Madix,3rd Place,3,3,placement_col
+32,Charity Lawson,4th Place,4,4,placement_col
+32,Alyson Hannigan,5th Place,5,5,placement_col
+32,Harry Jowsey,Eliminated Week 9,6,6,placement_col
+32,Barry Williams,Eliminated Week 8,7,7,placement_col
+32,Lele Pons,Eliminated Week 7,8,8,placement_col
+32,Mauricio Umansky,Eliminated Week 6,9,9,placement_col
+32,Mira Sorvino,Eliminated Week 5,10,10,placement_col
+32,Adrian Peterson,Eliminated Week 4,11,11,placement_col
+32,Tyson Beckford,Eliminated Week 3,12,12,placement_col
+32,Jamie Lynn Spears,Eliminated Week 2,13,13,placement_col
+32,Matt Walsh,Eliminated Week 1,14,14,placement_col
+33,Joey Graziadei,1st Place,1,1,placement_col
+33,Ilona Maher,2nd Place,2,2,placement_col
+33,Chandler Kinney,3rd Place,3,3,placement_col
+33,Stephen Nedoroscik,4th Place,4,4,placement_col
+33,Danny Amendola,5th Place,5,5,placement_col
+33,Dwight Howard,Eliminated Week 7,6,6,placement_col
+33,Jenn Tran,Eliminated Week 6,7,7,placement_col
+33,Phaedra Parks,Eliminated Week 5,8,8,placement_col
+33,Brooks Nader,Eliminated Week 4,9,9,placement_col
+33,Eric Roberts,Eliminated Week 3,10,10,placement_col
+33,Reginald VelJohnson,Eliminated Week 3,10,10,placement_col
+33,Anna Delvey,Eliminated Week 2,12,12,placement_col
+33,Tori Spelling,Eliminated Week 2,12,12,placement_col
+34,Robert Irwin,1st Place,1,1,placement_col
+34,Alix Earle,2nd Place,2,2,placement_col
+34,Jordan Chiles,3rd Place,3,3,placement_col
+34,Dylan Efron,4th Place,4,4,placement_col
+34,Elaine Hendrix,5th Place,5,5,placement_col
+34,Whitney Leavitt,Eliminated Week 10,6,6,placement_col
+34,Andy Richter,Eliminated Week 9,7,7,placement_col
+34,Danielle Fishel,Eliminated Week 8,8,8,placement_col
+34,Jen Affleck,Eliminated Week 7,9,9,placement_col
+34,Scott Hoying,Eliminated Week 6,10,10,placement_col
+34,Hilaria Baldwin,Eliminated Week 4,11,11,placement_col
+34,Lauren Jauregui,Eliminated Week 3,12,12,placement_col
+34,Baron Davis,Eliminated Week 2,13,13,placement_col
+34,Corey Feldman,Eliminated Week 2,13,13,placement_col

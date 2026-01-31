@@ -1,0 +1,5 @@
+enum	enum
+interval	interval
+interval.numeric	interval
+inum	inum
+inum.data.frame	inum

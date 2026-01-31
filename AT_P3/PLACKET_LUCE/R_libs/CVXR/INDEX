@@ -1,0 +1,593 @@
+%*%,Expression,Expression-method
+                        The MulExpression class.
+%>>%                    The PSDConstraint class.
+*,Expression,Expression-method
+                        Elementwise multiplication operator
++,Expression,missing-method
+                        The AddExpression class.
+-,Expression,missing-method
+                        The NegExpression class.
+.LinOpVector__new       Create a new LinOpVector object.
+.LinOpVector__push_back
+                        Perform a push back operation on the 'args'
+                        field of LinOp
+.LinOp__args_push_back
+                        Perform a push back operation on the 'args'
+                        field of LinOp
+.LinOp__get_dense_data
+                        Get the field 'dense_data' for the LinOp object
+.LinOp__get_id          Get the id field of the LinOp Object
+.LinOp__get_size        Get the field 'size' for the LinOp object
+.LinOp__get_slice       Get the slice field of the LinOp Object
+.LinOp__get_sparse      Get the 'sparse' flag field for the LinOp
+                        object
+.LinOp__get_sparse_data
+                        Get the field named 'sparse_data' from the
+                        LinOp object
+.LinOp__get_type        Get the field named 'type' for the LinOp object
+.LinOp__new             Create a new LinOp object.
+.LinOp__set_dense_data
+                        Set the field 'dense_data' of the LinOp object
+.LinOp__set_size        Set the field 'size' of the LinOp object
+.LinOp__set_slice       Set the slice field of the LinOp Object
+.LinOp__set_sparse      Set the flag 'sparse' of the LinOp object
+.LinOp__set_sparse_data
+                        Set the field named 'sparse_data' of the LinOp
+                        object
+.LinOp__set_type        Set the field named 'type' for the LinOp object
+.LinOp__size_push_back
+                        Perform a push back operation on the 'size'
+                        field of LinOp
+.LinOp__slice_push_back
+                        Perform a push back operation on the 'slice'
+                        field of LinOp
+.LinOp_at_index         Return the LinOp element at index i (0-based)
+.ProblemData__get_I     Get the I field of the ProblemData Object
+.ProblemData__get_J     Get the J field of the ProblemData Object
+.ProblemData__get_V     Get the V field of the ProblemData Object
+.ProblemData__get_const_to_row
+                        Get the const_to_row field of the ProblemData
+                        Object
+.ProblemData__get_const_vec
+                        Get the const_vec field from the ProblemData
+                        Object
+.ProblemData__get_id_to_col
+                        Get the id_to_col field of the ProblemData
+                        Object
+.ProblemData__new       Create a new ProblemData object.
+.ProblemData__set_I     Set the I field in the ProblemData Object
+.ProblemData__set_J     Set the J field in the ProblemData Object
+.ProblemData__set_V     Set the V field in the ProblemData Object
+.ProblemData__set_const_to_row
+                        Set the const_to_row map of the ProblemData
+                        Object
+.ProblemData__set_const_vec
+                        Set the const_vec field in the ProblemData
+                        Object
+.ProblemData__set_id_to_col
+                        Set the id_to_col field of the ProblemData
+                        Object
+.build_matrix_0         Get the 'sparse' flag field for the LinOp
+                        object
+.build_matrix_1         Get the 'sparse' flag field for the LinOp
+                        object
+.decomp_quad            Compute a Matrix Decomposition.
+.p_norm                 Internal method for calculating the p-norm
+/,Expression,Expression-method
+                        The DivExpression class.
+<=,Expression,Expression-method
+                        The IneqConstraint class
+==,Expression,Expression-method
+                        The EqConstraint class
+Abs-class               The Abs class.
+AffAtom-class           The AffAtom class.
+Atom-class              The Atom class.
+AxisAtom-class          The AxisAtom class.
+BinaryOperator-class    The BinaryOperator class.
+CBC_CONIC-class         An interface to the CBC solver
+CLARABEL-class          An interface for the CLARABEL solver
+CLARABEL.dims_to_solver_dict
+                        Utility method for formatting a ConeDims
+                        instance into a dictionary that can be supplied
+                        to Clarabel
+CLARABEL.extract_dual_value
+                        Extracts the dual value for constraint starting
+                        at offset.
+CPLEX_CONIC-class       An interface for the CPLEX solver
+CPLEX_QP-class          An interface for the CPLEX solver.
+CVXOPT-class            An interface for the CVXOPT solver.
+CallbackParam-class     The CallbackParam class.
+Canonical-class         The Canonical class.
+Canonicalization-class
+                        The Canonicalization class.
+Chain-class             The Chain class.
+Complex2Real-class      Lifts complex numbers to a real representation.
+Complex2Real.abs_canon
+                        Complex canonicalizer for the absolute value
+                        atom
+Complex2Real.add        Helper function to sum arguments.
+Complex2Real.at_least_2D
+                        Upcast 0D and 1D to 2D.
+Complex2Real.binary_canon
+                        Complex canonicalizer for the binary atom
+Complex2Real.canonicalize_expr
+                        Canonicalizes a Complex Expression
+Complex2Real.canonicalize_tree
+                        Recursively Canonicalizes a Complex Expression.
+Complex2Real.conj_canon
+                        Complex canonicalizer for the conjugate atom
+Complex2Real.constant_canon
+                        Complex canonicalizer for the constant atom
+Complex2Real.hermitian_canon
+                        Complex canonicalizer for the hermitian atom
+Complex2Real.imag_canon
+                        Complex canonicalizer for the imaginary atom
+Complex2Real.join       Helper function to combine arguments.
+Complex2Real.lambda_sum_largest_canon
+                        Complex canonicalizer for the largest sum atom
+Complex2Real.matrix_frac_canon
+                        Complex canonicalizer for the matrix fraction
+                        atom
+Complex2Real.nonpos_canon
+                        Complex canonicalizer for the non-positive atom
+Complex2Real.norm_nuc_canon
+                        Complex canonicalizer for the nuclear norm atom
+Complex2Real.param_canon
+                        Complex canonicalizer for the parameter matrix
+                        atom
+Complex2Real.pnorm_canon
+                        Complex canonicalizer for the p norm atom
+Complex2Real.psd_canon
+                        Complex canonicalizer for the positive
+                        semidefinite atom
+Complex2Real.quad_canon
+                        Complex canonicalizer for the quadratic atom
+Complex2Real.quad_over_lin_canon
+                        Complex canonicalizer for the quadratic over
+                        linear term atom
+Complex2Real.real_canon
+                        Complex canonicalizer for the real atom
+Complex2Real.separable_canon
+                        Complex canonicalizer for the separable atom
+Complex2Real.soc_canon
+                        Complex canonicalizer for the SOC atom
+Complex2Real.variable_canon
+                        Complex canonicalizer for the variable atom
+Complex2Real.zero_canon
+                        Complex canonicalizer for the zero atom
+ConeDims-class          Summary of cone dimensions present in
+                        constraints.
+ConeMatrixStuffing-class
+                        Construct Matrices for Linear Cone Problems
+ConicSolver-class       The ConicSolver class.
+ConicSolver.get_coeff_offset
+                        Return the coefficient and offset in Ax + b.
+ConicSolver.get_spacing_matrix
+                        Returns a sparse matrix that spaces out an
+                        expression.
+Conjugate-class         The Conjugate class.
+Constant-class          The Constant class.
+ConstantSolver-class    The ConstantSolver class.
+Constraint-class        The Constraint class.
+Conv-class              The Conv class.
+CumMax-class            The CumMax class.
+CumSum-class            The CumSum class.
+CvxAttr2Constr-class    The CvxAttr2Constr class.
+Dcp2Cone-class          Reduce DCP Problem to Conic Form
+Dcp2Cone.entr_canon     Dcp2Cone canonicalizer for the entropy atom
+Dcp2Cone.exp_canon      Dcp2Cone canonicalizer for the exponential atom
+Dcp2Cone.geo_mean_canon
+                        Dcp2Cone canonicalizer for the geometric mean
+                        atom
+Dcp2Cone.huber_canon    Dcp2Cone canonicalizer for the huber atom
+Dcp2Cone.indicator_canon
+                        Dcp2Cone canonicalizer for the indicator atom
+Dcp2Cone.kl_div_canon   Dcp2Cone canonicalizer for the KL Divergence
+                        atom
+Dcp2Cone.lambda_max_canon
+                        Dcp2Cone canonicalizer for the lambda
+                        maximization atom
+Dcp2Cone.lambda_sum_largest_canon
+                        Dcp2Cone canonicalizer for the largest lambda
+                        sum atom
+Dcp2Cone.log1p_canon    Dcp2Cone canonicalizer for the log 1p atom
+Dcp2Cone.log_canon      Dcp2Cone canonicalizer for the log atom
+Dcp2Cone.log_det_canon
+                        Dcp2Cone canonicalizer for the log determinant
+                        atom
+Dcp2Cone.log_sum_exp_canon
+                        Dcp2Cone canonicalizer for the log sum of the
+                        exp atom
+Dcp2Cone.logistic_canon
+                        Dcp2Cone canonicalizer for the logistic
+                        function atom
+Dcp2Cone.matrix_frac_canon
+                        Dcp2Cone canonicalizer for the matrix fraction
+                        atom
+Dcp2Cone.normNuc_canon
+                        Dcp2Cone canonicalizer for the nuclear norm
+                        atom
+Dcp2Cone.pnorm_canon    Dcp2Cone canonicalizer for the p norm atom
+Dcp2Cone.power_canon    Dcp2Cone canonicalizer for the power atom
+Dcp2Cone.quad_form_canon
+                        Dcp2Cone canonicalizer for the quadratic form
+                        atom
+Dcp2Cone.quad_over_lin_canon
+                        Dcp2Cone canonicalizer for the quadratic over
+                        linear term atom
+Dcp2Cone.sigma_max_canon
+                        Dcp2Cone canonicalizer for the sigma max atom
+Dgp2Dcp-class           Reduce DGP problems to DCP problems.
+Dgp2Dcp.add_canon       Dgp2Dcp canonicalizer for the addition atom
+Dgp2Dcp.constant_canon
+                        Dgp2Dcp canonicalizer for the constant atom
+Dgp2Dcp.div_canon       Dgp2Dcp canonicalizer for the division atom
+Dgp2Dcp.exp_canon       Dgp2Dcp canonicalizer for the exp atom
+Dgp2Dcp.eye_minus_inv_canon
+                        Dgp2Dcp canonicalizer for the (I - X)^{-1} atom
+Dgp2Dcp.geo_mean_canon
+                        Dgp2Dcp canonicalizer for the geometric mean
+                        atom
+Dgp2Dcp.log_canon       Dgp2Dcp canonicalizer for the log atom
+Dgp2Dcp.mul_canon       Dgp2Dcp canonicalizer for the multiplication
+                        atom
+Dgp2Dcp.mulexpression_canon
+                        Dgp2Dcp canonicalizer for the multiplication
+                        expression atom
+Dgp2Dcp.nonpos_constr_canon
+                        Dgp2Dcp canonicalizer for the non-positive
+                        constraint atom
+Dgp2Dcp.norm1_canon     Dgp2Dcp canonicalizer for the 1 norm atom
+Dgp2Dcp.norm_inf_canon
+                        Dgp2Dcp canonicalizer for the infinite norm
+                        atom
+Dgp2Dcp.one_minus_pos_canon
+                        Dgp2Dcp canonicalizer for the 1-x atom
+Dgp2Dcp.parameter_canon
+                        Dgp2Dcp canonicalizer for the parameter atom
+Dgp2Dcp.pf_eigenvalue_canon
+                        Dgp2Dcp canonicalizer for the spectral radius
+                        atom
+Dgp2Dcp.pnorm_canon     Dgp2Dcp canonicalizer for the p norm atom
+Dgp2Dcp.power_canon     Dgp2Dcp canonicalizer for the power atom
+Dgp2Dcp.prod_canon      Dgp2Dcp canonicalizer for the product atom
+Dgp2Dcp.quad_form_canon
+                        Dgp2Dcp canonicalizer for the quadratic form
+                        atom
+Dgp2Dcp.quad_over_lin_canon
+                        Dgp2Dcp canonicalizer for the quadratic over
+                        linear term atom
+Dgp2Dcp.sum_canon       Dgp2Dcp canonicalizer for the sum atom
+Dgp2Dcp.trace_canon     Dgp2Dcp canonicalizer for the trace atom
+Dgp2Dcp.zero_constr_canon
+                        Dgp2Dcp canonicalizer for the zero constraint
+                        atom
+DgpCanonMethods-class   DGP canonical methods class.
+Diag                    Turns an expression into a DiagVec object
+DiagMat-class           The DiagMat class.
+DiagVec-class           The DiagVec class.
+Diff                    Takes the k-th order differences
+DiffPos                 The DiffPos atom.
+ECOS-class              An interface for the ECOS solver
+ECOS.dims_to_solver_dict
+                        Utility method for formatting a ConeDims
+                        instance into a dictionary that can be supplied
+                        to ECOS.
+ECOS_BB-class           An interface for the ECOS BB solver.
+Elementwise-class       The Elementwise class.
+EliminatePwl-class      The EliminatePwl class.
+EliminatePwl.abs_canon
+                        EliminatePwl canonicalizer for the absolute
+                        atom
+EliminatePwl.cummax_canon
+                        EliminatePwl canonicalizer for the cumulative
+                        max atom
+EliminatePwl.cumsum_canon
+                        EliminatePwl canonicalizer for the cumulative
+                        sum atom
+EliminatePwl.max_elemwise_canon
+                        EliminatePwl canonicalizer for the elementwise
+                        maximum atom
+EliminatePwl.max_entries_canon
+                        EliminatePwl canonicalizer for the max entries
+                        atom
+EliminatePwl.min_elemwise_canon
+                        EliminatePwl canonicalizer for the elementwise
+                        minimum atom
+EliminatePwl.min_entries_canon
+                        EliminatePwl canonicalizer for the minimum
+                        entries atom
+EliminatePwl.norm1_canon
+                        EliminatePwl canonicalizer for the 1 norm atom
+EliminatePwl.norm_inf_canon
+                        EliminatePwl canonicalizer for the infinite
+                        norm atom
+EliminatePwl.sum_largest_canon
+                        EliminatePwl canonicalizer for the largest sum
+                        atom
+Entr-class              The Entr class.
+EvalParams-class        The EvalParams class.
+Exp-class               The Exp class.
+ExpCone-class           The ExpCone class.
+Expression-class        The Expression class.
+EyeMinusInv-class       The EyeMinusInv class.
+FlipObjective-class     The FlipObjective class.
+GLPK-class              An interface for the GLPK solver.
+GLPK_MI-class           An interface for the GLPK MI solver.
+GUROBI_CONIC-class      An interface for the GUROBI conic solver.
+GUROBI_QP-class         An interface for the GUROBI_QP solver.
+GeoMean-class           The GeoMean class.
+HStack-class            The HStack class.
+HarmonicMean            The HarmonicMean atom.
+Huber-class             The Huber class.
+Imag-class              The Imag class.
+InverseData-class       The InverseData class.
+KLDiv-class             The KLDiv class.
+Kron-class              The Kron class.
+LambdaMax-class         The LambdaMax class.
+LambdaMin               The LambdaMin atom.
+LambdaSumLargest-class
+                        The LambdaSumLargest class.
+LambdaSumSmallest       The LambdaSumSmallest atom.
+Leaf-class              The Leaf class.
+ListORConstr-class      A Class Union of List and Constraint
+Log-class               The Log class.
+Log1p-class             The Log1p class.
+LogDet-class            The LogDet class.
+LogSumExp-class         The LogSumExp class.
+Logistic-class          The Logistic class.
+MOSEK-class             An interface for the MOSEK solver.
+MOSEK.parse_dual_vars   Parses MOSEK dual variables into corresponding
+                        CVXR constraints and dual values
+MOSEK.recover_dual_variables
+                        Recovers MOSEK solutions dual variables
+MatrixFrac-class        The MatrixFrac class.
+MatrixStuffing-class    The MatrixStuffing class.
+MaxElemwise-class       The MaxElemwise class.
+MaxEntries-class        The MaxEntries class.
+Maximize-class          The Maximize class.
+MinElemwise-class       The MinElemwise class.
+MinEntries-class        The MinEntries class.
+Minimize-class          The Minimize class.
+MixedNorm               The MixedNorm atom.
+Multiply-class          The Multiply class.
+Neg                     An alias for -MinElemwise(x, 0)
+NonPosConstraint-class
+                        The NonPosConstraint class
+NonlinearConstraint-class
+                        The NonlinearConstraint class.
+Norm                    The Norm atom.
+Norm1-class             The Norm1 class.
+Norm2                   The Norm2 atom.
+NormInf-class           The NormInf class.
+NormNuc-class           The NormNuc class.
+OSQP-class              An interface for the OSQP solver.
+Objective-arith         Arithmetic Operations on Objectives
+Objective-class         The Objective class.
+OneMinusPos-class       The OneMinusPos class.
+PSDWrap-class           The PSDWrap class.
+Parameter-class         The Parameter class.
+PfEigenvalue-class      The PfEigenvalue class.
+Pnorm-class             The Pnorm class.
+Pos                     An alias for MaxElemwise(x, 0)
+Power-class             The Power class.
+Problem-arith           Arithmetic Operations on Problems
+Problem-class           The Problem class.
+ProdEntries-class       The ProdEntries class.
+Promote-class           The Promote class.
+Qp2SymbolicQp-class     The Qp2SymbolicQp class.
+QpMatrixStuffing-class
+                        The QpMatrixStuffing class.
+QpSolver-class          A QP solver interface.
+QuadForm-class          The QuadForm class.
+QuadOverLin-class       The QuadOverLin class.
+Rdict-class             The Rdict class.
+Rdictdefault-class      The Rdictdefault class.
+Real-class              The Real class.
+Reduction-class         The Reduction class.
+ReductionSolver-class   The ReductionSolver class.
+Reshape-class           The Reshape class.
+SCS-class               An interface for the SCS solver
+SCS.dims_to_solver_dict
+                        Utility method for formatting a ConeDims
+                        instance into a dictionary that can be supplied
+                        to SCS.
+SCS.extract_dual_value
+                        Extracts the dual value for constraint starting
+                        at offset.
+SOC-class               The SOC class.
+SOCAxis-class           The SOCAxis class.
+SigmaMax-class          The SigmaMax class.
+SizeMetrics-class       The SizeMetrics class.
+Solution-class          The Solution class.
+SolverStats-class       The SolverStats class.
+SolvingChain-class      The SolvingChain class.
+SumEntries-class        The SumEntries class.
+SumLargest-class        The SumLargest class.
+SumSmallest             The SumSmallest atom.
+SumSquares              The SumSquares atom.
+SymbolicQuadForm-class
+                        The SymbolicQuadForm class.
+TotalVariation          The TotalVariation atom.
+Trace-class             The Trace class.
+Transpose-class         The Transpose class.
+UnaryOperator-class     The UnaryOperator class.
+UpperTri-class          The UpperTri class.
+VStack-class            The VStack class.
+Variable-class          The Variable class.
+Wrap-class              The Wrap class.
+ZeroConstraint-class    The ZeroConstraint class
+[,Expression,index,missing,ANY-method
+                        The SpecialIndex class.
+[,Expression,missing,missing,ANY-method
+                        The Index class.
+^,Expression,numeric-method
+                        Elementwise Power
+abs,Expression-method   Absolute Value
+accepts                 Reduction Acceptance
+are_args_affine         Are the arguments affine?
+bmat                    Block Matrix
+canonicalize            Canonicalize
+cdiac                   Global Monthly and Annual Temperature Anomalies
+                        (degrees C), 1850-2015 (Relative to the
+                        1961-1990 Mean) (May 2016)
+complex-atoms           Complex Numbers
+complex-methods         Complex Properties
+cone-methods            Second-Order Cone Methods
+constr_value            Is Constraint Violated?
+construct_intermediate_chain,Problem,list-method
+                        Builds a chain that rewrites a problem into an
+                        intermediate representation suitable for
+                        numeric reductions.
+construct_solving_chain
+                        Build a reduction chain from a problem to an
+                        installed solver.
+conv                    Discrete Convolution
+cummax_axis             Cumulative Maximum
+cumsum_axis             Cumulative Sum
+curvature               Curvature of Expression
+curvature-atom          Curvature of an Atom
+curvature-comp          Curvature of Composition
+curvature-methods       Curvature Properties
+cvxr_norm               Matrix Norm (Alternative)
+diag,Expression-method
+                        Matrix Diagonal
+diff,Expression-method
+                        Lagged and Iterated Differences
+dim_from_args           Atom Dimensions
+domain                  Domain
+dspop                   Direct Standardization: Population
+dssamp                  Direct Standardization: Sample
+dual_value-methods      Get and Set Dual Value
+entr                    Entropy Function
+exp,Expression-method   Natural Exponential
+expression-parts        Parts of an Expression Leaf
+extract_dual_value      Gets a specified value of a dual variable.
+extract_mip_idx         Coalesces bool, int indices for variables.
+eye_minus_inv           Unity Resolvent
+format_constr           Format Constraints
+geo_mean                Geometric Mean
+get_data                Get Expression Data
+get_dual_values         Gets the values of the dual variables.
+get_id                  Get ID
+get_np                  Get numpy handle
+get_problem_data        Get Problem Data
+get_sp                  Get scipy handle
+grad                    Sub/Super-Gradient
+graph_implementation    Graph Implementation
+group_constraints       Organize the constraints into a dictionary
+                        keyed by constraint names.
+harmonic_mean           Harmonic Mean
+hstack                  Horizontal Concatenation
+huber                   Huber Function
+id                      Identification Number
+import_solver           Import Solver
+installed_solvers       List installed solvers
+inv_pos                 Reciprocal Function
+invert                  Return Original Solution
+is_dcp                  DCP Compliance
+is_dgp                  DGP Compliance
+is_mixed_integer        Is Problem Mixed Integer?
+is_qp                   Is Problem a QP?
+is_stuffed_cone_constraint
+                        Is the constraint a stuffed cone constraint?
+is_stuffed_cone_objective
+                        Is the objective a stuffed cone objective?
+is_stuffed_qp_objective
+                        Is the QP objective stuffed?
+kl_div                  Kullback-Leibler Divergence
+kronecker,Expression,ANY-method
+                        Kronecker Product
+lambda_max              Maximum Eigenvalue
+lambda_min              Minimum Eigenvalue
+lambda_sum_largest      Sum of Largest Eigenvalues
+lambda_sum_smallest     Sum of Smallest Eigenvalues
+leaf-attr               Attributes of an Expression Leaf
+linearize               Affine Approximation to an Expression
+log,Expression-method   Logarithms
+log_det                 Log-Determinant
+log_log_curvature       Log-Log Curvature of Expression
+log_log_curvature-atom
+                        Log-Log Curvature of an Atom
+log_log_curvature-methods
+                        Log-Log Curvature Properties
+log_sum_exp             Log-Sum-Exponential
+logistic                Logistic Function
+make_sparse_diagonal_matrix
+                        Make a CSC sparse diagonal matrix
+matrix_frac             Matrix Fraction
+matrix_prop-methods     Matrix Properties
+matrix_trace            Matrix Trace
+max_elemwise            Elementwise Maximum
+max_entries             Maximum
+mean.Expression         Arithmetic Mean
+min_elemwise            Elementwise Minimum
+min_entries             Minimum
+mip_capable             Solver Capabilities
+mixed_norm              Mixed Norm
+multiply                Elementwise Multiplication
+name                    Variable, Parameter, or Expression Name
+neg                     Elementwise Negative
+norm,Expression,character-method
+                        Matrix Norm
+norm1                   1-Norm
+norm2                   Euclidean Norm
+norm_inf                Infinity-Norm
+norm_nuc                Nuclear Norm
+one_minus_pos           Difference on Restricted Domain
+p_norm                  P-Norm
+perform                 Perform Reduction
+pf_eigenvalue           Perron-Frobenius Eigenvalue
+pos                     Elementwise Positive
+problem-parts           Parts of a Problem
+prod_entries            Product of Entries
+project-methods         Project Value
+psd_coeff_offset        Given a problem returns a PSD constraint
+psolve                  Solve a DCP Problem
+quad_form               Quadratic Form
+quad_over_lin           Quadratic over Linear
+reduce                  Reduce a Problem
+resetOptions            Reset Options
+reshape_expr            Reshape an Expression
+residual-methods        Constraint Residual
+retrieve                Retrieve Solution
+scaled_lower_tri        Utility methods for special handling of
+                        semidefinite constraints.
+scaled_upper_tri        Utility methods for special handling of
+                        semidefinite constraints.
+scalene                 Scalene Function
+setIdCounter            Set ID Counter
+sigma_max               Maximum Singular Value
+sign,Expression-method
+                        Sign of Expression
+sign-methods            Sign Properties
+sign_from_args          Atom Sign
+size                    Size of Expression
+size-methods            Size Properties
+sqrt,Expression-method
+                        Square Root
+square,Expression-method
+                        Square
+sum_entries             Sum of Entries
+sum_largest             Sum of Largest Values
+sum_smallest            Sum of Smallest Values
+sum_squares             Sum of Squares
+t.Expression            Matrix Transpose
+to_numeric              Numeric Value of Atom
+tri_to_full             Expands lower triangular to full matrix.
+triu_to_full            Expands upper triangular to full matrix.
+tv                      Total Variation
+unpack_results          Parse output from a solver and updates problem
+                        state
+updated_scaled_lower_tri
+                        Utility methods for special handling of
+                        semidefinite constraints.
+upper_tri               Upper Triangle of a Matrix
+validate_args           Validate Arguments
+validate_val            Validate Value
+value-methods           Get or Set Value
+vec                     Vectorization of a Matrix
+vectorized_lower_tri_to_mat
+                        Turns symmetric 2D array into a lower
+                        triangular matrix
+vstack                  Vertical Concatenation

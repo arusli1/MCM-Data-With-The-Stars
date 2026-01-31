@@ -1,0 +1,422 @@
+season,celebrity_name,ballroom_partner,celebrity_industry,celebrity_homestate,celebrity_homecountry_region,celebrity_age_during_season,placement_final,placement_source
+1,Evander Holyfield,Edyta Sliwinska,Athlete,Alabama,United States,42,5,placement_col
+1,Joey McIntyre,Ashly DelGrosso,Singer/Rapper,Massachusetts,United States,32,3,placement_col
+1,John O'Hurley,Charlotte Jorgensen,Actor/Actress,Maine,United States,50,2,placement_col
+1,Kelly Monaco,Alec Mazo,Actor/Actress,Pennsylvania,United States,29,1,placement_col
+1,Rachel Hunter,Jonathan Roberts,Model,NA,New Zealand,35,4,placement_col
+1,Trista Sutter,Louis van Amstel,TV Personality,Indiana,United States,32,6,placement_col
+2,Drew Lachey,Cheryl Burke,Singer/Rapper,Ohio,United States,29,1,placement_col
+2,George Hamilton,Edyta Sliwinska,Actor/Actress,Tennessee,United States,66,5,placement_col
+2,Giselle Fernandez,Jonathan Roberts,News Anchor,NA,Mexico,44,8,placement_col
+2,Jerry Rice,Anna Trebunskaya,Athlete,Mississippi,United States,43,2,placement_col
+2,Kenny Mayne,Andrea Hale,Sports Broadcaster,Washington,United States,46,10,placement_col
+2,Lisa Rinna,Louis van Amstel,Actor/Actress,California,United States,42,4,placement_col
+2,Master P,Ashly DelGrosso,Singer/Rapper,Louisiana,United States,35,7,placement_col
+2,Stacy Keibler,Tony Dovolani,Athlete,Maryland,United States,26,3,placement_col
+2,Tatum O'Neal,Nick Kosovich,Actor/Actress,California,United States,42,9,placement_col
+2,Tia Carrere,Maksim Chmerkoskiy,Actor/Actress,Hawaii,United States,39,6,placement_col
+3,Emmitt Smith,Cheryl Burke,Athlete,Florida,United States,37,1,placement_col
+3,Harry Hamlin,Ashly DelGrosso,Actor/Actress,California,United States,54,9,placement_col
+3,Jerry Springer,Kym Johnson,TV Personality,NA,England,62,5,placement_col
+3,Joey Lawrence,Edyta Sliwinska,Actor/Actress,Pennsylvania,United States,30,3,placement_col
+3,Mario Lopez,Karina Smirnoff,Actor/Actress,California,United States,32,2,placement_col
+3,Monique Coleman,Louis van Amstel,Actor/Actress,South Carolina,United States,25,4,placement_col
+3,Sara Evans,Tony Dovolani,Singer/Rapper,Missouri,United States,35,6,placement_col
+3,Shanna Moakler,Jesse DeSoto,Model,Rhode Island,United States,31,10,placement_col
+3,Tucker Carlson,Elena Grinenko,TV Personality,California,United States,37,11,placement_col
+3,Vivica A. Fox,Nick Kosovich,Actor/Actress,Indiana,United States,42,8,placement_col
+3,Willa Ford,Maksim Chmerkoskiy,Singer/Rapper,Florida,United States,25,7,placement_col
+4,Apolo Anton Ohno,Julianne Hough,Athlete,Washington,United States,24,1,placement_col
+4,Billy Ray Cyrus,Karina Smirnoff,Singer/Rapper,Kentucky,United States,45,5,placement_col
+4,Clyde Drexler,Elena Grinenko,Athlete,Louisiana,United States,44,8,placement_col
+4,Heather Mills,Jonathan Roberts,Model,NA,England,39,7,placement_col
+4,Ian Ziering,Cheryl Burke,Actor/Actress,New Jersey,United States,42,4,placement_col
+4,Joey Fatone,Kym Johnson,Singer/Rapper,New York,United States,30,2,placement_col
+4,John Ratzenberger,Edyta Sliwinska,Actor/Actress,Connecticut,United States,59,6,placement_col
+4,Laila Ali,Maksim Chmerkoskiy,Athlete,Florida,United States,29,3,placement_col
+4,Leeza Gibbons,Tony Dovolani,TV Personality,South Carolina,United States,50,9,placement_col
+4,Paulina Porizkova,Alec Mazo,Model,NA,Czechoslovakia,41,11,placement_col
+4,Shandi Finnessey,Brian Fortuna,Beauty Pagent,Missouri,United States,28,10,placement_col
+5,Albert Reed,Anna Trebunskaya,Model,Florida,United States,22,11,placement_col
+5,Cameron Mathison,Edyta Sliwinska,Actor/Actress,NA,Canada,38,5,placement_col
+5,Floyd Mayweather Jr.,Karina Smirnoff,Athlete,Michigan,United States,30,9,placement_col
+5,Helio Castroneves,Julianne Hough,Racing Driver,NA,Brazil,32,1,placement_col
+5,Jane Seymour,Tony Dovolani,Actor/Actress,NA,England,56,6,placement_col
+5,Jennie Garth,Derek Hough,Actor/Actress,Illinois,United States,35,4,placement_col
+5,Josie Maran,Alec Mazo,Model,California,United States,29,12,placement_col
+5,Marie Osmond,Jonathan Roberts,Singer/Rapper,Utah,United States,47,3,placement_col
+5,Mark Cuban,Kym Johnson,TV Personality,Pennsylvania,United States,49,8,placement_col
+5,Mel B,Maksim Chmerkoskiy,Singer/Rapper,NA,England,32,2,placement_col
+5,Sabrina Bryan,Mark Ballas,Actor/Actress,California,United States,23,7,placement_col
+5,Wayne Newton,Cheryl Burke,Singer/Rapper,Virginia,United States,65,10,placement_col
+6,Adam Carolla,Julianne Hough,Radio Personality,California,United States,43,9,placement_col
+6,Cristian de la Fuente,Cheryl Burke,Actor/Actress,NA,Chile,34,3,placement_col
+6,Jason Taylor,Edyta Sliwinska,Athlete,Pennsylvania,United States,33,2,placement_col
+6,Kristi Yamaguchi,Mark Ballas,Athlete,California,United States,36,1,placement_col
+6,Mario,Karina Smirnoff,Singer/Rapper,Maryland,United States,21,5,placement_col
+6,Marissa Jaret Winokur,Tony Dovolani,Actor/Actress,New York,United States,35,4,placement_col
+6,Marlee Matlin,Fabian Sanchez,Actor/Actress,Illinois,United States,42,7,placement_col
+6,Monica Seles,Jonathan Roberts,Athlete,NA,Yugoslavia,34,11,placement_col
+6,Penn Jillette,Kym Johnson,Magician,Massachusetts,United States,53,12,placement_col
+6,Priscilla Presley,Louis van Amstel,Actor/Actress,New York,United States,62,8,placement_col
+6,Shannon Elizabeth,Derek Hough,Actor/Actress,Texas,United States,34,6,placement_col
+6,Steve Guttenberg,Anna Trebunskaya,Actor/Actress,New York,United States,49,10,placement_col
+7,Brooke Burke,Derek Hough,TV Personality,Connecticut,United States,37,1,placement_col
+7,Cloris Leachman,Corky Ballas,Actor/Actress,Iowa,United States,82,7,placement_col
+7,Cody Linley,Julianne Hough,Actor/Actress,Texas,United States,18,4,placement_col
+7,Jeffrey Ross,Edyta Sliwinska,Comedian,New Jersey,United States,43,13,placement_col
+7,Kim Kardashian,Mark Ballas,TV Personality,California,United States,27,11,placement_col
+7,Lance Bass,Lacey Schwimmer,Singer/Rapper,Mississippi,United States,29,3,placement_col
+7,Maurice Greene,Cheryl Burke,Athlete,Kansas,United States,34,5,placement_col
+7,Misty May-Treanor,Maksim Chmerkoskiy,Athlete,California,United States,31,10,placement_col
+7,Rocco DiSpirito,Karina Smirnoff,TV Personality,New York,United States,41,9,placement_col
+7,Susan Lucci,Tony Dovolani,Actor/Actress,New York,United States,61,6,placement_col
+7,Ted McGinley,Inna Brayer,Actor/Actress,California,United States,50,12,placement_col
+7,Toni Braxton,Alec Mazo,Singer/Rapper,Maryland,United States,40,8,placement_col
+7,Warren Sapp,Kym Johnson,Athlete,Florida,United States,35,2,placement_col
+8,Belinda Carlisle,Jonathan Roberts,Singer/Rapper,California,United States,50,13,placement_col
+8,Chuck Wicks,Julianne Hough,Singer/Rapper,Delaware,United States,29,6,placement_col
+8,David Alan Grier,Kym Johnson,Actor/Actress,Michigan,United States,52,9,placement_col
+8,Denise Richards,Maksim Chmerkoskiy,Actor/Actress,Illinois,United States,38,12,placement_col
+8,Gilles Marini,Cheryl Burke,Actor/Actress,NA,France,33,2,placement_col
+8,Holly Madison,Dmitry Chaplin,TV Personality,Oregon,United States,30,11,placement_col
+8,Lawrence Taylor,Edyta Sliwinska,Athlete,Virginia,United States,50,7,placement_col
+8,Lil' Kim,Derek Hough,Singer/Rapper,New York,United States,34,5,placement_col
+8,Melissa Rycroft,Tony Dovolani,TV Personality,Texas,United States,26,3,placement_col
+8,Shawn Johnson,Mark Ballas,Athlete,Iowa,United States,17,1,placement_col
+8,Steve Wozniak,Karina Smirnoff,Entrepreneur,California,United States,58,10,placement_col
+8,Steve-O,Lacey Schwimmer,TV Personality,NA,England,34,8,placement_col
+8,Ty Murray,Chelsie Hightower,Athlete,Arizona,United States,39,4,placement_col
+9,Aaron Carter,Karina Smirnoff,Singer/Rapper,Florida,United States,21,5,placement_col
+9,Ashley Hamiliton,Edyta Sliwinska,Actor/Actress,California,United States,34,16,placement_col
+9,Chuck Liddell,Anna Trebunskaya,Athlete,California,United States,39,11,placement_col
+9,Debi Mazar,Maksim Chmerkoskiy,Actor/Actress,New York,United States,45,12,placement_col
+9,Donny Osmond,Kym Johnson,Singer/Rapper,Utah,United States,51,1,placement_col
+9,Joanna Krupa,Derek Hough,Model,NA,Poland,30,4,placement_col
+9,Kathy Ireland,Tony Dovolani,Model,California,United States,46,14,placement_col
+9,Kelly Osbourne,Louis van Amstel,TV Personality,NA,England,24,3,placement_col
+9,Louie Vito,Chelsie Hightower,Athlete,Ohio,United States,21,8,placement_col
+9,Macy Gray,Jonathan Roberts,Singer/Rapper,Ohio,United States,42,15,placement_col
+9,Mark Dacascos,Lacey Schwimmer,Actor/Actress,Hawaii,United States,45,6,placement_col
+9,Melissa Joan Hart,Mark Ballas,Actor/Actress,New York,United States,33,9,placement_col
+9,Michael Irvin,Anna Demidova,Athlete,Florida,United States,43,7,placement_col
+9,Mya,Dmitry Chaplin,Singer/Rapper,Washington D.C.,United States,29,2,placement_col
+9,Natalie Coughlin,Alec Mazo,Athlete,California,United States,27,10,placement_col
+9,Tom DeLay,Cheryl Burke,Politician,Texas,United States,62,13,placement_col
+10,Aiden Turner,Edyta Sliwinska,Actor/Actress,NA,England,32,9,placement_col
+10,Buzz Aldrin,Ashly DelGrosso,Astronaut,New Jersey,United States,80,10,placement_col
+10,Chad Ochocinco,Cheryl Burke,Athlete,Florida,United States,32,4,placement_col
+10,Erin Andrews,Maksim Chmerkoskiy,Sports Broadcaster,Maine,United States,32,3,placement_col
+10,Evan Lysacek,Anna Trebunskaya,Athlete,Illinois,United States,24,2,placement_col
+10,Jake Pavelka,Chelsie Hightower,TV Personality,Texas,United States,32,7,placement_col
+10,Kate Gosselin,Tony Dovolani,TV Personality,Pennsylvania,United States,35,8,placement_col
+10,Nicole Scherzinger,Derek Hough,Singer/Rapper,Hawaii,United States,31,1,placement_col
+10,Niecy Nash,Louis van Amstel,Actor/Actress,California,United States,40,5,placement_col
+10,Pamela Anderson,Damian Whitewood,Model,NA,Canada,42,6,placement_col
+10,Shannen Doherty,Mark Ballas,Actor/Actress,Tennessee,United States,38,11,placement_col
+11,Audrina Patridge,Tony Dovolani,TV Personality,California,United States,25,7,placement_col
+11,Brandy,Maksim Chmerkoskiy,Singer/Rapper,Mississippi,United States,31,4,placement_col
+11,Bristol Palin,Mark Ballas,TV Personality,Alaska,United States,19,3,placement_col
+11,David Hasselhoff,Kym Johnson,Actor/Actress,Maryland,United States,58,12,placement_col
+11,Florence Henderson,Corky Ballas,Actor/Actress,Indiana,United States,76,8,placement_col
+11,Jennifer Grey,Derek Hough,Actor/Actress,New York,United States,50,1,placement_col
+11,Kurt Warner,Anna Trebunskaya,Athlete,Iowa,United States,39,5,placement_col
+11,Kyle Massey,Lacey Schwimmer,Actor/Actress,Georgia,United States,19,2,placement_col
+11,Margaret Cho,Louis van Amstel,Comedian,California,United States,41,10,placement_col
+11,Michael Bolton,Chelsie Hightower,Singer/Rapper,Connecticut,United States,57,11,placement_col
+11,Rick Fox,Cheryl Burke,Athlete,NA,Canada,41,6,placement_col
+11,The Situation,Karina Smirnoff,TV Personality,New York,United States,28,9,placement_col
+12,Chelsea Kane,Mark Ballas,Actor/Actress,Arizona,United States,22,3,placement_col
+12,Chris Jericho,Cheryl Burke,Athlete,New York,United States,40,7,placement_col
+12,Hines Ward,Kym Johnson,Athlete,NA,South Korea,35,1,placement_col
+12,Kendra Wilkinson,Louis van Amstel,TV Personality,California,United States,25,6,placement_col
+12,Kirstie Alley,Maksim Chmerkoskiy,Actor/Actress,Kansas,United States,60,2,placement_col
+12,Mike Catherwood,Lacey Schwimmer,Radio Personality,California,United States,32,11,placement_col
+12,Petra Nemcova,Dmitry Chaplin,Model,NA,Czechoslovakia,31,8,placement_col
+12,Ralph Macchio,Karina Smirnoff,Actor/Actress,New York,United States,49,4,placement_col
+12,Romeo,Chelsie Hightower,Singer/Rapper,Louisiana,United States,21,5,placement_col
+12,Sugar Ray Leonard,Anna Trebunskaya,Athlete,North Carolina,United States,54,9,placement_col
+12,Wendy Williams,Tony Dovolani,TV Personality,New Jersey,United States,46,10,placement_col
+13,Carson Kressley,Anna Trebunskaya,TV Personality,Pennsylvania,United States,41,8,placement_col
+13,Chaz Bono,Lacey Schwimmer,TV Personality,California,United States,42,7,placement_col
+13,Chynna Phillips,Tony Dovolani,Singer/Rapper,California,United States,43,9,placement_col
+13,David Arquette,Kym Johnson,Actor/Actress,Virginia,United States,40,6,placement_col
+13,Elisabetta Canalis,Valentin Chmerkovskiy,Actor/Actress,NA,Italy,33,11,placement_col
+13,Hope Solo,Maksim Chmerkoskiy,Athlete,Washington,United States,30,4,placement_col
+13,J.R. Martinez,Karina Smirnoff,Actor/Actress,Louisiana,United States,28,1,placement_col
+13,Kristin Cavallari,Mark Ballas,TV Personality,Colorado,United States,24,10,placement_col
+13,Metta World Peace (Ron),Peta Murgatroyd,Athlete,New York,United States,31,12,placement_col
+13,Nancy Grace,Tristan MacManus,TV Personality,Georgia,United States,51,5,placement_col
+13,Ricki Lake,Derek Hough,Actor/Actress,New York,United States,42,3,placement_col
+13,Rob Kardashian,Cheryl Burke,TV Personality,California,United States,24,2,placement_col
+14,Donald Driver,Peta Murgatroyd,Athlete,Texas,United States,37,1,placement_col
+14,Gavin DeGraw,Karina Smirnoff,Singer/Rapper,New York,United States,35,9,placement_col
+14,Gladys Knight,Tristan MacManus,Singer/Rapper,Georgia,United States,67,8,placement_col
+14,Jack Wagner,Anna Trebunskaya,Actor/Actress,Missouri,United States,52,11,placement_col
+14,Jaleel White,Kym Johnson,Actor/Actress,California,United States,35,7,placement_col
+14,Katherine Jenkins,Mark Ballas,Singer/Rapper,NA,Wales,31,2,placement_col
+14,Maria Menounos,Derek Hough,TV Personality,Massachusetts,United States,33,4,placement_col
+14,Martina Navratilova,Tony Dovolani,Athlete,NA,Czechoslovakia,55,12,placement_col
+14,Melissa Gilbert,Maksim Chmerkoskiy,Actor/Actress,California,United States,47,5,placement_col
+14,Roshon Fegan,Chelsie Hightower,Actor/Actress,California,United States,20,6,placement_col
+14,Sherri Sheperd,Valentin Chmerkovskiy,Actor/Actress,Illinois,United States,44,10,placement_col
+14,William Levy,Cheryl Burke,Actor/Actress,NA,Cuba,31,3,placement_col
+15,Apolo Anton Ohno,Karina Smirnoff,Athlete,Washington,United States,30,5,placement_col
+15,Bristol Palin,Mark Ballas,TV Personality,Alaska,United States,21,9,placement_col
+15,Drew Lachey,Anna Trebunskaya,Singer/Rapper,Ohio,United States,36,11,placement_col
+15,Emmitt Smith,Cheryl Burke,Athlete,Florida,United States,43,4,placement_col
+15,Gilles Marini,Peta Murgatroyd,Actor/Actress,NA,France,36,6,placement_col
+15,Helio Castroneves,Chelsie Hightower,Racing Driver,NA,Brazil,37,10,placement_col
+15,Joey Fatone,Kym Johnson,Singer/Rapper,New York,United States,35,12,placement_col
+15,Kelly Monaco,Valentin Chmerkovskiy,Actor/Actress,Pennsylvania,United States,36,3,placement_col
+15,Kirstie Alley,Maksim Chmerkoskiy,Actor/Actress,Kansas,United States,61,7,placement_col
+15,Melissa Rycroft,Tony Dovolani,TV Personality,Texas,United States,29,1,placement_col
+15,Pamela Anderson,Tristan MacManus,Model,NA,Canada,45,13,placement_col
+15,Sabrina Bryan,Louis van Amstel,Actor/Actress,California,United States,28,8,placement_col
+15,Shawn Johnson,Derek Hough,Athlete,Iowa,United States,20,2,placement_col
+16,Alexandra Raisman,Mark Ballas,Athlete,Massachusetts,United States,18,4,placement_col
+16,Andy Dick,Sharna Burgess,Comedian,South Carolina,United States,47,7,placement_col
+16,D. L. Hughley,Cheryl Burke,Comedian,Virginia,United States,50,9,placement_col
+16,Dorothy Hamill,Tristan MacManus,Athlete,Illinois,United States,56,12,placement_col
+16,Ingo Rademacher,Kym Johnson,Actor/Actress,NA,Germany,41,5,placement_col
+16,Jacoby Jones,Karina Smirnoff,Athlete,Louisiana,United States,28,3,placement_col
+16,Kellie Pickler,Derek Hough,Singer/Rapper,North Carolina,United States,26,1,placement_col
+16,Lisa Vanderpump,Gleb Savchenko,TV Personality,NA,England,52,10,placement_col
+16,Sean Lowe,Peta Murgatroyd,TV Personality,Texas,United States,29,6,placement_col
+16,Victor Ortiz,Lindsay Arnold,Athlete,Kansas,United States,26,8,placement_col
+16,Wynonna Judd,Tony Dovolani,Singer/Rapper,Kentucky,United States,48,11,placement_col
+16,Zendaya,Valentin Chmerkovskiy,Actor/Actress,California,United States,16,2,placement_col
+17,Amber Riley,Derek Hough,Actor/Actress,California,United States,27,1,placement_col
+17,Bill Engvall,Emma Slater,Comedian,Texas,United States,56,4,placement_col
+17,Bill Nye,Tyne Stecklein,TV Personality,Washington D.C.,United States,57,11,placement_col
+17,Brant Daugherty,Peta Murgatroyd,Actor/Actress,Ohio,United States,28,7,placement_col
+17,Christina Milian,Mark Ballas,Singer/Rapper,New Jersey,United States,31,9,placement_col
+17,Corbin Bleu,Karina Smirnoff,Actor/Actress,New York,United States,24,2,placement_col
+17,Elizabeth Berkley Lauren,Valentin Chmerkovskiy,Actor/Actress,Michigan,United States,39,6,placement_col
+17,Jack Osbourne,Cheryl Burke,TV Personality,NA,England,27,3,placement_col
+17,Keyshawn Johnson,Sharna Burgess,Athlete,California,United States,41,12,placement_col
+17,Leah Remini,Tony Dovolani,Actor/Actress,New York,United States,43,5,placement_col
+17,"Nicole ""Snooki"" Polizzi",Sasha Farber,TV Personality,NA,Chile,25,8,placement_col
+17,Valerie Harper,Tristan MacManus,Actor/Actress,New York,United States,74,10,placement_col
+18,Amy Purdy,Derek Hough,Athlete,Nevada,United States,34,2,placement_col
+18,Billy Dee Williams,Emma Slater,Actor/Actress,New York,United States,76,10,placement_col
+18,Candace Cameron Bure,Mark Ballas,Actor/Actress,California,United States,37,3,placement_col
+18,Charlie White,Sharna Burgess,Athlete,Michigan,United States,26,5,placement_col
+18,Cody Simpson,Witney Carson,Singer/Rapper,NA,Australia,17,9,placement_col
+18,Danica McKellar,Valentin Chmerkovskiy,Actor/Actress,California,United States,39,6,placement_col
+18,Diana Nyad,Henry Byalikov,Athlete,New York,United States,64,12,placement_col
+18,Drew Carey,Cheryl Burke,Comedian,Ohio,United States,55,8,placement_col
+18,James Maslow,Peta Murgatroyd,Actor/Actress,New York,United States,23,4,placement_col
+18,Meryl Davis,Maksim Chmerkoskiy,Athlete,Michigan,United States,27,1,placement_col
+18,NeNe Leakes,Tony Dovolani,TV Personality,New York,United States,46,7,placement_col
+18,Sean Avery,Karina Smirnoff,Athlete,NA,Canada,33,11,placement_col
+19,Alfonso Ribeiro,Witney Carson,Actor/Actress,New York,United States,42,1,placement_col
+19,Antonio Sabato Jr.,Cheryl Burke,Actor/Actress,NA,Italy,42,8,placement_col
+19,Bethany Mota,Derek Hough,Social Media Personality,California,United States,18,4,placement_col
+19,Betsey Johnson,Tony Dovolani,Fashion Designer,Connecticut,United States,72,10,placement_col
+19,Janel Parrish,Valentin Chmerkovskiy,Actor/Actress,Hawaii,United States,25,3,placement_col
+19,Jonathan Bennett,Allison Holker,Actor/Actress,Ohio,United States,33,9,placement_col
+19,Lea Thompson,Artem Chigvintsev,Actor/Actress,Minnesota,United States,53,6,placement_col
+19,Lolo Jones,Keo Motsepe,Athlete,Iowa,United States,32,13,placement_col
+19,Michael Waltrip,Emma Slater,Racing Driver,Kentucky,United States,51,7,placement_col
+19,Randy Couture,Karina Smirnoff,Athlete,Washington,United States,51,11,placement_col
+19,Sadie Robertson,Mark Ballas,TV Personality,Louisiana,United States,17,2,placement_col
+19,Tavis Smiley,Sharna Burgess,Radio Personality,Mississippi,United States,50,12,placement_col
+19,Tommy Chong,Peta Murgatroyd,Comedian,NA,Canada,76,5,placement_col
+20,Charlotte McKinney,Keo Motsepe,Model,Florida,United States,21,11,placement_col
+20,Chris Soules,Witney Carson,TV Personality,Iowa,United States,33,5,placement_col
+20,Michael Sam,Peta Murgatroyd,Athlete,Texas,United States,25,10,placement_col
+20,Nastia Liukin,Derek Hough,Athlete,NA,Russia,25,4,placement_col
+20,Noah Galloway,Sharna Burgess,Motivational Speaker,Alabama,United States,33,3,placement_col
+20,Patti LaBelle,Artem Chigvintsev,Singer/Rapper,Pennsylvania,United States,70,8,placement_col
+20,Redfoo,Emma Slater,Singer/Rapper,California,United States,39,12,placement_col
+20,Riker Lynch,Allison Holker,Actor/Actress,Colorado,United States,23,2,placement_col
+20,Robert Herjavec,Kym Johnson,Entrepreneur,NA,Croatia,52,6,placement_col
+20,Rumer Willis,Valentin Chmerkovskiy,Actor/Actress,Kentucky,United States,26,1,placement_col
+20,Suzanne Somers,Tony Dovolani,Actor/Actress,California,United States,68,9,placement_col
+20,Willow Shields,Mark Ballas,Actor/Actress,New Mexico,United States,14,7,placement_col
+21,Alek Skarlatos,Lindsay Arnold,Military,California,United States,22,3,placement_col
+21,Alexa PenaVega,Mark Ballas,Actor/Actress,Florida,United States,27,6,placement_col
+21,Andy Grammer,Allison Holker,Singer/Rapper,California,United States,31,7,placement_col
+21,Bindi Irwin,Derek Hough,TV Personality,NA,Australia,17,1,placement_col
+21,Carlos PenaVega,Witney Carson,Actor/Actress,Missouri,United States,26,4,placement_col
+21,Chaka Khan,Keo Motsepe,Singer/Rapper,Illinois,United States,62,13,placement_col
+21,Gary Busey,Anna Trebunskaya,Actor/Actress,Texas,United States,71,10,placement_col
+21,Hayes Grier,Emma Slater,Social Media Personality,North Carolina,United States,15,8,placement_col
+21,Kim Zolciak-Biermann,Tony Dovolani,TV Personality,Florida,United States,37,11,placement_col
+21,Nick Carter,Sharna Burgess,Singer/Rapper,New York,United States,35,2,placement_col
+21,Paula Deen,Louis van Amstel,TV Personality,Georgia,United States,68,9,placement_col
+21,Tamar Braxton,Valentin Chmerkovskiy,Singer/Rapper,Maryland,United States,38,5,placement_col
+21,Victor Espinoza,Karina Smirnoff,Athlete,NA,Mexico,43,12,placement_col
+22,Antonio Brown,Sharna Burgess,Athlete,Florida,United States,27,5,placement_col
+22,Doug Flutie,Karina Smirnoff,Athlete,Maryland,United States,53,9,placement_col
+22,Geraldo Rivera,Edyta Sliwinska,Journalist,New York,United States,72,12,placement_col
+22,Ginger Zee,Valentin Chmerkovskiy,News Anchor,California,United States,35,3,placement_col
+22,Jodie Sweetin,Keo Motsepe,Actor/Actress,California,United States,34,6,placement_col
+22,Kim Fields,Sasha Farber,Actor/Actress,New York,United States,46,8,placement_col
+22,Marla Maples,Tony Dovolani,TV Personality,Georgia,United States,52,10,placement_col
+22,Mischa Barton,Artem Chigvintsev,Actor/Actress,NA,England,30,11,placement_col
+22,Nyle DiMarco,Peta Murgatroyd,Model,New York,United States,26,1,placement_col
+22,Paige VanZant,Mark Ballas,Athlete,Oregon,United States,22,2,placement_col
+22,Von Miller,Witney Carson,Athlete,Texas,United States,27,7,placement_col
+22,Wanya Morris,Lindsay Arnold,Singer/Rapper,Pennsylvania,United States,42,4,placement_col
+23,Amber Rose,Maksim Chmerkoskiy,Model,Pennsylvania,United States,32,9,placement_col
+23,Babyface,Allison Holker,Singer/Rapper,Indiana,United States,57,11,placement_col
+23,Calvin Johnson Jr.,Lindsay Arnold,Athlete,Georgia,United States,30,3,placement_col
+23,Jake T. Austin,Jenna Johnson,Actor/Actress,New York,United States,21,13,placement_col
+23,James Hinchcliffe,Sharna Burgess,Racing Driver,NA,Canada,29,2,placement_col
+23,Jana Kramer,Gleb Savchenko,Singer/Rapper,Michigan,United States,32,4,placement_col
+23,Laurie Hernandez,Valentin Chmerkovskiy,Athlete,New Jersey,United States,16,1,placement_col
+23,Marilu Henner,Derek Hough,Actor/Actress,Illinois,United States,64,6,placement_col
+23,Maureen McCormick,Artem Chigvintsev,Actor/Actress,California,United States,60,8,placement_col
+23,Rick Perry,Emma Slater,Politician,Texas,United States,66,12,placement_col
+23,Ryan Lochte,Cheryl Burke,Athlete,New York,United States,32,7,placement_col
+23,Terra Jole,Sasha Farber,TV Personality,Texas,United States,36,5,placement_col
+23,Vanilla Ice,Witney Carson,Singer/Rapper,Texas,United States,48,10,placement_col
+24,Bonner Bolton,Sharna Burgess,Athlete,Texas,United States,29,5,placement_col
+24,Charo,Keo Motsepe,Actor/Actress,NA,Spain,66,11,placement_col
+24,Chris Kattan,Witney Carson,Comedian,California,United States,46,12,placement_col
+24,David Ross,Lindsay Arnold,Athlete,Georgia,United States,40,2,placement_col
+24,Erika Jayne,Gleb Savchenko,Singer/Rapper,Georgia,United States,45,9,placement_col
+24,Heather Morris,Maksim Chmerkoskiy,Actor/Actress,California,United States,30,8,placement_col
+24,Mr. T,Kym Herjavec,Actor/Actress,Illinois,United States,64,10,placement_col
+24,Nancy Kerrigan,Artem Chigvintsev,Athlete,Massachusetts,United States,47,7,placement_col
+24,Nick Viall,Peta Murgatroyd,TV Personality,Wisconsin,United States,36,6,placement_col
+24,Normani,Valentin Chmerkovskiy,Singer/Rapper,Georgia,United States,20,3,placement_col
+24,Rashad Jennings,Emma Slater,Athlete,Virginia,United States,32,1,placement_col
+24,Simone Biles,Sasha Farber,Athlete,Ohio,United States,20,4,placement_col
+25,Barbara Corcoran,Keo Motsepe,Entrepreneur,New Jersey,United States,68,13,placement_col
+25,Debbie Gibson,Alan Bersten,Singer/Rapper,New York,United States,47,12,placement_col
+25,Derek Fisher,Sharna Burgess,Athlete,Arkansas,United States,43,11,placement_col
+25,Drew Scott,Emma Slater,TV Personality,NA,Canada,39,4,placement_col
+25,Frankie Muniz,Witney Carson,Actor/Actress,New Jersey,United States,31,3,placement_col
+25,Jordan Fisher,Lindsay Arnold,Actor/Actress,Alabama,United States,23,1,placement_col
+25,Lindsey Stirling,Mark Ballas,Musician,California,United States,31,2,placement_col
+25,Nick Lachey,Peta Murgatroyd,Singer/Rapper,Kentucky,United States,43,9,placement_col
+25,Nikki Bella,Artem Chigvintsev,Athlete,California,United States,33,8,placement_col
+25,Sasha Pieterse,Gleb Savchenko,Actor/Actress,NA,South Africa,21,10,placement_col
+25,Terrell Owens,Cheryl Burke,Athlete,Alabama,United States,43,6,placement_col
+25,Vanessa Lachey,Maksim Chmerkoskiy,TV Personality,NA,Philippines,36,7,placement_col
+25,Victoria Arlen,Valentin Chmerkovskiy,Athlete,New Hamshire,United States,22,5,placement_col
+26,Adam Rippon,Jenna Johnson,Athlete,Pennsylvania,United States,28,1,placement_col
+26,Arike Ogunbowale,Gleb Savchenko,Athlete,Wisconsin,United States,21,7,placement_col
+26,Chris Mazdzer,Witney Carson,Athlete,Massachusetts,United States,29,5,placement_col
+26,Jamie Anderson,Artem Chigvintsev,Athlete,California,United States,27,10,placement_col
+26,Jennie Finch Daigle,Keo Motsepe,Athlete,California,United States,37,6,placement_col
+26,Johnny Damon,Emma Slater,Athlete,Kansas,United States,44,9,placement_col
+26,Josh Norman,Sharna Burgess,Athlete,South Carolina,United States,30,2,placement_col
+26,Kareem Abdul-Jabbar,Lindsay Arnold,Athlete,New York,United States,71,8,placement_col
+26,Mirai Nagasu,Alan Bersten,Athlete,California,United States,25,4,placement_col
+26,Tonya Harding,Sasha Farber,Athlete,Oregon,United States,47,3,placement_col
+27,Alexis Ren,Alan Bersten,Social Media Personality,California,United States,21,4,placement_col
+27,Bobby Bones,Sharna Burgess,Radio Personality,Arkansas,United States,38,1,placement_col
+27,Danelle Umstead,Artem Chigvintsev,Athlete,New Mexico,United States,46,12,placement_col
+27,DeMarcus Ware,Lindsay Arnold,Athlete,Alabama,United States,36,7,placement_col
+27,Evanna Lynch,Keo Motsepe,Actor/Actress,NA,Ireland,27,3,placement_col
+27,Joe Amabile,Jenna Johnson,TV Personality,Illinois,United States,32,6,placement_col
+27,John Schneider,Emma Slater,Actor/Actress,New York,United States,58,8,placement_col
+27,Juan Pablo Di Pace,Cheryl Burke,Actor/Actress,NA,Argentina,39,5,placement_col
+27,Mary Lou Retton,Sasha Farber,Athlete,West Virginia,United States,50,9,placement_col
+27,Milo Manheim,Witney Carson,Actor/Actress,California,United States,17,2,placement_col
+27,Nancy McKeon,Valentin Chmerkovskiy,Actor/Actress,New York,United States,52,11,placement_col
+27,Nikki Glaser,Gleb Savchenko,Comedian,Ohio,United States,34,13,placement_col
+27,Tinashe,Brandon Armstrong,Singer/Rapper,Kentucky,United States,25,10,placement_col
+28,Ally Brooke,Sasha Farber,Singer/Rapper,Texas,United States,26,3,placement_col
+28,Hannah Brown,Alan Bersten,TV Personality,Alabama,United States,24,1,placement_col
+28,James Van Der Beek,Emma Slater,Actor/Actress,Connecticut,United States,42,5,placement_col
+28,Karamo Brown,Jenna Johnson,TV Personality,Texas,United States,38,8,placement_col
+28,Kate Flannery,Pasha Pashkov,Actor/Actress,Pennsylvania,United States,55,7,placement_col
+28,Kel Mitchell,Witney Carson,Actor/Actress,Illinois,United States,41,2,placement_col
+28,Lamar Odom,Peta Murgatroyd,Athlete,New York,United States,39,10,placement_col
+28,Lauren Alaina,Gleb Savchenko,Singer/Rapper,Georgia,United States,24,4,placement_col
+28,Mary Wilson,Brandon Armstrong,Singer/Rapper,Nevada,United States,75,12,placement_col
+28,Ray Lewis,Cheryl Burke,Athlete,Florida,United States,44,11,placement_col
+28,Sailor Brinkley-Cook,Valentin Chmerkovskiy,Model,New York,United States,21,9,placement_col
+28,Sean Spicer,Lindsay Arnold,Politician,New York,United States,48,6,placement_col
+29,AJ McLean,Cheryl Burke,Singer/Rapper,Florida,United States,42,7,placement_col
+29,Anne Heche,Keo Motsepe,Actor/Actress,Ohio,United States,51,13,placement_col
+29,Carole Baskin,Pasha Pashkov,TV Personality,Texas,United States,59,14,placement_col
+29,Charles Oakley,Emma Slater,Athlete,Ohio,United States,56,15,placement_col
+29,Chrishell Stause,Gleb Savchenko,Actor/Actress,Kentucky,United States,39,8,placement_col
+29,Jeannie Mai,Brandon Armstrong,TV Personality,California,United States,41,9,placement_col
+29,Jesse Metcalfe,Sharna Burgess,Actor/Actress,California,United States,41,12,placement_col
+29,Johnny Weir,Britt Stewart,Athlete,Pennsylvania,United States,36,6,placement_col
+29,Justina Machado,Sasha Farber,Actor/Actress,Illinois,United States,48,4,placement_col
+29,Kaitlyn Bristowe,Artem Chigvintsev,TV Personality,NA,Canada,35,1,placement_col
+29,Monica Aldama,Valentin Chmerkovskiy,TV Personality,Alabama,United States,48,10,placement_col
+29,Nelly,Daniella Karagach,Singer/Rapper,Texas,United States,45,3,placement_col
+29,Nev Schulman,Jenna Johnson,Producer,New York,United States,35,2,placement_col
+29,Skai Jackson,Alan Bersten,Actor/Actress,New York,United States,18,5,placement_col
+29,Veron Davis,Peta Murgatroyd,Athlete,Washington D.C.,United States,36,11,placement_col
+30,Amanda Kloots,Alan Bersten,TV Personality,Ohio,United States,39,4,placement_col
+30,Brian Austin Green,Sharna Burgess,Actor/Actress,California,United States,48,13,placement_col
+30,Christine Chiu,Pasha Pashkov,TV Personality,NA,Taiwan China,38,14,placement_col
+30,Cody Rigsby,Cheryl Burke,Fitness Instructor,California,United States,34,3,placement_col
+30,Iman Shumpert,Daniella Karagach,Athlete,Illinois,United States,31,1,placement_col
+30,Jimmie Allen,Emma Slater,Singer/Rapper,Delaware,United States,36,7,placement_col
+30,JoJo Siwa,Jenna Johnson,Social Media Personality,Nebraska,United States,18,2,placement_col
+30,Kenya Moore,Brandon Armstrong,TV Personality,Michigan,United States,50,10,placement_col
+30,Martin Kove,Britt Stewart,Actor/Actress,New York,United States,75,15,placement_col
+30,Matt James,Lindsay Arnold,Athlete,North Carolina,United States,29,12,placement_col
+30,Melanie C,Gleb Savchenko,Singer/Rapper,NA,England,47,11,placement_col
+30,Melora Hardin,Artem Chigvintsev,Actor/Actress,Texas,United States,54,6,placement_col
+30,"Mike ""The Miz"" Mizanin",Witney Carson,Athlete,Ohio,United States,40,9,placement_col
+30,Olivia Jade,Valentin Chmerkovskiy,Social Media Personality,California,United States,21,8,placement_col
+30,Suni Lee,Sasha Farber,Athlete,Minnesota,United States,18,5,placement_col
+31,Charli D'Amelio,Mark Ballas,Social Media Personality,Connecticut,United States,18,1,placement_col
+31,Cheryl Ladd,Louis van Amstel,Actor/Actress,South Dakota,United States,71,14,placement_col
+31,Daniel Durant,Britt Stewart,Actor/Actress,Michigan,United States,32,5,placement_col
+31,Gabby Windey,Valentin Chmerkovskiy,TV Personality,Illinois,United States,31,2,placement_col
+31,Heidi D'Amelio,Artem Chigvintsev,Social Media Personality,Louisiana,United States,50,8,placement_col
+31,Jason Lewis,Peta Murgatroyd,Actor/Actress,California,United States,51,16,placement_col
+31,Jessie James Decker,Alan Bersten,Singer/Rapper,NA,Italy,34,10,placement_col
+31,Jordin Sparks,Brandon Armstrong,Singer/Rapper,Arizona,United States,32,9,placement_col
+31,Joseph Baena,Daniella Karagach,Actor/Actress,California,United States,24,11,placement_col
+31,Sam Champion,Cheryl Burke,News Anchor,Kentucky,United States,61,13,placement_col
+31,Selma Blair,Sasha Farber,Actor/Actress,Michigan,United States,50,12,placement_col
+31,Shangela,Gleb Savchenko,TV Personality,Texas,United States,40,4,placement_col
+31,Teresa Giudice,Pasha Pashkov,TV Personality,New Jersey,United States,50,15,placement_col
+31,Trevor Donovan,Emma Slater,Actor/Actress,California,United States,39,6,placement_col
+31,Vinny Guadagnino,Koko Iwasaki,TV Personality,New York,United States,34,7,placement_col
+31,Wayne Brady,Witney Carson,Comedian,Georgia,United States,50,3,placement_col
+32,Adrian Peterson,Britt Stewart,Athlete,Texas,United States,38,11,placement_col
+32,Alyson Hannigan,Sasha Farber,Actor/Actress,Washington D.C.,United States,49,5,placement_col
+32,Ariana Madix,Pasha Pashkov,TV Personality,Florida,United States,38,3,placement_col
+32,Barry Williams,Peta Murgatroyd,Actor/Actress,California,United States,68,7,placement_col
+32,Charity Lawson,Artem Chigvintsev,TV Personality,Georgia,United States,27,4,placement_col
+32,Harry Jowsey,Rylee Arnold,TV Personality,NA,Australia,26,6,placement_col
+32,Jamie Lynn Spears,Alan Bersten,Actor/Actress,Mississippi,United States,32,13,placement_col
+32,Jason Mraz,Daniella Karagach,Singer/Rapper,Virginia,United States,46,2,placement_col
+32,Lele Pons,Brandon Armstrong,Social Media Personality,NA,Venezuela,27,8,placement_col
+32,Matt Walsh,Koko Iwasaki,Comedian,Illinois,United States,58,14,placement_col
+32,Mauricio Umansky,Emma Slater,TV Personality,NA,Mexico,53,9,placement_col
+32,Mira Sorvino,Gleb Savchenko,Actor/Actress,New York,United States,55,10,placement_col
+32,Tyson Beckford,Jenna Johnson,Model,New York,United States,52,12,placement_col
+32,Xochitl Gomez,Valentin Chmerkovskiy,Actor/Actress,California,United States,17,1,placement_col
+33,Anna Delvey,Ezra Sosa,Con artist,NA,Russia,33,12,placement_col
+33,Brooks Nader,Gleb Savchenko,Model,New York,United States,27,9,placement_col
+33,Chandler Kinney,Brandon Armstrong,Actor/Actress,California,United States,24,3,placement_col
+33,Danny Amendola,Witney Carson,Athlete,Texas,United States,39,5,placement_col
+33,Dwight Howard,Daniella Karagach,Athlete,Georgia,United States,38,6,placement_col
+33,Eric Roberts,Britt Stewart,Actor/Actress,California,United States,68,10,placement_col
+33,Ilona Maher,Alan Bersten,Athlete,California,United States,28,2,placement_col
+33,Jenn Tran,Sasha Farber,TV Personality,Florida,United States,26,7,placement_col
+33,Joey Graziadei,Jenna Johnson,TV Personality,Louisiana,United States,29,1,placement_col
+33,Phaedra Parks,Val Chmerkovskiy,TV Personality,Georgia,United States,51,8,placement_col
+33,Reginald VelJohnson,Emma Slater,Actor/Actress,New York,United States,74,10,placement_col
+33,Stephen Nedoroscik,Rylee Arnold,Athlete,Florida,United States,26,4,placement_col
+33,Tori Spelling,Pasha Pashkov,Actor/Actress,California,United States,51,12,placement_col
+34,Alix Earle,Val Chmerkovskiy (Joey Graziadei week 9),Social media personality,Florida,United States,24,2,placement_col
+34,Andy Richter,Emma Slater/Kaitlyn Bristowe (week 9),Comedian,California,United States,59,7,placement_col
+34,Baron Davis,Britt Stewart,Athlete,California,United States,46,13,placement_col
+34,Corey Feldman,Jenna Johnson,Actor/Actress,California,United States,54,13,placement_col
+34,Danielle Fishel,Pasha Pashkov,Actor/Actress,California,United States,44,8,placement_col
+34,Dylan Efron,Daniella Karagach (Rumer Willis week 9),TV Personality,California,United States,33,4,placement_col
+34,Elaine Hendrix,Alan Bersten (Rashad Jennings week 9),Actor/Actress,Georgia,United States,55,5,placement_col
+34,Hilaria Baldwin,Gleb Savchenko,Entrepreneur,New York,United States,41,11,placement_col
+34,Jen Affleck,Jan Ravnik,TV Personality,Utah,United States,26,9,placement_col
+34,Jordan Chiles,Ezra Sosa (Apolo Anton Ohno week 9),Athlete,Texas,United States,24,3,placement_col
+34,Lauren Jauregui,Brandon Armstrong,Singer/Rapper,Florida,United States,29,12,placement_col
+34,Robert Irwin,Witney Carson (Xoshitl Gomez week 9),Conservationist,NA,Australia,22,1,placement_col
+34,Scott Hoying,Rylee Arnold,Singer/Rapper,California,United States,34,10,placement_col
+34,Whitney Leavitt,Mark Ballas,TV Personality,Utah,United States,32,6,placement_col

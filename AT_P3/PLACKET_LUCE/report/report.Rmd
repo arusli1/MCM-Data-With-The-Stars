@@ -1,0 +1,104 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+find_root <- function() {
+  cands <- c(
+    "AT_P3/PLACKET_LUCE",        # when run from repo root
+    ".", "..", "../..",          # when run from report/ or subdirs
+    "../../AT_P3/PLACKET_LUCE"   # fallback
+  )
+  for (c in cands) {
+    p <- normalizePath(c, mustWork = FALSE)
+    if (file.exists(file.path(p, "artifacts"))) return(p)
+  }
+  stop("Could not locate AT_P3/PLACKET_LUCE/artifacts from current working directory.")
+}
+root <- find_root()
+art <- file.path(root, "artifacts")
+library(readr)
+library(dplyr)
+```
+
+## Data
+
+```{r}
+data_summary <- read_csv(file.path(art, "data_summary.csv"), show_col_types = FALSE)
+data_summary
+```
+
+```{r}
+train_seasons <- read_csv(file.path(art, "train_seasons.csv"), show_col_types = FALSE)
+test_seasons <- read_csv(file.path(art, "test_seasons.csv"), show_col_types = FALSE)
+list(
+  n_train_seasons = nrow(train_seasons),
+  n_test_seasons = nrow(test_seasons),
+  test_seasons = test_seasons$test_season
+)
+```
+
+## Model
+
+We fit a Plackett–Luce ranking model with item covariates. For an item \(i\) with covariate vector \(x_i\),
+the model assigns a *worth*:
+
+\[
+w_i = \exp(x_i^\top \beta),
+\]
+
+and the probability of an observed full ranking is the product of stagewise multinomial choices (standard Plackett–Luce likelihood).
+
+### Shrinkage / regularization mechanism
+
+Because PlackettLuce does not provide separate per-variable penalties for factor levels, we implement shrinkage for sparse categorical variables via:
+
+- **Pseudo-comparisons (`npseudo`)**: adds pseudo-information that regularizes the fit toward equal worths.
+- **Rare-level collapsing (partner/state/country only)**: levels with low training support are mapped to `"Other"` (threshold tuned).
+
+Industry and age are treated as **non-shrink** variables (industry levels are not collapsed).
+
+## Hyperparameter selection (training only)
+
+```{r}
+cv_grid <- read_csv(file.path(art, "cv_hyperparams.csv"), show_col_types = FALSE)
+best <- read_csv(file.path(art, "best_hyperparams.csv"), show_col_types = FALSE)
+best
+```
+
+```{r}
+cv_grid %>% arrange(desc(kendall_mean), desc(spearman_mean)) %>% head(10)
+```
+
+## Test-set performance (season heldout)
+
+```{r}
+metrics_overall <- read_csv(file.path(art, "metrics_overall.csv"), show_col_types = FALSE)
+metrics_overall
+```
+
+```{r}
+metrics_by_season <- read_csv(file.path(art, "metrics_by_season.csv"), show_col_types = FALSE)
+metrics_by_season
+```
+
+## Predicted vs actual rankings
+
+```{r}
+pred <- read_csv(file.path(art, "predictions_test_seasons.csv"), show_col_types = FALSE)
+pred %>% arrange(season, predicted_rank) %>% head(20)
+```
+
+## Variable impacts (multiplicative worth)
+
+```{r}
+coef_tbl <- read_csv(file.path(art, "coefficients.csv"), show_col_types = FALSE)
+coef_tbl %>% arrange(desc(abs(estimate)))
+```
+
+Interpretation: each coefficient \(\beta_j\) is a log-multiplicative effect on worth; \(\exp(\beta_j)\) is the worth multiplier per 1 unit change in the covariate (or relative to the baseline level for factors).
+
+## Limitations
+
+- This is still a *season-level* ranking model; it does not model week-by-week dynamics.
+- Shrinkage here is operationalized via `npseudo` and rare-level collapsing (not true random effects).
+- Some categorical levels are sparse and will be partially pooled into `"Other"` for stability.
+
+

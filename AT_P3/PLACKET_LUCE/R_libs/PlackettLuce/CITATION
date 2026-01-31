@@ -1,0 +1,25 @@
+## R package reference generated from DESCRIPTION metadata
+citation(auto = meta)
+
+## PlackettLuce article
+bibentry(bibtype = "Article",
+  title        = "Modelling Rankings in {R}: The {PlackettLuce} Package",
+  author       = c(person(c("Heather", "L."),  "Turner"),
+                   person("Jacob", c("van", "Etten")),
+                   person("David", "Firth"),
+                   person("Ioannis", "Kosmidis")),
+  journal      = "Computational Statistics",
+  year         = "2020",
+  volume       = "35",
+  pages        = "1027--1057",
+  url          = "https://doi.org/10.1007/s00180-020-00959-3",
+  doi          = "10.1007/s00180-020-00959-3",
+
+  textVersion  =
+  paste("Turner, H.L., van Etten, J., Firth, D. and Kosmidis, I. (2020).",
+        "Modelling Rankings in R: The PlackettLuce Package.",
+        "Computational Statistics, 35, 1027-1057.",
+        "URL https://doi.org/10.1007/s00180-020-00959-3."),
+)
+
+

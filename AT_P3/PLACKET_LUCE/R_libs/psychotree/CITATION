@@ -1,0 +1,71 @@
+bibentry(bibtype = "Article",
+  title        = "Accounting for Individual Differences in {B}radley-{T}erry Models by Means of Recursive Partitioning",
+  author       = c(person(given = "Carolin", family = "Strobl"), 
+	           person(given = "Florian", family = "Wickelmaier"),
+                   person(given = "Achim", family = "Zeileis", email = "Achim.Zeileis@R-project.org", comment = c(ORCID = "0000-0003-0918-3766"))),
+  journal      = "Journal of Educational and Behavioral Statistics",
+  year         = "2011",
+  volume       = "36",
+  number       = "2",
+  pages        = "135--153",
+  doi          = "10.3102/1076998609359791",
+
+  mheader      = "To cite psychotree in publications use the references for the relevant functions/data sets:",
+  header       = "If you use Bradley-Terry trees (bttree) please cite:"
+)
+
+bibentry(bibtype = "Article",
+  title        = "Rasch Trees: A New Method for Detecting Differential Item Functioning in the {R}asch Model",
+  author       = c(person(given = "Carolin", family = "Strobl"), 
+ 		   person(given = "Julia", family = "Kopf"),
+		   person(given = "Achim", family = "Zeileis", email = "Achim.Zeileis@R-project.org", comment = c(ORCID = "0000-0003-0918-3766"))),
+  journal      = "Psychometrika",
+  year         = "2015",
+  volume       = "80",
+  number       = "2",
+  pages        = "289--316",
+  doi	       = "10.1007/s11336-013-9388-3",
+  
+  header       = "If you use Rasch trees (raschtree) please cite:"
+)
+
+bibentry(bibtype = "Article",
+  title        = "Tree-Based Global Model Tests for Polytomous {R}asch Models",
+  author       = c(person(given = "Basil", family = "Komboz"), 
+ 		   person(given = "Achim", family = "Zeileis", email = "Achim.Zeileis@R-project.org", comment = c(ORCID = "0000-0003-0918-3766")),
+		   person(given = "Carolin", family = "Strobl")),
+  journal      = "Educational and Psychological Measurement",
+  year         = "2018",
+  volume       = "78",
+  number       = "1",
+  pages        = "128--166",
+  doi          = "10.1177/0013164416664394",
+  
+  header       = "If you use rating scale or partial credit trees (rstree/pctree) please cite:"
+)
+
+bibentry(bibtype = "Article",
+  title        = "Using Recursive Partitioning to Account for Parameter Heterogeneity in Multinomial Processing Tree Models",
+  author       = c(person(given = "Florian", family = "Wickelmaier"), 
+                   person(given = "Achim", family = "Zeileis", email = "Achim.Zeileis@R-project.org", comment = c(ORCID = "0000-0003-0918-3766"))),
+  journal      = "Behavior Research Methods",
+  year         = "2018",
+  volume       = "50",
+  number       = "3",
+  pages        = "1217--1233",
+  doi	       = "10.3758/s13428-017-0937-z",
+  
+  header       = "If you use MPT trees (mpttree) please cite:"
+)
+
+bibentry(bibtype = "Book",
+  title        = "{A}llgemeinbildung in {D}eutschland -- Erkenntnisse aus dem {SPIEGEL} {S}tudentenpisa-{T}est",
+  editor       = c(person(given = "Sabine", family = "Trepte"),
+                   person(given = "Markus", family = "Verbeet")),
+  year         = "2010",
+  publisher    = "VS Verlag",
+  address      = "Wiesbaden",
+  doi          = "10.1007/978-3-531-92543-1",
+  
+  header       = "If you use the SPIEGEL Studentenpisa data subsample (SPISA) please cite:"
+)

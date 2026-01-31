@@ -1,0 +1,5 @@
+ECOS_csolve             Solve a conic optimization problem
+ECOS_exitcodes          ECOS solver exit codes
+ECOSolveR               ECOSolveR: Embedded Conic Solver in R
+ecos.control            Return the default optimization parameters for
+                        ECOS
