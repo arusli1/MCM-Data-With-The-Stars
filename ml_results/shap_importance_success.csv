@@ -1,52 +1,52 @@
 feature,mean_abs_shap
-judge_mean_w1_3,0.113884225
-celebrity_age_during_season,0.061328027
-fan_mean_w1_3,0.05474599
-fan_week1,0.04305509
-fan_slope_w1_3,0.038707312
-judge_week1,0.029379813
-judge_slope_w1_3,0.0127914
-ballroom_partner_Other_Partner,0.010823408
-celebrity_industry_Singer/Rapper,0.008685546
-celebrity_industry_Model,0.00665498
-ballroom_partner_Cheryl Burke,0.0051590945
-celebrity_homestate_California,0.005107992
-celebrity_homestate_Pennsylvania,0.005025931
-ballroom_partner_Derek Hough,0.004907855
-celebrity_industry_Actor/Actress,0.004533898
-celebrity_homecountry/region_Other,0.0035373718
-celebrity_homestate_Texas,0.0031084805
-celebrity_homestate_Florida,0.002901609
-celebrity_industry_Other,0.0027600925
-ballroom_partner_Maksim Chmerkoskiy,0.0025161933
-celebrity_homestate_Ohio,0.0024344085
-ballroom_partner_Karina Smirnoff,0.0023933195
-celebrity_industry_TV Personality,0.0023926036
-celebrity_homestate_Georgia,0.0023694218
-celebrity_homestate_Unknown,0.0023421696
-celebrity_industry_Athlete,0.0023318855
-celebrity_industry_Comedian,0.0022945188
-ballroom_partner_Kym Johnson,0.0019154071
-celebrity_homestate_Other,0.001599607
-ballroom_partner_Valentin Chmerkovskiy,0.0015630398
-celebrity_homestate_Illinois,0.0014868318
-ballroom_partner_Sharna Burgess,0.0014630294
-celebrity_homestate_New York,0.0012810592
-ballroom_partner_Mark Ballas,0.0011890096
-celebrity_homestate_Michigan,0.001150774
-ballroom_partner_Gleb Savchenko,0.0011310276
-ballroom_partner_Emma Slater,0.0009149434
-celebrity_homecountry/region_Italy,0.00088239927
-ballroom_partner_Tony Dovolani,0.00058374176
-ballroom_partner_Artem Chigvintsev,0.00056319585
-ballroom_partner_Witney Carson,0.0005190802
-celebrity_industry_Radio Personality,0.0004924444
-ballroom_partner_Sasha Farber,0.00037093982
-celebrity_homecountry/region_Canada,0.00036806095
-ballroom_partner_Peta Murgatroyd,0.00036714296
-celebrity_industry_Racing Driver,0.00027598796
-celebrity_industry_Social Media Personality,0.00017066319
-celebrity_industry_Entrepreneur,3.5463538e-05
-celebrity_homecountry/region_England,3.2236025e-05
+judge_mean_w1_3,0.09460051
+fan_mean_w1_3,0.05955365
+celebrity_age_during_season,0.050371636
+fan_week1,0.028859654
+fan_slope_w1_3,0.023259208
+judge_week1,0.016538056
+celebrity_industry_Model,0.0060813567
+ballroom_partner_Derek Hough,0.0051146885
+judge_slope_w1_3,0.005019056
+ballroom_partner_Other_Partner,0.0048574563
+ballroom_partner_Cheryl Burke,0.003916308
+celebrity_homestate_Pennsylvania,0.0017735921
+celebrity_industry_Singer/Rapper,0.0015141107
+celebrity_industry_Comedian,0.0013108517
+celebrity_homecountry/region_Other,0.00077131425
+celebrity_homestate_Ohio,0.00060606474
+ballroom_partner_Mark Ballas,0.0004610999
+celebrity_industry_Radio Personality,0.00039792556
+celebrity_homestate_California,0.00027198702
+celebrity_homestate_Texas,0.00025582104
+ballroom_partner_Karina Smirnoff,0.0002192765
+celebrity_homestate_Illinois,0.0001913918
+ballroom_partner_Sharna Burgess,0.00018079455
+celebrity_industry_Other,0.00017040086
+ballroom_partner_Artem Chigvintsev,9.091559e-05
+celebrity_industry_Athlete,8.554339e-05
+celebrity_homestate_Georgia,8.045866e-05
+ballroom_partner_Tony Dovolani,5.3282125e-05
+celebrity_homestate_New York,3.7435093e-05
+ballroom_partner_Maksim Chmerkoskiy,2.2951377e-05
+celebrity_homecountry/region_Italy,2.2192033e-05
+ballroom_partner_Emma Slater,1.8863242e-05
+celebrity_homestate_Unknown,4.2099146e-06
+ballroom_partner_Kym Johnson,0.0
+ballroom_partner_Peta Murgatroyd,0.0
+ballroom_partner_Sasha Farber,0.0
+ballroom_partner_Gleb Savchenko,0.0
+ballroom_partner_Valentin Chmerkovskiy,0.0
+celebrity_homestate_Other,0.0
 celebrity_homecountry/region_United States,0.0
+celebrity_homecountry/region_England,0.0
+celebrity_homecountry/region_Canada,0.0
 celebrity_homecountry/region_Australia,0.0
+celebrity_homestate_Michigan,0.0
+celebrity_homestate_Florida,0.0
+celebrity_industry_TV Personality,0.0
+celebrity_industry_Social Media Personality,0.0
+celebrity_industry_Racing Driver,0.0
+celebrity_industry_Entrepreneur,0.0
+celebrity_industry_Actor/Actress,0.0
+ballroom_partner_Witney Carson,0.0

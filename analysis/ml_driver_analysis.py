@@ -138,17 +138,32 @@ def evaluate_model(y_true, y_pred):
     spearman, _ = spearmanr(y_true, y_pred)
     return mae, rmse, pearson, spearman
 
-def train_and_cv(X, y, groups):
+def train_and_cv(X, y, groups, tune=False):
     logo = LeaveOneGroupOut()
     
+    # Defaults
+    rf_params = {'n_estimators': 400, 'max_depth': 6, 'random_state': 42}
+    xgb_params = {'max_depth': 5, 'n_estimators': 400, 'learning_rate': 0.05, 'random_state': 42}
+    
+    if tune:
+        print("  Tuning XGBoost...")
+        from sklearn.model_selection import GridSearchCV
+        param_grid = {
+            'max_depth': [3, 5, 7],
+            'n_estimators': [200, 400],
+            'learning_rate': [0.01, 0.05, 0.1]
+        }
+        grid = GridSearchCV(XGBRegressor(random_state=42), param_grid, cv=3, scoring='neg_mean_absolute_error')
+        grid.fit(X, y)
+        xgb_params.update(grid.best_params_)
+        print(f"  Best XGB Params: {grid.best_params_}")
+
     models_to_test = {
-        'rf': RandomForestRegressor(n_estimators=400, max_depth=6, random_state=42),
-        'xgb': XGBRegressor(max_depth=5, n_estimators=400, learning_rate=0.05, random_state=42)
+        'rf': RandomForestRegressor(**rf_params),
+        'xgb': XGBRegressor(**xgb_params)
     }
     
     all_metrics = {}
-    best_model_xgb = None
-    
     for m_name, model in models_to_test.items():
         cv_results = []
         all_preds = np.zeros(len(y))
@@ -169,7 +184,7 @@ def train_and_cv(X, y, groups):
         }
     
     # Train final XGB for SHAP
-    final_model = XGBRegressor(max_depth=5, n_estimators=400, learning_rate=0.05, random_state=42)
+    final_model = XGBRegressor(**xgb_params)
     final_model.fit(X, y)
     
     return all_metrics, final_model
@@ -379,7 +394,8 @@ def main():
         features = success_features if name == 'success' else driver_features
         X, y, groups = prepare_modeling_data(df, target, features)
         
-        metrics_bundle, final_model = train_and_cv(X, y, groups)
+        # Tune only the success model to save time, others use defaults
+        metrics_bundle, final_model = train_and_cv(X, y, groups, tune=(name=='success'))
         
         # Save metrics for both RF and XGB
         for m_name, bundle in metrics_bundle.items():

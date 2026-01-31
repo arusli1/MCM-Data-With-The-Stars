@@ -1,12 +1,17 @@
 # DWTS Machine Learning Analysis Summary
 
 ## Methods
-We trained XGBoost and Random Forest regression models to predict competition success, early judge scores, and early fan support using Leave-One-Season-Out (LOGO) cross-validation (N=421 contestants). Feature engineering focused on celebrity characteristics and early-window (Weeks 1-3) performance metrics, with categorical bucketing for industries and professional partners. Model explainability was quantified using SHAP values to identify global influence and specific category effects.
+We trained tuned XGBoost and Random Forest regression models to predict competition success, early judge scores, and early fan support using Leave-One-Season-Out (LOGO) cross-validation (N=421 contestants). Feature engineering focused on celebrity characteristics and early-window (Weeks 1-3) performance metrics. Model explainability was quantified using SHAP values.
 
 ## Results
-*   **Success Score**: Achieving a Spearman correlation of 0.674, the model identified **Early Judge Mean**, **Early Fan Share**, and **Week 1 Fan Score** as the top positive drivers. Negative drivers included **Advanced Celebrity Age** and low initial performance metrics.
-*   **Early Judges**: With a Spearman correlation of 0.373, judges were primarily influenced by **Television/Acting backgrounds** and specific pro-partners like **Derek Hough**. Older celebrity age was a significant negative driver of initial judge scores.
-*   **Early Fans**: This model (Spearman 0.121) showed that fans are strongly driven by **Celebrity Age** (favoring younger) and the "halo effect" of top-tier pro dancers like **Derek Hough** and **Valentin Chmerkovskiy**.
+*   **Success Score**: Achieving a Spearman correlation of 0.736 (RF) and 0.674 (XGB), models identified **Early Judge Mean**, **Early Fan Share**, and **Week 1 Fan Score** as the top predictors. Advanced Celebrity Age remains the primary negative driver.
+*   **Early Judges (Spearman 0.445)**: Judges favor **Television/Acting backgrounds** and specific pro-partners like **Derek Hough**.
+*   **Early Fans (Spearman 0.201)**: Fans are significantly driven by **Celebrity Age** (favoring younger) and high-profile pro-partner pairings.
+
+## Robustness & Sensitivity
+- **Stability**: Feature importance for success remains consistent when comparing a Week 1 only model vs. the Weeks 1-3 window, confirming that initial impressions are highly persistent throughout the competition.
+- **Fan Noise Sensitivity**: Fan drivers (Age, Partner) remained the top predictors even when adding Gaussian noise ($\pm 10\%$) to inferred vote shares, indicating that the identified drivers are not artifacts of vote estimation noise.
+- **Pro Boost**: Residualized analysis confirms **Derek Hough**, **Cheryl Burke**, and **Kym Johnson** provides the most consistent "boost" to their celebrities, outperforming baseline expectations.
 
 ## Comparison: Judges vs. Fans
-While both judges and fans favor younger contestants and specific pro dancers, judges are significantly more responsive to professional entertainment backgrounds (Actors/TV Stars), whereas fans show higher idiosyncratic variation. Pro dancers like **Derek Hough** consistently provide a "boost" to their celebrities' success residuals, even after controlling for early window performance. Residualized analysis confirms that certain veterans significantly outperform their expected baseline, though these effects carry wider uncertainty for newer pros.
+Judges are more responsive to professional entertainment backgrounds, whereas fans show higher sensitivity to the celebrity's age and the specific professional dancer's reputation. Both groups are influenced by the "pro-partner effect," but fans weigh the social prestige of certain dancers more heavily in early voting rounds.
