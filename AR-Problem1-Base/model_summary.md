@@ -39,6 +39,20 @@ driven by standardized judge performance (a log-linear influence model).
 - Final placements are derived from elimination week; finalists are ordered
   by final-week combined score.
 
+Constraint-based uncertainty (math-only)
+----------------------------------------
+We separately analyze uncertainty using regime-specific feasibility constraints
+without solving the inverse optimization model. For each week, we sample fan
+shares on the simplex and retain those that satisfy the elimination constraints
+within a small slack, producing uncertainty bands.
+
+Regime constraints:
+- Percent (Seasons 3-27): C_{i,w} = j_pct_{i,w} + s_{i,w} and
+  C_{e,w} <= C_{j,w} - epsilon for eliminated e vs survivor j.
+- Rank (Seasons 1-2): R_{i,w} = rJ_{i,w} + rF_{i,w}; eliminated are largest R.
+- Bottom-two (Seasons 28+): eliminated must be in bottom-2 of R_{i,w} with lower
+  judge score (or bottom-k for multi-elim weeks).
+
 Determinism
 -----------
 Given s0 and alpha, the simulation is deterministic. Randomness enters only
@@ -91,6 +105,8 @@ Uncertainty quantification
   AR-Problem1-Base/base_metrics.csv
 - Full bootstrap runs in:
   AR-Problem1-Base/base_bootstrap_results.csv
+- Constraint feasibility sampling outputs:
+  AR-Problem1-Constraints/outputs/constraints_shares_uncertainty.csv
 
 Sensitivity analysis
 --------------------

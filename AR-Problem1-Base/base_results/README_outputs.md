@@ -26,6 +26,17 @@ Uncertainty of fan-vote estimates
 - base_bootstrap_results.csv
   - Bootstrap distribution of season-level metrics and alpha.
 
+Constraint-based uncertainty (math-only)
+----------------------------------------
+- AR-Problem1-Constraints/outputs/constraint_equations.md
+  - Regime-specific feasibility constraints (percent, rank, bottom-two).
+- AR-Problem1-Constraints/outputs/constraints_shares_uncertainty.csv
+  - Feasible-set sampling bands for each contestant/week.
+- AR-Problem1-Constraints/outputs/constraints_week_summary.csv
+  - Acceptance rates and margin summaries by week (identifiability proxy).
+- AR-Problem1-Constraints/outputs/constraints_regime_summary.csv
+  - Regime-level acceptance and margin summaries.
+
 Model bounds and settings
 -------------------------
 - base_hyperparams.json
