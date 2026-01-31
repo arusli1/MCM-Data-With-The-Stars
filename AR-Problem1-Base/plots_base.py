@@ -68,12 +68,13 @@ def plot_consistency(metrics: pd.DataFrame) -> None:
     ax2.set_xlabel("Season")
     ax2.legend(frameon=False)
 
-    fig.suptitle("Consistency with Eliminations (Base Model)")
+    fig.suptitle("Consistency with Eliminations")
     save_figure(fig, "consistency_by_season")
     plt.close(fig)
 
 
 def plot_uncertainty(season_unc: pd.DataFrame, season: int) -> None:
+    """Heatmap with same title and axes as constraint uncertainty: Fan-share p90 (Season N)."""
     df = season_unc[season_unc["season"] == season].copy()
     if df.empty:
         warnings.warn(f"No uncertainty data for season {season}")
@@ -87,10 +88,10 @@ def plot_uncertainty(season_unc: pd.DataFrame, season: int) -> None:
     pivot = pivot.sort_index()
 
     fig, ax = plt.subplots(figsize=(8.2, 6.2))
-    im = ax.imshow(pivot.values, aspect="auto", cmap="Reds")
+    im = ax.imshow(pivot.values, aspect="auto", cmap="Reds", vmin=0.0, vmax=1.0)
     ax.set_xlabel("Week")
     ax.set_ylabel("Contestant")
-    ax.set_title(f"Uncertainty Analysis: p90 Fan Share (Season {season})")
+    ax.set_title(f"Fan-share p90 (Season {season})")
     ax.set_xticks(range(len(pivot.columns)))
     ax.set_xticklabels(pivot.columns)
     ax.set_yticks(range(len(pivot.index)))
@@ -226,7 +227,7 @@ def load_csv(path: str) -> Optional[pd.DataFrame]:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Charts for Problem 1 base model.")
-    parser.add_argument("--season", type=int, default=34, help="Season for uncertainty heatmap.")
+    parser.add_argument("--seasons", type=int, nargs="+", default=[1, 27, 34], help="Seasons for uncertainty heatmap (default: 1 27 34).")
     args = parser.parse_args()
 
     os.makedirs(FIG_DIR, exist_ok=True)
@@ -238,7 +239,8 @@ def main() -> None:
 
     uncertainty = load_csv(os.path.join(RESULTS_DIR, "base_inferred_shares_uncertainty.csv"))
     if uncertainty is not None:
-        plot_uncertainty(uncertainty, args.season)
+        for s in args.seasons:
+            plot_uncertainty(uncertainty, s)
 
     sensitivity = load_csv(os.path.join(RESULTS_DIR, "base_sensitivity.csv"))
     if sensitivity is not None:

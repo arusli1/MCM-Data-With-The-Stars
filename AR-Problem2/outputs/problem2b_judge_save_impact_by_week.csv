@@ -1,0 +1,45 @@
+season,week,bottom2_names,elim_with_judge_save,elim_with_fan_decide,judge_save_changed_result
+28,5,"['Mary Wilson', 'Lamar Odom']",Mary Wilson,Mary Wilson,False
+28,7,"['Lamar Odom', 'Ray Lewis']",Lamar Odom,Lamar Odom,False
+28,8,"['Sailor Brinkley-Cook', 'Karamo Brown']",Sailor Brinkley-Cook,Sailor Brinkley-Cook,False
+28,9,"['Karamo Brown', 'Ray Lewis']",Karamo Brown,Karamo Brown,False
+28,10,"['Ray Lewis', 'Sean Spicer']",Ray Lewis,Ray Lewis,False
+28,11,"['Sean Spicer', 'James Van Der Beek']",Sean Spicer,Sean Spicer,False
+29,3,"['Carole Baskin', 'Charles Oakley']",Charles Oakley,Carole Baskin,True
+29,4,"['Carole Baskin', 'Jesse Metcalfe']",Carole Baskin,Carole Baskin,False
+29,5,"['Anne Heche', 'Jesse Metcalfe']",Anne Heche,Anne Heche,False
+29,6,"['Jesse Metcalfe', 'Monica Aldama']",Jesse Metcalfe,Monica Aldama,True
+29,7,"['Monica Aldama', 'Veron Davis']",Veron Davis,Monica Aldama,True
+29,9,"['Jeannie Mai', 'Monica Aldama']",Jeannie Mai,Jeannie Mai,False
+29,10,"['Monica Aldama', 'AJ McLean']",Monica Aldama,Monica Aldama,False
+30,3,"['Martin Kove', 'Jimmie Allen']",Martin Kove,Martin Kove,False
+30,4,"['Christine Chiu', 'Matt James']",Christine Chiu,Christine Chiu,False
+30,6,"['Matt James', 'Melanie C']",Matt James,Matt James,False
+30,7,"['Melanie C', 'Kenya Moore']",Melanie C,Melanie C,False
+30,8,"['Kenya Moore', 'Brian Austin Green']",Kenya Moore,Kenya Moore,False
+31,2,"['Jason Lewis', 'Teresa Giudice']",Jason Lewis,Jason Lewis,False
+31,3,"['Teresa Giudice', 'Cheryl Ladd']",Teresa Giudice,Teresa Giudice,False
+31,4,"['Cheryl Ladd', 'Sam Champion']",Cheryl Ladd,Cheryl Ladd,False
+31,5,"['Sam Champion', 'Vinny Guadagnino']",Sam Champion,Sam Champion,False
+31,7,"['Joseph Baena', 'Jessie James Decker']",Joseph Baena,Joseph Baena,False
+31,8,"['Jessie James Decker', 'Selma Blair']",Jessie James Decker,Jessie James Decker,False
+32,2,"['Matt Walsh', 'Mauricio Umansky']",Matt Walsh,Matt Walsh,False
+32,3,"['Jamie Lynn Spears', 'Tyson Beckford']",Jamie Lynn Spears,Jamie Lynn Spears,False
+32,4,"['Tyson Beckford', 'Mauricio Umansky']",Tyson Beckford,Tyson Beckford,False
+32,5,"['Adrian Peterson', 'Harry Jowsey']",Adrian Peterson,Adrian Peterson,False
+32,6,"['Harry Jowsey', 'Mira Sorvino']",Mira Sorvino,Harry Jowsey,True
+32,7,"['Mauricio Umansky', 'Harry Jowsey']",Mauricio Umansky,Mauricio Umansky,False
+32,8,"['Harry Jowsey', 'Lele Pons']",Lele Pons,Harry Jowsey,True
+32,9,"['Harry Jowsey', 'Barry Williams']",Barry Williams,Harry Jowsey,True
+32,10,"['Harry Jowsey', 'Alyson Hannigan']",Harry Jowsey,Harry Jowsey,False
+33,5,"['Anna Delvey', 'Reginald VelJohnson']",Anna Delvey,Anna Delvey,False
+33,6,"['Brooks Nader', 'Reginald VelJohnson']",Brooks Nader,Brooks Nader,False
+33,7,"['Phaedra Parks', 'Reginald VelJohnson']",Phaedra Parks,Phaedra Parks,False
+33,8,"['Jenn Tran', 'Reginald VelJohnson']",Jenn Tran,Jenn Tran,False
+34,4,"['Baron Davis', 'Lauren Jauregui']",Baron Davis,Baron Davis,False
+34,5,"['Lauren Jauregui', 'Corey Feldman']",Lauren Jauregui,Lauren Jauregui,False
+34,7,"['Hilaria Baldwin', 'Scott Hoying']",Hilaria Baldwin,Hilaria Baldwin,False
+34,8,"['Scott Hoying', 'Jen Affleck']",Scott Hoying,Scott Hoying,False
+34,9,"['Jen Affleck', 'Danielle Fishel']",Jen Affleck,Jen Affleck,False
+34,10,"['Danielle Fishel', 'Andy Richter']",Danielle Fishel,Danielle Fishel,False
+34,11,"['Andy Richter', 'Whitney Leavitt']",Andy Richter,Andy Richter,False

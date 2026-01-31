@@ -247,7 +247,8 @@ def summarize_samples(samples: WeekSamples) -> Tuple[List[Dict], Dict]:
     return rows, summary
 
 
-def plot_uncertainty_heatmap(df: pd.DataFrame, season: int, value_col: str, title: str, out_name: str) -> None:
+def plot_uncertainty_heatmap(df: pd.DataFrame, season: int, value_col: str, out_name: str) -> None:
+    """Heatmap with consistent title and axes: Fan-share p90 (Season N), Week, Contestant."""
     if df.empty or "season" not in df.columns:
         return
     df_season = df[df["season"] == season].copy()
@@ -260,16 +261,16 @@ def plot_uncertainty_heatmap(df: pd.DataFrame, season: int, value_col: str, titl
     pivot = df_season.pivot(index="name_idx", columns="week", values=value_col).sort_index()
 
     fig, ax = plt.subplots(figsize=(8.2, 6.2))
-    im = ax.imshow(pivot.values, aspect="auto", cmap="Reds")
+    im = ax.imshow(pivot.values, aspect="auto", cmap="Reds", vmin=0.0, vmax=1.0)
     ax.set_xlabel("Week")
     ax.set_ylabel("Contestant")
-    ax.set_title(title)
+    ax.set_title(f"Fan-share p90 (Season {season})")
     ax.set_xticks(range(len(pivot.columns)))
     ax.set_xticklabels(pivot.columns)
     ax.set_yticks(range(len(pivot.index)))
     ax.set_yticklabels([names[i] for i in pivot.index])
     cbar = fig.colorbar(im, ax=ax)
-    cbar.set_label(value_col)
+    cbar.set_label("Fan-share p90")
     png_path = os.path.join(FIG_DIR, out_name)
     pdf_path = os.path.join(FIG_DIR, out_name.replace(".png", ".pdf"))
     fig.savefig(png_path, bbox_inches="tight", dpi=300)
@@ -294,7 +295,7 @@ def plot_acceptance_rate(week_summary: pd.DataFrame, season: int) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Constraint-based uncertainty analysis.")
-    parser.add_argument("--season", type=int, default=34, help="Season for plots.")
+    parser.add_argument("--seasons", type=int, nargs="+", default=[1, 27, 34], help="Seasons for uncertainty heatmap (default: 1 27 34).")
     parser.add_argument("--samples", type=int, default=300, help="Target accepted samples per week.")
     parser.add_argument("--trials", type=int, default=4000, help="Max trials per week.")
     parser.add_argument("--tol-percent", type=float, default=0.02, help="Slack for percent regime.")
@@ -352,14 +353,16 @@ def main() -> None:
     shares.to_csv(shares_path, index=False)
     week_summary.to_csv(week_path, index=False)
 
-    plot_uncertainty_heatmap(
-        shares,
-        args.season,
-        "s_p90",
-        f"Constraint Uncertainty p90 (Season {args.season})",
-        f"constraints_uncertainty_p90_season_{args.season}.png",
-    )
-    plot_acceptance_rate(week_summary, args.season)
+    for s in args.seasons:
+        if (shares["season"] == s).any():
+            plot_uncertainty_heatmap(
+                shares,
+                int(s),
+                "s_p90",
+                f"constraints_uncertainty_p90_season_{s}.png",
+            )
+    if args.seasons:
+        plot_acceptance_rate(week_summary, args.seasons[-1])
 
     print(f"Wrote {shares_path}")
     print(f"Wrote {week_path}")

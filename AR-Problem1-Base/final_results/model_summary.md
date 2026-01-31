@@ -68,6 +68,9 @@ Minimize:
 
 Where:
 - mean_sq_rank_diff: mean squared error between predicted and true placement.
+  When weekly elim match is perfect, placement is pinned by elimination order
+  except for finalists (and same-week ties); so any rank MSE is from finalist
+  ranking (and within-week ordering) only.
 - weekly_elim_match_rate: fraction of weeks with correct elimination sets
   (tie-aware).
 - s0_entropy: Shannon entropy of s0.

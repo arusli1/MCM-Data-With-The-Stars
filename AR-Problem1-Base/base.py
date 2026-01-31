@@ -946,6 +946,9 @@ def main():
         weights = weights / weights.sum()
     else:
         weights = np.ones(len(results)) / max(1, len(results))
+    alphas = np.array([r["alpha"] for r in results])
+    alpha_mean = float(np.average(alphas, weights=weights))
+    alpha_var = float(np.average((alphas - alpha_mean) ** 2, weights=weights))
     overall = {
         "overall_objective_mean": float(np.average([r["objective"] for r in results], weights=weights)),
         "overall_mean_sq_rank_diff": float(np.average([r["mean_sq_rank_diff"] for r in results], weights=weights)),
@@ -953,7 +956,8 @@ def main():
             np.average([r["weekly_elim_match_rate"] for r in results], weights=weights)
         ),
         "overall_elim_week_mae": float(np.average([r["elim_week_mae"] for r in results], weights=weights)),
-        "overall_alpha_mean": float(np.average([r["alpha"] for r in results], weights=weights)),
+        "overall_alpha_mean": alpha_mean,
+        "overall_alpha_std": float(np.sqrt(alpha_var)),
     }
     overall_path = os.path.join(RESULTS_DIR, "base_overall_metrics.csv")
     pd.DataFrame([overall]).to_csv(overall_path, index=False)

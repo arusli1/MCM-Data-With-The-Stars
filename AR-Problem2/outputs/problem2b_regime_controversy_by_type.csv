@@ -1,0 +1,9 @@
+controversy_type,regime,n,mean_simulated_controversy,mean_placement
+fan_favored,rank_judge_save,13,0.29662559662559657,5.076923076923077
+fan_favored,rank_fan_decide,13,0.29662559662559657,5.076923076923077
+fan_favored,percent_judge_save,13,0.43713508713508714,4.538461538461538
+fan_favored,percent_fan_decide,13,0.4151570651570651,3.4615384615384617
+judge_favored,rank_judge_save,8,0.342016317016317,7.5
+judge_favored,rank_fan_decide,8,0.342016317016317,7.5
+judge_favored,percent_judge_save,8,0.3498106060606061,7.5
+judge_favored,percent_fan_decide,8,0.4363490675990676,8.625
