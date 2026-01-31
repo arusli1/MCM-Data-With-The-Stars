@@ -1,0 +1,422 @@
+season,celebrityname,wiki_title,pageid,cutoff_start_utc,edits_start_to_cutoff,cutoff_end_utc,edits_end_to_cutoff,edits_change,status_start,status_end,notes
+1,Evander Holyfield,Evander Holyfield,158538,2005-05-25T00:00:00Z,49.0,2005-07-07T00:00:00Z,58,9,ok,ok,nan
+1,Joey McIntyre,Joey McIntyre,2048467,2005-05-25T00:00:00Z,0.0,2005-07-07T00:00:00Z,23,23,ok,ok,nan
+1,John O'Hurley,John O'Hurley,1539454,2005-05-25T00:00:00Z,4.0,2005-07-07T00:00:00Z,6,2,ok,ok,nan
+1,Kelly Monaco,Kelly Monaco,719429,2005-05-25T00:00:00Z,28.0,2005-07-07T00:00:00Z,52,24,ok,ok,nan
+1,Rachel Hunter,Rachel Hunter,640889,2005-05-25T00:00:00Z,15.0,2005-07-07T00:00:00Z,26,11,ok,ok,nan
+1,Trista Sutter,Trista Sutter,1584380,2005-05-25T00:00:00Z,25.0,2005-07-07T00:00:00Z,28,3,ok,ok,nan
+2,Drew Lachey,Drew Lachey,2063909,2005-12-29T00:00:00Z,10.0,2006-02-27T00:00:00Z,51,41,ok,ok,nan
+2,George Hamilton,George Hamilton,1290065,2005-12-29T00:00:00Z,nan,2006-02-27T00:00:00Z,9,,disambiguation,ok,Page is a disambiguation page (pageprops.disambiguation)
+2,Giselle Fernandez,Giselle Fernández,1181002,2005-12-29T00:00:00Z,17.0,2006-02-27T00:00:00Z,29,12,ok,ok,nan
+2,Jerry Rice,Jerry Rice,402607,2005-12-29T00:00:00Z,165.0,2006-02-27T00:00:00Z,234,69,ok,ok,nan
+2,Kenny Mayne,Kenny Mayne,1817522,2005-12-29T00:00:00Z,10.0,2006-02-27T00:00:00Z,23,13,ok,ok,nan
+2,Lisa Rinna,Lisa Rinna,704720,2005-12-29T00:00:00Z,40.0,2006-02-27T00:00:00Z,77,37,ok,ok,nan
+2,Master P,Master P,168572,2005-12-29T00:00:00Z,203.0,2006-02-27T00:00:00Z,317,114,ok,ok,nan
+2,Stacy Keibler,Stacy Keibler,307284,2005-12-29T00:00:00Z,604.0,2006-02-27T00:00:00Z,809,205,ok,ok,nan
+2,Tatum O'Neal,Tatum O'Neal,489204,2005-12-29T00:00:00Z,59.0,2006-02-27T00:00:00Z,75,16,ok,ok,nan
+2,Tia Carrere,Tia Carrere,411292,2005-12-29T00:00:00Z,78.0,2006-02-27T00:00:00Z,97,19,ok,ok,nan
+3,Emmitt Smith,Emmitt Smith,154857,2006-09-05T00:00:00Z,258.0,2006-11-16T00:00:00Z,347,89,ok,ok,nan
+3,Harry Hamlin,Harry Hamlin,689499,2006-09-05T00:00:00Z,59.0,2006-11-16T00:00:00Z,82,23,ok,ok,nan
+3,Jerry Springer,Jerry Springer,21207345,2006-09-05T00:00:00Z,365.0,2006-11-16T00:00:00Z,441,76,ok,ok,nan
+3,Joey Lawrence,Joey Lawrence,719197,2006-09-05T00:00:00Z,92.0,2006-11-16T00:00:00Z,148,56,ok,ok,nan
+3,Mario Lopez,Mario Lopez,609663,2006-09-05T00:00:00Z,183.0,2006-11-16T00:00:00Z,352,169,ok,ok,nan
+3,Monique Coleman,Monique Coleman,4462806,2006-09-05T00:00:00Z,158.0,2006-11-16T00:00:00Z,394,236,ok,ok,nan
+3,Sara Evans,Sara Evans,913162,2006-09-05T00:00:00Z,341.0,2006-11-16T00:00:00Z,517,176,ok,ok,nan
+3,Shanna Moakler,Shanna Moakler,1759214,2006-09-05T00:00:00Z,128.0,2006-11-16T00:00:00Z,180,52,ok,ok,nan
+3,Tucker Carlson,Tucker Carlson,796076,2006-09-05T00:00:00Z,835.0,2006-11-16T00:00:00Z,990,155,ok,ok,nan
+3,Vivica A. Fox,Vivica A. Fox,596313,2006-09-05T00:00:00Z,129.0,2006-11-16T00:00:00Z,152,23,ok,ok,nan
+3,Willa Ford,Willa Ford,1282560,2006-09-05T00:00:00Z,649.0,2006-11-16T00:00:00Z,848,199,ok,ok,nan
+4,Apolo Anton Ohno,Apolo Ohno,239012,2007-03-12T00:00:00Z,420.0,2007-05-23T00:00:00Z,557,137,ok,ok,nan
+4,Billy Ray Cyrus,Billy Ray Cyrus,169602,2007-03-12T00:00:00Z,477.0,2007-05-23T00:00:00Z,623,146,ok,ok,nan
+4,Clyde Drexler,Clyde Drexler,372857,2007-03-12T00:00:00Z,177.0,2007-05-23T00:00:00Z,218,41,ok,ok,nan
+4,Heather Mills,Heather Mills,213199,2007-03-12T00:00:00Z,604.0,2007-05-23T00:00:00Z,817,213,ok,ok,nan
+4,Ian Ziering,Ian Ziering,221723,2007-03-12T00:00:00Z,54.0,2007-05-23T00:00:00Z,116,62,ok,ok,nan
+4,Joey Fatone,Joey Fatone,1202691,2007-03-12T00:00:00Z,147.0,2007-05-23T00:00:00Z,254,107,ok,ok,nan
+4,John Ratzenberger,John Ratzenberger,98713,2007-03-12T00:00:00Z,212.0,2007-05-23T00:00:00Z,301,89,ok,ok,nan
+4,Laila Ali,Laila Ali,145395,2007-03-12T00:00:00Z,161.0,2007-05-23T00:00:00Z,223,62,ok,ok,nan
+4,Leeza Gibbons,Leeza Gibbons,1842870,2007-03-12T00:00:00Z,69.0,2007-05-23T00:00:00Z,83,14,ok,ok,nan
+4,Paulina Porizkova,Paulina Porizkova,871448,2007-03-12T00:00:00Z,224.0,2007-05-23T00:00:00Z,292,68,ok,ok,nan
+4,Shandi Finnessey,Shandi Finnessey,1872291,2007-03-12T00:00:00Z,185.0,2007-05-23T00:00:00Z,241,56,ok,ok,nan
+5,Albert Reed,Albert Reed,39568850,2007-09-17T00:00:00Z,nan,2007-11-28T00:00:00Z,0,,disambiguation,ok,Page is a disambiguation page (pageprops.disambiguation)
+5,Cameron Mathison,Cameron Mathison,2170780,2007-09-17T00:00:00Z,60.0,2007-11-28T00:00:00Z,85,25,ok,ok,nan
+5,Floyd Mayweather Jr.,Floyd Mayweather Jr.,1388019,2007-09-17T00:00:00Z,1037.0,2007-11-28T00:00:00Z,1187,150,ok,ok,nan
+5,Helio Castroneves,Hélio Castroneves,345352,2007-09-17T00:00:00Z,184.0,2007-11-28T00:00:00Z,203,19,ok,ok,nan
+5,Jane Seymour,Jane Seymour,46383,2007-09-17T00:00:00Z,340.0,2007-11-28T00:00:00Z,449,109,ok,ok,nan
+5,Jennie Garth,Jennie Garth,225482,2007-09-17T00:00:00Z,214.0,2007-11-28T00:00:00Z,270,56,ok,ok,nan
+5,Josie Maran,Josie Maran,929640,2007-09-17T00:00:00Z,389.0,2007-11-28T00:00:00Z,460,71,ok,ok,nan
+5,Marie Osmond,Marie Osmond,728775,2007-09-17T00:00:00Z,287.0,2007-11-28T00:00:00Z,537,250,ok,ok,nan
+5,Mark Cuban,Mark Cuban,408743,2007-09-17T00:00:00Z,1240.0,2007-11-28T00:00:00Z,1424,184,ok,ok,nan
+5,Mel B,Mel B,262482,2007-09-17T00:00:00Z,981.0,2007-11-28T00:00:00Z,1024,43,ok,ok,nan
+5,Sabrina Bryan,Sabrina Bryan,3028912,2007-09-17T00:00:00Z,621.0,2007-11-28T00:00:00Z,771,150,ok,ok,nan
+5,Wayne Newton,Wayne Newton,556410,2007-09-17T00:00:00Z,234.0,2007-11-28T00:00:00Z,317,83,ok,ok,nan
+6,Adam Carolla,Adam Carolla,2723,2008-03-10T00:00:00Z,1095.0,2008-05-21T00:00:00Z,1182,87,ok,ok,nan
+6,Cristian de la Fuente,Cristián de la Fuente,4092617,2008-03-10T00:00:00Z,77.0,2008-05-21T00:00:00Z,116,39,ok,ok,nan
+6,Jason Taylor,Jason Taylor,3917511,2008-03-10T00:00:00Z,nan,2008-05-21T00:00:00Z,29,,disambiguation,ok,Page is a disambiguation page (pageprops.disambiguation)
+6,Kristi Yamaguchi,Kristi Yamaguchi,17291,2008-03-10T00:00:00Z,365.0,2008-05-21T00:00:00Z,543,178,ok,ok,nan
+6,Mario,Mario,81361,2008-03-10T00:00:00Z,8340.0,2008-05-21T00:00:00Z,8525,185,ok,ok,nan
+6,Marissa Jaret Winokur,Marissa Jaret Winokur,1823364,2008-03-10T00:00:00Z,109.0,2008-05-21T00:00:00Z,185,76,ok,ok,nan
+6,Marlee Matlin,Marlee Matlin,182870,2008-03-10T00:00:00Z,291.0,2008-05-21T00:00:00Z,354,63,ok,ok,nan
+6,Monica Seles,Monica Seles,300468,2008-03-10T00:00:00Z,876.0,2008-05-21T00:00:00Z,936,60,ok,ok,nan
+6,Penn Jillette,Penn Jillette,348378,2008-03-10T00:00:00Z,585.0,2008-05-21T00:00:00Z,630,45,ok,ok,nan
+6,Priscilla Presley,Priscilla Presley,208580,2008-03-10T00:00:00Z,420.0,2008-05-21T00:00:00Z,558,138,ok,ok,nan
+6,Shannon Elizabeth,Shannon Elizabeth,26675,2008-03-10T00:00:00Z,549.0,2008-05-21T00:00:00Z,665,116,ok,ok,nan
+6,Steve Guttenberg,Steve Guttenberg,724645,2008-03-10T00:00:00Z,516.0,2008-05-21T00:00:00Z,562,46,ok,ok,nan
+7,Brooke Burke,Brooke Burke,21486834,2008-09-15T00:00:00Z,578.0,2008-11-26T00:00:00Z,678,100,ok,ok,nan
+7,Cloris Leachman,Cloris Leachman,521820,2008-09-15T00:00:00Z,461.0,2008-11-26T00:00:00Z,558,97,ok,ok,nan
+7,Cody Linley,Cody Linley,4833081,2008-09-15T00:00:00Z,1457.0,2008-11-26T00:00:00Z,1773,316,ok,ok,nan
+7,Jeffrey Ross,Jeff Ross,5847824,2008-09-15T00:00:00Z,117.0,2008-11-26T00:00:00Z,143,26,ok,ok,nan
+7,Kim Kardashian,Kim Kardashian,19394613,2008-09-15T00:00:00Z,2247.0,2008-11-26T00:00:00Z,2568,321,ok,ok,nan
+7,Lance Bass,Lance Bass,161230,2008-09-15T00:00:00Z,2505.0,2008-11-26T00:00:00Z,2641,136,ok,ok,nan
+7,Maurice Greene,Maurice Greene,1127982,2008-09-15T00:00:00Z,nan,2008-11-26T00:00:00Z,16,,disambiguation,ok,Page is a disambiguation page (pageprops.disambiguation)
+7,Misty May-Treanor,Misty May-Treanor,928737,2008-09-15T00:00:00Z,560.0,2008-11-26T00:00:00Z,646,86,ok,ok,nan
+7,Rocco DiSpirito,Rocco DiSpirito,1433761,2008-09-15T00:00:00Z,112.0,2008-11-26T00:00:00Z,138,26,ok,ok,nan
+7,Susan Lucci,Susan Lucci,645193,2008-09-15T00:00:00Z,377.0,2008-11-26T00:00:00Z,461,84,ok,ok,nan
+7,Ted McGinley,Ted McGinley,654916,2008-09-15T00:00:00Z,216.0,2008-11-26T00:00:00Z,253,37,ok,ok,nan
+7,Toni Braxton,Toni Braxton,495350,2008-09-15T00:00:00Z,1809.0,2008-11-26T00:00:00Z,1922,113,ok,ok,nan
+7,Warren Sapp,Warren Sapp,538870,2008-09-15T00:00:00Z,597.0,2008-11-26T00:00:00Z,700,103,ok,ok,nan
+8,Belinda Carlisle,Belinda Carlisle,338350,2009-03-02T00:00:00Z,982.0,2009-05-20T00:00:00Z,1086,104,ok,ok,nan
+8,Chuck Wicks,Chuck Wicks,13255277,2009-03-02T00:00:00Z,302.0,2009-05-20T00:00:00Z,386,84,ok,ok,nan
+8,David Alan Grier,David Alan Grier,998033,2009-03-02T00:00:00Z,316.0,2009-05-20T00:00:00Z,345,29,ok,ok,nan
+8,Denise Richards,Denise Richards,37275,2009-03-02T00:00:00Z,1049.0,2009-05-20T00:00:00Z,1126,77,ok,ok,nan
+8,Gilles Marini,Gilles Marini,21462703,2009-03-02T00:00:00Z,24.0,2009-05-20T00:00:00Z,81,57,ok,ok,nan
+8,Holly Madison,Holly Madison,2686441,2009-03-02T00:00:00Z,932.0,2009-05-20T00:00:00Z,1040,108,ok,ok,nan
+8,Lawrence Taylor,Lawrence Taylor,448584,2009-03-02T00:00:00Z,1806.0,2009-05-20T00:00:00Z,1842,36,ok,ok,nan
+8,Lil' Kim,Lil' Kim,215670,2009-03-02T00:00:00Z,3890.0,2009-05-20T00:00:00Z,4116,226,ok,ok,nan
+8,Melissa Rycroft,Melissa Rycroft,21876113,2009-03-02T00:00:00Z,0.0,2009-05-20T00:00:00Z,240,240,ok,ok,nan
+8,Shawn Johnson,Shawn Johnson East,19084452,2009-03-02T00:00:00Z,1018.0,2009-05-20T00:00:00Z,1204,186,ok,ok,nan
+8,Steve Wozniak,Steve Wozniak,27848,2009-03-02T00:00:00Z,2170.0,2009-05-20T00:00:00Z,2360,190,ok,ok,nan
+8,Steve-O,Steve-O,13063807,2009-03-02T00:00:00Z,1516.0,2009-05-20T00:00:00Z,1545,29,ok,ok,nan
+8,Ty Murray,Ty Murray,5303744,2009-03-02T00:00:00Z,123.0,2009-05-20T00:00:00Z,214,91,ok,ok,nan
+9,Aaron Carter,Aaron Carter,83108,2009-09-14T00:00:00Z,2458.0,2009-11-25T00:00:00Z,2477,19,ok,ok,nan
+9,Ashley Hamiliton,Ashley Hamiliton,nan,2009-09-14T00:00:00Z,nan,2009-11-25T00:00:00Z,,,missing_title,missing_pageid,No valid pageid from preseason CSV; cannot compute end edits. Title not found (pageid=-1)
+9,Chuck Liddell,Chuck Liddell,1715880,2009-09-14T00:00:00Z,3565.0,2009-11-25T00:00:00Z,3587,22,ok,ok,nan
+9,Debi Mazar,Debi Mazar,90685,2009-09-14T00:00:00Z,228.0,2009-11-25T00:00:00Z,268,40,ok,ok,nan
+9,Donny Osmond,Donny Osmond,726651,2009-09-14T00:00:00Z,873.0,2009-11-25T00:00:00Z,939,66,ok,ok,nan
+9,Joanna Krupa,Joanna Krupa,2079934,2009-09-14T00:00:00Z,443.0,2009-11-25T00:00:00Z,572,129,ok,ok,nan
+9,Kathy Ireland,Kathy Ireland,276471,2009-09-14T00:00:00Z,450.0,2009-11-25T00:00:00Z,482,32,ok,ok,nan
+9,Kelly Osbourne,Kelly Osbourne,97561,2009-09-14T00:00:00Z,1250.0,2009-11-25T00:00:00Z,1346,96,ok,ok,nan
+9,Louie Vito,Louie Vito,9524378,2009-09-14T00:00:00Z,60.0,2009-11-25T00:00:00Z,142,82,ok,ok,nan
+9,Macy Gray,Macy Gray,168875,2009-09-14T00:00:00Z,800.0,2009-11-25T00:00:00Z,832,32,ok,ok,nan
+9,Mark Dacascos,Mark Dacascos,728473,2009-09-14T00:00:00Z,276.0,2009-11-25T00:00:00Z,306,30,ok,ok,nan
+9,Melissa Joan Hart,Melissa Joan Hart,148164,2009-09-14T00:00:00Z,1177.0,2009-11-25T00:00:00Z,1238,61,ok,ok,nan
+9,Michael Irvin,Michael Irvin,449874,2009-09-14T00:00:00Z,1128.0,2009-11-25T00:00:00Z,1149,21,ok,ok,nan
+9,Mya,Mya,1161897,2009-09-14T00:00:00Z,nan,2009-11-25T00:00:00Z,160,,disambiguation,ok,Page is a disambiguation page (pageprops.disambiguation)
+9,Natalie Coughlin,Natalie Coughlin,907833,2009-09-14T00:00:00Z,515.0,2009-11-25T00:00:00Z,536,21,ok,ok,nan
+9,Tom DeLay,Tom DeLay,216169,2009-09-14T00:00:00Z,2927.0,2009-11-25T00:00:00Z,3329,402,ok,ok,nan
+10,Aiden Turner,Aiden Turner,1450336,2010-03-15T00:00:00Z,130.0,2010-05-26T00:00:00Z,158,28,ok,ok,nan
+10,Buzz Aldrin,Buzz Aldrin,65777,2010-03-15T00:00:00Z,1913.0,2010-05-26T00:00:00Z,1957,44,ok,ok,nan
+10,Chad Ochocinco,Chad Johnson,7761399,2010-03-15T00:00:00Z,2903.0,2010-05-26T00:00:00Z,3064,161,ok,ok,nan
+10,Erin Andrews,Erin Andrews,23684268,2010-03-15T00:00:00Z,1083.0,2010-05-26T00:00:00Z,1167,84,ok,ok,nan
+10,Evan Lysacek,Evan Lysacek,1426102,2010-03-15T00:00:00Z,1057.0,2010-05-26T00:00:00Z,1191,134,ok,ok,nan
+10,Jake Pavelka,Jake Pavelka,24737882,2010-03-15T00:00:00Z,32.0,2010-05-26T00:00:00Z,37,5,ok,ok,nan
+10,Kate Gosselin,Kate Gosselin,12469037,2010-03-15T00:00:00Z,1063.0,2010-05-26T00:00:00Z,1223,160,ok,ok,nan
+10,Nicole Scherzinger,Nicole Scherzinger,6803715,2010-03-15T00:00:00Z,6330.0,2010-05-26T00:00:00Z,6555,225,ok,ok,nan
+10,Niecy Nash,Niecy Nash,2148973,2010-03-15T00:00:00Z,213.0,2010-05-26T00:00:00Z,274,61,ok,ok,nan
+10,Pamela Anderson,Pamela Anderson,23035,2010-03-15T00:00:00Z,4578.0,2010-05-26T00:00:00Z,4940,362,ok,ok,nan
+10,Shannen Doherty,Shannen Doherty,21207432,2010-03-15T00:00:00Z,1497.0,2010-05-26T00:00:00Z,1611,114,ok,ok,nan
+11,Audrina Patridge,Audrina Patridge,7600033,2010-09-13T00:00:00Z,1453.0,2010-11-24T00:00:00Z,1541,88,ok,ok,nan
+11,Brandy,Brandy,45189,2010-09-13T00:00:00Z,985.0,2010-11-24T00:00:00Z,1017,32,ok,ok,nan
+11,Bristol Palin,Bristol Palin,19134078,2010-09-13T00:00:00Z,653.0,2010-11-24T00:00:00Z,956,303,ok,ok,nan
+11,David Hasselhoff,David Hasselhoff,166103,2010-09-13T00:00:00Z,4463.0,2010-11-24T00:00:00Z,4632,169,ok,ok,nan
+11,Florence Henderson,Florence Henderson,3648917,2010-09-13T00:00:00Z,403.0,2010-11-24T00:00:00Z,445,42,ok,ok,nan
+11,Jennifer Grey,Jennifer Grey,680333,2010-09-13T00:00:00Z,377.0,2010-11-24T00:00:00Z,451,74,ok,ok,nan
+11,Kurt Warner,Kurt Warner,414302,2010-09-13T00:00:00Z,2266.0,2010-11-24T00:00:00Z,2339,73,ok,ok,nan
+11,Kyle Massey,Kyle Massey,1288339,2010-09-13T00:00:00Z,2030.0,2010-11-24T00:00:00Z,2150,120,ok,ok,nan
+11,Margaret Cho,Margaret Cho,89662,2010-09-13T00:00:00Z,1220.0,2010-11-24T00:00:00Z,1263,43,ok,ok,nan
+11,Michael Bolton,Michael Bolton,551974,2010-09-13T00:00:00Z,1438.0,2010-11-24T00:00:00Z,1497,59,ok,ok,nan
+11,Rick Fox,Rick Fox,654160,2010-09-13T00:00:00Z,586.0,2010-11-24T00:00:00Z,632,46,ok,ok,nan
+11,The Situation,Situation,19039812,2010-09-13T00:00:00Z,nan,2010-11-24T00:00:00Z,14,,disambiguation,ok,Page is a disambiguation page (pageprops.disambiguation)
+12,Chelsea Kane,Chelsea Kane,12270854,2011-03-14T00:00:00Z,1474.0,2011-05-25T00:00:00Z,1665,191,ok,ok,nan
+12,Chris Jericho,Chris Jericho,424778,2011-03-14T00:00:00Z,7396.0,2011-05-25T00:00:00Z,7482,86,ok,ok,nan
+12,Hines Ward,Hines Ward,1129656,2011-03-14T00:00:00Z,1630.0,2011-05-25T00:00:00Z,1709,79,ok,ok,nan
+12,Kendra Wilkinson,Kendra Wilkinson,9031039,2011-03-14T00:00:00Z,2191.0,2011-05-25T00:00:00Z,2200,9,ok,ok,nan
+12,Kirstie Alley,Kirstie Alley,327664,2011-03-14T00:00:00Z,1382.0,2011-05-25T00:00:00Z,1475,93,ok,ok,nan
+12,Mike Catherwood,Michael Catherwood,26837390,2011-03-14T00:00:00Z,nan,2011-05-25T00:00:00Z,202,,api_error,ok,"count_revisions request failed: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+12,Petra Nemcova,Petra Němcová,701533,2011-03-14T00:00:00Z,712.0,2011-05-25T00:00:00Z,738,26,ok,ok,nan
+12,Ralph Macchio,Ralph Macchio,577433,2011-03-14T00:00:00Z,1009.0,2011-05-25T00:00:00Z,1115,106,ok,ok,nan
+12,Romeo,Romeo,10730517,2011-03-14T00:00:00Z,778.0,2011-05-25T00:00:00Z,866,88,ok,ok,nan
+12,Sugar Ray Leonard,Sugar Ray Leonard,87530,2011-03-14T00:00:00Z,1206.0,2011-05-25T00:00:00Z,1253,47,ok,ok,nan
+12,Wendy Williams,Wendy Williams,1056193,2011-03-14T00:00:00Z,1575.0,2011-05-25T00:00:00Z,1672,97,ok,ok,nan
+13,Carson Kressley,Carson Kressley,489504,2011-09-12T00:00:00Z,451.0,2011-11-23T00:00:00Z,463,12,ok,ok,nan
+13,Chaz Bono,Chaz Bono,42765,2011-09-12T00:00:00Z,920.0,2011-11-23T00:00:00Z,952,32,ok,ok,nan
+13,Chynna Phillips,Chynna Phillips,705751,2011-09-12T00:00:00Z,228.0,2011-11-23T00:00:00Z,262,34,ok,ok,nan
+13,David Arquette,David Arquette,600332,2011-09-12T00:00:00Z,1205.0,2011-11-23T00:00:00Z,1224,19,ok,ok,nan
+13,Elisabetta Canalis,Elisabetta Canalis,7623086,2011-09-12T00:00:00Z,279.0,2011-11-23T00:00:00Z,314,35,ok,ok,nan
+13,Hope Solo,Hope Solo,8322947,2011-09-12T00:00:00Z,549.0,2011-11-23T00:00:00Z,686,137,ok,ok,nan
+13,J.R. Martinez,J. R. Martinez,20664185,2011-09-12T00:00:00Z,64.0,2011-11-23T00:00:00Z,176,112,ok,ok,nan
+13,Kristin Cavallari,Kristin Cavallari,3169910,2011-09-12T00:00:00Z,1958.0,2011-11-23T00:00:00Z,2028,70,ok,ok,nan
+13,Metta World Peace (Ron),Metta World Peace (Ron),nan,2011-09-12T00:00:00Z,nan,2011-11-23T00:00:00Z,,,missing_title,missing_pageid,No valid pageid from preseason CSV; cannot compute end edits. Title not found (pageid=-1)
+13,Nancy Grace,Nancy Grace,11481790,2011-09-12T00:00:00Z,2833.0,2011-11-23T00:00:00Z,2853,20,ok,ok,nan
+13,Ricki Lake,Ricki Lake,250943,2011-09-12T00:00:00Z,807.0,2011-11-23T00:00:00Z,902,95,ok,ok,nan
+13,Rob Kardashian,Rob Kardashian,17325260,2011-09-12T00:00:00Z,1334.0,2011-11-23T00:00:00Z,1503,169,ok,ok,nan
+14,Donald Driver,Donald Driver,1266505,2012-03-12T00:00:00Z,651.0,2012-05-23T00:00:00Z,672,21,ok,ok,nan
+14,Gavin DeGraw,Gavin DeGraw,7955359,2012-03-12T00:00:00Z,1213.0,2012-05-23T00:00:00Z,1287,74,ok,ok,nan
+14,Gladys Knight,Gladys Knight,165909,2012-03-12T00:00:00Z,1127.0,2012-05-23T00:00:00Z,1154,27,ok,ok,nan
+14,Jack Wagner,Jack Wagner,839097,2012-03-12T00:00:00Z,nan,2012-05-23T00:00:00Z,30,,disambiguation,ok,Page is a disambiguation page (pageprops.disambiguation)
+14,Jaleel White,Jaleel White,682238,2012-03-12T00:00:00Z,1696.0,2012-05-23T00:00:00Z,1760,64,ok,ok,nan
+14,Katherine Jenkins,Katherine Jenkins,1833326,2012-03-12T00:00:00Z,1103.0,2012-05-23T00:00:00Z,1136,33,ok,ok,nan
+14,Maria Menounos,Maria Menounos,939956,2012-03-12T00:00:00Z,832.0,2012-05-23T00:00:00Z,889,57,ok,ok,nan
+14,Martina Navratilova,Martina Navratilova,198092,2012-03-12T00:00:00Z,1741.0,2012-05-23T00:00:00Z,1768,27,ok,ok,nan
+14,Melissa Gilbert,Melissa Gilbert,417692,2012-03-12T00:00:00Z,618.0,2012-05-23T00:00:00Z,662,44,ok,ok,nan
+14,Roshon Fegan,Roshon Fegan,21960899,2012-03-12T00:00:00Z,717.0,2012-05-23T00:00:00Z,862,145,ok,ok,nan
+14,Sherri Sheperd,Sherri Sheperd,nan,2012-03-12T00:00:00Z,nan,2012-05-23T00:00:00Z,,,missing_title,missing_pageid,No valid pageid from preseason CSV; cannot compute end edits. Title not found (pageid=-1)
+14,William Levy,William Levy,35145340,2012-03-12T00:00:00Z,nan,2012-05-23T00:00:00Z,6,,disambiguation,ok,Page is a disambiguation page (pageprops.disambiguation)
+15,Apolo Anton Ohno,Apolo Ohno,239012,2012-09-17T00:00:00Z,1828.0,2012-11-28T00:00:00Z,1845,17,ok,ok,nan
+15,Bristol Palin,Bristol Palin,19134078,2012-09-17T00:00:00Z,1495.0,2012-11-28T00:00:00Z,1511,16,ok,ok,nan
+15,Drew Lachey,Drew Lachey,2063909,2012-09-17T00:00:00Z,328.0,2012-11-28T00:00:00Z,346,18,ok,ok,nan
+15,Emmitt Smith,Emmitt Smith,154857,2012-09-17T00:00:00Z,2129.0,2012-11-28T00:00:00Z,2162,33,ok,ok,nan
+15,Gilles Marini,Gilles Marini,21462703,2012-09-17T00:00:00Z,229.0,2012-11-28T00:00:00Z,240,11,ok,ok,nan
+15,Helio Castroneves,Hélio Castroneves,345352,2012-09-17T00:00:00Z,809.0,2012-11-28T00:00:00Z,814,5,ok,ok,nan
+15,Joey Fatone,Joey Fatone,1202691,2012-09-17T00:00:00Z,951.0,2012-11-28T00:00:00Z,975,24,ok,ok,nan
+15,Kelly Monaco,Kelly Monaco,719429,2012-09-17T00:00:00Z,891.0,2012-11-28T00:00:00Z,933,42,ok,ok,nan
+15,Kirstie Alley,Kirstie Alley,327664,2012-09-17T00:00:00Z,1656.0,2012-11-28T00:00:00Z,1696,40,ok,ok,nan
+15,Melissa Rycroft,Melissa Rycroft,21876113,2012-09-17T00:00:00Z,509.0,2012-11-28T00:00:00Z,526,17,ok,ok,nan
+15,Pamela Anderson,Pamela Anderson,23035,2012-09-17T00:00:00Z,5730.0,2012-11-28T00:00:00Z,5788,58,ok,ok,nan
+15,Sabrina Bryan,Sabrina Bryan,3028912,2012-09-17T00:00:00Z,1982.0,2012-11-28T00:00:00Z,2040,58,ok,ok,nan
+15,Shawn Johnson,Shawn Johnson East,19084452,2012-09-17T00:00:00Z,1859.0,2012-11-28T00:00:00Z,1904,45,ok,ok,nan
+16,Alexandra Raisman,Aly Raisman,28138758,2013-03-11T00:00:00Z,664.0,2013-05-22T00:00:00Z,779,115,ok,ok,nan
+16,Andy Dick,Andy Dick,641959,2013-03-11T00:00:00Z,2345.0,2013-05-22T00:00:00Z,2354,9,ok,ok,nan
+16,D. L. Hughley,D. L. Hughley,524989,2013-03-11T00:00:00Z,547.0,2013-05-22T00:00:00Z,558,11,ok,ok,nan
+16,Dorothy Hamill,Dorothy Hamill,434988,2013-03-11T00:00:00Z,389.0,2013-05-22T00:00:00Z,398,9,ok,ok,nan
+16,Ingo Rademacher,Ingo Rademacher,3693103,2013-03-11T00:00:00Z,218.0,2013-05-22T00:00:00Z,235,17,ok,ok,nan
+16,Jacoby Jones,Jacoby Jones,10957791,2013-03-11T00:00:00Z,339.0,2013-05-22T00:00:00Z,394,55,ok,ok,nan
+16,Kellie Pickler,Kellie Pickler,3859453,2013-03-11T00:00:00Z,3238.0,2013-05-22T00:00:00Z,3407,169,ok,ok,nan
+16,Lisa Vanderpump,Lisa Vanderpump,38789274,2013-03-11T00:00:00Z,0.0,2013-05-22T00:00:00Z,55,55,ok,ok,nan
+16,Sean Lowe,Sean Lowe,43578506,2013-03-11T00:00:00Z,nan,2013-05-22T00:00:00Z,0,,disambiguation,ok,Page is a disambiguation page (pageprops.disambiguation)
+16,Victor Ortiz,Victor Ortiz,13675852,2013-03-11T00:00:00Z,884.0,2013-05-22T00:00:00Z,942,58,ok,ok,nan
+16,Wynonna Judd,Wynonna Judd,782522,2013-03-11T00:00:00Z,698.0,2013-05-22T00:00:00Z,716,18,ok,ok,nan
+16,Zendaya,Zendaya,28753159,2013-03-11T00:00:00Z,1585.0,2013-05-22T00:00:00Z,1651,66,ok,ok,nan
+17,Amber Riley,Amber Riley,24189535,2013-09-09T00:00:00Z,650.0,2013-11-27T00:00:00Z,709,59,ok,ok,nan
+17,Bill Engvall,Bill Engvall,1539811,2013-09-09T00:00:00Z,660.0,2013-11-27T00:00:00Z,672,12,ok,ok,nan
+17,Bill Nye,Bill Nye,10276064,2013-09-09T00:00:00Z,3840.0,2013-11-27T00:00:00Z,3851,11,ok,ok,nan
+17,Brant Daugherty,Brant Daugherty,30248112,2013-09-09T00:00:00Z,178.0,2013-11-27T00:00:00Z,201,23,ok,ok,nan
+17,Christina Milian,Christina Milian,657902,2013-09-09T00:00:00Z,4616.0,2013-11-27T00:00:00Z,4671,55,ok,ok,nan
+17,Corbin Bleu,Corbin Bleu,3591242,2013-09-09T00:00:00Z,5932.0,2013-11-27T00:00:00Z,5951,19,ok,ok,nan
+17,Elizabeth Berkley Lauren,Elizabeth Berkley,235473,2013-09-09T00:00:00Z,1022.0,2013-11-27T00:00:00Z,1032,10,ok,ok,nan
+17,Jack Osbourne,Jack Osbourne,394763,2013-09-09T00:00:00Z,915.0,2013-11-27T00:00:00Z,929,14,ok,ok,nan
+17,Keyshawn Johnson,Keyshawn Johnson,638094,2013-09-09T00:00:00Z,722.0,2013-11-27T00:00:00Z,731,9,ok,ok,nan
+17,Leah Remini,Leah Remini,991720,2013-09-09T00:00:00Z,1400.0,2013-11-27T00:00:00Z,1449,49,ok,ok,nan
+17,"Nicole ""Snooki"" Polizzi",Snooki,25529159,2013-09-09T00:00:00Z,1471.0,2013-11-27T00:00:00Z,1511,40,ok,ok,nan
+17,Valerie Harper,Valerie Harper,351501,2013-09-09T00:00:00Z,567.0,2013-11-27T00:00:00Z,589,22,ok,ok,nan
+18,Amy Purdy,Amy Purdy,2457365,2014-03-10T00:00:00Z,141.0,2014-05-21T00:00:00Z,214,73,ok,ok,nan
+18,Billy Dee Williams,Billy Dee Williams,433992,2014-03-10T00:00:00Z,1049.0,2014-05-21T00:00:00Z,1080,31,ok,ok,nan
+18,Candace Cameron Bure,Candace Cameron Bure,21424406,2014-03-10T00:00:00Z,1242.0,2014-05-21T00:00:00Z,1276,34,ok,ok,nan
+18,Charlie White,Charles White,6113954,2014-03-10T00:00:00Z,nan,2014-05-21T00:00:00Z,93,,disambiguation,ok,Page is a disambiguation page (pageprops.disambiguation)
+18,Cody Simpson,Cody Simpson,27367390,2014-03-10T00:00:00Z,1475.0,2014-05-21T00:00:00Z,1588,113,ok,ok,nan
+18,Danica McKellar,Danica McKellar,146089,2014-03-10T00:00:00Z,966.0,2014-05-21T00:00:00Z,982,16,ok,ok,nan
+18,Diana Nyad,Diana Nyad,2329635,2014-03-10T00:00:00Z,593.0,2014-05-21T00:00:00Z,617,24,ok,ok,nan
+18,Drew Carey,Drew Carey,18842230,2014-03-10T00:00:00Z,2495.0,2014-05-21T00:00:00Z,2521,26,ok,ok,nan
+18,James Maslow,James Maslow,25259595,2014-03-10T00:00:00Z,nan,2014-05-21T00:00:00Z,2183,,api_error,ok,"count_revisions request failed: HTTPSConnectionPool(host='en.wikipedia.org', port=443): Read timed out. (read timeout=20.0)"
+18,Meryl Davis,Meryl Davis,7847641,2014-03-10T00:00:00Z,927.0,2014-05-21T00:00:00Z,971,44,ok,ok,nan
+18,NeNe Leakes,NeNe Leakes,24657439,2014-03-10T00:00:00Z,585.0,2014-05-21T00:00:00Z,650,65,ok,ok,nan
+18,Sean Avery,Sean Avery,914114,2014-03-10T00:00:00Z,3044.0,2014-05-21T00:00:00Z,3062,18,ok,ok,nan
+19,Alfonso Ribeiro,Alfonso Ribeiro,1828686,2014-09-08T00:00:00Z,1637.0,2014-11-26T00:00:00Z,1698,61,ok,ok,nan
+19,Antonio Sabato Jr.,Antonio Sabàto Jr.,30872446,2014-09-08T00:00:00Z,574.0,2014-11-26T00:00:00Z,586,12,ok,ok,nan
+19,Bethany Mota,Bethany Mota,42673887,2014-09-08T00:00:00Z,250.0,2014-11-26T00:00:00Z,403,153,ok,ok,nan
+19,Betsey Johnson,Betsey Johnson,2234792,2014-09-08T00:00:00Z,426.0,2014-11-26T00:00:00Z,436,10,ok,ok,nan
+19,Janel Parrish,Janel Parrish,12303441,2014-09-08T00:00:00Z,597.0,2014-11-26T00:00:00Z,659,62,ok,ok,nan
+19,Jonathan Bennett,Jonathan Bennett,5097119,2014-09-08T00:00:00Z,nan,2014-11-26T00:00:00Z,32,,disambiguation,ok,Page is a disambiguation page (pageprops.disambiguation)
+19,Lea Thompson,Lea Thompson,399162,2014-09-08T00:00:00Z,644.0,2014-11-26T00:00:00Z,677,33,ok,ok,nan
+19,Lolo Jones,Lolo Jones,47506158,2014-09-08T00:00:00Z,774.0,2014-11-26T00:00:00Z,786,12,ok,ok,nan
+19,Michael Waltrip,Michael Waltrip,1432362,2014-09-08T00:00:00Z,1077.0,2014-11-26T00:00:00Z,1176,99,ok,ok,nan
+19,Randy Couture,Randy Couture,1216791,2014-09-08T00:00:00Z,4228.0,2014-11-26T00:00:00Z,4243,15,ok,ok,nan
+19,Sadie Robertson,Sadie Robertson,41427720,2014-09-08T00:00:00Z,110.0,2014-11-26T00:00:00Z,177,67,ok,ok,nan
+19,Tavis Smiley,Tavis Smiley,875830,2014-09-08T00:00:00Z,561.0,2014-11-26T00:00:00Z,588,27,ok,ok,nan
+19,Tommy Chong,Tommy Chong,316276,2014-09-08T00:00:00Z,1245.0,2014-11-26T00:00:00Z,1265,20,ok,ok,nan
+20,Charlotte McKinney,Charlotte McKinney,45276122,2015-03-09T00:00:00Z,17.0,2015-05-20T00:00:00Z,138,121,ok,ok,nan
+20,Chris Soules,Chris Soules,46298078,2015-03-09T00:00:00Z,0.0,2015-05-20T00:00:00Z,34,34,ok,ok,nan
+20,Michael Sam,Michael Sam,41357456,2015-03-09T00:00:00Z,508.0,2015-05-20T00:00:00Z,520,12,ok,ok,nan
+20,Nastia Liukin,Nastia Liukin,4057599,2015-03-09T00:00:00Z,1771.0,2015-05-20T00:00:00Z,1804,33,ok,ok,nan
+20,Noah Galloway,Noah Galloway,45700998,2015-03-09T00:00:00Z,0.0,2015-05-20T00:00:00Z,139,139,ok,ok,nan
+20,Patti LaBelle,Patti LaBelle,186089,2015-03-09T00:00:00Z,2294.0,2015-05-20T00:00:00Z,2332,38,ok,ok,nan
+20,Redfoo,Redfoo,33285056,2015-03-09T00:00:00Z,790.0,2015-05-20T00:00:00Z,878,88,ok,ok,nan
+20,Riker Lynch,Riker Lynch,31383036,2015-03-09T00:00:00Z,509.0,2015-05-20T00:00:00Z,575,66,ok,ok,nan
+20,Robert Herjavec,Robert Herjavec,22333849,2015-03-09T00:00:00Z,374.0,2015-05-20T00:00:00Z,443,69,ok,ok,nan
+20,Rumer Willis,Rumer Willis,1796004,2015-03-09T00:00:00Z,767.0,2015-05-20T00:00:00Z,804,37,ok,ok,nan
+20,Suzanne Somers,Suzanne Somers,30876264,2015-03-09T00:00:00Z,854.0,2015-05-20T00:00:00Z,867,13,ok,ok,nan
+20,Willow Shields,Willow Shields,32056806,2015-03-09T00:00:00Z,457.0,2015-05-20T00:00:00Z,512,55,ok,ok,nan
+21,Alek Skarlatos,Alek Skarlatos,47705550,2015-09-07T00:00:00Z,48.0,2015-11-25T00:00:00Z,144,96,ok,ok,nan
+21,Alexa PenaVega,Alexa PenaVega,636701,2015-09-07T00:00:00Z,2076.0,2015-11-25T00:00:00Z,2132,56,ok,ok,nan
+21,Andy Grammer,Andy Grammer,31284480,2015-09-07T00:00:00Z,734.0,2015-11-25T00:00:00Z,782,48,ok,ok,nan
+21,Bindi Irwin,Bindi Irwin,7075860,2015-09-07T00:00:00Z,2005.0,2015-11-25T00:00:00Z,2101,96,ok,ok,nan
+21,Carlos PenaVega,Carlos PenaVega,25896674,2015-09-07T00:00:00Z,1878.0,2015-11-25T00:00:00Z,1937,59,ok,ok,nan
+21,Chaka Khan,Chaka Khan,346473,2015-09-07T00:00:00Z,1739.0,2015-11-25T00:00:00Z,1769,30,ok,ok,nan
+21,Gary Busey,Gary Busey,13030,2015-09-07T00:00:00Z,2801.0,2015-11-25T00:00:00Z,2830,29,ok,ok,nan
+21,Hayes Grier,Hayes Grier,47811832,2015-09-07T00:00:00Z,0.0,2015-11-25T00:00:00Z,88,88,ok,ok,nan
+21,Kim Zolciak-Biermann,Kim Zolciak,24217539,2015-09-07T00:00:00Z,1313.0,2015-11-25T00:00:00Z,1399,86,ok,ok,nan
+21,Nick Carter,Nick Carter,1358569,2015-09-07T00:00:00Z,2947.0,2015-11-25T00:00:00Z,3010,63,ok,ok,nan
+21,Paula Deen,Paula Deen,1587917,2015-09-07T00:00:00Z,2271.0,2015-11-25T00:00:00Z,2309,38,ok,ok,nan
+21,Tamar Braxton,Tamar Braxton,1626277,2015-09-07T00:00:00Z,1724.0,2015-11-25T00:00:00Z,1828,104,ok,ok,nan
+21,Victor Espinoza,Victor Espinoza,9631181,2015-09-07T00:00:00Z,242.0,2015-11-25T00:00:00Z,251,9,ok,ok,nan
+22,Antonio Brown,Antonio Brown,25725265,2016-03-14T00:00:00Z,1035.0,2016-05-25T00:00:00Z,1175,140,ok,ok,nan
+22,Doug Flutie,Doug Flutie,189559,2016-03-14T00:00:00Z,1548.0,2016-05-25T00:00:00Z,1573,25,ok,ok,nan
+22,Geraldo Rivera,Geraldo Rivera,156507,2016-03-14T00:00:00Z,2341.0,2016-05-25T00:00:00Z,2368,27,ok,ok,nan
+22,Ginger Zee,Ginger Zee,37160404,2016-03-14T00:00:00Z,212.0,2016-05-25T00:00:00Z,226,14,ok,ok,nan
+22,Jodie Sweetin,Jodie Sweetin,162084,2016-03-14T00:00:00Z,1432.0,2016-05-25T00:00:00Z,1455,23,ok,ok,nan
+22,Kim Fields,Kim Fields,809006,2016-03-14T00:00:00Z,436.0,2016-05-25T00:00:00Z,472,36,ok,ok,nan
+22,Marla Maples,Marla Maples,473806,2016-03-14T00:00:00Z,497.0,2016-05-25T00:00:00Z,542,45,ok,ok,nan
+22,Mischa Barton,Mischa Barton,291520,2016-03-14T00:00:00Z,3324.0,2016-05-25T00:00:00Z,3328,4,ok,ok,nan
+22,Nyle DiMarco,Nyle DiMarco,47599064,2016-03-14T00:00:00Z,247.0,2016-05-25T00:00:00Z,313,66,ok,ok,nan
+22,Paige VanZant,Paige VanZant,44481963,2016-03-14T00:00:00Z,231.0,2016-05-25T00:00:00Z,259,28,ok,ok,nan
+22,Von Miller,Von Miller,24848538,2016-03-14T00:00:00Z,969.0,2016-05-25T00:00:00Z,1094,125,ok,ok,nan
+22,Wanya Morris,Wanya Morris,1963493,2016-03-14T00:00:00Z,190.0,2016-05-25T00:00:00Z,195,5,ok,ok,nan
+23,Amber Rose,Amber Rose,22488385,2016-09-05T00:00:00Z,2234.0,2016-11-23T00:00:00Z,2346,112,ok,ok,nan
+23,Babyface,Babyface,1429186,2016-09-05T00:00:00Z,nan,2016-11-23T00:00:00Z,93,,disambiguation,ok,Page is a disambiguation page (pageprops.disambiguation)
+23,Calvin Johnson Jr.,Calvin Johnson,11061916,2016-09-05T00:00:00Z,3190.0,2016-11-23T00:00:00Z,3262,72,ok,ok,nan
+23,Jake T. Austin,Jake T. Austin,11470826,2016-09-05T00:00:00Z,4154.0,2016-11-23T00:00:00Z,4159,5,ok,ok,nan
+23,James Hinchcliffe,James Hinchcliffe,7914439,2016-09-05T00:00:00Z,364.0,2016-11-23T00:00:00Z,383,19,ok,ok,nan
+23,Jana Kramer,Jana Kramer,23486950,2016-09-05T00:00:00Z,888.0,2016-11-23T00:00:00Z,948,60,ok,ok,nan
+23,Laurie Hernandez,Laurie Hernandez,40600541,2016-09-05T00:00:00Z,216.0,2016-11-23T00:00:00Z,310,94,ok,ok,nan
+23,Marilu Henner,Marilu Henner,559311,2016-09-05T00:00:00Z,643.0,2016-11-23T00:00:00Z,656,13,ok,ok,nan
+23,Maureen McCormick,Maureen McCormick,3632577,2016-09-05T00:00:00Z,1122.0,2016-11-23T00:00:00Z,1134,12,ok,ok,nan
+23,Rick Perry,Rick Perry,545253,2016-09-05T00:00:00Z,5257.0,2016-11-23T00:00:00Z,5318,61,ok,ok,nan
+23,Ryan Lochte,Ryan Lochte,4057953,2016-09-05T00:00:00Z,1880.0,2016-11-23T00:00:00Z,1952,72,ok,ok,nan
+23,Terra Jole,Terra Jolé,52051491,2016-09-05T00:00:00Z,0.0,2016-11-23T00:00:00Z,21,21,ok,ok,nan
+23,Vanilla Ice,Vanilla Ice,180532,2016-09-05T00:00:00Z,3871.0,2016-11-23T00:00:00Z,3896,25,ok,ok,nan
+24,Bonner Bolton,Bonner Bolton,53549975,2017-03-13T00:00:00Z,0.0,2017-05-24T00:00:00Z,23,23,ok,ok,nan
+24,Charo,Charo,169281,2017-03-13T00:00:00Z,1218.0,2017-05-24T00:00:00Z,1283,65,ok,ok,nan
+24,Chris Kattan,Chris Kattan,577779,2017-03-13T00:00:00Z,780.0,2017-05-24T00:00:00Z,800,20,ok,ok,nan
+24,David Ross,David Ross,1824177,2017-03-13T00:00:00Z,nan,2017-05-24T00:00:00Z,88,,disambiguation,ok,Page is a disambiguation page (pageprops.disambiguation)
+24,Erika Jayne,Erika Jayne,12889576,2017-03-13T00:00:00Z,463.0,2017-05-24T00:00:00Z,516,53,ok,ok,nan
+24,Heather Morris,Heather Morris,25727676,2017-03-13T00:00:00Z,1308.0,2017-05-24T00:00:00Z,1348,40,ok,ok,nan
+24,Mr. T,Mr. T,19019,2017-03-13T00:00:00Z,5523.0,2017-05-24T00:00:00Z,5536,13,ok,ok,nan
+24,Nancy Kerrigan,Nancy Kerrigan,332815,2017-03-13T00:00:00Z,944.0,2017-05-24T00:00:00Z,962,18,ok,ok,nan
+24,Nick Viall,Nick Viall,53562441,2017-03-13T00:00:00Z,0.0,2017-05-24T00:00:00Z,59,59,ok,ok,nan
+24,Normani,Normani,38879280,2017-03-13T00:00:00Z,95.0,2017-05-24T00:00:00Z,97,2,ok,ok,nan
+24,Rashad Jennings,Rashad Jennings,20824224,2017-03-13T00:00:00Z,239.0,2017-05-24T00:00:00Z,270,31,ok,ok,nan
+24,Simone Biles,Simone Biles,38659992,2017-03-13T00:00:00Z,1396.0,2017-05-24T00:00:00Z,1472,76,ok,ok,nan
+25,Barbara Corcoran,Barbara Corcoran,26030611,2017-09-11T00:00:00Z,278.0,2017-11-22T00:00:00Z,304,26,ok,ok,nan
+25,Debbie Gibson,Debbie Gibson,155723,2017-09-11T00:00:00Z,2076.0,2017-11-22T00:00:00Z,2102,26,ok,ok,nan
+25,Derek Fisher,Derek Fisher,1246851,2017-09-11T00:00:00Z,2431.0,2017-11-22T00:00:00Z,2436,5,ok,ok,nan
+25,Drew Scott,Drew Scott,50066161,2017-09-11T00:00:00Z,420.0,2017-11-22T00:00:00Z,553,133,ok,ok,nan
+25,Frankie Muniz,Frankie Muniz,167144,2017-09-11T00:00:00Z,4043.0,2017-11-22T00:00:00Z,4099,56,ok,ok,nan
+25,Jordan Fisher,Jordan Fisher,11426541,2017-09-11T00:00:00Z,207.0,2017-11-22T00:00:00Z,252,45,ok,ok,nan
+25,Lindsey Stirling,Lindsey Stirling,33554195,2017-09-11T00:00:00Z,nan,2017-11-22T00:00:00Z,2381,,api_error,ok,"count_revisions request failed: HTTPSConnectionPool(host='en.wikipedia.org', port=443): Read timed out. (read timeout=20.0)"
+25,Nick Lachey,Nick Lachey,762775,2017-09-11T00:00:00Z,2706.0,2017-11-22T00:00:00Z,2712,6,ok,ok,nan
+25,Nikki Bella,Nikki Bella,50282071,2017-09-11T00:00:00Z,1220.0,2017-11-22T00:00:00Z,1248,28,ok,ok,nan
+25,Sasha Pieterse,Sasha Pieterse,2211870,2017-09-11T00:00:00Z,1940.0,2017-11-22T00:00:00Z,1971,31,ok,ok,nan
+25,Terrell Owens,Terrell Owens,428819,2017-09-11T00:00:00Z,8127.0,2017-11-22T00:00:00Z,8407,280,ok,ok,nan
+25,Vanessa Lachey,Vanessa Lachey,1888621,2017-09-11T00:00:00Z,1777.0,2017-11-22T00:00:00Z,1785,8,ok,ok,nan
+25,Victoria Arlen,Victoria Arlen,36894272,2017-09-11T00:00:00Z,73.0,2017-11-22T00:00:00Z,83,10,ok,ok,nan
+26,Adam Rippon,Adam Rippon,12537457,2018-04-23T00:00:00Z,949.0,2018-05-22T00:00:00Z,952,3,ok,ok,nan
+26,Arike Ogunbowale,Arike Ogunbowale,57059914,2018-04-23T00:00:00Z,25.0,2018-05-22T00:00:00Z,29,4,ok,ok,nan
+26,Chris Mazdzer,Chris Mazdzer,25625908,2018-04-23T00:00:00Z,88.0,2018-05-22T00:00:00Z,88,0,ok,ok,nan
+26,Jamie Anderson,Jamie Anderson,4794558,2018-04-23T00:00:00Z,nan,2018-05-22T00:00:00Z,47,,disambiguation,ok,Page is a disambiguation page (pageprops.disambiguation)
+26,Jennie Finch Daigle,Jennie Finch Daigle,nan,2018-04-23T00:00:00Z,nan,2018-05-22T00:00:00Z,,,missing_title,missing_pageid,No valid pageid from preseason CSV; cannot compute end edits. Title not found (pageid=-1)
+26,Johnny Damon,Johnny Damon,608740,2018-04-23T00:00:00Z,3413.0,2018-05-22T00:00:00Z,3414,1,ok,ok,nan
+26,Josh Norman,Josh Norman,35269134,2018-04-23T00:00:00Z,904.0,2018-05-22T00:00:00Z,921,17,ok,ok,nan
+26,Kareem Abdul-Jabbar,Kareem Abdul-Jabbar,16899,2018-04-23T00:00:00Z,4556.0,2018-05-22T00:00:00Z,4626,70,ok,ok,nan
+26,Mirai Nagasu,Mirai Nagasu,9159762,2018-04-23T00:00:00Z,1618.0,2018-05-22T00:00:00Z,1620,2,ok,ok,nan
+26,Tonya Harding,Tonya Harding,48110,2018-04-23T00:00:00Z,2276.0,2018-05-22T00:00:00Z,2293,17,ok,ok,nan
+27,Alexis Ren,Alexis Ren,54577289,2018-09-17T00:00:00Z,238.0,2018-11-20T00:00:00Z,283,45,ok,ok,nan
+27,Bobby Bones,Bobby Bones,43073155,2018-09-17T00:00:00Z,299.0,2018-11-20T00:00:00Z,320,21,ok,ok,nan
+27,Danelle Umstead,Danelle Umstead,27694146,2018-09-17T00:00:00Z,24.0,2018-11-20T00:00:00Z,29,5,ok,ok,nan
+27,DeMarcus Ware,DeMarcus Ware,1806555,2018-09-17T00:00:00Z,1573.0,2018-11-20T00:00:00Z,1579,6,ok,ok,nan
+27,Evanna Lynch,Evanna Lynch,3931304,2018-09-17T00:00:00Z,2614.0,2018-11-20T00:00:00Z,2645,31,ok,ok,nan
+27,Joe Amabile,Joe Amabile,58468039,2018-09-17T00:00:00Z,3.0,2018-11-20T00:00:00Z,4,1,ok,ok,nan
+27,John Schneider,John Schneider,319321,2018-09-17T00:00:00Z,nan,2018-11-20T00:00:00Z,57,,disambiguation,ok,Page is a disambiguation page (pageprops.disambiguation)
+27,Juan Pablo Di Pace,Juan Pablo Di Pace,2184375,2018-09-17T00:00:00Z,257.0,2018-11-20T00:00:00Z,285,28,ok,ok,nan
+27,Mary Lou Retton,Mary Lou Retton,74728,2018-09-17T00:00:00Z,846.0,2018-11-20T00:00:00Z,872,26,ok,ok,nan
+27,Milo Manheim,Milo Manheim,56711002,2018-09-17T00:00:00Z,155.0,2018-11-20T00:00:00Z,199,44,ok,ok,nan
+27,Nancy McKeon,Nancy McKeon,806317,2018-09-17T00:00:00Z,517.0,2018-11-20T00:00:00Z,534,17,ok,ok,nan
+27,Nikki Glaser,Nikki Glaser,36855494,2018-09-17T00:00:00Z,340.0,2018-11-20T00:00:00Z,352,12,ok,ok,nan
+27,Tinashe,Tinashe,25831844,2018-09-17T00:00:00Z,2535.0,2018-11-20T00:00:00Z,2601,66,ok,ok,nan
+28,Ally Brooke,Ally Brooke,37607502,2019-09-09T00:00:00Z,781.0,2019-11-26T00:00:00Z,807,26,ok,ok,nan
+28,Hannah Brown,Hannah Brown,60215586,2019-09-09T00:00:00Z,96.0,2019-11-26T00:00:00Z,116,20,ok,ok,nan
+28,James Van Der Beek,James Van Der Beek,600595,2019-09-09T00:00:00Z,1315.0,2019-11-26T00:00:00Z,1353,38,ok,ok,nan
+28,Karamo Brown,Karamo Brown,54992730,2019-09-09T00:00:00Z,183.0,2019-11-26T00:00:00Z,218,35,ok,ok,nan
+28,Kate Flannery,Kate Flannery,4702041,2019-09-09T00:00:00Z,334.0,2019-11-26T00:00:00Z,353,19,ok,ok,nan
+28,Kel Mitchell,Kel Mitchell,661872,2019-09-09T00:00:00Z,3316.0,2019-11-26T00:00:00Z,3358,42,ok,ok,nan
+28,Lamar Odom,Lamar Odom,651268,2019-09-09T00:00:00Z,2241.0,2019-11-26T00:00:00Z,2283,42,ok,ok,nan
+28,Lauren Alaina,Lauren Alaina,31000171,2019-09-09T00:00:00Z,2464.0,2019-11-26T00:00:00Z,2512,48,ok,ok,nan
+28,Mary Wilson,Mary Wilson,343104,2019-09-09T00:00:00Z,nan,2019-11-26T00:00:00Z,46,,disambiguation,ok,Page is a disambiguation page (pageprops.disambiguation)
+28,Ray Lewis,Ray Lewis,449982,2019-09-09T00:00:00Z,3399.0,2019-11-26T00:00:00Z,3409,10,ok,ok,nan
+28,Sailor Brinkley-Cook,Sailor Brinkley Cook,41476979,2019-09-09T00:00:00Z,4.0,2019-11-26T00:00:00Z,4,0,ok,ok,nan
+28,Sean Spicer,Sean Spicer,52246221,2019-09-09T00:00:00Z,1178.0,2019-11-26T00:00:00Z,1196,18,ok,ok,nan
+29,AJ McLean,AJ McLean,675411,2020-09-07T00:00:00Z,1544.0,2020-11-24T00:00:00Z,1568,24,ok,ok,nan
+29,Anne Heche,Anne Heche,320781,2020-09-07T00:00:00Z,1539.0,2020-11-24T00:00:00Z,1558,19,ok,ok,nan
+29,Carole Baskin,Carole Baskin,63468915,2020-09-07T00:00:00Z,291.0,2020-11-24T00:00:00Z,359,68,ok,ok,nan
+29,Charles Oakley,Charles Oakley,1277617,2020-09-07T00:00:00Z,642.0,2020-11-24T00:00:00Z,648,6,ok,ok,nan
+29,Chrishell Stause,Chrishell Stause,2245230,2020-09-07T00:00:00Z,356.0,2020-11-24T00:00:00Z,391,35,ok,ok,nan
+29,Jeannie Mai,Jeannie Mai,23970626,2020-09-07T00:00:00Z,760.0,2020-11-24T00:00:00Z,786,26,ok,ok,nan
+29,Jesse Metcalfe,Jesse Metcalfe,1533111,2020-09-07T00:00:00Z,1538.0,2020-11-24T00:00:00Z,1545,7,ok,ok,nan
+29,Johnny Weir,Johnny Weir,1352814,2020-09-07T00:00:00Z,2360.0,2020-11-24T00:00:00Z,2369,9,ok,ok,nan
+29,Justina Machado,Justina Machado,2034846,2020-09-07T00:00:00Z,463.0,2020-11-24T00:00:00Z,468,5,ok,ok,nan
+29,Kaitlyn Bristowe,Kaitlyn Bristowe,46883354,2020-09-07T00:00:00Z,220.0,2020-11-24T00:00:00Z,231,11,ok,ok,nan
+29,Monica Aldama,Monica Aldama,62861622,2020-09-07T00:00:00Z,38.0,2020-11-24T00:00:00Z,56,18,ok,ok,nan
+29,Nelly,Nelly,169408,2020-09-07T00:00:00Z,5805.0,2020-11-24T00:00:00Z,5811,6,ok,ok,nan
+29,Nev Schulman,Nev Schulman,37689668,2020-09-07T00:00:00Z,465.0,2020-11-24T00:00:00Z,476,11,ok,ok,nan
+29,Skai Jackson,Skai Jackson,33506114,2020-09-07T00:00:00Z,2061.0,2020-11-24T00:00:00Z,2074,13,ok,ok,nan
+29,Veron Davis,Veron Davis,nan,2020-09-07T00:00:00Z,nan,2020-11-24T00:00:00Z,,,missing_title,missing_pageid,No valid pageid from preseason CSV; cannot compute end edits. Title not found (pageid=-1)
+30,Amanda Kloots,Amanda Kloots,65906228,2021-09-13T00:00:00Z,152.0,2021-11-23T00:00:00Z,168,16,ok,ok,nan
+30,Brian Austin Green,Brian Austin Green,225485,2021-09-13T00:00:00Z,2356.0,2021-11-23T00:00:00Z,2387,31,ok,ok,nan
+30,Christine Chiu,Bling Empire,66472318,2021-09-13T00:00:00Z,94.0,2021-11-23T00:00:00Z,105,11,ok,ok,nan
+30,Cody Rigsby,Cody Rigsby,68748127,2021-09-13T00:00:00Z,0.0,2021-11-23T00:00:00Z,8,8,ok,ok,nan
+30,Iman Shumpert,Iman Shumpert,26654955,2021-09-13T00:00:00Z,1540.0,2021-11-23T00:00:00Z,1568,28,ok,ok,nan
+30,Jimmie Allen,Jimmie Allen,57880949,2021-09-13T00:00:00Z,333.0,2021-11-23T00:00:00Z,359,26,ok,ok,nan
+30,JoJo Siwa,JoJo Siwa,50561266,2021-09-13T00:00:00Z,1164.0,2021-11-23T00:00:00Z,1185,21,ok,ok,nan
+30,Kenya Moore,Kenya Moore,2920466,2021-09-13T00:00:00Z,1169.0,2021-11-23T00:00:00Z,1192,23,ok,ok,nan
+30,Martin Kove,Martin Kove,2176801,2021-09-13T00:00:00Z,667.0,2021-11-23T00:00:00Z,691,24,ok,ok,nan
+30,Matt James,Matt James,7349982,2021-09-13T00:00:00Z,nan,2021-11-23T00:00:00Z,75,,disambiguation,ok,Page is a disambiguation page (pageprops.disambiguation)
+30,Melanie C,Melanie C,262475,2021-09-13T00:00:00Z,5961.0,2021-11-23T00:00:00Z,6005,44,ok,ok,nan
+30,Melora Hardin,Melora Hardin,1796057,2021-09-13T00:00:00Z,710.0,2021-11-23T00:00:00Z,724,14,ok,ok,nan
+30,"Mike ""The Miz"" Mizanin",The Miz,2162222,2021-09-13T00:00:00Z,13402.0,2021-11-23T00:00:00Z,13422,20,ok,ok,nan
+30,Olivia Jade,Olivia Jade,60216019,2021-09-13T00:00:00Z,569.0,2021-11-23T00:00:00Z,589,20,ok,ok,nan
+30,Suni Lee,Sunisa Lee,59267698,2021-09-13T00:00:00Z,460.0,2021-11-23T00:00:00Z,506,46,ok,ok,nan
+31,Charli D'Amelio,Charli D'Amelio,62810909.0,2022-09-12T00:00:00Z,1199.0,,,,ok,missing_finale_date,Missing season_finale_date for season 31. nan
+31,Cheryl Ladd,Cheryl Ladd,953920.0,2022-09-12T00:00:00Z,798.0,,,,ok,missing_finale_date,Missing season_finale_date for season 31. nan
+31,Daniel Durant,Daniel Durant,49067799.0,2022-09-12T00:00:00Z,80.0,,,,ok,missing_finale_date,Missing season_finale_date for season 31. nan
+31,Gabby Windey,Gabby Windey,70269682.0,2022-09-12T00:00:00Z,45.0,,,,ok,missing_finale_date,Missing season_finale_date for season 31. nan
+31,Heidi D'Amelio,Charli D'Amelio,62810909.0,2022-09-12T00:00:00Z,1199.0,,,,ok,missing_finale_date,Missing season_finale_date for season 31. nan
+31,Jason Lewis,Jason Lewis,13598924.0,2022-09-12T00:00:00Z,nan,,,,disambiguation,missing_finale_date,Missing season_finale_date for season 31. Page is a disambiguation page (pageprops.disambiguation)
+31,Jessie James Decker,Jessie James Decker,18442704.0,2022-09-12T00:00:00Z,1794.0,,,,ok,missing_finale_date,Missing season_finale_date for season 31. nan
+31,Jordin Sparks,Jordin Sparks,3536351.0,2022-09-12T00:00:00Z,7923.0,,,,ok,missing_finale_date,Missing season_finale_date for season 31. nan
+31,Joseph Baena,Joseph Baena,41476935.0,2022-09-12T00:00:00Z,9.0,,,,ok,missing_finale_date,Missing season_finale_date for season 31. nan
+31,Sam Champion,Sam Champion,2833927.0,2022-09-12T00:00:00Z,649.0,,,,ok,missing_finale_date,Missing season_finale_date for season 31. nan
+31,Selma Blair,Selma Blair,261017.0,2022-09-12T00:00:00Z,1869.0,,,,ok,missing_finale_date,Missing season_finale_date for season 31. nan
+31,Shangela,Shangela,34803359.0,2022-09-12T00:00:00Z,818.0,,,,ok,missing_finale_date,Missing season_finale_date for season 31. nan
+31,Teresa Giudice,Teresa Giudice,24726351.0,2022-09-12T00:00:00Z,887.0,,,,ok,missing_finale_date,Missing season_finale_date for season 31. nan
+31,Trevor Donovan,Trevor Donovan,12517910.0,2022-09-12T00:00:00Z,566.0,,,,ok,missing_finale_date,Missing season_finale_date for season 31. nan
+31,Vinny Guadagnino,Vinny Guadagnino,25980324.0,2022-09-12T00:00:00Z,579.0,,,,ok,missing_finale_date,Missing season_finale_date for season 31. nan
+31,Wayne Brady,Wayne Brady,524997.0,2022-09-12T00:00:00Z,2362.0,,,,ok,missing_finale_date,Missing season_finale_date for season 31. nan
+32,Adrian Peterson,Adrian Peterson,19156186,2023-09-19T00:00:00Z,8088.0,2023-12-06T00:00:00Z,8090,2,ok,ok,nan
+32,Alyson Hannigan,Alyson Hannigan,43997,2023-09-19T00:00:00Z,2394.0,2023-12-06T00:00:00Z,2408,14,ok,ok,nan
+32,Ariana Madix,Ariana Madix,51973787,2023-09-19T00:00:00Z,299.0,2023-12-06T00:00:00Z,317,18,ok,ok,nan
+32,Barry Williams,Barry Williams,44038178,2023-09-19T00:00:00Z,nan,2023-12-06T00:00:00Z,20,,disambiguation,ok,Page is a disambiguation page (pageprops.disambiguation)
+32,Charity Lawson,The Bachelorette (American TV series) season 20,73442027,2023-09-19T00:00:00Z,165.0,2023-12-06T00:00:00Z,176,11,ok,ok,nan
+32,Harry Jowsey,Harry Jowsey,74812836,2023-09-19T00:00:00Z,1.0,2023-12-06T00:00:00Z,2,1,ok,ok,nan
+32,Jamie Lynn Spears,Jamie Lynn Spears,97803,2023-09-19T00:00:00Z,8368.0,2023-12-06T00:00:00Z,8456,88,ok,ok,nan
+32,Jason Mraz,Jason Mraz,412807,2023-09-19T00:00:00Z,4328.0,2023-12-06T00:00:00Z,4360,32,ok,ok,nan
+32,Lele Pons,Lele Pons,43774211,2023-09-19T00:00:00Z,3269.0,2023-12-06T00:00:00Z,3274,5,ok,ok,nan
+32,Matt Walsh,Matthew Walsh,8623761,2023-09-19T00:00:00Z,nan,2023-12-06T00:00:00Z,121,,disambiguation,ok,Page is a disambiguation page (pageprops.disambiguation)
+32,Mauricio Umansky,Mauricio Umansky,75613590,2023-09-19T00:00:00Z,0.0,2023-12-06T00:00:00Z,0,0,ok,ok,nan
+32,Mira Sorvino,Mira Sorvino,277368,2023-09-19T00:00:00Z,1162.0,2023-12-06T00:00:00Z,1185,23,ok,ok,nan
+32,Tyson Beckford,Tyson Beckford,1692237,2023-09-19T00:00:00Z,1227.0,2023-12-06T00:00:00Z,1237,10,ok,ok,nan
+32,Xochitl Gomez,Xochitl Gomez,66298962,2023-09-19T00:00:00Z,506.0,2023-12-06T00:00:00Z,526,20,ok,ok,nan
+33,Anna Delvey,Anna Delvey,57545953,2024-09-10T00:00:00Z,1470.0,2024-11-27T00:00:00Z,1537,67,ok,ok,nan
+33,Brooks Nader,Brooks Nader,73856782,2024-09-10T00:00:00Z,39.0,2024-11-27T00:00:00Z,76,37,ok,ok,nan
+33,Chandler Kinney,Chandler Kinney,77795621,2024-09-10T00:00:00Z,13.0,2024-11-27T00:00:00Z,33,20,ok,ok,nan
+33,Danny Amendola,Danny Amendola,17155306,2024-09-10T00:00:00Z,1791.0,2024-11-27T00:00:00Z,1823,32,ok,ok,nan
+33,Dwight Howard,Dwight Howard,479273,2024-09-10T00:00:00Z,4559.0,2024-11-27T00:00:00Z,4569,10,ok,ok,nan
+33,Eric Roberts,Eric Roberts,399280,2024-09-10T00:00:00Z,1837.0,2024-11-27T00:00:00Z,1855,18,ok,ok,nan
+33,Ilona Maher,Ilona Maher,67162609,2024-09-10T00:00:00Z,118.0,2024-11-27T00:00:00Z,152,34,ok,ok,nan
+33,Jenn Tran,Jenn Tran,76916459,2024-09-10T00:00:00Z,33.0,2024-11-27T00:00:00Z,44,11,ok,ok,nan
+33,Joey Graziadei,Joey Graziadei,74646857,2024-09-10T00:00:00Z,57.0,2024-11-27T00:00:00Z,66,9,ok,ok,nan
+33,Phaedra Parks,Phaedra Parks,57560916,2024-09-10T00:00:00Z,215.0,2024-11-27T00:00:00Z,219,4,ok,ok,nan
+33,Reginald VelJohnson,Reginald VelJohnson,1260945,2024-09-10T00:00:00Z,1461.0,2024-11-27T00:00:00Z,1472,11,ok,ok,nan
+33,Stephen Nedoroscik,Stephen Nedoroscik,68027842,2024-09-10T00:00:00Z,312.0,2024-11-27T00:00:00Z,334,22,ok,ok,nan
+33,Tori Spelling,Tori Spelling,97149,2024-09-10T00:00:00Z,2292.0,2024-11-27T00:00:00Z,2296,4,ok,ok,nan
+34,Alix Earle,Alix Earle,74584114.0,2025-09-09T00:00:00Z,281.0,,,,ok,missing_finale_date,Missing season_finale_date for season 34. nan
+34,Andy Richter,Andy Richter,869611.0,2025-09-09T00:00:00Z,1425.0,,,,ok,missing_finale_date,Missing season_finale_date for season 34. nan
+34,Baron Davis,Baron Davis,1402941.0,2025-09-09T00:00:00Z,2692.0,,,,ok,missing_finale_date,Missing season_finale_date for season 34. nan
+34,Corey Feldman,Corey Feldman,90141.0,2025-09-09T00:00:00Z,3348.0,,,,ok,missing_finale_date,Missing season_finale_date for season 34. nan
+34,Danielle Fishel,Danielle Fishel,148907.0,2025-09-09T00:00:00Z,1941.0,,,,ok,missing_finale_date,Missing season_finale_date for season 34. nan
+34,Dylan Efron,Dylan Efron,64830605.0,2025-09-09T00:00:00Z,62.0,,,,ok,missing_finale_date,Missing season_finale_date for season 34. nan
+34,Elaine Hendrix,Elaine Hendrix,1674777.0,2025-09-09T00:00:00Z,634.0,,,,ok,missing_finale_date,Missing season_finale_date for season 34. nan
+34,Hilaria Baldwin,Hilaria Baldwin,50826041.0,2025-09-09T00:00:00Z,983.0,,,,ok,missing_finale_date,Missing season_finale_date for season 34. nan
+34,Jen Affleck,The Secret Lives of Mormon Wives,77837934.0,2025-09-09T00:00:00Z,321.0,,,,ok,missing_finale_date,Missing season_finale_date for season 34. nan
+34,Jordan Chiles,Jordan Chiles,43473171.0,2025-09-09T00:00:00Z,671.0,,,,ok,missing_finale_date,Missing season_finale_date for season 34. nan
+34,Lauren Jauregui,Lauren Jauregui,37607520.0,2025-09-09T00:00:00Z,2050.0,,,,ok,missing_finale_date,Missing season_finale_date for season 34. nan
+34,Robert Irwin,Robert Irwin,2324851.0,2025-09-09T00:00:00Z,nan,,,,disambiguation,missing_finale_date,Missing season_finale_date for season 34. Page is a disambiguation page (pageprops.disambiguation)
+34,Scott Hoying,Scott Hoying,44917205.0,2025-09-09T00:00:00Z,326.0,,,,ok,missing_finale_date,Missing season_finale_date for season 34. nan
+34,Whitney Leavitt,Whitney Leavitt,77892310.0,2025-09-09T00:00:00Z,3.0,,,,ok,missing_finale_date,Missing season_finale_date for season 34. nan

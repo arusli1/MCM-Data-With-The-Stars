@@ -37,7 +37,7 @@ def main() -> None:
 
     df = pd.read_csv(csv_path)
 
-    # Premiere dates provided by user (note: season 31 not present in list)
+    # Premiere + finale dates provided by user (DWTS US).
     premiere_dates_text = {
         1: "June 1, 2005",
         2: "January 5, 2006",
@@ -74,7 +74,43 @@ def main() -> None:
         33: "September 17, 2024",
         34: "September 16, 2025",
     }
+    finale_dates_text = {
+        1: "July 6, 2005",
+        2: "February 26, 2006",
+        3: "November 15, 2006",
+        4: "May 22, 2007",
+        5: "November 27, 2007",
+        6: "May 20, 2008",
+        7: "November 25, 2008",
+        8: "May 19, 2009",
+        9: "November 24, 2009",
+        10: "May 25, 2010",
+        11: "November 23, 2010",
+        12: "May 24, 2011",
+        13: "November 22, 2011",
+        14: "May 22, 2012",
+        15: "November 27, 2012",
+        16: "May 21, 2013",
+        17: "November 26, 2013",
+        18: "May 20, 2014",
+        19: "November 25, 2014",
+        20: "May 19, 2015",
+        21: "November 24, 2015",
+        22: "May 24, 2016",
+        23: "November 22, 2016",
+        24: "May 23, 2017",
+        25: "November 21, 2017",
+        26: "May 21, 2018",
+        27: "November 19, 2018",
+        28: "November 25, 2019",
+        29: "November 23, 2020",
+        30: "November 22, 2021",
+        32: "December 5, 2023",
+        33: "November 26, 2024",
+        # 34 finale unknown / N/A
+    }
     premiere_dates_iso = {k: _parse_us_date(v) for k, v in premiere_dates_text.items()}
+    finale_dates_iso = {k: _parse_us_date(v) for k, v in finale_dates_text.items()}
 
     # Detect relevant columns (robust to minor naming differences)
     cols_lower = {c.lower(): c for c in df.columns}
@@ -97,14 +133,19 @@ def main() -> None:
     out = out.drop_duplicates().sort_values(["season", "celebrity_name"], kind="stable")
 
     out["season_premiere_date"] = out["season"].map(premiere_dates_iso)
+    out["season_finale_date"] = out["season"].map(finale_dates_iso)
 
-    # Sanity: report missing premiere dates (if any)
-    missing = out[out["season_premiere_date"].isna()]["season"].value_counts().sort_index()
-    if len(missing):
+    # Sanity: report missing dates (if any)
+    missing_prem = out[out["season_premiere_date"].isna()]["season"].value_counts().sort_index()
+    if len(missing_prem):
         print("WARNING: Missing premiere date for some seasons (count of contestants):")
-        print(missing.to_string())
+        print(missing_prem.to_string())
+    missing_fin = out[out["season_finale_date"].isna()]["season"].value_counts().sort_index()
+    if len(missing_fin):
+        print("WARNING: Missing finale date for some seasons (count of contestants):")
+        print(missing_fin.to_string())
 
-    out = out[["season", "season_premiere_date", "celebrity_name"]]
+    out = out[["season", "season_premiere_date", "season_finale_date", "celebrity_name"]]
 
     out_path = repo / "Archit_Preliminary" / "celebrity_season_premiere_table.csv"
     out.to_csv(out_path, index=False)

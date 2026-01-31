@@ -1,0 +1,5 @@
+metric,corr_r,p_value,n
+"Pearson(placement_pct, log_fame_ratio)",-0.06965689962363499,0.15714419616035688,414
+"Spearman(log_fame_ratio, judge_avg_week_total)",0.07172963508348586,0.14513111341862173,414
+"Spearman(placement_pct, judge_avg_week_total)",-0.7215265947102804,9.092681906402765e-68,414
+"Spearman(placement_pct, log_fame_ratio)",-0.07267916006547705,0.13986770068007043,414

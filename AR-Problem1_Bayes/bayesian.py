@@ -50,15 +50,6 @@ UNC_PATH = "AR-Problem1_Bayes/results/bayesian/inferred_shares_bayes_unc.csv"
 MATCH_PATH = "AR-Problem1_Bayes/results/bayesian/elimination_match_bayes.csv"
 
 EPS = 1e-8
-<<<<<<< HEAD
-TEMP = 0.7  # temperature for elimination softmax; smaller -> sharper (more deterministic)
-TEMP_PLACEMENT = 0.6  # temperature for finals placement likelihood (if enabled)
-LAM_DYN = 0.5
-LAM_P = 0.1  # L2 penalty on latent logits (prevents extreme shares)
-LAM_HARD = 150.0  # hard-constraint margin penalty for eliminated vs non-eliminated risk
-LAM_FINAL = 10.0  # weight for finals placement constraint (0 disables)
-LAM_ENT = 0.05  # entropy regularization on shares (keeps shares from collapsing)
-=======
 TEMP = 0.7
 RANK_TAU = 10.0
 LAM_DYN = 0.5
@@ -66,7 +57,6 @@ LAM_ETA = 1.0
 LAM_HARD = 150.0
 LAM_FINAL = 10.0
 LAM_COEF = 0.1
->>>>>>> 6d5ea59fe28bbddb5dafbbf64361c1de20d09701
 
 LR = 0.05  # Adam learning rate
 N_STEPS = 250  # Adam optimization steps per season
@@ -314,19 +304,8 @@ def loss_for_season(
             pred = p[w - 1] + gamma * Jz[w]
             loss = loss + LAM_DYN * torch.mean((p[w, shared] - pred[shared]) ** 2)
 
-<<<<<<< HEAD
-    # L2 prior on latent logits to prevent extreme vote-share distributions.
+    # L2 prior on latent states to prevent extreme logits
     loss = loss + LAM_P * torch.mean((p * active_mask) ** 2)
-=======
-    # L2 prior on coefficients to prevent drift
-    loss = loss + LAM_COEF * (
-        torch.mean(beta_age**2)
-        + torch.mean(beta_judge**2)
-        + torch.mean(beta_industry**2)
-        + torch.mean(beta_partner**2)
-        + torch.mean(b_contestant**2)
-    )
->>>>>>> 6d5ea59fe28bbddb5dafbbf64361c1de20d09701
 
     # Likelihood (soft elimination) + hard-constraint penalties:
     # - compute a per-week \"risk\" score that should be high for eliminated contestants.
@@ -351,10 +330,9 @@ def loss_for_season(
                 .rank(ascending=False, method="first")
                 .to_numpy()
             ).to(p.device)
-<<<<<<< HEAD
             q = (rJ - 1) / (rJ.numel() - 1 + EPS)
 
-        # Normalize scales within week so neither term dominates due to scale.
+        # Normalize scales within week to reduce dominance by one term.
         q_z = (q - q.mean()) / (q.std() + EPS)
         log_s = torch.log(s[w, idx] + EPS)
         log_s_z = (log_s - log_s.mean()) / (log_s.std() + EPS)
@@ -364,15 +342,6 @@ def loss_for_season(
         risk = a * q_z - b * log_s_z
 
         logits = risk / TEMP
-=======
-            rJ = (rJ - 1) / (rJ.numel() - 1 + EPS)
-            s_w = s[w, idx]
-            diff = (s_w.unsqueeze(0) - s_w.unsqueeze(1)) * RANK_TAU
-            rF = 1.0 + torch.sigmoid(diff).sum(dim=1)
-            rF = (rF - 1) / (rF.numel() - 1 + EPS)
-            R = rJ + rF
-            logits = R / TEMP
->>>>>>> 6d5ea59fe28bbddb5dafbbf64361c1de20d09701
         log_probs = torch.log_softmax(logits, dim=0)
         loss = loss - torch.sum(log_probs[[idx.tolist().index(e) for e in elim]])
 

@@ -1,0 +1,9 @@
+metric,corr_r,p_value,n
+"Pearson(log_edits, judge_avg_week_total)",-0.0828137046752136,0.10158766858694694,392
+"Pearson(placement_pct, judge_avg_week_total)",-0.7018140111763376,2.0494729157083522e-59,392
+"Pearson(placement_pct, log_edits)",0.12268854748118374,0.015076304500832149,392
+"Spearman(log_edits, judge_avg_week_total)",-0.08047579381037936,0.11164732513840461,392
+"Spearman(placement, judge_avg_week_total)",-0.6583549142363625,4.682757139126494e-50,392
+"Spearman(placement, log_edits)",0.19418095035908206,0.0001091931950079967,392
+"Spearman(placement_pct, judge_avg_week_total)",-0.7087077088439568,4.6659633470894646e-61,392
+"Spearman(placement_pct, log_edits)",0.14778584924768084,0.00335934727171956,392
