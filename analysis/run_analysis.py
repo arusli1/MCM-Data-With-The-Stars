@@ -51,6 +51,10 @@ RF_PARAMS = dict(
 # a retrospective explanation using full-season info.
 ALLOW_LEAKY_FEATURES_FOR_SUCCESS = False
 
+# If True, adds Week 1 & 2 scores to the SUCCESS model.
+# This creates the "High Accuracy Forecasting" SHAP view.
+ALLOW_HIGH_ACCURACY_FEATURES = True
+
 
 # -------------------------
 # Helpers
@@ -134,6 +138,16 @@ def load_and_preprocess():
     else:
         df["avg_fan_share"] = 0.0  # extreme fallback
 
+    # --- Early Talent Proxy: Week 1 & 2 Scores ---
+    score_cols_w12 = [c for c in df_main.columns if ('score' in c and 'judge' in c) and ('week1_' in c or 'week2_' in c)]
+    def get_early_score(row):
+        scores = pd.to_numeric(row[score_cols_w12], errors="coerce")
+        scores = scores[scores > 0]
+        return float(scores.mean()) if len(scores) else np.nan
+    
+    df["early_score"] = df.apply(get_early_score, axis=1)
+    df["early_score"] = df["early_score"].fillna(df["early_score"].mean())
+
     print(f"Merged Data Shape (left join): {df.shape}")
     return df
 
@@ -179,6 +193,9 @@ def make_design_matrix(df, include_leaky_for_success: bool):
     ]
 
     X_raw = df[base_cols].copy()
+
+    if ALLOW_HIGH_ACCURACY_FEATURES:
+        X_raw["Early Performance (W1-2)"] = df["early_score"]
 
     if include_leaky_for_success:
         X_raw["avg_judge_score"] = df["avg_judge_score"]

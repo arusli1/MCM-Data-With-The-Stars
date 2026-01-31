@@ -1,6 +1,11 @@
 # How to Quantify Accuracy in DWTS Predictions
 
-When predicting a competition like *Dancing with the Stars*, "Accuracy" is not a single number. We use four complementary metrics to measure how well the model is performing.
+## Technical Optimization (The Loss Function)
+Since we are using **Random Forest Regressors**, the model does not "optimize" using a single global loss function like a Neural Network (Gradient Descent). Instead, it uses **Greedy Variance Reduction**.
+
+*   **Criterion (Loss Function)**: The model uses **Mean Squared Error (MSE)**. 
+*   **The Goal**: At every branch in a decision tree, the model searches for the exact "split" (e.g., "Age < 35") that minimizes the MSE of the predictions in the resulting groups.
+*   **Averaging**: The final prediction is the average of 400 separate trees, which further reduces variance and prevents overfitting.
 
 ## 1. Directional Accuracy (Pearson & Spearman Correlation)
 This is the most important metric for ranking problems.
@@ -23,10 +28,18 @@ This is the most important metric for ranking problems.
     *   Our current Success Model has an R² of **~0.21 (21%)**.
     *   This means 21% of your placement is "decided" before you even dance (based on who you are), while the remaining 79% is decided by performance, personality, and luck.
 
-## 4. Winner Success Rate
-*   **What it measures**: Did the model correctly identify the Season Winner?
-*   **Interpretation**:
-    *   Our model currently correctly identifies the winner in **~24% of seasons**. Since there are 10-15 contestants per season, a random guess would be ~7-10%, so the model is significantly better than chance.
+## 4. Winner Accuracy (Hit Rate)
+This measures how often the model's highest-ranked predictions actually win the show.
+
+### Pre-Season Model (Static Traits)
+*   **Top-1 Accuracy**: **23.5%** (95% CI: [9.2%, 37.9%])
+*   **Top-3 Accuracy**: **50.0%** (95% CI: [33.2%, 66.8%])
+
+### High-Accuracy Model (Includes Week 1-2 Scores)
+*   **Top-1 Accuracy**: **38.2%** (95% CI: [21.8%, 54.6%])
+*   **Top-3 Accuracy**: **79.4%** (95% CI: [65.8%, 93.0%])
+
+**Why this matters**: Adding just two weeks of performance data allows the model to capture "actual talent." Picking the winner in the Top 3 **~80% of the time** makes this a highly reliable forecasting tool once the season begins.
 
 ---
 
