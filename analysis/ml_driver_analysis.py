@@ -127,7 +127,7 @@ def prepare_modeling_data(df, target_col, features):
     X[numeric_features] = imputer.fit_transform(X[numeric_features])
     
     # One-hot encode categorical
-    X = pd.get_dummies(X, columns=categorical_features)
+    X = pd.get_dummies(X, columns=categorical_features, dtype=int)
     
     return X, y, groups
 
@@ -138,33 +138,41 @@ def evaluate_model(y_true, y_pred):
     spearman, _ = spearmanr(y_true, y_pred)
     return mae, rmse, pearson, spearman
 
-def train_and_cv(X, y, groups, model_type='xgb'):
+def train_and_cv(X, y, groups):
     logo = LeaveOneGroupOut()
-    cv_results = []
-    all_preds = np.zeros(len(y))
     
-    for train_idx, test_idx in logo.split(X, y, groups):
-        X_train, X_test = X.iloc[train_idx], X.iloc[test_idx]
-        y_train, y_test = y.iloc[train_idx], y.iloc[test_idx]
-        
-        if model_type == 'xgb':
-            # Simplified tuning
-            model = XGBRegressor(max_depth=5, n_estimators=400, learning_rate=0.05, random_state=42)
-        else:
-            model = RandomForestRegressor(n_estimators=400, max_depth=6, random_state=42)
+    models_to_test = {
+        'rf': RandomForestRegressor(n_estimators=400, max_depth=6, random_state=42),
+        'xgb': XGBRegressor(max_depth=5, n_estimators=400, learning_rate=0.05, random_state=42)
+    }
+    
+    all_metrics = {}
+    best_model_xgb = None
+    
+    for m_name, model in models_to_test.items():
+        cv_results = []
+        all_preds = np.zeros(len(y))
+        for train_idx, test_idx in logo.split(X, y, groups):
+            X_train, X_test = X.iloc[train_idx], X.iloc[test_idx]
+            y_train, y_test = y.iloc[train_idx], y.iloc[test_idx]
             
-        model.fit(X_train, y_train)
-        preds = model.predict(X_test)
-        all_preds[test_idx] = preds
+            m = model.__class__(**model.get_params())
+            m.fit(X_train, y_train)
+            preds = m.predict(X_test)
+            all_preds[test_idx] = preds
+            cv_results.append(evaluate_model(y_test, preds))
         
-        metrics = evaluate_model(y_test, preds)
-        cv_results.append(metrics)
-        
-    # Final model for SHAP (trained on all data)
-    final_model = XGBRegressor(max_depth=5, n_estimators=400, learning_rate=0.05, random_state=42) if model_type == 'xgb' else RandomForestRegressor(n_estimators=400, max_depth=6, random_state=42)
+        all_metrics[m_name] = {
+            'cv_res': cv_results,
+            'preds': all_preds,
+            'mean_metrics': np.mean(cv_results, axis=0)
+        }
+    
+    # Train final XGB for SHAP
+    final_model = XGBRegressor(max_depth=5, n_estimators=400, learning_rate=0.05, random_state=42)
     final_model.fit(X, y)
     
-    return cv_results, all_preds, final_model
+    return all_metrics, final_model
 
 def run_shap_analysis(model, X, target_name):
     explainer = shap.TreeExplainer(model)
@@ -184,8 +192,42 @@ def run_shap_analysis(model, X, target_name):
     }).sort_values('mean_abs_shap', ascending=False)
     importance.to_csv(f"{OUTPUT_DIR}/shap_importance_{target_name}.csv", index=False)
     
-    # Top 10 Pos/Neg
-    # Calculate feature correlations with SHAP values to determine direction
+    # 1. SHAP Dependence Plots for Continuous Characteristics
+    # age, judge_mean_w1_3, fan_mean_w1_3, slopes
+    cont_features = ['celebrity_age_during_season', 'judge_mean_w1_3', 'fan_mean_w1_3', 
+                     'judge_slope_w1_3', 'fan_slope_w1_3']
+    for feat in cont_features:
+        if feat in X.columns:
+            plt.figure(figsize=(8, 6))
+            shap.dependence_plot(feat, shap_values, X, show=False)
+            plt.title(f"SHAP Dependence: {feat} ({target_name})")
+            plt.tight_layout()
+            plt.savefig(f"{OUTPUT_DIR}/shap_dependence_{feat}_{target_name}.png")
+            plt.close()
+
+    # 2. Categorical SHAP distribution plots (Beeswarm subselection)
+    # industry buckets, partner IDs
+    cat_groups = ['celebrity_industry', 'ballroom_partner', 'celebrity_homestate', 'celebrity_homecountry/region']
+    for base_cat in cat_groups:
+        related_cols = [c for c in X.columns if c.startswith(base_cat)]
+        if not related_cols: continue
+        
+        # Get indices of these columns
+        col_indices = [X.columns.get_loc(c) for c in related_cols]
+        
+        # Plot beeswarm for just these categorical features
+        plt.figure(figsize=(10, 6))
+        # shap 0.4x+ uses shap_values as an Explanation object or we handle indices
+        # For simplicity, we can use a bar-like plot of distributions if beeswarm is tricky to subselect
+        temp_shap = shap_values[:, col_indices]
+        temp_X = X.iloc[:, col_indices]
+        shap.summary_plot(temp_shap, temp_X, plot_type="violin", show=False)
+        plt.title(f"SHAP Effects: {base_cat} ({target_name})")
+        plt.tight_layout()
+        plt.savefig(f"{OUTPUT_DIR}/shap_cat_{base_cat.replace('/', '_')}_{target_name}.png")
+        plt.close()
+    
+    # 3. Specialized SHAP graphs (Top 10 Positive and Top 10 Negative)
     feature_directions = []
     for i, col in enumerate(X.columns):
         if np.std(X[col]) > 0:
@@ -211,15 +253,12 @@ def run_shap_analysis(model, X, target_name):
     plt.savefig(f"{OUTPUT_DIR}/shap_top10_neg_{target_name}.png")
     plt.close()
     
-    # Per-characteristic graphs
+    # 4. Per-characteristic graphs (focused SHAP visualization)
     chars = ['ballroom_partner', 'celebrity_industry', 'celebrity_homestate', 'celebrity_homecountry/region', 'celebrity_age_during_season']
     for char in chars:
-        # Find all columns related to this characteristic (if OHE)
         related_cols = [c for c in X.columns if c.startswith(char)]
         if not related_cols: continue
-        
         char_importance = importance[importance['feature'].isin(related_cols)].sort_values('mean_abs_shap', ascending=False)
-        
         plt.figure(figsize=(10, 6))
         sns.barplot(data=char_importance.head(10), x='mean_abs_shap', y='feature', palette='viridis')
         plt.title(f"Impact of {char} - {target_name}")
@@ -232,11 +271,12 @@ def run_shap_analysis(model, X, target_name):
 def pro_boost_analysis(df, features_no_partner, target_col='success_score'):
     # Fit model without partner features
     X, y, groups = prepare_modeling_data(df, target_col, features_no_partner)
-    _, cv_preds, _ = train_and_cv(X, y, groups, model_type='xgb')
+    metrics_bundle, _ = train_and_cv(X, y, groups)
+    cv_preds = metrics_bundle['xgb']['preds']
     
     data = df.dropna(subset=[target_col]).copy()
     data['predicted_success'] = cv_preds
-    data['residual'] = data[target_col] - data['predicted_success']
+    data['residual'] = (data[target_col] - data['predicted_success']).astype(float)
     
     # Aggregate mean residual by partner
     partner_res = data.groupby('ballroom_partner')['residual'].agg(['mean', 'count']).reset_index()
@@ -244,31 +284,55 @@ def pro_boost_analysis(df, features_no_partner, target_col='success_score'):
     # Bootstrap CIs
     seasons = data['season'].unique()
     n_boot = 1000
-    boot_means = []
     
-    for _ in range(n_boot):
+    # Pre-allocate or use a better structure
+    # We want mean residual per partner per bootstrap iteration
+    partners = partner_res['ballroom_partner'].tolist()
+    boot_matrix = np.full((n_boot, len(partners)), np.nan, dtype=float)
+    
+    for i in range(n_boot):
         boot_seasons = np.random.choice(seasons, size=len(seasons), replace=True)
         boot_data = pd.concat([data[data['season'] == s] for s in boot_seasons])
-        boot_means.append(boot_data.groupby('ballroom_partner')['residual'].mean())
-        
-    boot_df = pd.DataFrame(boot_means)
-    ci_lower = boot_df.quantile(0.025)
-    ci_upper = boot_df.quantile(0.975)
+        means = boot_data.groupby('ballroom_partner')['residual'].mean().astype(float)
+        for j, p in enumerate(partners):
+            if p in means.index:
+                boot_matrix[i, j] = means[p]
+                
+    ci_lower = []
+    ci_upper = []
+    for j in range(len(partners)):
+        vals = boot_matrix[:, j]
+        vals = vals[~np.isnan(vals)]
+        if len(vals) > 0:
+            try:
+                sorted_vals = np.sort(vals.astype(float))
+                # Explicitly take indices for 2.5th and 97.5th percentiles
+                l_idx = max(0, int(0.025 * len(sorted_vals)))
+                u_idx = min(len(sorted_vals) - 1, int(0.975 * len(sorted_vals)))
+                ci_lower.append(sorted_vals[l_idx])
+                ci_upper.append(sorted_vals[u_idx])
+            except Exception as e:
+                print(f"Error for partner {partners[j]}: {e}")
+                ci_lower.append(np.nan)
+                ci_upper.append(np.nan)
+        else:
+            ci_lower.append(np.nan)
+            ci_upper.append(np.nan)
     
-    partner_res['ci_lower'] = partner_res['ballroom_partner'].map(ci_lower)
-    partner_res['ci_upper'] = partner_res['ballroom_partner'].map(ci_upper)
+    partner_res['ci_lower'] = ci_lower
+    partner_res['ci_upper'] = ci_upper
     
     partner_res = partner_res.sort_values('mean', ascending=False)
     partner_res.to_csv(f"{OUTPUT_DIR}/pro_boost_residuals.csv", index=False)
     
     # Plot
-    plt.figure(figsize=(12, 8))
+    plt.figure(figsize=(10, 12)) # Taller for partners
     plt.errorbar(partner_res['mean'], partner_res['ballroom_partner'], 
                  xerr=[partner_res['mean'] - partner_res['ci_lower'], partner_res['ci_upper'] - partner_res['mean']],
                  fmt='o', color='royalblue', capsize=5)
     plt.axvline(0, color='red', linestyle='--')
-    plt.xlabel('Mean Success Residual')
-    plt.title('Pro Dancer Boost (Residualized Success)')
+    plt.xlabel('Mean Outperformance (Residuals)')
+    plt.title('Professional Dancer Impact (Residualized Success)')
     plt.tight_layout()
     plt.savefig(f"{OUTPUT_DIR}/pro_boost_residuals.png")
     plt.close()
@@ -277,8 +341,17 @@ def pro_boost_analysis(df, features_no_partner, target_col='success_score'):
 
 def main():
     df = load_data()
-    print(f"Dataset Summary: {len(df)} contestants, {df['season'].nunique()} seasons")
+    print(f"Dataset Summary:")
+    print(f"  Contestants: {len(df)}")
+    print(f"  Seasons: {df['season'].nunique()}")
     
+    # Missingness rates
+    early_features = ['judge_mean_w1_3', 'fan_mean_w1_3', 'judge_slope_w1_3', 'fan_slope_w1_3']
+    print("Missingness Assessment (Early Window):")
+    for feat in early_features:
+        miss = df[feat].isna().mean()
+        print(f"  {feat}: {miss:.2%}")
+
     targets = {
         'success': 'success_score',
         'judge': 'judge_mean_w1_3',
@@ -306,19 +379,21 @@ def main():
         features = success_features if name == 'success' else driver_features
         X, y, groups = prepare_modeling_data(df, target, features)
         
-        cv_res, cv_preds, final_model = train_and_cv(X, y, groups, model_type='xgb')
+        metrics_bundle, final_model = train_and_cv(X, y, groups)
         
-        # Aggregate metrics
-        mean_metrics = np.mean(cv_res, axis=0)
-        results_metrics.append({
-            'target': name,
-            'MAE': mean_metrics[0],
-            'RMSE': mean_metrics[1],
-            'Pearson': mean_metrics[2],
-            'Spearman': mean_metrics[3]
-        })
+        # Save metrics for both RF and XGB
+        for m_name, bundle in metrics_bundle.items():
+            mean_metrics = bundle['mean_metrics']
+            results_metrics.append({
+                'model': m_name,
+                'target': name,
+                'MAE': mean_metrics[0],
+                'RMSE': mean_metrics[1],
+                'Pearson': mean_metrics[2],
+                'Spearman': mean_metrics[3]
+            })
         
-        # SHAP
+        # SHAP using the "final" XGB model
         importances[name] = run_shap_analysis(final_model, X, name)
         
     # Save Metrics
@@ -341,8 +416,8 @@ def main():
     X1, y1, g1 = prepare_modeling_data(df, 'success_score', base_features + ['judge_week1', 'fan_week1'])
     X13, y13, g13 = prepare_modeling_data(df, 'success_score', success_features)
     
-    _, _, model1 = train_and_cv(X1, y1, g1)
-    _, _, model13 = train_and_cv(X13, y13, g13)
+    _, model1 = train_and_cv(X1, y1, g1)
+    _, model13 = train_and_cv(X13, y13, g13)
     
     imp1 = pd.DataFrame({'feature': X1.columns, 'shap_week1': np.abs(shap.TreeExplainer(model1).shap_values(X1)).mean(axis=0)})
     imp13 = pd.DataFrame({'feature': X13.columns, 'shap_w1_3': np.abs(shap.TreeExplainer(model13).shap_values(X13)).mean(axis=0)})
@@ -357,7 +432,7 @@ def main():
         df_noise = df.copy()
         df_noise['fan_mean_w1_3'] += np.random.normal(0, scale * df_noise['fan_mean_w1_3'].std(), len(df_noise))
         Xn, yn, gn = prepare_modeling_data(df_noise, 'fan_mean_w1_3', driver_features)
-        _, _, model_n = train_and_cv(Xn, yn, gn)
+        _, model_n = train_and_cv(Xn, yn, gn)
         imp_n = pd.DataFrame({'feature': Xn.columns, f'shap_noise_{scale}': np.abs(shap.TreeExplainer(model_n).shap_values(Xn)).mean(axis=0)})
         noise_results.append(imp_n)
     
