@@ -17,7 +17,7 @@ import statsmodels.api as sm
 warnings.filterwarnings('ignore')
 
 # Set output directory
-OUTPUT_DIR = "ml_results"
+OUTPUT_DIR = 'AG_Problem_3'
 if not os.path.exists(OUTPUT_DIR):
     os.makedirs(OUTPUT_DIR)
 
@@ -134,9 +134,47 @@ def prepare_modeling_data(df, target_col, features):
 def evaluate_model(y_true, y_pred):
     mae = mean_absolute_error(y_true, y_pred)
     rmse = np.sqrt(mean_squared_error(y_true, y_pred))
-    pearson, _ = pearsonr(y_true, y_pred)
-    spearman, _ = spearmanr(y_true, y_pred)
+    # Handle cases with constant predictions or true values
+    if np.std(y_true) == 0 or np.std(y_pred) == 0:
+        pearson = 0.0
+        spearman = 0.0
+    else:
+        pearson, _ = pearsonr(y_true, y_pred)
+        spearman, _ = spearmanr(y_true, y_pred)
     return mae, rmse, pearson, spearman
+
+def compute_ranking_metrics(df, preds_col, target_col='success_score'):
+    # Rank within each season
+    df = df.copy()
+    df['predicted_success'] = preds_col
+    
+    # Higher success_score means better rank (lower placement number)
+    # We use rank(ascending=False) so highest score is rank 1
+    df['predicted_rank'] = df.groupby('season')['predicted_success'].rank(ascending=False, method='min')
+    df['actual_rank'] = df.groupby('season')['placement'].rank(ascending=True, method='min')
+    
+    # Metrics
+    # 1. Top-1 Accuracy: Is the predicted rank 1 actually the winner (placement 1)?
+    def is_top_1_correct(group):
+        pred_winner = group[group['predicted_rank'] == 1]
+        if len(pred_winner) == 0: return 0
+        # If there's a tie for rank 1, check if any of them is the actual winner
+        return 1 if 1 in pred_winner['placement'].values else 0
+    
+    top1_acc = df.groupby('season').apply(is_top_1_correct).mean()
+    
+    # 2. Top-3 Accuracy: Is the actual winner in our predicted top 3?
+    def is_winner_in_top_3(group):
+        top_3_preds = group[group['predicted_rank'] <= 3]
+        return 1 if 1 in top_3_preds['placement'].values else 0
+    
+    top3_acc = df.groupby('season').apply(is_winner_in_top_3).mean()
+    
+    # 3. Mean Rank Error: How many spots off are we on average?
+    df['rank_error'] = np.abs(df['actual_rank'] - df['predicted_rank'])
+    mean_rank_error = df['rank_error'].mean()
+    
+    return top1_acc, top3_acc, mean_rank_error, df[['season', 'celebrity_name', 'actual_rank', 'predicted_rank']]
 
 def train_and_cv(X, y, groups, tune=False):
     logo = LeaveOneGroupOut()
@@ -400,13 +438,25 @@ def main():
         # Save metrics for both RF and XGB
         for m_name, bundle in metrics_bundle.items():
             mean_metrics = bundle['mean_metrics']
+            
+            # Additional ranking metrics for success models
+            top1, top3, mre = np.nan, np.nan, np.nan
+            if name == 'success':
+                # Filter df to match indices of X/y
+                modeling_df = df.iloc[X.index].copy()
+                top1, top3, mre, pred_df = compute_ranking_metrics(modeling_df, bundle['preds'])
+                pred_df.to_csv(f"{OUTPUT_DIR}/ranking_predictions_{m_name}.csv", index=False)
+
             results_metrics.append({
                 'model': m_name,
                 'target': name,
                 'MAE': mean_metrics[0],
                 'RMSE': mean_metrics[1],
                 'Pearson': mean_metrics[2],
-                'Spearman': mean_metrics[3]
+                'Spearman': mean_metrics[3],
+                'Top1_Acc': top1,
+                'Top3_Acc': top3,
+                'Mean_Rank_Err': mre
             })
         
         # SHAP using the "final" XGB model

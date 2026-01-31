@@ -1,0 +1,46 @@
+feature,shap_original,shap_noise_0.05,shap_noise_0.1
+celebrity_age_during_season,0.013992623,0.013994889,0.013881548
+ballroom_partner_Derek Hough,0.004850775,0.0048455605,0.0049316827
+celebrity_homestate_Other,0.0044488558,0.0042784885,0.0043878383
+celebrity_homestate_California,0.0024964022,0.0026637418,0.0024279656
+ballroom_partner_Valentin Chmerkovskiy,0.0016070991,0.0017362767,0.0015650894
+celebrity_industry_Actor/Actress,0.0014503823,0.0012395513,0.0013097288
+celebrity_homestate_Georgia,0.0014007663,0.001631761,0.0014648446
+ballroom_partner_Other_Partner,0.0013307871,0.0012910569,0.0010267938
+celebrity_industry_TV Personality,0.0012503183,0.0012020177,0.0013362318
+celebrity_industry_Singer/Rapper,0.0012454861,0.001145868,0.0018576488
+ballroom_partner_Mark Ballas,0.0012440843,0.0011580476,0.0011913215
+ballroom_partner_Maksim Chmerkoskiy,0.0011981918,0.0013291098,0.0013676593
+ballroom_partner_Gleb Savchenko,0.0011091569,0.0010068165,0.0010045981
+ballroom_partner_Emma Slater,0.001067274,0.0010866422,0.0011613673
+celebrity_homestate_Pennsylvania,0.0010604752,0.0010083779,0.00090869825
+celebrity_industry_Athlete,0.0010573865,0.0012908701,0.001110701
+celebrity_homecountry/region_Canada,0.0008327962,0.0008306477,0.00079862017
+celebrity_industry_Model,0.0007527409,0.0007639976,0.00084775564
+celebrity_industry_Comedian,0.00074684806,0.0007622232,0.00069873326
+ballroom_partner_Peta Murgatroyd,0.0007466391,0.0007589727,0.00076677743
+celebrity_homestate_Texas,0.0007309065,0.00090907904,0.0007686216
+celebrity_homestate_New York,0.00067396404,0.0008160707,0.0006376129
+celebrity_industry_Racing Driver,0.00064214977,0.000673172,0.00065738213
+ballroom_partner_Karina Smirnoff,0.0006392261,0.00063248165,0.00079388224
+celebrity_industry_Other,0.0006238994,0.00058502954,0.00064268743
+ballroom_partner_Kym Johnson,0.0005791856,0.00064883626,0.00055886735
+celebrity_homestate_Illinois,0.00048191196,0.00049368077,0.0005109004
+ballroom_partner_Sharna Burgess,0.00046225777,0.0004861057,0.00047717878
+celebrity_homecountry/region_Other,0.0004241288,0.00046086742,0.00040619916
+celebrity_homestate_Michigan,0.0004161487,0.00039556436,0.0005159849
+ballroom_partner_Tony Dovolani,0.0004063448,0.0004231069,0.00038588117
+ballroom_partner_Cheryl Burke,0.0003855878,0.00037915984,0.0004898548
+celebrity_homestate_Florida,0.0003807947,0.00041177194,0.0005359261
+celebrity_homestate_Unknown,0.00035629873,0.00030207532,0.0003035066
+ballroom_partner_Witney Carson,0.00034274833,0.00037881202,0.00048258406
+ballroom_partner_Artem Chigvintsev,0.0002618697,0.0002951995,0.00013578671
+celebrity_homecountry/region_England,0.0002567078,0.00026582056,0.00037474517
+celebrity_homecountry/region_Australia,0.0002106419,0.00019816539,0.0001834011
+celebrity_homestate_Ohio,0.0002061157,0.00022077013,0.000293759
+ballroom_partner_Sasha Farber,0.00017738201,0.00013397308,0.00023931489
+celebrity_industry_Entrepreneur,0.00011783361,0.00010341733,0.00014096852
+celebrity_homecountry/region_Italy,7.1784816e-05,5.7411842e-05,0.0
+celebrity_industry_Social Media Personality,5.4519067e-05,7.5566524e-05,0.00018894524
+celebrity_industry_Radio Personality,1.736934e-05,0.0,0.00010828366
+celebrity_homecountry/region_United States,0.0,0.0,0.0
