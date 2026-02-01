@@ -19,19 +19,19 @@ We evaluate methods along three criteria, motivated by theory and prior work:
 
 ---
 
-## Recommendation 1: Use Rank (Not Percent)
+## Recommendation 1: Use Rank (Favors Fans More)
 
 **Conclusion:** Recommend **Rank** for combining judge and fan inputs.
 
-**Evidence from our analysis:**
-- Rank gives fans more influence (mean rank favor magnitude 0.75 displacement units; 24/34 seasons).
-- Percent is heavily judge-dominated (fan advantage −0.97 vs −0.23 for Rank).
-- Same winner in 76% of seasons under both—so switching to Rank would not radically alter most outcomes, but would improve perceived legitimacy where it matters.
+**Evidence from our analysis (Forward simulation; Data/estimate_votes.csv):**
+- Rank favors fans more than percent (rank favor magnitude 0.81 displacement units; 29/34 seasons).
+- Percent is heavily judge-dominated (fan advantage −0.97; 0/34 seasons fans dominate).
+- Same winner in 88% of seasons under both; same top 4 in 71%.
 
 **Rationale:**
-- **Legitimacy:** Viewers who vote expect their input to matter. Percent’s structure lets judge scores dominate; rank normalizes inputs to the same scale. Procedural fairness favors Rank.
-- **Engagement:** Rank creates more "swing" potential—fan favorites can overcome bad judge weeks. This increases outcome uncertainty and suspense, especially in later weeks when stakes are highest.
-- **Controversy balance:** Our 21 controversial cases are mostly fan-favored (Bobby Bones, Bristol Palin). Under Percent, several would have fared worse. Allowing fan influence to occasionally override judges sustains underdog narratives without eliminating judge authority.
+- **Legitimacy:** Rank gives fans more influence than percent. Percent's structure lets judge scores dominate; rank normalizes inputs. Procedural fairness favors Rank.
+- **Engagement:** Rank creates more swing potential; fan favorites can overcome bad judge weeks.
+- **Controversy balance:** Our 21 controversial cases are mostly fan-favored (Bobby Bones, Bristol Palin). Rank allows fan influence to override judges; percent would reduce perceived fairness.
 
 ---
 
@@ -46,9 +46,7 @@ This applies in **every** bottom-two week, not only when scores are tied.
 **Conclusion:** We recommend **fan-decide** for fairness; **judge-save** if maximizing drama is the priority.
 
 **Evidence:**
-- Judge-save decreases fan advantage in 21/34 seasons (Rank). It strengthens judge influence.
-- Under Percent, judge-save has no effect (Δ = 0)—so the choice only matters for Rank.
-- Judge-save directly changed outcomes for only 2 of 21 controversial contestants; 6 of 44 bottom-two weeks.
+- Judge-save decreases fan advantage in 25/34 seasons (Rank). Under Percent, judge-save has no effect (Δ = 0).
 
 **Rationale:**
 - **If legitimacy > drama:** Use **fan-decide**. In every bottom-two week, the contestant with lower fan share goes home—fans effectively choose. Aligns with "your vote matters."
@@ -130,7 +128,7 @@ We cannot robustly test whether controversy drives engagement (e.g., viewership)
 
 | Decision | Recommendation | Primary justification |
 |----------|----------------|----------------------|
-| **Combination method** | **Rank** | Fan influence, legitimacy, suspense |
+| **Combination method** | **Rank** | Fan influence, legitimacy, rank favor magnitude 0.81 |
 | **Who picks in bottom-two** (every k=1 week) | **Fan-decide** (fairness) or **Judge-save** (drama) | Trade-off; fan-decide can amplify extreme favorites |
 | **Creative rules** | Tension arc, Redemption B2, Judge Blind Week, Momentum bonus, Controversy cap | Theory-motivated; differentiate from generic suggestions |
 
@@ -138,7 +136,7 @@ We cannot robustly test whether controversy drives engagement (e.g., viewership)
 
 ## Suggested Paper Wording (2c)
 
-> We recommend **Rank** over Percent for future seasons. Rank gives fans more influence (mean rank favor magnitude 0.75 displacement units), improving procedural legitimacy and sustaining underdog narratives. Percent is heavily judge-dominated and would reduce perceived fairness.
+> We recommend **Rank** over Percent for future seasons. Rank gives fans more influence (rank favor magnitude 0.81 displacement units; 29/34 seasons). Percent is heavily judge-dominated (fan advantage −0.97). Same winner in 88% of seasons—switching would not radically alter most outcomes but would improve legitimacy where it matters.
 >
 > For the bottom-two rule (in every single-elimination week, who picks which of the bottom two goes home): **fan-decide** favors legitimacy; **judge-save** favors drama. The choice depends on whether the show prioritizes "your vote matters" or "judges vs. fans" tension. Transparency about the rule is essential either way.
 >

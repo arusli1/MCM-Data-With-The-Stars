@@ -1,6 +1,8 @@
 """
 Shared utilities for Problem 2: compare rank vs percent combination methods,
 and controversy (judge-fan disagreement) analysis.
+
+Forward simulation: phantom survivors use zeros. See simulation_divergence_limitation.md.
 """
 import os
 import re
@@ -10,7 +12,9 @@ import numpy as np
 import pandas as pd
 
 DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "Data", "2026_MCM_Problem_C_Data.csv")
-BASE_SHARES_PATH = os.path.join(os.path.dirname(__file__), "..", "AR-Problem1-Base", "final_results", "base_inferred_shares.csv")
+# Primary: Data/estimate_votes.csv (AR-Problem1-Base, s_share). Fallbacks for compatibility.
+FAN_SHARES_PATH = os.path.join(os.path.dirname(__file__), "..", "Data", "estimate_votes.csv")
+BASE_SHARES_PATH = os.path.join(os.path.dirname(__file__), "..", "AR-Problem1-Base", "base_results", "base_inferred_shares.csv")
 
 
 def parse_week_cols(df: pd.DataFrame) -> List[int]:
@@ -73,26 +77,27 @@ def season_regime(season: int) -> str:
 
 
 def load_fan_shares_for_season(season: int, names: List[str], W: int) -> Optional[np.ndarray]:
-    """Load s_hist (W x N) from base_inferred_shares.csv; None if missing."""
-    if not os.path.isfile(BASE_SHARES_PATH):
-        return None
-    df = pd.read_csv(BASE_SHARES_PATH)
-    df = df[df["season"] == season]
-    if df.empty:
-        return None
-    name_to_i = {n: i for i, n in enumerate(names)}
-    s_hist = np.zeros((W, len(names)))
-    for _, row in df.iterrows():
-        w = int(row["week"])
-        name = row["celebrity_name"]
-        if w <= W and name in name_to_i:
-            s_hist[w - 1, name_to_i[name]] = row["s_share"]
-    # Normalize each row to sum to 1 among active (or use as-is if already normalized)
-    for w in range(W):
-        tot = s_hist[w].sum()
-        if tot > 0:
-            s_hist[w] /= tot
-    return s_hist
+    """Load s_hist (W x N). Primary: Data/estimate_votes.csv (s_share). Fallback: base_inferred_shares."""
+    for path, col in [(FAN_SHARES_PATH, "s_share"), (BASE_SHARES_PATH, "s_share")]:
+        if not os.path.isfile(path):
+            continue
+        df = pd.read_csv(path)
+        df = df[df["season"] == season]
+        if df.empty:
+            continue
+        name_to_i = {n: i for i, n in enumerate(names)}
+        s_hist = np.zeros((W, len(names)))
+        for _, row in df.iterrows():
+            w = int(row["week"])
+            name = row["celebrity_name"]
+            if w <= W and name in name_to_i:
+                s_hist[w - 1, name_to_i[name]] = row[col]
+        for w in range(W):
+            tot = s_hist[w].sum()
+            if tot > 0:
+                s_hist[w] /= tot
+        return s_hist
+    return None
 
 
 def compute_elim_week_from_judge(J: np.ndarray) -> List[int]:
@@ -119,10 +124,7 @@ def elim_schedule_from_judge(J: np.ndarray) -> List[int]:
 
 
 def forward_simulate_judge_only(J: np.ndarray, schedule: List[int]) -> Tuple[List[int], List[int]]:
-    """
-    Simulate elimination by judge total only (lowest judge total eliminated each week).
-    Returns (elim_week, placement) same format as forward_simulate.
-    """
+    """Simulate elimination by judge total only. Returns (elim_week, placement)."""
     W, N = J.shape
     elim_week = [W + 1] * N
     for w in range(W):
@@ -140,7 +142,6 @@ def forward_simulate_judge_only(J: np.ndarray, schedule: List[int]) -> Tuple[Lis
         elim_idx = order[:k]
         for i in elim_idx:
             elim_week[i] = w + 1
-    # Placement: later elim = better; tie-break by final week judge score
     remaining = np.array([elim_week[i] == W + 1 for i in range(N)])
     final_J = J[W - 1].copy()
     final_J[~remaining] = -np.inf
@@ -152,10 +153,7 @@ def forward_simulate_judge_only(J: np.ndarray, schedule: List[int]) -> Tuple[Lis
 
 
 def forward_simulate_fan_only(s_hist: np.ndarray, schedule: List[int]) -> Tuple[List[int], List[int]]:
-    """
-    Simulate elimination by fan share only (lowest fan share eliminated each week).
-    s_hist: (W, N) fan shares per week. Returns (elim_week, placement) same format as forward_simulate.
-    """
+    """Simulate elimination by fan share only. Returns (elim_week, placement)."""
     W, N = s_hist.shape
     elim_week = [W + 1] * N
     for w in range(W):
@@ -173,7 +171,6 @@ def forward_simulate_fan_only(s_hist: np.ndarray, schedule: List[int]) -> Tuple[
         elim_idx = order[:k]
         for i in elim_idx:
             elim_week[i] = w + 1
-    # Placement: later elim = better; tie-break by final week fan share
     remaining = np.array([elim_week[i] == W + 1 for i in range(N)])
     final_s = s_hist[W - 1].copy()
     final_s[~remaining] = -np.inf
@@ -185,19 +182,15 @@ def forward_simulate_fan_only(s_hist: np.ndarray, schedule: List[int]) -> Tuple[
 
 
 def forward_simulate_simple(
-    J: np.ndarray, 
-    s_hist: np.ndarray, 
+    J: np.ndarray,
+    s_hist: np.ndarray,
     schedule: List[int],
     regime: str = "rank"
 ) -> Tuple[List[int], List[int]]:
-    """
-    Simple forward simulation without bottom-two logic (for 2a comparison).
-    regime: "rank" (judge_rank + fan_rank) or "percent" (judge_pct + fan_share).
-    Returns (elim_week, placement).
-    """
+    """Simple forward simulation without bottom-two logic. Phantom survivors use zeros."""
     W, N = J.shape
     elim_week = [W + 1] * N
-    
+
     for w in range(W):
         k = schedule[w + 1] if w + 1 < len(schedule) else 0
         if k <= 0:
@@ -208,31 +201,28 @@ def forward_simulate_simple(
             for i in active_idx:
                 elim_week[i] = w + 1
             continue
-        
+
         J_w = J[w]
         s_w = s_hist[w]
-        
+
         if regime == "percent":
-            # Judge percent + fan share (eliminate lowest combined)
             jp = judge_pct(J_w, active)
             combined = jp + s_w
             order = active_idx[np.argsort(combined[active_idx])]
             elim_idx = order[:k]
-        else:  # rank
-            # Judge rank + fan rank (eliminate highest combined rank)
+        else:
             rJ = rank_order(-J_w, active)
             rF = rank_order(-s_w, active)
             R = rJ + rF
             order = active_idx[np.argsort(R[active_idx])]
-            elim_idx = order[-k:]  # Highest rank = worst
-        
+            elim_idx = order[-k:]
+
         for i in elim_idx:
             elim_week[i] = w + 1
-    
-    # Placement from elim_week (higher week = better); tie-break by final-week combined
+
     remaining = np.array([elim_week[i] == W + 1 for i in range(N)])
     final_scores = np.full(N, -np.inf)
-    
+
     if regime == "percent":
         jp = judge_pct(J[W - 1], remaining)
         final_scores[remaining] = jp[remaining] + s_hist[W - 1][remaining]
@@ -241,7 +231,7 @@ def forward_simulate_simple(
         rF = rank_order(-s_hist[W - 1], remaining)
         R = rJ + rF
         final_scores[remaining] = -R[remaining]
-    
+
     order = np.lexsort((-final_scores, -np.array(elim_week)))
     placement = [0] * N
     for r, i in enumerate(order, start=1):
@@ -280,11 +270,8 @@ def forward_simulate(
     force_no_bottom2: bool = False,
 ) -> Tuple[List[int], List[int]]:
     """
-    Run elimination using judge matrix J and fan-share trajectory s_hist.
-    regime_override: "rank" | "percent" | None (use season default).
-    judge_save: for bottom-two weeks (k=1), if True eliminate lower judge score of bottom 2; if False eliminate lower fan share of bottom 2.
-    force_bottom2: if True, apply bottom-2 logic to ALL k=1 weeks (regardless of season). For regime testing.
-    force_no_bottom2: if True, never apply bottom-2 (even for s28+). For regime testing.
+    Forward simulation. Phantom survivors use zeros (no data = 0 fan share).
+    regime_override: "rank" | "percent" | None.
     Returns (elim_week_pred, placement_pred).
     """
     W, N = J.shape
@@ -309,9 +296,9 @@ def forward_simulate(
         if regime == "percent":
             jp = judge_pct(J_w, active)
             combined = jp + s_w
-            order = active_idx[np.argsort(combined[active_idx])]  # ascending: order[0]=worst (lowest combined)
+            order = active_idx[np.argsort(combined[active_idx])]
             if is_bottom2_season and k == 1 and len(order) >= 2 and judge_save:
-                bottom2 = order[:2]  # bottom 2 = two with lowest combined (worst)
+                bottom2 = order[:2]
                 elim_idx = np.array([bottom2[np.argmin(J_w[bottom2])]])
             elif is_bottom2_season and k == 1 and len(order) >= 2 and not judge_save:
                 bottom2 = order[:2]
@@ -333,7 +320,6 @@ def forward_simulate(
                 elim_idx = order[-k:]
         for i in elim_idx:
             elim_week[i] = w + 1
-    # Placement from elim_week (higher week = better); tie-break by final-week combined
     remaining = np.array([elim_week[i] == W + 1 for i in range(N)])
     final_scores = np.full(N, -np.inf)
     if regime == "percent":
@@ -352,7 +338,7 @@ def forward_simulate(
 
 
 def kendall_tau(order_a: List[str], order_b: List[str]) -> float:
-    """Kendall tau distance (fraction of pairs that are discordant). Names in rank order (first = best)."""
+    """Kendall tau distance (fraction of pairs that are discordant)."""
     if len(order_a) != len(order_b) or len(order_a) < 2:
         return 0.0
     rank_a = {n: i for i, n in enumerate(order_a)}

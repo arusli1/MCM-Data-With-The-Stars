@@ -12,21 +12,21 @@ Maps the problem questions to files in `all-paper-info` and provides direct answ
 
 | Finding | Source | Location |
 |---------|--------|----------|
-| Same winner 26/34 (76%); same top 4 23/34 (68%) | Part 1 | `problem2a_part1_table.md` |
-| Mean Kendall τ 0.082; mean displacement 0.80 | Part 1 | `problem2a_part1_table.md` |
-| **Rank favors fans more** in 24/34 seasons | Part 2 | `problem2a_part2_table.md`, `paper_2a_explanation.md` |
-| Rank favor magnitude: 0.75 ± 0.94 displacement units | Part 2 | `problem2a_part2_table.md` |
-| Fan advantage: Rank −0.23, Percent −0.97 (judges dominate more under percent) | Part 2 | `problem2a_part2_table.md` |
+| Same winner 30/34 (88%); same top 4 24/34 (71%) | Part 1 | `problem2a_part1_table.md` |
+| Mean Kendall τ 0.078; mean displacement 0.76 | Part 1 | `problem2a_part1_table.md` |
+| **Rank favors fans more** in 29/34 seasons (rank favor magnitude 0.81) | Part 2 | `problem2a_part2_table.md`, `paper_2a_explanation.md` |
+| Fan advantage: Rank −0.16, Percent −0.97 | Part 2 | `problem2a_part2_table.md` |
+| Part 3: Judge-save decreases fan adv (Rank) 25/34 seasons | Part 3 | `problem2a_part2_table.md` |
 
 ### Files
 
 - `paper_2a_explanation.md` — methods, assumptions, results, limitations, conclusions
-- `problem2a_part1_table.md` — per-season Kendall τ, displacement, winner same, top4 same
+- `problem2a_part1_table.md` — per-season elim agreement, Kendall τ, displacement, winner same, top4 same
 - `problem2a_part2_table.md` — fan advantage, rank favor magnitude, Part 3 bottom-2
 - `problem2a_part1_displacement.pdf`, `problem2a_evolution.pdf`, `problem2a_combined_evolution_bottom2.pdf` (in all-paper-info)
 - `methods_overview.md` — structure of rank vs percent, fan advantage
 
-**Conclusion:** Yes. Rank favors fan votes more than percent. Percent is more judge-dominated.
+**Conclusion:** Rank favors fan votes more than percent (rank favor magnitude 0.81). Forward simulation; phantom survivors use zeros. Data: `Data/estimate_votes.csv` (AR-Problem1-Base).
 
 ---
 
@@ -63,12 +63,12 @@ See **`problem2b_table.md`** for the complete table of all 21 controversial cont
 | Rank vs percent comparison (Part 1) | ✓ `problem2a_part1_table.md`, figures |
 | Fan advantage (Part 2) | ✓ `problem2a_part2_table.md` |
 | Does one favor fans more? | ✓ Yes — Rank; `paper_2a_explanation.md` |
-| Rank favor magnitude | ✓ 0.75 displacement units |
+| Rank favor magnitude | ✓ 0.81 displacement units |
 | Judge-save effect (Part 3) | ✓ `problem2a_part2_table.md`, `problem2a_combined_evolution_bottom2.pdf` |
 | Controversy definition | ✓ GMM (in `paper_2b_explanation.md`) |
 | Four named examples classified | ✓ JR, BC, BP, BB in `problem2b_table.md`, scatter |
 | Would method choice same result? | ✓ This document (table above) |
-| Would judge-save impact them? | ✓ This document; 6/44 weeks overall |
+| Would judge-save impact them? | ✓ 2 contestants (Iman S30, Whitney S34); Rank 25/34 seasons; 6/44 (2b bottom-2 weeks) |
 | Regenerate commands | ✓ `paper2_index.md` |
 
 ---

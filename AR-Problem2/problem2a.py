@@ -3,7 +3,7 @@
 Problem 2a: Compare rank vs percent methods across seasons.
 Does one method favor fan votes more?
 
-Minimal implementation with high-quality, info-dense plots.
+Forward simulation (phantom survivors use zeros). See simulation_divergence_limitation.md.
 """
 
 import numpy as np
@@ -72,7 +72,7 @@ def kendall_tau_distance(place1, place2):
 
 def main():
     print("=" * 60)
-    print("Problem 2a: Rank vs Percent Methods")
+    print("Problem 2a: Rank vs Percent Methods (Forward Simulation)")
     print("=" * 60)
     
     # Load data
@@ -205,7 +205,7 @@ def main():
             "fan_advantage_percent": fan_advantage_pct,
             "fan_dominates_percent": fan_advantage_pct > 0,
             "rank_favors_fans_more": fan_advantage_rank > fan_advantage_pct,
-            "rank_favor_magnitude": rank_favor_magnitude,  # interpretable: rank gives X more displacement advantage to fans
+            "rank_favor_magnitude": rank_favor_magnitude,
         })
         
         print(f"  ✓ Season {season}: fan_adv_rank={fan_advantage_rank:.3f}, fan_adv_pct={fan_advantage_pct:.3f}")
@@ -214,10 +214,7 @@ def main():
     df_part2.to_csv(OUTPUT_DIR / "problem2a_part2_input_dominance.csv", index=False)
     print(f"\n✓ Saved: {OUTPUT_DIR / 'problem2a_part2_input_dominance.csv'}")
 
-    # Part 3: Bottom-2 judge-save effect (ALL seasons): apply bottom-2 to k=1 weeks for every season.
-    # Compute fan advantage for Rank and Percent separately: no bottom-2 vs judge-save.
-    # Judge-save = in bottom-2, judges pick who goes home (lower judge score eliminated).
-    # Fan-decide = in bottom-2, fans pick who goes home (lower fan share eliminated).
+    # Part 3: Bottom-2 judge-save effect
     print("\n[Part 3] Bottom-2: fan advantage by method (rank vs percent) and tie-break (no B2 vs judge-save)...")
     part3_rows = []
     for season in seasons:
@@ -235,7 +232,6 @@ def main():
         _, place_j = forward_simulate_judge_only(J, schedule)
         _, place_f = forward_simulate_fan_only(s_hist, schedule)
 
-        # Rank: no bottom-2 vs judge-save
         _, place_rank_no = forward_simulate(season, names, J, s_hist, schedule, regime_override="rank", force_no_bottom2=True)
         _, place_rank_js = forward_simulate(season, names, J, s_hist, schedule, regime_override="rank", judge_save=True, force_bottom2=True)
         disp_j_rno = mean_displacement(place_j, place_rank_no)
@@ -245,7 +241,6 @@ def main():
         disp_f_rjs = mean_displacement(place_f, place_rank_js)
         fan_adv_rank_js = disp_j_rjs - disp_f_rjs
 
-        # Percent: no bottom-2 vs judge-save
         _, place_pct_no = forward_simulate(season, names, J, s_hist, schedule, regime_override="percent", force_no_bottom2=True)
         _, place_pct_js = forward_simulate(season, names, J, s_hist, schedule, regime_override="percent", judge_save=True, force_bottom2=True)
         disp_j_pno = mean_displacement(place_j, place_pct_no)
@@ -269,7 +264,7 @@ def main():
         df_part3.to_csv(OUTPUT_DIR / "problem2a_part3_bottom2_effect.csv", index=False)
         print(f"✓ Saved: {OUTPUT_DIR / 'problem2a_part3_bottom2_effect.csv'}")
 
-    # Summary statistics
+    # Summary
     print("\n" + "=" * 60)
     print("SUMMARY")
     print("=" * 60)
@@ -289,20 +284,17 @@ def main():
     mag = df_part2['rank_favor_magnitude']
     print(f"  Rank favor magnitude (mean ± SD): {mag.mean():.3f} ± {mag.std():.3f} displacement units")
     if not df_part3.empty:
-        print("\n[Part 3] Bottom-2 Effect (all seasons):")
+        print("\n[Part 3] Bottom-2 Effect:")
         print(f"  Judge-save decreases fan adv (Rank): {df_part3['judge_save_decreases_rank'].sum()}/{len(df_part3)} seasons")
         print(f"  Judge-save decreases fan adv (Percent): {df_part3['judge_save_decreases_pct'].sum()}/{len(df_part3)} seasons")
-        print(f"  Mean fan adv: Rank no-B2={df_part3['fan_adv_rank_no'].mean():.3f}, Rank judge-save={df_part3['fan_adv_rank_js'].mean():.3f}")
-        print(f"  Mean fan adv: Percent no-B2={df_part3['fan_adv_pct_no'].mean():.3f}, Percent judge-save={df_part3['fan_adv_pct_js'].mean():.3f}")
     
-    # Generate plots
+    # Generate plots and tables
     print("\n" + "=" * 60)
     print("GENERATING PLOTS")
     print("=" * 60)
     
-    # Part 1 Summary Table (markdown - LaTeX friendly)
     summary_lines = [
-        "# Part 1: Rank vs Percent Outcome Differences\n",
+        "# Part 1: Rank vs Percent Outcome Differences (Forward Simulation)\n",
         "| Season | Kendall τ | Displacement | Winner Same | Top4 Same | Weeks Differ |",
         "|--------|-----------|--------------|-------------|-----------|--------------|",
     ]
@@ -312,19 +304,17 @@ def main():
         summary_lines.append(
             f"| {int(row['season'])} | {row['kendall_tau_distance']:.3f} | {row['mean_displacement']:.2f} | {winner} | {top4} | {row['frac_weeks_differ']:.2f} |"
         )
-    
-    # Summary stats
-    summary_lines.append("")
-    summary_lines.append(f"**Mean Kendall τ:** {df_part1['kendall_tau_distance'].mean():.3f}")
-    summary_lines.append(f"**Mean Displacement:** {df_part1['mean_displacement'].mean():.2f} positions")
-    summary_lines.append(f"**Same Winner:** {df_part1['winner_same'].sum()}/34 ({df_part1['winner_same'].sum()/34*100:.0f}%)")
-    summary_lines.append(f"**Same Top 4:** {df_part1['top4_same'].sum()}/34 ({df_part1['top4_same'].sum()/34*100:.0f}%)")
-    
+    summary_lines.extend([
+        "",
+        f"**Mean Kendall τ:** {df_part1['kendall_tau_distance'].mean():.3f}",
+        f"**Mean Displacement:** {df_part1['mean_displacement'].mean():.2f} positions",
+        f"**Same Winner:** {df_part1['winner_same'].sum()}/34 ({df_part1['winner_same'].sum()/34*100:.0f}%)",
+        f"**Same Top 4:** {df_part1['top4_same'].sum()}/34 ({df_part1['top4_same'].sum()/34*100:.0f}%)",
+    ])
     with open(OUTPUT_DIR / "problem2a_part1_table.md", "w") as f:
         f.write("\n".join(summary_lines))
     print(f"✓ Saved: {OUTPUT_DIR / 'problem2a_part1_table.md'}")
 
-    # Part 2 Summary Table (with rank favor magnitude)
     mag = df_part2["rank_favor_magnitude"]
     part2_lines = [
         "# Part 2: Which Input Dominates? (Fan Advantage Summary)\n",
@@ -335,60 +325,42 @@ def main():
         "",
         "**Fan Advantage** = (Judges displacement from combined) − (Fans displacement from combined). Positive = fans dominate.",
         "",
-        "**Rank Favor Magnitude** (interpretable effect size): fan_advantage_rank − fan_advantage_percent. ",
-        f"Mean = {mag.mean():.3f} ± {mag.std():.3f} displacement units. Positive = rank gives fans more advantage than percent.",
+        "**Rank Favor Magnitude:** fan_advantage_rank − fan_advantage_percent. ",
+        f"Mean = {mag.mean():.3f} ± {mag.std():.3f} displacement units.",
         "",
-        f"| Metric | Value |",
-        f"|--------|-------|",
-        f"| Seasons where rank favors fans more | {(df_part2['rank_favors_fans_more']).sum()}/{len(df_part2)} ({(100*(df_part2['rank_favors_fans_more']).mean()):.0f}%) |",
-        f"| Mean rank favor magnitude | {mag.mean():.3f} displacement units |",
+        f"| Seasons where rank favors fans more | {(df_part2['rank_favors_fans_more']).sum()}/{len(df_part2)} |",
     ]
     if not df_part3.empty:
         part2_lines.extend([
             "",
-            "## Part 3: Bottom-2 Judge-Save Effect (all 34 seasons)",
-            "",
-            "Bottom-2 applied to k=1 weeks. Judge-save = judges pick who of bottom 2 goes home (eliminate lower judge score).",
+            "## Part 3: Bottom-2 Judge-Save Effect",
             f"Judge-save decreases fan adv: Rank {(df_part3['judge_save_decreases_rank']).sum()}/{len(df_part3)}, Percent {(df_part3['judge_save_decreases_pct']).sum()}/{len(df_part3)} seasons.",
-            f"Mean fan adv: Rank no-B2={df_part3['fan_adv_rank_no'].mean():.3f}, Rank judge-save={df_part3['fan_adv_rank_js'].mean():.3f}",
-            f"Mean fan adv: Percent no-B2={df_part3['fan_adv_pct_no'].mean():.3f}, Percent judge-save={df_part3['fan_adv_pct_js'].mean():.3f}",
         ])
     with open(OUTPUT_DIR / "problem2a_part2_table.md", "w") as f:
         f.write("\n".join(part2_lines))
     print(f"✓ Saved: {OUTPUT_DIR / 'problem2a_part2_table.md'}")
     
-    # Part 1 Plot: Compact with dual y-axis (displacement bars + Kendall tau line)
+    # Part 1 Plot
     fig, ax = plt.subplots(figsize=(11, 3.5))
-    
     x = df_part1["season"]
-    
-    # Bar for displacement: green = same winner, red = different winner
     colors = ['#C1292E' if not w else '#029E73' for w in df_part1['winner_same']]
     bars = ax.bar(x, df_part1['mean_displacement'], color=colors, alpha=0.8, 
                   edgecolor='black', linewidth=0.5, width=0.7)
-    
-    # Mark top4 different with hatching
     for i, (bar, t4) in enumerate(zip(bars, df_part1['top4_same'])):
         if not t4:
             bar.set_hatch('///')
             bar.set_edgecolor('black')
-    
-    # Add Kendall tau as line on secondary axis (purple/magenta to avoid confusion)
     ax2 = ax.twinx()
     ax2.plot(x, df_part1['kendall_tau_distance'], 'o-', color='#A23B72', 
              linewidth=2, markersize=4, alpha=0.9, markeredgewidth=0)
     ax2.set_ylabel('Kendall τ Distance', fontsize=10, color='#A23B72')
     ax2.tick_params(axis='y', labelcolor='#A23B72')
     ax2.set_ylim(0, df_part1['kendall_tau_distance'].max() * 1.15)
-    
-    # Labels
     ax.set_xlabel('Season', fontsize=11)
     ax.set_ylabel('Mean Displacement', fontsize=10)
-    ax.set_title('Rank vs Percent: Outcome Differences', fontsize=12)
+    ax.set_title('Rank vs Percent: Outcome Differences (Forward Simulation)', fontsize=12)
     ax.set_xlim(0, 35)
     ax.grid(True, alpha=0.2, axis='y')
-    
-    # Legend
     from matplotlib.patches import Patch
     from matplotlib.lines import Line2D
     legend_elements = [
@@ -399,55 +371,41 @@ def main():
     ]
     ax.legend(handles=legend_elements, loc='upper right', frameon=True, 
               fancybox=False, edgecolor='black', framealpha=1, fontsize=8, ncol=2)
-    
     plt.tight_layout()
     plt.savefig(FIG_DIR / "problem2a_part1_displacement.pdf", dpi=300, bbox_inches='tight', format='pdf')
     print(f"✓ Saved: {FIG_DIR / 'problem2a_part1_displacement.pdf'}")
     plt.close()
     
-    
-    # Plot 2: Clean time series
+    # Plot 2: Fan advantage over time
     fig, ax = plt.subplots(figsize=(11, 5))
-    
     x = df_part2["season"]
     y_rank = df_part2["fan_advantage_rank"]
     y_pct = df_part2["fan_advantage_percent"]
-    
-    # Plot with filled area between
     ax.plot(x, y_rank, 'o-', color='#0173B2', linewidth=2.5, markersize=5, 
             label='Rank', alpha=0.9, markeredgewidth=0.5, markeredgecolor='white')
     ax.plot(x, y_pct, 's-', color='#DE8F05', linewidth=2.5, markersize=5, 
             label='Percent', alpha=0.9, markeredgewidth=0.5, markeredgecolor='white')
-    
-    # Fill between to show difference
     ax.fill_between(x, y_rank, y_pct, where=(y_rank > y_pct), 
                      color='#0173B2', alpha=0.15, interpolate=True)
     ax.fill_between(x, y_rank, y_pct, where=(y_rank <= y_pct), 
                      color='#DE8F05', alpha=0.15, interpolate=True)
-    
-    # Zero reference
     ax.axhline(0, color='#333333', linestyle='--', linewidth=1.5, alpha=0.7, zorder=0)
-    
     ax.set_xlabel('Season', fontsize=12)
     ax.set_ylabel('Fan Advantage', fontsize=11)
     ax.set_title('Fan Advantage Over Time', fontsize=12)
-    ax.legend(loc='lower left', frameon=True, fancybox=False, 
-              edgecolor='black', framealpha=1, fontsize=10)
+    ax.legend(loc='lower left', frameon=True, fancybox=False, edgecolor='black', framealpha=1, fontsize=10)
     ax.grid(True, alpha=0.25, axis='y', linewidth=0.8)
     ax.set_xlim(0, 35)
-    
     plt.tight_layout()
     plt.savefig(FIG_DIR / "problem2a_evolution.pdf", dpi=300, bbox_inches='tight', format='pdf')
     print(f"✓ Saved: {FIG_DIR / 'problem2a_evolution.pdf'}")
     plt.close()
 
-    # Combined 2-panel: (a) Rank vs Percent, (b) Judge-save EFFECT (Δ = fan_adv_js − fan_adv_no)
+    # Combined 2-panel
     if not df_part3.empty:
         x = df_part3["season"]
-        effect_rank = df_part3["fan_adv_rank_js"] - df_part3["fan_adv_rank_no"]  # negative = judge-save favors judges
-
+        effect_rank = df_part3["fan_adv_rank_js"] - df_part3["fan_adv_rank_no"]
         fig2, axes2 = plt.subplots(2, 1, figsize=(11, 8), sharex=True, gridspec_kw={"height_ratios": [1, 1]})
-
         ax_a = axes2[0]
         ax_a.plot(df_part2["season"], df_part2["fan_advantage_rank"], "o-", color="#0173B2", linewidth=2.5, markersize=5, label="Rank")
         ax_a.plot(df_part3["season"], df_part3["fan_adv_rank_js"], "o--", color="#0173B2", linewidth=1.5, markersize=4, alpha=0.9, label="Rank, judge-save")
@@ -458,13 +416,11 @@ def main():
         ax_a.legend(loc="lower left", fontsize=9)
         ax_a.grid(True, alpha=0.2)
         ax_a.set_xlim(0, 35)
-
         ax_b = axes2[1]
-        w = 0.5  # full-width bars since Rank only
-        bars_r = ax_b.bar(x, effect_rank, w, color="#0173B2", alpha=0.85, edgecolor="black", linewidth=0.5)
+        bars_r = ax_b.bar(x, effect_rank, 0.5, color="#0173B2", alpha=0.85, edgecolor="black", linewidth=0.5)
         ax_b.axhline(0, color="#333333", linestyle="-", linewidth=1)
         ax_b.set_xlabel("Season", fontsize=11)
-        ax_b.set_ylabel("Judge-save effect on fan advantage (Δ)", fontsize=11)
+        ax_b.set_ylabel("Judge-save effect (Δ)", fontsize=11)
         ax_b.set_title("(b) Rank: Judge-save effect (Δ < 0 = favors judges)", fontsize=11)
         ax_b.grid(True, alpha=0.2, axis="y")
         ax_b.set_xlim(0, 35)

@@ -5,79 +5,66 @@ Compare rank vs percent across seasons. Does one method favor fan votes more tha
 
 ---
 
-## Methods
+## Methods (Forward Simulation)
 
-### Part 1 — Rank vs Percent Comparison
-- **Rank:** Combined score = judge_rank + fan_rank (within active contestants each week). Eliminate contestant(s) with **largest** combined rank.
-- **Percent:** Combined score = judge_pct + fan_share (both normalized to sum to 1 among active). Eliminate contestant(s) with **lowest** combined score.
-- **Metrics:** Kendall τ (fraction of discordant pairs in final order), mean displacement (|placement_rank − placement_percent|), same winner, same top 4.
+We use **forward simulation**: week-by-week elimination under each method (rank vs percent). Phantom survivors—contestants who would have been eliminated under reality but survive under the simulated path—receive **zero** fan share (no data). See `simulation_divergence_limitation.md` for details and caveats.
 
-### Part 2 — Fan Advantage (Input Dominance)
-- For each method, run 3 simulations: (1) judges only, (2) combined (normal rule), (3) fans only.
-- **Fan Advantage** = disp(judges→combined) − disp(fans→combined).
-- **disp(A,B)** = mean |placement_A − placement_B| over contestants. Smaller disp = A and B are more similar.
-- Positive fan advantage = combined outcome is closer to fans-only than judges-only (fans dominate).
-- **Rank favor magnitude** = fan_advantage_rank − fan_advantage_percent. Interpretable effect size: how much more fan advantage rank gives than percent (in displacement units).
+### Part 1 — Rank vs Percent Outcome Differences
+- For each season: simulate full elimination under **rank** (judge_rank + fan_rank) and **percent** (judge_pct + fan_share).
+- Compare placements: Kendall τ, mean displacement, same winner?, same top 4?
+
+### Part 2 — Fan Advantage
+- For each method: compare judges-only, combined, and fans-only orderings.
+- **Fan Advantage** = disp(judges→combined) − disp(fans→combined). Positive = fans dominate.
+- **Rank favor magnitude** = fan_adv_rank − fan_adv_percent. Positive = rank favors fans more than percent.
 
 ### Part 3 — Bottom-2 Judge-Save Effect
-- In weeks with k=1 elimination, the bottom two by combined score face elimination. A tie-break picks who goes home.
-- **Judge-save:** Tie-break = eliminate the one with **lower judge score** (judges pick).
-- **Fan-decide:** Tie-break = eliminate the one with **lower fan share** (fans pick).
-- Apply bottom-2 to k=1 weeks for **all 34 seasons** (ignoring historical regimes). Compare fan advantage: no bottom-2 vs judge-save, for Rank and Percent separately.
-
-**Key finding:** Percent judge-save has no effect (Δ = 0 for all seasons) because in every k=1 week, the contestant with lowest combined also has the lowest judge score among the bottom 2, so no-B2 and judge-save eliminate the same person. Rank judge-save decreases fan advantage in 21/34 seasons. Season 18 is an outlier: Rank judge-save increases fan advantage (Δ ≈ +0.83).
+- Apply bottom-two logic to k=1 weeks for all seasons (regime override).
+- **Judge-save:** Judges pick who of bottom 2 goes home (eliminate lower judge score).
+- **Fan-decide:** Fans pick (eliminate lower fan share).
+- Compare fan advantage: no bottom-2 vs judge-save.
 
 ---
 
 ## Assumptions
 
-1. **Fan-share estimates:** We use inferred fan shares from Problem 1 (base model). These are estimates, not observed votes.
-2. **Elimination schedule:** We use the judge-based elimination schedule (k per week) for all simulations. The number eliminated each week is fixed; only *who* is eliminated varies by method.
-3. **No strategic voting:** We assume fan shares reflect true preferences; no gaming of the vote.
-4. **Static judge scores:** Judge scores per week are taken as given from the data.
-5. **Same contestants:** We do not model withdrawals, injuries, or late additions beyond what the data encodes.
+1. **Fan-share estimates:** `Data/estimate_votes.csv` (AR-Problem1-Base). Phantom survivors use zeros.
+2. **Elimination schedule:** Judge-based k per week. Same schedule for all regimes.
+3. **No strategic voting:** Fan shares reflect true preferences.
 
 ---
 
-## Results
+## Results (Forward Simulation; Data/estimate_votes.csv)
 
 | Metric | Value |
 |--------|-------|
-| Mean Kendall τ | 0.082 |
-| Mean displacement | 0.80 |
-| Same winner | 26/34 (76%) |
-| Same top 4 | 23/34 (68%) |
-| Rank favors fans more | 24/34 (71%) |
-| Fan advantage (rank) | −0.23 |
+| Mean Kendall τ | 0.078 |
+| Mean displacement | 0.76 |
+| Same winner | 30/34 (88%) |
+| Same top 4 | 24/34 (71%) |
+| Rank favors fans more | 29/34 (85%) |
+| Fan advantage (rank) | −0.16 |
 | Fan advantage (percent) | −0.97 |
-| **Rank favor magnitude** | **0.75 ± 0.94** displacement units |
+| **Rank favor magnitude** | **0.81 ± 0.79** displacement units |
 
-**Part 3:** Judge-save decreases fan adv (Rank): 21/34 seasons. Percent: 0/34 (no effect). Mean fan adv: Rank no-B2 −0.26, Rank judge-save −0.57; Percent −0.94 (identical with or without judge-save).
+**Part 3:** Judge-save decreases fan adv: Rank 25/34 seasons, Percent 0/34.
 
 ---
 
 ## Limitations
 
-1. **Fan-share uncertainty:** Inferred fan shares have uncertainty; robustness to alternative share estimates is not fully explored.
-2. **Schedule dependence:** Results depend on the judge-derived elimination schedule. A different schedule (e.g., fan-derived) could change outcomes.
-3. **Single metric:** Fan advantage is one summary; other metrics (e.g., winner stability, distribution of placements) could yield different conclusions.
-4. **Season 18 outlier:** Rank judge-save increases fan advantage in S18; some weeks have J=0 (withdrawn/missing data), which may affect tie-breaks.
+1. **Phantom survivors:** When sim diverges from reality, we lack data for survivors. We use zeros—they are eliminated quickly. See `simulation_divergence_limitation.md`.
+2. **Fan-share uncertainty:** Inferred shares; robustness to alternatives not fully explored.
+3. **Schedule dependence:** Results depend on judge-derived elimination schedule.
 
 ---
 
 ## Conclusions
 
-- **Rank favors fans more than percent.** Mean rank favor magnitude 0.75 displacement units; rank outcomes are on average ~0.75 positions closer to fan-only than percent outcomes.
-- **Percent is more judge-dominated.** Fan advantage under percent (−0.97) is more negative than under rank (−0.23).
-- **Judge-save tilts toward judges** for Rank (21/34 seasons); for Percent it has no effect because the worst-by-combined always has the worst judge score among the bottom 2.
-
----
-
-## Implications and Discussion
-
-- **For show design:** If the goal is to give fans more influence, the rank combination method is preferable to percent. Percent’s additive structure (judge_pct + fan_share) lets judge scores dominate when they are more variable.
-- **For interpretation:** The 76% winner agreement and 0.80 mean displacement suggest moderate but non-trivial differences. In ~1 in 4 seasons, the winner would change under the other method.
-- **Bottom-2:** Adding judge-save in bottom-two weeks strengthens judge influence under Rank but does nothing under Percent—a structural property of the data, not a design choice.
+- **Rank favors fans more than percent** (rank favor magnitude 0.81; 29/34 seasons).
+- Percent is heavily judge-dominated (fan advantage −0.97; 0/34 seasons fans dominate).
+- Same winner in 88% of seasons; same top 4 in 71%.
+- Judge-save reduces fan advantage under Rank in 25/34 seasons.
 
 ---
 
@@ -85,10 +72,6 @@ Compare rank vs percent across seasons. Does one method favor fan votes more tha
 
 | File | Description |
 |------|-------------|
-| `problem2a_part1_displacement.pdf` | Displacement bars by season; Kendall τ. |
+| `problem2a_part1_displacement.pdf` | Displacement bars; Kendall τ. |
 | `problem2a_evolution.pdf` | Fan advantage over time. Blue=rank, orange=percent. |
-| `problem2a_combined_evolution_bottom2.pdf` | (a) Rank, Rank judge-save, Percent. (b) Rank judge-save effect Δ. |
-
-## Tables
-- `problem2a_part1_table.md` — 34 seasons: Kendall τ, displacement, winner same, top4 same.
-- `problem2a_part2_table.md` — Fan advantage summary, rank favor magnitude, Part 3 bottom-2.
+| `problem2a_combined_evolution_bottom2.pdf` | (a) Rank vs Percent fan advantage. (b) Judge-save effect Δ. |

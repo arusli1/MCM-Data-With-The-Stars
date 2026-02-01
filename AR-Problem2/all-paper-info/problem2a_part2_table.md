@@ -2,22 +2,15 @@
 
 | Method | Mean Fan Advantage | Fans Dominate | Judges Dominate |
 |--------|-------------------|---------------|-----------------|
-| Rank | -0.23 | 8/34 (24%) | 26/34 (76%) |
-| Percent | -0.97 | 1/34 (3%) | 33/34 (97%) |
+| Rank | -0.16 | 10/34 (29%) | 24/34 (71%) |
+| Percent | -0.97 | 0/34 (0%) | 34/34 (100%) |
 
 **Fan Advantage** = (Judges displacement from combined) − (Fans displacement from combined). Positive = fans dominate.
 
-**Rank Favor Magnitude** (interpretable effect size): fan_advantage_rank − fan_advantage_percent. 
-Mean = 0.746 ± 0.939 displacement units. Positive = rank gives fans more advantage than percent.
+**Rank Favor Magnitude:** fan_advantage_rank − fan_advantage_percent.
+Mean = 0.811 ± 0.788 displacement units.
 
-| Metric | Value |
-|--------|-------|
-| Seasons where rank favors fans more | 24/34 (71%) |
-| Mean rank favor magnitude | 0.746 displacement units |
+| Seasons where rank favors fans more | 29/34 |
 
-## Part 3: Bottom-2 Judge-Save Effect (all 34 seasons)
-
-Bottom-2 applied to k=1 weeks. Judge-save = judges pick who of bottom 2 goes home (eliminate lower judge score).
-Judge-save decreases fan adv: Rank 21/34, Percent 0/34 seasons.
-Mean fan adv: Rank no-B2=-0.257, Rank judge-save=-0.573
-Mean fan adv: Percent no-B2=-0.942, Percent judge-save=-0.942
+## Part 3: Bottom-2 Judge-Save Effect
+Judge-save decreases fan adv: Rank 25/34, Percent 0/34 seasons.

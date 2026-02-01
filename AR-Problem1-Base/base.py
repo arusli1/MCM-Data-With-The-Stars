@@ -13,8 +13,11 @@ EPS = 1e-8
 RANK_MSE_WEIGHT = 1.0
 WEEKLY_ELIM_WEIGHT = 3.0
 ENTROPY_WEIGHT = 0.02
-MIN_SHARE = 0.01
-MAX_SHARE = 0.8
+# Soft penalty for extreme shares (no hard min/max). Discourages unrealistic
+# distributions (many tiny + one huge). Quadratic penalty outside [low, high].
+LOW_SHARE_THRESHOLD = 0.05   # shares below 5% get penalized (e.g. 1-3% are extreme)
+HIGH_SHARE_THRESHOLD = 0.60  # shares above 60% get penalized (one person dominating)
+EXTREME_SHARE_PENALTY_WEIGHT = 0.1
 ALPHA_PENALTY = 0.0
 JUDGE_SCALE = 0.5
 S0_PRIOR_SCALE = 6.0
@@ -177,38 +180,29 @@ def rank_order(values: np.ndarray, active: np.ndarray) -> np.ndarray:
     return ranks
 
 
-def normalize_with_bounds(values: np.ndarray, min_share: float, max_share: float) -> np.ndarray:
+def normalize_shares(values: np.ndarray) -> np.ndarray:
+    """Normalize to sum to 1. No hard bounds; extreme values discouraged via objective penalty."""
     n = values.size
     if n == 0:
         return values
-    if min_share * n >= 1.0:
-        min_share = 0.0
-    max_share = min(max_share, 1.0)
     x = np.clip(values, 0.0, None)
-    if x.sum() <= 0:
-        x = np.full(n, 1.0 / n, dtype=float)
-    else:
-        x = x / x.sum()
-    x = np.clip(x, min_share, max_share)
-    for _ in range(100):
-        total = x.sum()
-        if abs(total - 1.0) <= 1e-6:
-            break
-        if total < 1.0:
-            free = x < max_share - EPS
-            if not free.any():
-                break
-            add = (1.0 - total) / free.sum()
-            x[free] = np.minimum(x[free] + add, max_share)
-        else:
-            free = x > min_share + EPS
-            if not free.any():
-                break
-            sub = (total - 1.0) / free.sum()
-            x[free] = np.maximum(x[free] - sub, min_share)
-    if x.sum() > 0:
-        x = x / x.sum()
-    return x
+    s = x.sum()
+    if s <= 0:
+        return np.full(n, 1.0 / n, dtype=float)
+    return x / s
+
+
+def extreme_share_penalty(s_hist: np.ndarray) -> float:
+    """Soft quadratic penalty for shares outside [LOW, HIGH]. Discourages unrealistic distributions."""
+    total = 0.0
+    for s in s_hist.flat:
+        if s <= 0:
+            continue
+        if s < LOW_SHARE_THRESHOLD:
+            total += (LOW_SHARE_THRESHOLD - s) ** 2
+        elif s > HIGH_SHARE_THRESHOLD:
+            total += (s - HIGH_SHARE_THRESHOLD) ** 2
+    return EXTREME_SHARE_PENALTY_WEIGHT * total
 
 
 def simulate_season(
@@ -236,8 +230,7 @@ def simulate_season(
                 s[active] = 1.0 / active.sum()
             else:
                 s[active] = s[active] / s_sum
-            # Keep shares within realistic bounds.
-            s[active] = normalize_with_bounds(s[active], MIN_SHARE, MAX_SHARE)
+            s[active] = normalize_shares(s[active])
         s_hist[w] = s
         # Finals week: rank remaining using combined scores, no eliminations.
         if w == W - 1:
@@ -280,7 +273,7 @@ def simulate_season(
             s[elim_idx] = 0.0
             remaining = active_idx[~np.isin(active_idx, elim_idx)]
             s[remaining] += elim_share / len(remaining)
-            s[remaining] = normalize_with_bounds(s[remaining], MIN_SHARE, MAX_SHARE)
+            s[remaining] = normalize_shares(s[remaining])
     # Final-week tie-break scores for finalists (higher = better).
     final_scores = np.full(N, -np.inf, dtype=float)
     remaining = np.array([ew == W + 1 for ew in elim_week_pred], dtype=bool)
@@ -514,11 +507,13 @@ def fit_season(
                 names, elim_week_true, elim_week_pred, placement_true, final_scores, J.shape[0]
             )
             s0_entropy = entropy(s0)
+            ext_pen = extreme_share_penalty(s_hist)
             objective = (
                 RANK_MSE_WEIGHT * mean_sq_rank_diff
                 + obj_weight * (1.0 - weekly_elim_match_rate)
                 - ENTROPY_WEIGHT * s0_entropy
                 + ALPHA_PENALTY * (alpha**2)
+                + ext_pen
             )
             placement_pred = placement_from_elim(elim_week_pred, final_scores)
             res = SeasonResult(
@@ -562,11 +557,13 @@ def fit_season(
                 names, elim_week_true, elim_week_pred, placement_true, final_scores, J.shape[0]
             )
             cand_entropy = entropy(cand)
+            ext_pen = extreme_share_penalty(s_hist)
             objective = (
                 RANK_MSE_WEIGHT * mean_sq_rank_diff
                 + obj_weight * (1.0 - weekly_elim_match_rate)
                 - ENTROPY_WEIGHT * cand_entropy
                 + ALPHA_PENALTY * (alpha**2)
+                + ext_pen
             )
             if objective < best.objective:
                 placement_pred = placement_from_elim(elim_week_pred, final_scores)
@@ -969,8 +966,13 @@ def main():
     pd.DataFrame(placement_rows).to_csv(placement_path, index=False)
     print(f"Wrote {placement_path}")
     share_path = os.path.join(RESULTS_DIR, "base_inferred_shares.csv")
-    pd.DataFrame(share_rows).to_csv(share_path, index=False)
+    share_df = pd.DataFrame(share_rows)
+    share_df.to_csv(share_path, index=False)
     print(f"Wrote {share_path}")
+    # Duplicate to Data/new_estimate_votes.csv
+    new_votes_path = os.path.join(os.path.dirname(DATA_PATH), "new_estimate_votes.csv")
+    share_df.to_csv(new_votes_path, index=False)
+    print(f"Wrote {new_votes_path}")
     share_uncertainty_path = os.path.join(
         RESULTS_DIR, "base_inferred_shares_uncertainty.csv"
     )
@@ -1004,8 +1006,9 @@ def main():
             "weekly_elim_weight": obj_weight,
             "rank_mse_weight": RANK_MSE_WEIGHT,
             "entropy_weight": ENTROPY_WEIGHT,
-            "min_share": MIN_SHARE,
-            "max_share": MAX_SHARE,
+            "low_share_threshold": LOW_SHARE_THRESHOLD,
+            "high_share_threshold": HIGH_SHARE_THRESHOLD,
+            "extreme_share_penalty_weight": EXTREME_SHARE_PENALTY_WEIGHT,
             "alpha_penalty": ALPHA_PENALTY,
             "judge_scale": JUDGE_SCALE,
             "s0_prior_scale": S0_PRIOR_SCALE,

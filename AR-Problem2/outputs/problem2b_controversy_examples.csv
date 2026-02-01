@@ -1,11 +1,11 @@
 season,celebrity_name,brief,placement_true,weeks_lowest_judge_score,weeks_in_bottom_two_combined,regime
-1,Kelly Monaco,Judge–placement disagreement,1,1,1,rank
-1,Rachel Hunter,"High judge score, low placement (early exit)",4,0,4,rank
-2,Jerry Rice,Runner-up despite lowest judges scores in 5 weeks,2,2,3,rank
+1,Kelly Monaco,Judge–placement disagreement,1,1,2,rank
+1,Rachel Hunter,"High judge score, low placement (early exit)",4,0,1,rank
+2,Jerry Rice,Runner-up despite lowest judges scores in 5 weeks,2,2,2,rank
 4,Shandi Finnessey,"High judge score, low placement (early exit)",10,0,0,percent
 4,Paulina Porizkova,Judge–placement disagreement,11,0,0,percent
 4,Billy Ray Cyrus,5th despite last place judge scores in 6 weeks,5,3,0,percent
-5,Sabrina Bryan,"High judge score, low placement (early exit)",7,0,6,percent
+5,Sabrina Bryan,"High judge score, low placement (early exit)",7,0,0,percent
 5,Marie Osmond,"Low judge score, high placement (fan favorite)",3,4,0,percent
 7,Cloris Leachman,"Low judge score, high placement (fan favorite)",7,4,0,percent
 11,Bristol Palin,3rd with lowest judge scores 12 times,3,5,0,percent
@@ -13,10 +13,10 @@ season,celebrity_name,brief,placement_true,weeks_lowest_judge_score,weeks_in_bot
 17,Bill Engvall,"Low judge score, high placement (fan favorite)",4,6,0,percent
 19,Michael Waltrip,"Low judge score, high placement (fan favorite)",7,4,0,percent
 21,Alek Skarlatos,"Low judge score, high placement (fan favorite)",3,2,0,percent
-24,Heather Morris,"High judge score, low placement (early exit)",8,0,0,percent
-24,David Ross,Judge–placement disagreement,2,3,2,percent
-27,Bobby Bones,Won despite consistently low judges scores,1,2,6,percent
-27,Tinashe,"High judge score, low placement (early exit)",10,0,2,percent
+24,Heather Morris,"High judge score, low placement (early exit)",8,0,1,percent
+24,David Ross,Judge–placement disagreement,2,3,1,percent
+27,Bobby Bones,Won despite consistently low judges scores,1,2,9,percent
+27,Tinashe,"High judge score, low placement (early exit)",10,0,0,percent
 27,Joe Amabile,"Low judge score, high placement (fan favorite)",6,6,0,percent
 30,Iman Shumpert,Judge–placement disagreement,1,1,0,rank_bottom2
 34,Whitney Leavitt,Judge–placement disagreement,6,0,1,rank_bottom2

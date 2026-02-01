@@ -15,7 +15,7 @@ Brief explanation of the main methods so the structure is clear.
 - Run **3 simulations** per method: (1) just judges, (2) combined (normal rule), (3) just fans.
 - **Fan Advantage** = disp(judges→combined) − disp(fans→combined). Positive = combined outcome is closer to "just fans" than to "just judges" (fans dominate).
 - **Disp(A,B)** = mean |placement_A − placement_B| over contestants. Smaller disp = A and B are more similar.
-- **Rank favor magnitude** = fan_adv_rank − fan_adv_percent. Interpretable: how much more fan advantage rank gives than percent (in displacement units).
+- **Rank favor magnitude** = fan_adv_rank − fan_adv_percent. Positive = rank gives fans more advantage. Forward simulation; phantom survivors use zeros (see simulation_divergence_limitation.md).
 
 ### Part 3 — Bottom-2 Judge-Save Effect
 - **Bottom-2:** In weeks with k=1 elimination, the bottom two by combined score face elimination. A tie-break picks who goes home.

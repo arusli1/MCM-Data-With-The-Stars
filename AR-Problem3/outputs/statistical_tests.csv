@@ -1,0 +1,11 @@
+factor,outcome,Kruskal_H,Pearson,Spearman
+age,mean_fan_w1_3,,-0.2632111270275396,-0.27106305915794815
+age,mean_judge_w1_3,,-0.3539036173102348,-0.3595155329228494
+age,placement,,0.4328657710442582,0.4425048448987368
+age,success_score,,-0.43039710676923426,-0.4383989513472571
+industry,mean_fan_w1_3,10.684800455841696,,
+industry,mean_judge_w1_3,24.198696622649113,,
+industry,success_score,16.430820220399724,,
+partner,mean_fan_w1_3,24.400955539519146,,
+partner,mean_judge_w1_3,45.36937353803416,,
+partner,success_score,44.41948793593972,,
