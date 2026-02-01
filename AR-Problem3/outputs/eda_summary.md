@@ -25,7 +25,7 @@ Kruskal-Wallis: industry significantly affects judge scores (H≈24.2, p<0.01), 
 ## Pro Partner Effects
 Kruskal-Wallis: pro partner significantly affects all outcomes (H≈24–45, p<0.01). Top partners (Derek Hough, Cheryl Burke, etc.) have consistently higher contestant success.
 
-## Judge vs Fan: Same or Different?
+## Judge vs Fan: Same or Different? (See `judge_fan_impact.py` for full analysis)
 - Correlation(age, judge) = -0.354; Correlation(age, fan) = -0.263
 Age has stronger effect on judge scores than fan support. Industry and partner affect both; pro partner effect is larger for judge scores (Kruskal H≈45 vs H≈24 for fans).
 
@@ -58,3 +58,8 @@ See `outputs/statistical_tests.csv` for full results.
 - `pro_partner_residualized_boost.pdf`: Pro boost controlling for age+industry
 - `judge_fan_agreement_by_subgroup.pdf`: Judge–fan correlation by industry/age
 - `slope_by_age.pdf`: Does age predict improvement (W1→W3)?
+- **Judge vs Fan impact (run `python3 judge_fan_impact.py`):**
+  - `judge_fan_effect_comparison.pdf`: Divergence plot + bar chart
+  - `judge_fan_impact_numbers.pdf`: Compact numbers panel
+  - `age_judge_vs_fan_overlay.pdf`: Age effect overlay
+  - `judge_fan_effect_ratio.pdf`: Judge/Fan effect ratio
