@@ -1,0 +1,108 @@
+--- Auditing: Data/2026_MCM_Problem_C_Data.csv ---
+Total Rows: 421
+Total Columns: 53
+
+Exact Duplicate Rows: 0
+Duplicate (Season, Celebrity) Pairs: 0
+
+Missing Values per Column (Percentage):
+week11_judge4_score    93.824228
+week1_judge4_score     80.760095
+week2_judge4_score     78.384798
+week10_judge4_score    77.909739
+week8_judge4_score     74.346793
+week11_judge3_score    71.733967
+week11_judge2_score    71.733967
+week11_judge1_score    71.733967
+week5_judge4_score     71.733967
+week3_judge4_score     69.596200
+week4_judge4_score     69.121140
+week9_judge4_score     68.408551
+week7_judge4_score     65.795724
+week6_judge4_score     65.083135
+celebrity_homestate    13.301663
+week10_judge3_score    12.351544
+week10_judge2_score    12.351544
+week10_judge1_score    12.351544
+week9_judge3_score      6.175772
+week9_judge1_score      6.175772
+week9_judge2_score      6.175772
+week8_judge3_score      3.800475
+week7_judge1_score      3.800475
+week7_judge3_score      3.800475
+week8_judge2_score      3.800475
+week8_judge1_score      3.800475
+week7_judge2_score      3.800475
+week1_judge3_score      3.325416
+week6_judge3_score      2.375297
+week6_judge2_score      2.375297
+week6_judge1_score      2.375297
+week5_judge3_score      2.375297
+week5_judge2_score      2.375297
+week5_judge1_score      2.375297
+dtype: float64
+
+'N/A' string occurrences per column:
+Series([], dtype: int64)
+
+Unique Values in Categorical Columns:
+  celebrity_industry: 26 unique values
+  celebrity_homestate: 45 unique values
+  celebrity_homecountry/region: 26 unique values
+  ballroom_partner: 60 unique values
+
+Numeric Validation:
+  Age: min=14, max=82
+  Placement: min=1, max=16
+
+Scores Summary (excluding 0 for min):
+                    col     min      max  zeros  nans
+0    week1_judge1_score  4.0000  11.3333      0     0
+1    week1_judge2_score  3.0000  11.3333      0     0
+4    week2_judge1_score  4.0000  10.0000     17     0
+5    week2_judge2_score  3.0000  10.0000     17     0
+6    week2_judge3_score  3.0000  10.0000     17     0
+8    week3_judge1_score  4.0000  10.5000     61     0
+9    week3_judge2_score  3.0000  10.5000     61     0
+10   week3_judge3_score  3.0000  10.0000     61     0
+12   week4_judge1_score  4.0000  10.0000     95     0
+13   week4_judge2_score  2.0000  10.0000     95     0
+14   week4_judge3_score  2.0000  10.0000     95     0
+22   week6_judge3_score  5.0000  13.3333    150    10
+20   week6_judge1_score  5.0000  13.3333    150    10
+18   week5_judge3_score  4.0000  10.3750    123    10
+17   week5_judge2_score  5.0000  10.3750    123    10
+16   week5_judge1_score  4.0000  10.3750    123    10
+21   week6_judge2_score  4.0000  12.3333    150    10
+2    week1_judge3_score  3.0000  11.3333      0    14
+30   week8_judge3_score  6.0000  11.6666    214    16
+29   week8_judge2_score  6.5000  11.6666    214    16
+28   week8_judge1_score  6.0000  11.6666    214    16
+26   week7_judge3_score  6.0000  12.8333    177    16
+24   week7_judge1_score  5.0000  13.3333    177    16
+25   week7_judge2_score  6.0000  12.8333    177    16
+32   week9_judge1_score  6.5000  12.0000    243    26
+34   week9_judge3_score  6.5000  12.5000    243    26
+33   week9_judge2_score  6.0000  12.0000    243    26
+36  week10_judge1_score  7.5000  10.5000    260    52
+37  week10_judge2_score  7.5000  10.5000    260    52
+38  week10_judge3_score  7.5000  11.0000    260    52
+23   week6_judge4_score  6.0000  11.0000     48   274
+27   week7_judge4_score  7.0000  11.2500     60   277
+35   week9_judge4_score  6.0000  10.7500     77   288
+15   week4_judge4_score  4.0000  10.0000     27   291
+11   week3_judge4_score  5.0000  10.5000     21   293
+42  week11_judge3_score  8.3333  10.4444     82   302
+19   week5_judge4_score  5.0000  10.8750     32   302
+40  week11_judge1_score  8.3333  10.4444     82   302
+41  week11_judge2_score  8.5000  10.4444     82   302
+31   week8_judge4_score  6.0000  11.2500     53   313
+39  week10_judge4_score  7.5000  10.0000     65   328
+7    week2_judge4_score  4.0000   9.5000      4   330
+3    week1_judge4_score  3.0000   9.0000      0   340
+43  week11_judge4_score  9.0000  10.0000     18   395
+
+Consistency Checks:
+  Mismatched '1st Place' vs placement: 0
+  Celebrity names with leading/trailing spaces: 1
+['Floyd Mayweather Jr. ']
