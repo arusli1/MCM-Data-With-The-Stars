@@ -272,7 +272,8 @@ def simulate_season(
             elim_share = s[elim_idx].sum()
             s[elim_idx] = 0.0
             remaining = active_idx[~np.isin(active_idx, elim_idx)]
-            s[remaining] += elim_share / len(remaining)
+            remaining_sum = s[remaining].sum() + EPS
+            s[remaining] += elim_share * (s[remaining] / remaining_sum)
             s[remaining] = normalize_shares(s[remaining])
     # Final-week tie-break scores for finalists (higher = better).
     final_scores = np.full(N, -np.inf, dtype=float)

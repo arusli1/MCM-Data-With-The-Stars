@@ -12,7 +12,8 @@ import numpy as np
 import pandas as pd
 
 DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "Data", "2026_MCM_Problem_C_Data.csv")
-# Primary: Data/estimate_votes.csv (AR-Problem1-Base, s_share). Fallbacks for compatibility.
+# Prefer new Base model output (Data/new_estimate_votes.csv), then legacy paths.
+NEW_ESTIMATE_VOTES_PATH = os.path.join(os.path.dirname(__file__), "..", "Data", "new_estimate_votes.csv")
 FAN_SHARES_PATH = os.path.join(os.path.dirname(__file__), "..", "Data", "estimate_votes.csv")
 BASE_SHARES_PATH = os.path.join(os.path.dirname(__file__), "..", "AR-Problem1-Base", "base_results", "base_inferred_shares.csv")
 
@@ -77,8 +78,8 @@ def season_regime(season: int) -> str:
 
 
 def load_fan_shares_for_season(season: int, names: List[str], W: int) -> Optional[np.ndarray]:
-    """Load s_hist (W x N). Primary: Data/estimate_votes.csv (s_share). Fallback: base_inferred_shares."""
-    for path, col in [(FAN_SHARES_PATH, "s_share"), (BASE_SHARES_PATH, "s_share")]:
+    """Load s_hist (W x N). Prefer Data/new_estimate_votes.csv (latest Base run), then estimate_votes, then base_inferred_shares."""
+    for path, col in [(NEW_ESTIMATE_VOTES_PATH, "s_share"), (FAN_SHARES_PATH, "s_share"), (BASE_SHARES_PATH, "s_share")]:
         if not os.path.isfile(path):
             continue
         df = pd.read_csv(path)

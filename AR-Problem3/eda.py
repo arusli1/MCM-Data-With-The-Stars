@@ -20,9 +20,10 @@ from statsmodels.stats.anova import anova_lm
 
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT.parent / "Data"
-# Try estimate_votes first; fallback to base_inferred_shares
-VOTES_PATH = DATA / "estimate_votes.csv"
-VOTES_FALLBACK = ROOT.parent / "AR-Problem1-Base" / "final_results" / "base_inferred_shares.csv"
+# Prefer Problem 1 base model fan vote estimates; fallback to estimate_votes then base_inferred_shares
+VOTES_PATH = DATA / "new_estimate_votes.csv"
+VOTES_FALLBACK = DATA / "estimate_votes.csv"
+VOTES_FALLBACK2 = ROOT.parent / "AR-Problem1-Base" / "base_results" / "base_inferred_shares.csv"
 OUT = ROOT / "outputs"
 FIGS = ROOT / "figures"
 OUT.mkdir(parents=True, exist_ok=True)
@@ -44,11 +45,13 @@ def load_data():
     df = pd.read_csv(DATA / "2026_MCM_Problem_C_Data.csv")
     df["norm_name"] = df["celebrity_name"].apply(normalize_name)
 
-    # Fan votes: try estimate_votes, fallback to base_inferred_shares
+    # Fan votes: prefer new_estimate_votes (Problem 1 base), then estimate_votes, then base_inferred_shares
     if VOTES_PATH.exists():
         votes = pd.read_csv(VOTES_PATH)
-    else:
+    elif VOTES_FALLBACK.exists():
         votes = pd.read_csv(VOTES_FALLBACK)
+    else:
+        votes = pd.read_csv(VOTES_FALLBACK2)
     votes["norm_name"] = votes["celebrity_name"].apply(normalize_name)
 
     # Success score: 1 = winner, 0 = last
@@ -584,6 +587,9 @@ def write_summary(df, test_df, reg_results, reg_models=None, extra=None):
         "- `pro_partner_residualized_boost.pdf`: Pro boost controlling for age+industry",
         "- `judge_fan_agreement_by_subgroup.pdf`: Judge–fan correlation by industry/age",
         "- `slope_by_age.pdf`: Does age predict improvement (W1→W3)?",
+        "- **Judge vs Fan (run `python3 judge_fan_impact.py`):** judge_fan_effect_comparison, age_judge_vs_fan_overlay, judge_fan_effect_ratio, judge_fan_impact_numbers, industry_partner_judge_fan_divergence",
+        "- **Full model & answer (run `python3 run_problem3_full.py`):** outputs/problem3_answer.md, outputs/key_findings_table.md, impact_partial_rsq_waterfall, impact_effect_summary_heatmap, judge_vs_fan_one_pager",
+        "- **Creative multi-panel (run `python3 creative_plots.py`):** creative_six_key_relationships (6), creative_six_by_subgroup (6), creative_four_trajectories_placement (4), creative_five_correlations_compact (5)",
         "",
     ])
     with open(OUT / "eda_summary.md", "w") as f:

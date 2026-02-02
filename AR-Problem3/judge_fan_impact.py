@@ -23,8 +23,9 @@ from statsmodels.formula.api import ols
 
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT.parent / "Data"
-VOTES_PATH = DATA / "estimate_votes.csv"
-VOTES_FALLBACK = ROOT.parent / "AR-Problem1-Base" / "base_results" / "base_inferred_shares.csv"
+VOTES_PATH = DATA / "new_estimate_votes.csv"
+VOTES_FALLBACK = DATA / "estimate_votes.csv"
+VOTES_FALLBACK2 = ROOT.parent / "AR-Problem1-Base" / "base_results" / "base_inferred_shares.csv"
 OUT = ROOT / "outputs"
 FIGS = ROOT / "figures"
 OUT.mkdir(parents=True, exist_ok=True)
@@ -44,7 +45,12 @@ def load_data():
     df = pd.read_csv(DATA / "2026_MCM_Problem_C_Data.csv")
     df["norm_name"] = df["celebrity_name"].apply(normalize_name)
 
-    votes = pd.read_csv(VOTES_PATH) if VOTES_PATH.exists() else pd.read_csv(VOTES_FALLBACK)
+    if VOTES_PATH.exists():
+        votes = pd.read_csv(VOTES_PATH)
+    elif VOTES_FALLBACK.exists():
+        votes = pd.read_csv(VOTES_FALLBACK)
+    else:
+        votes = pd.read_csv(VOTES_FALLBACK2)
     votes["norm_name"] = votes["celebrity_name"].apply(normalize_name)
     votes_col = "s_share" if "s_share" in votes.columns else "s_hat"
 
@@ -436,8 +442,10 @@ def plot_dual_slope_rainbow(df):
     sub = df.dropna(subset=["age", "mean_judge_w1_3", "mean_fan_w1_3"])
 
     # Normalize both to 0-1 for overlay
-    j_norm = (sub["mean_judge_w1_3"] - sub["mean_judge_w1_3"].min()) / (sub["mean_judge_w1_3"].max() - sub["mean_judge_w1_3"].min() + 1e-8)
-    f_norm = (sub["mean_fan_w1_3"] - sub["mean_fan_w1_3"].min()) / (sub["mean_fan_w1_3"].max() - sub["mean_fan_w1_3"].min() + 1e-8)
+    j_range = sub["mean_judge_w1_3"].max() - sub["mean_judge_w1_3"].min() + 1e-8
+    f_range = sub["mean_fan_w1_3"].max() - sub["mean_fan_w1_3"].min() + 1e-8
+    j_norm = (sub["mean_judge_w1_3"] - sub["mean_judge_w1_3"].min()) / j_range
+    f_norm = (sub["mean_fan_w1_3"] - sub["mean_fan_w1_3"].min()) / f_range
 
     ax.scatter(sub["age"], j_norm, alpha=0.4, s=40, c="#2E86AB", label="Judge score (norm)", edgecolors="none")
     ax.scatter(sub["age"], f_norm, alpha=0.4, s=40, c="#E94F37", label="Fan share (norm)", edgecolors="none")

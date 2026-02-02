@@ -6,21 +6,21 @@ season,week,bottom2_names,elim_with_judge_save,elim_with_fan_decide,judge_save_c
 28,10,"['Ray Lewis', 'Sean Spicer']",Ray Lewis,Ray Lewis,False
 28,11,"['Sean Spicer', 'James Van Der Beek']",Sean Spicer,Sean Spicer,False
 29,3,"['Charles Oakley', 'Carole Baskin']",Charles Oakley,Charles Oakley,False
-29,4,"['Carole Baskin', 'Anne Heche']",Carole Baskin,Carole Baskin,False
-29,5,"['Anne Heche', 'Veron Davis']",Anne Heche,Anne Heche,False
+29,4,"['Carole Baskin', 'Jeannie Mai']",Carole Baskin,Carole Baskin,False
+29,5,"['Anne Heche', 'Veron Davis']",Anne Heche,Veron Davis,True
 29,6,"['Veron Davis', 'Jesse Metcalfe']",Jesse Metcalfe,Veron Davis,True
-29,7,"['Monica Aldama', 'Veron Davis']",Veron Davis,Monica Aldama,True
+29,7,"['Veron Davis', 'Justina Machado']",Veron Davis,Veron Davis,False
 29,9,"['Jeannie Mai', 'Monica Aldama']",Jeannie Mai,Jeannie Mai,False
-29,10,"['Monica Aldama', 'Chrishell Stause']",Monica Aldama,Monica Aldama,False
-30,3,"['Jimmie Allen', 'Martin Kove']",Martin Kove,Jimmie Allen,True
-30,4,"['Christine Chiu', 'Matt James']",Christine Chiu,Christine Chiu,False
-30,6,"['Matt James', 'Brian Austin Green']",Matt James,Matt James,False
+29,10,"['Monica Aldama', 'AJ McLean']",Monica Aldama,Monica Aldama,False
+30,3,"['Martin Kove', 'Brian Austin Green']",Martin Kove,Martin Kove,False
+30,4,"['Christine Chiu', 'Matt James']",Christine Chiu,Matt James,True
+30,6,"['Matt James', 'Melanie C']",Matt James,Matt James,False
 30,7,"['Melanie C', 'Brian Austin Green']",Melanie C,Melanie C,False
 30,8,"['Kenya Moore', 'Brian Austin Green']",Kenya Moore,Kenya Moore,False
-31,2,"['Jason Lewis', 'Jessie James Decker']",Jason Lewis,Jason Lewis,False
-31,3,"['Vinny Guadagnino', 'Teresa Giudice']",Teresa Giudice,Vinny Guadagnino,True
-31,4,"['Cheryl Ladd', 'Sam Champion']",Cheryl Ladd,Cheryl Ladd,False
-31,5,"['Sam Champion', 'Vinny Guadagnino']",Sam Champion,Sam Champion,False
+31,2,"['Jason Lewis', 'Teresa Giudice']",Jason Lewis,Jason Lewis,False
+31,3,"['Teresa Giudice', 'Sam Champion']",Teresa Giudice,Teresa Giudice,False
+31,4,"['Sam Champion', 'Cheryl Ladd']",Cheryl Ladd,Sam Champion,True
+31,5,"['Sam Champion', 'Joseph Baena']",Sam Champion,Sam Champion,False
 31,7,"['Joseph Baena', 'Jessie James Decker']",Joseph Baena,Joseph Baena,False
 31,8,"['Jessie James Decker', 'Jordin Sparks']",Jessie James Decker,Jessie James Decker,False
 32,2,"['Matt Walsh', 'Harry Jowsey']",Matt Walsh,Matt Walsh,False
@@ -39,7 +39,7 @@ season,week,bottom2_names,elim_with_judge_save,elim_with_fan_decide,judge_save_c
 34,4,"['Baron Davis', 'Lauren Jauregui']",Baron Davis,Baron Davis,False
 34,5,"['Lauren Jauregui', 'Corey Feldman']",Lauren Jauregui,Lauren Jauregui,False
 34,7,"['Hilaria Baldwin', 'Scott Hoying']",Hilaria Baldwin,Hilaria Baldwin,False
-34,8,"['Scott Hoying', 'Jen Affleck']",Scott Hoying,Scott Hoying,False
+34,8,"['Scott Hoying', 'Corey Feldman']",Scott Hoying,Scott Hoying,False
 34,9,"['Jen Affleck', 'Corey Feldman']",Jen Affleck,Jen Affleck,False
 34,10,"['Danielle Fishel', 'Andy Richter']",Danielle Fishel,Danielle Fishel,False
 34,11,"['Andy Richter', 'Whitney Leavitt']",Andy Richter,Andy Richter,False

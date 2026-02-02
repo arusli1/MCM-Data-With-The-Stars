@@ -1,0 +1,14 @@
+% Loss section LaTeX (copy-paste)
+% Includes: rank MSE, weekly elimination match, entropy, alpha penalty, extreme-share penalty
+
+\paragraph{Optimization.}
+For this model, we design a per-season loss that accounts for placement and elimination consistency, entropy regularization to discourage degenerate $\mathbf{s}_0$ (e.g., when one contestant unrealistically dominates the initial share), a soft penalty on extreme vote shares (e.g., very low or very high) so that inferred distributions stay plausible, and a quadratic penalty on $\alpha$ to prevent an unrealistically strong influence of performance (mean judges' score):
+\[
+  \text{loss} =
+  w_r \cdot \text{MSE}_\text{rank} +
+  w_e \cdot (1-\text{MR}) -
+  w_h \cdot H(\mathbf{s}_0) +
+  P_{\text{ext}}(\{\mathbf{s}_w\}) +
+  \lambda \alpha^2.
+\]
+Here $\text{MR}$ denotes the weekly elimination match rate, $H(\mathbf{s}_0)$ is the Shannon entropy of the initial shares, and $P_{\text{ext}}$ is a soft quadratic penalty on vote shares outside a plausible range (e.g., below 5\% or above 60\%). The optimal season parameters $(\hat{\mathbf{s}}_0,\hat{\alpha})$ minimize the loss, and the resulting $\{\mathbf{s}_w\}$ are our estimated fan vote shares.

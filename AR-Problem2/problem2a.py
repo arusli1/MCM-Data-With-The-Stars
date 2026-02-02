@@ -25,9 +25,10 @@ from problem2_utils import (
     parse_week_cols,
 )
 
-# Paths
-OUTPUT_DIR = Path("outputs")
-FIG_DIR = Path("figures")
+# Paths (script-relative so runs from repo root or AR-Problem2)
+_BASE = Path(__file__).resolve().parent
+OUTPUT_DIR = _BASE / "outputs"
+FIG_DIR = _BASE / "figures"
 OUTPUT_DIR.mkdir(exist_ok=True)
 FIG_DIR.mkdir(exist_ok=True)
 
